@@ -1,5 +1,3 @@
 # pdvst 
-Revival of J.Sarlo's pdvst project
-for using pd + externals + native guis  as vst plugin
-The project has moved here 
+The project has moved here : https://github.com/jyg/pure-data/tree/master/pdvst
 
