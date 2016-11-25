@@ -1,3 +1,5 @@
+Adaptation des fichiers pour Compilation avec visual C++ 2015 (IDE code:blocks)
+
 remplacement de #if LINK_PLATFORM_WINDOWS
 par #ifdef LINK_PLATFORM_WINDOWS
 dans les fichiers suivants : 
@@ -5,9 +7,6 @@ dans les fichiers suivants :
 \external\link\include\ableton\platforms\asio\AsioWrapper.hpp
 \external\link\include\ableton\discovery\NetworkByteStreamSerializable.hpp
 \external\link\include\ableton\link\Kalman.hpp
-
-
-
 
 Définition des répertoires pour les libs
 C:\Program Files (x86)\Windows Kits\8.1\Lib\winv6.3\um\x86
@@ -18,5 +17,3 @@ C:\Program Files (x86)\pd-0.47-1\src\pd.a
 Modification des fichiers abl_link~.cpp et .hpp : ajout de __declspec(dllexport) devant la fonction de setup :
 __declspec(dllexport) void abl_link_tilde_setup(void);
 
-en cas d'obtention de l'erreur "The procedure entry point ucrtbase.terminate could not be located in the dynamic link library api-ms-win-crt-runtime-l1-1-0.dll", il faut appliquer un correctif à windows (à partir de vista sp2)
-https://support.microsoft.com/en-gb/kb/2999226
