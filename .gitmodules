@@ -1,0 +1,3 @@
+[submodule "pdvst/pure-data/pure-data"]
+	path = pdvst/pure-data/pure-data
+	url = https://github.com/pure-data/pure-data
