@@ -1,0 +1,4 @@
+#N canvas 470 74 450 300 10;
+#X obj 88 85 data_inlet \$1;
+#X obj 92 144 data_outlet \$1;
+#X connect 0 0 1 0;

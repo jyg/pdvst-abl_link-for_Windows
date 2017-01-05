@@ -1,0 +1,14 @@
+#N canvas 451 214 701 474 12;
+#X declare -path C:/Users/jyg/Desktop/pd/Patches/2010/fid_abs_0.3.6
+;
+#X obj 59 59 listenerRect livreAllemagne 0.2 0.115 7 1.571 0;
+#X text 106 117 Arguments;
+#X text 247 118 1: nom de la classe;
+#X text 247 143 2: largeur;
+#X text 248 168 3: hauteur;
+#X text 249 190 4: no de preset;
+#X text 250 211 5: rotation;
+#X text 250 234 6: nb de secteurs;
+#X obj 40 308 declare -path C:/Users/jyg/Desktop/pd/Patches/2010/fid_abs_0.3.6
+;
+#X coords 0 474 1 473 85 60 0;

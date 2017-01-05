@@ -1,0 +1,8 @@
+Ambiance plugname C:/Users/jyg/Desktop/pd/Patches/_VST/02_delay-effects/Ambience.dll
+@;
+Delay plugname C:/Users/jyg/Desktop/pd/Patches/_VST/02_delay-effects/Classic_Delay.dll
+@;
+Chorus plugname C:/Users/jyg/Desktop/pd/Patches/_VST/02_delay-effects/Classic_Phaser.dll
+@;
+Reverb plugname C:/Users/jyg/Desktop/pd/Patches/_VST/02_delay-effects/Classic_Reverb.dll
+@;

@@ -1,0 +1,131 @@
+#N canvas 159 67 678 486 10;
+#N canvas 172 83 586 377 LICENSE-GPL 0;
+#X text 57 88 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version.;
+#X text 58 168 This program is distributed in the hope that it will
+be useful \, but WITHOUT ANY WARRANTY \; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.;
+#X text 57 261 You should have received a copy of the GNU General Public
+License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X text 61 54 Copyright (C) 2009 \, Reality Jockey Ltd.;
+#X text 60 325 See the file LICENSE.txt for the full license text.
+;
+#X restore 298 15 pd LICENSE-GPL;
+#X text 35 69 ui_hsl \$0 name min max;
+#X obj 369 157 switch~;
+#X obj 31 246 stereo_inlet~ \$0;
+#X obj 28 304 stereo_outlet~ \$0;
+#X text 51 17 embedded rjdj e_beequad abstraction;
+#X obj 412 273 module_loader fx_lowhip \$0;
+#X obj 416 300 u_dispatch \$0 f.freq;
+#X obj 416 320 u_dispatch \$0 f.Q;
+#N canvas 0 50 989 545 filter 0;
+#X obj 77 38 inlet~;
+#X obj 278 25 inlet~;
+#X obj 70 445 outlet~;
+#X obj 246 453 outlet~;
+#N canvas 166 108 605 607 coeffs_filtre 0;
+#X obj 93 -3 inlet;
+#X obj 137 323 outlet;
+#X obj 93 293 u_lowpassq;
+#X text 436 99 args: <freq> <BW>;
+#X obj 341 276 u_highpassq;
+#X obj 30 70 moses 1;
+#X obj 227 9 inlet;
+#X obj 45 43 * 2.2;
+#X obj 107 96 moses 1.2;
+#X obj 107 124 - 1.2;
+#X obj 219 243 f;
+#X obj 55 232 t f b;
+#X obj 411 234 f;
+#X obj 307 220 t f b;
+#X obj 29 189 mtof;
+#X obj 133 204 mtof;
+#X obj 41 164 + 18;
+#X obj 42 142 * 109;
+#X obj 173 172 + 18;
+#X obj 167 151 * 109;
+#X obj 287 111 t b f f;
+#X obj 126 28 f;
+#X obj 218 46 * 6;
+#X obj 43 294 int;
+#X obj 303 364 int;
+#X obj 283 435 s \$0-freq-rcv;
+#X msg 34 336 label LOP:\$1Hz;
+#X msg 294 406 label HIP:\$1Hz;
+#X obj 279 63 max 0.1;
+#X connect 0 0 21 0;
+#X connect 2 0 1 0;
+#X connect 4 0 1 0;
+#X connect 5 0 17 0;
+#X connect 5 1 8 0;
+#X connect 6 0 22 0;
+#X connect 7 0 5 0;
+#X connect 8 1 9 0;
+#X connect 9 0 19 0;
+#X connect 10 0 2 1;
+#X connect 11 0 2 0;
+#X connect 11 0 23 0;
+#X connect 11 1 10 0;
+#X connect 12 0 4 1;
+#X connect 13 0 4 0;
+#X connect 13 0 24 0;
+#X connect 13 1 12 0;
+#X connect 14 0 11 0;
+#X connect 15 0 13 0;
+#X connect 16 0 14 0;
+#X connect 17 0 16 0;
+#X connect 18 0 15 0;
+#X connect 19 0 18 0;
+#X connect 20 0 21 0;
+#X connect 20 1 10 1;
+#X connect 20 2 12 1;
+#X connect 21 0 7 0;
+#X connect 22 0 28 0;
+#X connect 23 0 26 0;
+#X connect 24 0 27 0;
+#X connect 26 0 25 0;
+#X connect 27 0 25 0;
+#X connect 28 0 20 0;
+#X restore 370 213 pd coeffs_filtre;
+#X obj 46 343 e_beequad;
+#X msg 458 259 interp \$1;
+#X obj 255 338 e_beequad;
+#X obj 570 231 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
+10 -262144 -1 -1 19 256;
+#X obj 350 114 r \$0-f.freq;
+#X obj 579 112 r \$0-f.Q;
+#X connect 0 0 5 0;
+#X connect 1 0 7 0;
+#X connect 4 0 5 1;
+#X connect 4 0 7 1;
+#X connect 5 0 2 0;
+#X connect 6 0 5 1;
+#X connect 6 0 7 1;
+#X connect 7 0 3 0;
+#X connect 8 0 6 0;
+#X connect 9 0 4 0;
+#X connect 10 0 4 1;
+#X restore 32 282 pd filter;
+#X obj 101 101 cnv 15 188 68 empty \$0-background fx_lowhip 0 7 0 14
+-262144 -1 0;
+#X obj 101 101 cnv 15 188 68 empty \$0-background fx_lowhip 0 7 0 14
+-262144 -1 0;
+#X obj 214 115 ui_vs \$0 f.freq 0 1;
+#X obj 252 115 ui_vs \$0 f.Q 0 1;
+#X obj 101 153 cnv 15 100 16 empty \$0-freq-rcv HIP:688Hz 1 10 0 12
+-233017 -66577 0;
+#X obj 369 91 module_declare fx_lowhip \$0;
+#X obj 169 348 data_thru \$0;
+#X connect 3 0 9 0;
+#X connect 3 1 9 1;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 9 0 4 0;
+#X connect 9 1 4 1;
+#X connect 15 0 2 0;
+#X coords 0 -1 1 1 190 70 1 100 100;

@@ -1,0 +1,15 @@
+Test start_note 48 @ slot 36 @ lvol <undefined> <undefined> <undefined>
+<undefined> @ wave_file C:/Users/jyg/Desktop/Projets/AtelierSonMao/AtelierSon2015-2016/TravailSurSample/sounds/Basson.wav
+@ lwave_file C:/Users/jyg/Desktop/Projets/AtelierSonMao/AtelierSon2015-2016/TravailSurSample/sounds/Basson.wav
+C:/Users/jyg/Desktop/Projets/AtelierSonMao/AtelierSon2015-2016/TravailSurSample/sounds/Cello.wav
+C:/Users/jyg/Desktop/Projets/AtelierSonMao/AtelierSon2015-2016/TravailSurSample/sounds/Concret1.wav
+C:/Users/jyg/Desktop/Projets/AtelierSonMao/AtelierSon2015-2016/TravailSurSample/sounds/Dj.wav
+@ lpitch <undefined> <undefined> <undefined> <undefined> @ lfilename
+<undefined> <undefined> <undefined> <undefined> @ lstartpos <undefined>
+<undefined> <undefined> <undefined> @ lautomute <undefined> <undefined>
+<undefined> <undefined> @ pos 0.346457 @ lpos <undefined> <undefined>
+0.346457 0.212598 @ lturntable_rpm <undefined> <undefined> <undefined>
+<undefined> @ wavtable 0 @ lwavtable 0 0 0 0 @ from 0 @ lfrom 0 0 0.322835
+0.133858 @ start 0 @ lstart 0 0 0 0 @ to 1 @ lto 1 0.574803 0.724409
+0.566929 @ ldisc_rpm <undefined> <undefined> <undefined> <undefined>
+@;

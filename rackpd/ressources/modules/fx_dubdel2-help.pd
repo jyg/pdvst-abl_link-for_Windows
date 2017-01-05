@@ -1,0 +1,84 @@
+#N canvas 713 50 613 604 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X obj 346 45 declare -path ../core;
+#X obj 346 75 declare -path ../rj;
+#X obj 360 140 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X text 380 136 Instances multiples;
+#X text 11 37 effet de tape delay avec filtre;
+#X text 386 169 Synchronisation tempo;
+#X obj 53 477 tgl 15 0 \$0-sync \$0-sync-rcv sync 17 7 0 10 -4032 -1
+-1 0 1;
+#X text 114 474 mode synchro métronome;
+#X text 74 228 del : durée du retard (delay);
+#X text 63 250 bpitch : note centrale du filtre passebande (Q=2);
+#X text 67 344 L R;
+#X text 53 448 wet : mixage effet / son direct;
+#X obj 360 170 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 73 110 fx_dubdel2;
+#X obj 66 288 vradio 14 1 0 4 \$0-setdell \$0-setdell-rcv _4 -2 -5
+0 10 -204786 -35788 -159808 0;
+#X obj 80 288 vradio 14 1 0 4 \$0-setdelr \$0-setdelr-rcv _16 -2 -5
+0 10 -204786 -35788 -159808 3;
+#X text 66 287 1/5;
+#X text 66 300 2/6;
+#X text 66 314 3/8;
+#X text 65 328 4/16;
+#X text 113 274 (sub)division du retard utilisée pour chaque canal
+;
+#X text 392 308 1=;
+#X text 392 328 2=;
+#X text 392 348 3=;
+#X text 392 368 4=;
+#X text 462 308 5=;
+#X text 462 328 6=;
+#X text 462 348 8=;
+#X text 455 368 16=;
+#X text 416 361 |;
+#X text 415 371 °;
+#X text 414 372 °;
+#X text 414 321 |;
+#X text 413 331 °;
+#X text 412 332 °;
+#X text 417 316 ~;
+#X text 413 301 |;
+#X text 412 311 °;
+#X text 411 312 °;
+#X text 416 296 ~;
+#X text 416 300 ~;
+#X text 414 341 |;
+#X text 413 351 °;
+#X text 412 352 °;
+#X text 417 336 ~;
+#X text 496 301 |;
+#X text 495 311 °;
+#X text 494 312 °;
+#X text 503 301 |;
+#X text 502 311 °;
+#X text 501 312 °;
+#X text 506 296 ~;
+#X text 506 300 ~;
+#X text 496 341 |;
+#X text 494 348 o;
+#X text 493 367 o;
+#X text 498 307 _;
+#X text 496 321 |;
+#X text 495 331 °;
+#X text 494 332 °;
+#X text 502 326 .;
+#X text 418 346 .;
+#X text 321 301 |;
+#X text 320 311 °;
+#X text 319 312 °;
+#X text 267 309 si del=;
+#X text 63 361 un double click sur une case permet de basculer sur
+l'autre valeur possible, f 44;
+#X obj 400 476 s LATENCY;
+#X text 377 437 compensation latence (défaut 5ms);
+#X floatatom 362 455 5 0 200 0 - - -, f 5;
+#X text 46 401 fb : feedback \, réinjection de la sortie dans l'entrée
+(à travers le filtre) \, mode pingpong si les deux canaux ont une
+valeur identique \, sinon canaux séparés;
+#X text 10 57 inspiré de l'abstraction rjdj e_dubdel;
+#X connect 69 0 67 0;
+#X coords 0 604 1 603 190 70 0;

@@ -1,0 +1,39 @@
+#N canvas 323 212 833 514 12;
+#N canvas 207 193 628 487 communication 0;
+#X obj 28 205 r class-\$1.add;
+#X obj 27 255 r class-\$1.remove;
+#X obj 27 230 r class-\$1.update;
+#X obj 27 312 fid_get \$1-coords;
+#X text 18 28 Le module d'instrument/effet est créé avec les arguments
+\$0 et \$1 de RackUnit;
+#X text 98 80 exemple;
+#X text 28 108 Il est conseillé d'activer le G.O.P. de tel sorte qu'un
+click sur le RackUnit permet d'accéder à l'interface du module;
+#X text 27 162 Lorsqu'un événement de la classe <input> interagit avec
+la zone d'activité du module \, une classe secondaire est créée.;
+#X text 30 284 Les coordonnées locales sont obtenues comme suit :;
+#X obj 33 394 u_dispatch \$1 param1;
+#X obj 203 394 r \$1-param1;
+#X obj 210 76 oscillateur \$0 \$1;
+#X text 35 340 La sauvegarde des paramètres du module/instrument dans
+le système global s'obtient au moyen du systeme de sauvegarde de rjdj/ssad
+;
+#X obj 139 434 fid_sub_class;
+#X text 44 433 Voir aussi :;
+#X restore 306 377 pd communication du module avec l'extérieur;
+#X text 310 35 syntaxe :;
+#X text 301 116 Utilisé conjointement avec rjdj-style_state_saving
+;
+#X text 302 151 RackUnit permet d'accueillir un module d'instrument/effet
+et de gÃ©rer les prÃ©sets en local et en global;
+#X obj 28 36 RackUnit <effect> <input>;
+#X msg 357 269 add;
+#X msg 370 299 remove;
+#X msg 456 261 preset;
+#X msg 470 301 listener circle x y radius;
+#X msg 470 326 listener rect x y width height alpha;
+#X text 331 57 RackUnit <effect_module> <input_class> <output_audio_stream>
+;
+#X obj 321 215 catch~ <output_audio_stream>-l;
+#X obj 559 216 catch~ <output_audio_stream>-r;
+#X text 305 192 la sortie est envoyée vers;

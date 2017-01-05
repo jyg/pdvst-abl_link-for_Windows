@@ -1,0 +1,16 @@
+#N canvas 0 50 450 300 10;
+#X obj 166 48 inlet;
+#X obj 164 237 send;
+#X obj 167 76 list split 1;
+#X obj 167 144 list append;
+#X obj 167 175 list trim;
+#X obj 172 110 t b s;
+#X obj 294 167 makefilename \$1-%s;
+#X connect 0 0 2 0;
+#X connect 2 0 5 0;
+#X connect 2 1 3 1;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
+#X connect 5 0 3 0;
+#X connect 5 1 6 0;
+#X connect 6 0 1 1;

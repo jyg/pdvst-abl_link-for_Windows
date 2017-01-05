@@ -1,0 +1,24 @@
+#N canvas 448 85 894 552 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X obj 346 63 declare -path ../core;
+#X obj 346 93 declare -path ../rj;
+#X text 478 460 EXPERIMENTAL ALPHA;
+#X obj 458 462 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 460 515 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
+1;
+#X text 480 484 Instances multiples;
+#X obj 458 485 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X text 24 63 déclenchée par noteEvent;
+#X text 288 168 la vitesse est définie par le numéro de note joué
+au clavier;
+#X text 483 410 utilisable avec contrôleur midi (notein en data_inlet
+ou en omni \, ctlin;
+#X obj 458 412 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 24 183 inst_8bits;
+#X text 22 37 Synthétiseur 8bits;
+#X text 286 193 inspiré par inst_8bits du logiciel caustic (singlecellsoftware)
+;
+#X text 296 272 Fonctionnement : la forme d'onde générée est déterminée
+par une équation;
+#X coords 0 552 1 551 190 70 0;

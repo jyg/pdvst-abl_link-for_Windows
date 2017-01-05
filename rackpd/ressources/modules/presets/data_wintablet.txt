@@ -1,0 +1,2 @@
+Preset1 stylet 0 @ ccout_enable 1 @ ccz 14 @ ccy 15 @ ccx 9 @;
+Preset2 stylet 1 @ ccout_enable 0 @ ccz 14 @ ccy 51 @ ccx 68 @;

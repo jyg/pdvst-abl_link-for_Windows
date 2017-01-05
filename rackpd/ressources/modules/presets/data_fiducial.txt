@@ -1,0 +1,6 @@
+Preset1 litems ceci est une liste @;
+Preset2 litems Ceci est une autre liste @;
+Fid1 fidmax 1 @ fidmin 1 @;
+Fid1 fidmax 1 @ fidmin 1 @ ccz 25 @ ccy 16 @ ccx 8 @;
+Preset5 fidmax 91 @ fidmin 19 @ ccz_enable 1 @ ccx_enable 1 @ ccz 8
+@ ccy 7 @ ccx 6 @;

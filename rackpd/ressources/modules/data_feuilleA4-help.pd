@@ -1,0 +1,21 @@
+#N canvas 313 103 864 545 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X obj 436 76 declare -path ../core;
+#X text 45 309 EXPERIMENTAL ALPHA;
+#X obj 26 309 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 25 372 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
+1;
+#X obj 25 396 tgl 15 0 empty empty ? 4 8 0 12 -260097 -260097 -1 0
+1;
+#X obj 26 339 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 436 106 declare -path ../rj;
+#X text 49 371 Instances multiples;
+#X text 48 339 Une seule instance;
+#X text 168 200 en connexion avec le process video 'robosonic';
+#X obj 70 110 data_feuilleA4;
+#X text 34 28 data_out : set_calibration_points <x1> <y1> <x2> <y2>
+<x3> <y3> <x4> <y4>, f 78;
+#X text 76 50 (valeurs de coordonnées normalisées sur 0-1);
+#X text 237 455 fonctionne avec data_upic \, data_cyclogroove;
+#X coords 0 545 1 544 190 70 0;

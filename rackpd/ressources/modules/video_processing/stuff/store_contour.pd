@@ -1,0 +1,22 @@
+#N canvas 0 50 1182 677 12;
+#X obj 65 22 inlet;
+#X obj 65 264 cvContoursInterpolPoints \$1;
+#X obj 135 161 cvContoursFeature Perimeter;
+#X text 311 265 le contour est rééchantillonné sur \$1 points;
+#X text 443 374 Les coordonnées de ses \$1 points sont stockées dans
+les tables suivantes ->, f 38;
+#X obj 137 191 v \$2.Perimeter;
+#X obj 65 289 cvContoursPoints \$2.x \$2.y \$1;
+#X obj 751 370 table \$2.x \$1;
+#X obj 751 397 table \$2.y \$1;
+#X text 388 42 Les n points stockés dans le tableau sont obtenus par
+interpolation/rééchantillonnage du contour;
+#X text 388 20 store_contour stocke un contour dans un tableau de points
+(x \, y), f 66;
+#X text 393 155 <- on pourrait le cas échéant stocker d'autres caractéristiques
+du contour dans d'autres tableaux / variables -par exemple le C.O.G.
+\, etc....;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 1 0 6 0;
+#X connect 2 0 5 0;

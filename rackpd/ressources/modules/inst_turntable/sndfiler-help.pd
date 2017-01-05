@@ -1,0 +1,32 @@
+#N canvas 0 50 610 414 10;
+#X obj 170 178 sndfiler;
+#X obj 336 249 table left 1e+007;
+#X obj 147 107 openpanel;
+#X obj 124 88 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 150 142 read \$1 left right;
+#X floatatom 170 210 10 0 0 0 - - -, f 10;
+#X obj 315 277 table right 1e+007;
+#X obj 317 107 openpanel;
+#X obj 294 88 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 320 142 read \$1 left right;
+#X floatatom 340 210 10 0 0 0 - - -, f 10;
+#X obj 340 178 soundfiler;
+#X obj 204 74 openpanel;
+#X obj 181 55 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 29 313 Attention : les flags -skip -raw -maxsize ne sont pas
+pris en charge;
+#X text 12 7 sndfiler : soundfiler sans drops audio;
+#X connect 0 0 5 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 9 0 11 0;
+#X connect 11 0 10 0;
+#X connect 12 0 4 0;
+#X connect 12 0 9 0;
+#X connect 13 0 12 0;

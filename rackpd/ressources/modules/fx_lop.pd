@@ -1,0 +1,66 @@
+#N canvas 17 113 678 542 10;
+#X obj 437 292 u_dispatch \$0 freq;
+#N canvas 172 83 586 377 LICENSE-GPL 0;
+#X text 57 88 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version.;
+#X text 58 168 This program is distributed in the hope that it will
+be useful \, but WITHOUT ANY WARRANTY \; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.;
+#X text 57 261 You should have received a copy of the GNU General Public
+License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X text 61 54 Copyright (C) 2009 \, Reality Jockey Ltd.;
+#X text 60 325 See the file LICENSE.txt for the full license text.
+;
+#X restore 347 11 pd LICENSE-GPL;
+#X text 35 69 ui_hsl \$0 name min max;
+#X obj 475 94 switch~;
+#N canvas 200 58 989 545 filter 0;
+#X obj 77 38 inlet~;
+#X obj 278 25 inlet~;
+#X obj 70 445 outlet~;
+#X obj 246 453 outlet~;
+#X obj 46 343 e_beequad;
+#X msg 178 309 interp \$1;
+#X obj 263 350 e_beequad;
+#X obj 290 281 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
+10 -262144 -1 -1 21 256;
+#X obj 679 55 r \$0-freq;
+#X obj 781 56 r \$0-Q;
+#X obj 175 199 u_lowpassq;
+#X connect 0 0 4 0;
+#X connect 1 0 6 0;
+#X connect 4 0 2 0;
+#X connect 5 0 4 1;
+#X connect 5 0 6 1;
+#X connect 6 0 3 0;
+#X connect 7 0 5 0;
+#X connect 8 0 10 0;
+#X connect 9 0 10 1;
+#X connect 10 0 4 1;
+#X connect 10 0 6 1;
+#X restore 30 292 pd filter;
+#X obj 437 314 u_dispatch \$0 Q;
+#X text 51 17 embedded rjdj e_lowpass abstraction;
+#X obj 101 101 cnv 15 188 68 empty \$0-background fx_lop 0 7 0 14 -262144
+-1 0;
+#X obj 100 115 ui_vsl \$0 freq 20 20000;
+#X obj 142 115 ui_vs \$0 Q 0 10;
+#X obj 220 102 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv <no_preset>
+2 7 0 10 -232576 -232576 -1 0 1;
+#X obj 466 23 module_declare fx_lop \$0;
+#X obj 437 250 module_loader fx_lop \$0;
+#X obj 29 260 stereo_inlet~ \$0;
+#X obj 30 321 stereo_outlet~ \$0;
+#X obj 32 356 data_thru \$0;
+#X connect 0 0 5 0;
+#X connect 4 0 14 0;
+#X connect 4 1 14 1;
+#X connect 11 0 3 0;
+#X connect 12 0 0 0;
+#X connect 13 0 4 0;
+#X connect 13 1 4 1;
+#X coords 0 -1 1 1 190 70 1 100 100;

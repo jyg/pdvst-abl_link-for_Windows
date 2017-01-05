@@ -1,0 +1,5 @@
+#N canvas 0 50 542 520 10;
+#X text 35 69 ui_vsl \$0 name min max;
+#X text 295 61 logarithme;
+#X obj 253 186 ui_vsl \$0 name 1 10;
+#X coords 0 520 1 519 135 18 0;

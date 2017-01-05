@@ -1,0 +1,20 @@
+#N canvas 683 73 864 545 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X obj 436 76 declare -path ../core;
+#X text 45 309 EXPERIMENTAL ALPHA;
+#X obj 26 309 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 25 372 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
+1;
+#X obj 25 396 tgl 15 0 empty empty ? 4 8 0 12 -260097 -260097 -1 0
+1;
+#X obj 26 339 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 436 106 declare -path ../rj;
+#X text 49 371 Instances multiples;
+#X text 48 339 Une seule instance;
+#X text 168 200 en connexion avec le process video 'robosonic';
+#X text 162 230 cyclogroove;
+#X obj 99 122 data_cyclogroove;
+#X text 82 33 data_in : points;
+#X text 78 59 data_out : cc ? note ?;
+#X coords 0 545 1 544 190 70 0;

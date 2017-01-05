@@ -1,0 +1,4 @@
+Preset1 Q 0.0199393 @ freq 20000 @;
+Preset2 Q 4.63673 @ freq 20000 @;
+Test;
+Preset4 Q 7.5102 @ freq 2346.48 @;

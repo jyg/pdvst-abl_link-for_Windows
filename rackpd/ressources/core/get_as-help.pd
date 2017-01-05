@@ -1,0 +1,5 @@
+#N canvas 0 50 450 300 10;
+#X obj 169 125 get_as float \$1;
+#X text 28 69 permet de récupérer l'argument mentionné (en 2ème
+paramètre) seulement s'il est du type spécifié en premier paramètre
+;

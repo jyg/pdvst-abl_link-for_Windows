@@ -1,0 +1,117 @@
+#N canvas 1053 183 1066 486 10;
+#X obj 28 377 stereo_outlet~;
+#X obj 29 260 stereo_inlet~;
+#N canvas 172 83 586 377 LICENSE-GPL 0;
+#X text 57 88 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version.;
+#X text 58 168 This program is distributed in the hope that it will
+be useful \, but WITHOUT ANY WARRANTY \; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.;
+#X text 57 261 You should have received a copy of the GNU General Public
+License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X text 61 54 Copyright (C) 2009 \, Reality Jockey Ltd.;
+#X text 60 325 See the file LICENSE.txt for the full license text.
+;
+#X restore 298 15 pd LICENSE-GPL;
+#X obj 417 208 switch~;
+#X obj 187 131 tgl 25 0 \$0-rec \$0-rec-rcv REC 2 7 0 10 -262144 -1
+-1 0 56;
+#X obj 577 18 r \$0-rec;
+#X obj 162 448 s \$0-rec;
+#X obj 578 68 s \$0-rec-rcv;
+#X msg 578 48 set \$1;
+#X obj 159 425 > 64;
+#X obj 157 401 midi-colors \$0 rec \$0-rec-rcv;
+#X obj 156 139 bng 15 250 50 0 \$0-next_file \$0-next_file-rcv > 5
+7 0 10 -262144 -1 -1;
+#X obj 100 141 bng 15 250 50 0 \$0-prev_file \$0-prev_file-rcv < 5
+7 0 10 -262144 -1 -1;
+#X obj 574 118 r \$0-duree;
+#X obj 497 51 select 0;
+#X obj 86 184 rack_enableV2 200 80 4 8 0 1 inst_sampler \$1 \$0;
+#X obj 101 120 bng 20 250 50 0 empty empty bank... 2 7 0 10 -262144
+-1 -1;
+#X obj 416 260 u_dispatch \$0 bank;
+#X obj 416 280 u_dispatch \$0 index;
+#X floatatom 118 140 5 0 0 0 - #0-index -, f 5;
+#X obj 25 296 inst_sampler/01_sampler \$0;
+#X obj 221 342 data_inlet \$0;
+#X obj 203 370 data_outlet \$0;
+#X msg 205 319 filesource \$2 \$1;
+#X obj 544 175 s \$0-samplename;
+#X msg 549 95 label recording...;
+#X msg 576 139 label ext-sample(\$1ms);
+#X obj 416 300 u_dispatch \$0 f.freq;
+#X obj 416 320 u_dispatch \$0 f.Q;
+#X obj 220 102 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv PRESETS
+2 5 0 10 -232576 -232576 -1 0 1;
+#X obj 214 115 ui_vs \$0 f.freq 0 1;
+#X obj 252 115 ui_vs \$0 f.Q 0 1;
+#X obj 101 157 cnv 12 1 1 empty \$0-samplename Piano 2 6 0 10 -262144
+-66577 0;
+#X obj 765 21 midi-colors \$0 rec \$0-rec-rcv;
+#X obj 764 81 s \$0-rec;
+#X obj 764 60 change;
+#X obj 765 41 > 30;
+#X obj 764 149 change;
+#X obj 765 130 > 30;
+#X obj 764 269 change;
+#X obj 765 250 > 30;
+#X obj 765 110 midi-colors \$0 prev_file \$0-prev_file-rcv;
+#X obj 765 230 midi-colors \$0 next_file \$0-next_file-rcv;
+#X obj 764 172 select 1;
+#X obj 764 292 select 1;
+#X obj 764 330 s \$0-next_file-rcv;
+#X obj 764 200 s \$0-prev_file-rcv;
+#X obj 416 239 rack_loader inst_sampler \$1 \$0;
+#X obj 158 116 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 174 116 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 154 69 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 169 69 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 1 0 0 0;
+#X connect 1 0 20 0;
+#X connect 1 1 0 1;
+#X connect 1 1 20 1;
+#X connect 5 0 8 0;
+#X connect 5 0 14 0;
+#X connect 8 0 7 0;
+#X connect 9 0 6 0;
+#X connect 10 0 9 0;
+#X connect 13 0 26 0;
+#X connect 14 1 25 0;
+#X connect 15 0 1 0;
+#X connect 15 0 0 2;
+#X connect 15 1 3 0;
+#X connect 15 1 47 0;
+#X connect 16 0 20 2;
+#X connect 17 0 18 0;
+#X connect 18 0 27 0;
+#X connect 20 0 0 0;
+#X connect 20 1 0 1;
+#X connect 20 2 23 0;
+#X connect 21 0 22 0;
+#X connect 23 0 22 0;
+#X connect 25 0 24 0;
+#X connect 26 0 24 0;
+#X connect 27 0 28 0;
+#X connect 33 0 36 0;
+#X connect 35 0 34 0;
+#X connect 36 0 35 0;
+#X connect 37 0 43 0;
+#X connect 38 0 37 0;
+#X connect 39 0 44 0;
+#X connect 40 0 39 0;
+#X connect 41 0 38 0;
+#X connect 42 0 40 0;
+#X connect 43 0 46 0;
+#X connect 44 0 45 0;
+#X connect 47 0 17 0;
+#X coords 0 -1 1 1 190 70 1 100 100;

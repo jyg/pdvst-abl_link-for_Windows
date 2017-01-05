@@ -1,0 +1,37 @@
+#N canvas 107 50 991 595 10;
+#X obj 98 320 stereo_inlet~ \$0;
+#X obj 95 344 stereo_outlet~ \$0;
+#X obj 360 508 data_inlet \$0;
+#X obj 358 529 data_outlet \$0;
+#X obj 242 123 tgl 15 0 empty empty start 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 102 127 vsl 15 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 251 430 makenote 100 200;
+#X obj 248 470 pack f f;
+#X msg 249 491 note \$1 \$2;
+#X obj 131 39 notein;
+#X floatatom 125 66 5 0 0 0 - - -, f 5;
+#X obj 29 51 s \$0-pattern;
+#X msg 41 7 0 64 66 71 73 74 66 64 73 71 66 74 73;
+#X text 90 415 TODO;
+#X text 25 450 sauvegarde;
+#X text 27 473 multiple patterns;
+#X text 118 122 100%;
+#X text 119 153 0%;
+#X text 103 110 remplissage;
+#X obj 218 104 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv PRESETS
+2 5 0 10 -232576 -232576 -1 0 1;
+#X obj 279 279 rack_loader midi_pattern \$1 \$0;
+#X obj 21 246 rack_enableV2 200 80 4 8 0 1 midi_pattern \$1 \$0;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 2 0 3 0;
+#X connect 6 0 7 0;
+#X connect 6 1 7 1;
+#X connect 7 0 8 0;
+#X connect 8 0 3 0;
+#X connect 9 0 10 0;
+#X connect 12 0 11 0;
+#X connect 21 1 20 0;
+#X coords 0 -1 1 1 190 70 1 100 100;

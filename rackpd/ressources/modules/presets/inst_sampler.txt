@@ -1,0 +1,12 @@
+Atelier filename D:/MobMuPlat/sounds/LigetiArtikulationExtrait.wav
+@ lfilename D:/MobMuPlat/sounds/Concret1.wav D:/MobMuPlat/sounds/Concret2.wav
+D:/MobMuPlat/sounds/Speech.wav D:/MobMuPlat/sounds/Piano.wav D:/MobMuPlat/sounds/Basson.wav
+D:/MobMuPlat/sounds/Cello.wav D:/MobMuPlat/sounds/Flute.wav D:/MobMuPlat/sounds/Sacre.wav
+D:/MobMuPlat/sounds/GriseyPartielsExtrait2.wav D:/MobMuPlat/sounds/LigetiArtikulationExtrait.wav
+@;
+Atelier index 3 @ filename D:/MobMuPlat/sounds/Dj.wav @ lfilename D:/MobMuPlat/sounds/Concret1.wav
+D:/MobMuPlat/sounds/Concret2.wav D:/MobMuPlat/sounds/Speech.wav D:/MobMuPlat/sounds/Piano.wav
+D:/MobMuPlat/sounds/Basson.wav D:/MobMuPlat/sounds/Cello.wav D:/MobMuPlat/sounds/Flute.wav
+D:/MobMuPlat/sounds/Sacre.wav D:/MobMuPlat/sounds/GriseyPartielsExtrait2.wav
+D:/MobMuPlat/sounds/LigetiArtikulationExtrait.wav D:/MobMuPlat/sounds/Dj.wav
+@ f.Q 0.582677 @ f.freq 0.503937 @;

@@ -1,0 +1,4 @@
+ClarinetteLorieux loop 1 @ vol 100.045 @ play 1 @ file D:/Lorieux/Lorieux-EE-magnetique/Lorieux-EE-magnetique/clarinette.wav
+@ slot 11 @;
+concret2 loop 1 @ vol 100.045 @ play 1 @ file C:/Users/jyg/Desktop/Projets/AtelierSonMao/AtelierSon2015-2016/TravailSurSample/sounds/Concret2.wav
+@ slot 11 @;

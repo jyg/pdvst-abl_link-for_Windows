@@ -1,0 +1,16 @@
+#N canvas 324 77 802 300 10;
+#X obj 42 220 send;
+#X obj 24 107 inlet;
+#X obj 116 25 r REFRESH_CONNEXIONS;
+#X obj 186 83 r \$1-slot;
+#X obj 159 166 tabread SLOTS_MAP;
+#X obj 160 110 f;
+#X obj 159 136 + 1;
+#X msg 153 195 symbol \$1-data;
+#X connect 1 0 0 0;
+#X connect 2 0 5 0;
+#X connect 3 0 5 1;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 0 1;

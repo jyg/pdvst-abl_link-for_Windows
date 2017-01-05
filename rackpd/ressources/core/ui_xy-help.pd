@@ -1,0 +1,16 @@
+#N canvas 0 50 796 300 10;
+#X declare -stdpath extra/iemguts/;
+#X declare -stdpath extra/rj/;
+#X declare -stdpath extra/iemguts/;
+#X declare -stdpath extra/rj/;
+#X text 115 112 \$0 <name-x> <min-x> <max-x> <lin|log> <name-y> <min-y>
+<max-y> <lin|log>;
+#X text 115 82 arguments;
+#X obj 258 217 r \$0-posx;
+#X floatatom 252 245 5 0 0 0 - - -, f 5;
+#X floatatom 352 245 5 0 0 0 - - -, f 5;
+#X obj 358 217 r \$0-posy;
+#X obj 105 197 ui_xy \$0 posx 0 100 lin posy 1 100 log;
+#X obj 57 44 ui_xy \$0 namex 0 100 lin namey 0 100 lin;
+#X connect 2 0 3 0;
+#X connect 5 0 4 0;

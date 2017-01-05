@@ -1,0 +1,20 @@
+#N canvas 713 50 613 297 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X obj 396 38 declare -path ../core;
+#X obj 396 68 declare -path ../rj;
+#X obj 340 163 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 340 200 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
+1;
+#X text 360 159 Instances multiples;
+#X obj 34 88 fx_resonator;
+#X text 15 49 de type karpus strong je crois (piqué dans integralive)
+;
+#X text 25 224 les note on/off sont reçues sur le data_inlet ou bien
+par l'objet [notein] en mode midi_omni;
+#X obj 340 133 tgl 15 0 empty empty ! 4 8 0 12 -260097 -260097 -1 0
+1;
+#X text 363 132 Expérimental;
+#X text 46 24 effet de résonateur 8 circuits (commandé par notes
+midi);
+#X coords 0 297 1 296 190 70 0;

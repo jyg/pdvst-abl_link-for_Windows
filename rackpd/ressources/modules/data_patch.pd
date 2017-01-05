@@ -1,0 +1,41 @@
+#N canvas 518 69 858 342 10;
+#X obj 110 35 data_inlet \$0;
+#X obj 140 258 data_outlet \$0;
+#X obj 370 115 module_declare data_patch \$0;
+#X obj 408 210 module_loader data_patch \$0;
+#X obj 90 116 route note;
+#X obj 144 140 unpack f f;
+#X obj 157 196 + 30;
+#X obj 150 223 pack f f;
+#X msg 59 249 note \$1 \$2;
+#X obj 286 87 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 271 230 5 0 0 0 - - -, f 5;
+#X obj 227 167 * 1;
+#X obj 230 196 min 127;
+#X obj 260 35 vsl 15 128 0 10 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 409 243 u_dispatch \$0 patch_name;
+#X text 401 31 L'idée de data_patch est de charger un module puredata
+géré par l'utilisateur (dynamic patching - patchage en temps réel)
+;
+#X obj 125 67 spigot;
+#X obj 300 32 r \$0-busy;
+#X obj 294 290 stereo_inlet~ \$0;
+#X obj 265 321 stereo_outlet~ \$0;
+#X connect 0 0 16 0;
+#X connect 3 0 14 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 1 11 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 1 0;
+#X connect 9 0 6 1;
+#X connect 9 0 10 0;
+#X connect 11 0 12 0;
+#X connect 12 0 7 1;
+#X connect 13 0 11 1;
+#X connect 16 0 4 0;
+#X connect 17 0 16 1;
+#X connect 18 0 19 0;

@@ -1,0 +1,13 @@
+#N canvas 183 333 759 261 10;
+#X obj 253 92 u_dispatch \$1 \$2;
+#X obj 237 47 inlet;
+#X obj 250 177 outlet;
+#X obj 252 123 u_dispatch \$1 l\$2;
+#X obj 489 91 text fromlist \$1-l\$2;
+#X obj 504 22 r \$1-l\$1;
+#X obj 509 57 list;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 3 0 2 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;

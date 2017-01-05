@@ -1,0 +1,12 @@
+#N canvas 361 76 791 219 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X obj 346 46 declare -path ../core;
+#X obj 346 76 declare -path ../rj;
+#X obj 509 131 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X text 531 129 Instances multiples possibles;
+#X obj 509 151 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X text 531 149 PureData Vanilia;
+#X obj 53 61 fx_sub;
+#X text 26 17 sub octave;
+#X coords 0 219 1 218 190 70 0;

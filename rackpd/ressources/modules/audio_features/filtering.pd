@@ -1,0 +1,13 @@
+#N canvas 0 50 549 387 10;
+#X obj 144 24 inlet;
+#X obj 66 338 outlet;
+#X obj 305 313 u_parameter \$1 \$2-filtering;
+#X obj 163 125 line;
+#X obj 169 83 pack f f;
+#X floatatom 300 128 5 0 0 0 - - -, f 5;
+#X obj 276 69 r \$1-\$2-filt;
+#X connect 0 0 4 0;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X connect 6 0 4 1;
+#X connect 6 0 5 0;

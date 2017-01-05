@@ -1,0 +1,16 @@
+#N canvas 0 50 971 678 12;
+#X msg 203 157 \$4 vol 100 \, \$4 delay \$1 \, \$4 pan \$2 \, \$4 pitch
+\$3;
+#X obj 144 316 bonk_pitch_delay <input_event_class>;
+#X text 435 243 parametre 1 : nom de la class des événements d'entrée
+agissant;
+#X text 499 321 polyphonie : 8 lignes à retard;
+#X obj 142 257 inlet~;
+#X obj 244 258 inlet~;
+#X obj 150 359 outlet~;
+#X obj 266 366 outlet~;
+#X connect 0 0 1 2;
+#X connect 1 0 6 0;
+#X connect 1 1 7 0;
+#X connect 4 0 1 0;
+#X connect 5 0 1 1;

@@ -1,0 +1,13 @@
+#N canvas 54 50 1194 562 10;
+#X text 197 66 Gestionnaire présets / automation midi \, etc....;
+#X text 522 265 gestion midi learn;
+#X text 519 286 forwarding des messages midi et des messages avec cible
+en en-tête;
+#X text 488 337 gestion des présets locaux (propres à chaque type
+de module);
+#X obj 738 375 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv PRESETS
+2 5 0 10 -232576 -232576 -1 0 1;
+#X text 369 375 copier le slider suivant dans le conteneur parent;
+#X text 375 395 pour accéder à 'interface de gestion des présets.
+;
+#X obj 228 129 module_loader <nom_type_de_module> \$0;

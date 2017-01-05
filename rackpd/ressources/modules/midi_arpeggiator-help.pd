@@ -1,0 +1,12 @@
+#N canvas 713 50 613 297 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X obj 346 38 declare -path ../core;
+#X obj 346 68 declare -path ../rj;
+#X obj 340 163 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 340 200 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
+1;
+#X text 360 159 Instances multiples;
+#X obj 57 61 midi_arpeggiator;
+#X text 70 162 A DEBUGGUER;
+#X coords 0 297 1 296 190 70 0;

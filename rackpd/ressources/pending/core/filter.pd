@@ -1,0 +1,19 @@
+#N canvas 301 91 382 291 10;
+#X obj 12 83 inlet~;
+#X obj 107 83 inlet;
+#X text 12 65 Signal Input;
+#X text 107 65 High Pass Frequency;
+#X obj 237 83 inlet;
+#X text 237 65 Low Pass Frequency;
+#X text 12 215 Signal outlet;
+#X obj 12 193 outlet~;
+#X obj 12 124 hip~;
+#X obj 12 159 lop~;
+#X text 97 259 Balandino Di Donato © 2013;
+#X text 9 8 FILTER This patch applies a high-pass filter and a low-pass
+filter on the signal.;
+#X connect 0 0 8 0;
+#X connect 1 0 8 1;
+#X connect 4 0 9 1;
+#X connect 8 0 9 0;
+#X connect 9 0 7 0;

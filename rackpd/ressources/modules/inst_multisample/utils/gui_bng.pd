@@ -1,0 +1,10 @@
+#N canvas 594 110 446 367 10;
+#X obj 61 249 list prepend \$1;
+#X obj 60 283 list trim;
+#X obj 64 312 s fromGUI;
+#X obj 100 100 bng 40 250 50 0 empty empty \$1 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 0 0;
+#X coords 0 -1 1 1 40 40 2 100 100;

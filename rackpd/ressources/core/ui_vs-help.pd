@@ -1,0 +1,5 @@
+#N canvas 0 50 542 520 10;
+#X text 295 61 lineaire;
+#X obj 197 157 ui_vs \$0 name 0 127;
+#X text 35 69 ui_vs \$0 name min max;
+#X coords 0 520 1 519 135 18 0;

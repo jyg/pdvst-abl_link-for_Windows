@@ -1,0 +1,34 @@
+#N canvas 361 66 718 438 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X declare -path ./fid_abs_0.3.6;
+#X declare -stdpath extra/zexy;
+#X declare -stdlib extra/cvlib/cvlib93;
+#X obj 436 59 declare -path ../core;
+#X obj 436 89 declare -path ../rj;
+#X text 45 292 EXPERIMENTAL ALPHA;
+#X obj 25 294 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 24 319 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
+1;
+#X text 47 316 Instances multiples;
+#X obj 82 350 tgl 15 0 empty empty ? 4 8 0 12 -260097 -260097 -1 0
+1;
+#X text 51 236 fidmin / fidmax : intervalle de valeurs de fiducial
+actives;
+#X obj 162 111 data_kinectblob;
+#X text 303 134 <------------ numéro de cc;
+#X text 356 153 <---- bouton d'activation du cc, f 49;
+#X text 186 179 ^;
+#X text 186 182 |;
+#X text 187 188 -- numéro de noteout;
+#X text 27 13 Utilise la kinect pour faire du suivi de blob (détection
+de mouvement). le blob détecté peut générer un message noteOn et
+des cc selon sa position x \, y (normalisés 0-127 sur les dimensions
+de l'image) et la profondeur (normalisation approximative);
+#X text 244 286 Une seule instance;
+#X text 242 307 Renvoie les CC sur CTLIN et les noteon/off sur sa sortie
+data, f 28;
+#X text 251 365 Contient un objet Gemwin;
+#X text 247 400 TODO : prévoir une autre instance de pd pour le graphique
+;
+#X coords 0 438 1 437 190 70 0;

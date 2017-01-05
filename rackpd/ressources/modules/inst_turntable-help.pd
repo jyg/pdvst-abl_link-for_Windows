@@ -1,0 +1,88 @@
+#N struct 7110-symarray float x array symbols 7110-sym;
+#N struct 7110-sym symbol name float on;
+#N canvas 560 50 766 552 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X obj 346 63 declare -path ../core;
+#X obj 346 93 declare -path ../rj;
+#X text 478 460 EXPERIMENTAL ALPHA;
+#X obj 458 462 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 460 515 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
+1;
+#X text 480 484 Instances multiples;
+#X obj 458 485 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X text 22 37 platine a scratcher;
+#X obj 19 273 cnv 15 250 180 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 62 337 vradio 15 1 0 2 \$0-disc_rpm \$0-disc_rpm-rcv empty 0
+-8 0 10 -262144 -260097 -1 1;
+#X obj 25 337 vradio 15 1 0 2 \$0-turntable_rpm \$0-turntable_rpm-rcv
+empty 0 -8 0 10 -262144 -260097 -1 1;
+#X obj 46 381 hradio 18 1 0 5 \$0-wavtable-snd \$0-wavtable-rcv wav_1_2_3_4
+-20 9 0 16 -262144 -260097 -1 0;
+#X text 41 335 45;
+#X text 41 350 33;
+#X symbolatom 23 419 21 0 0 0 - #0-file-rcv -, f 21;
+#X text 18 321 Speed|Disc;
+#X text 25 397 |;
+#X text 25 403 V;
+#X text 28 385 __;
+#X obj 118 312 hsl 128 15 0 1 0 0 \$0-from \$0-from-rcv from -2 9 0
+12 -262144 -1 -1 0 1;
+#X obj 118 329 hsl 128 15 0 1 0 0 \$0-to \$0-to-rcv to -2 9 0 12 -262144
+-1 -1 0 1;
+#X obj 118 346 hsl 128 15 0 1 0 0 \$0-pos \$0-pos-rcv start_at_pos
+-2 9 0 12 -262144 -1 -1 0 1;
+#X text 40 273 TURNTABLE;
+#X obj 119 292 hsl 128 15 0 1 0 0 \$0-setpos \$0-curseur Dj.wav -2
+-8 0 10 -262144 -1 -1 0 1;
+#X obj 252 313 bng 15 250 50 0 \$0-set-from empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 252 330 bng 15 250 50 0 \$0-set-to empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 26 293 tgl 25 0 \$0-start \$0-start-rcv START 28 12 0 10 -262144
+-1 -1 0 1;
+#X obj 187 366 cnv 15 80 84 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X obj 244 384 bng 15 250 50 0 \$0-next_file \$0-next_file-rcv > 5
+7 0 10 -262144 -1 -1;
+#X obj 190 384 bng 15 250 50 0 \$0-prev_file \$0-prev_file-rcv < 5
+7 0 10 -262144 -1 -1;
+#X floatatom 206 385 5 0 0 0 - #0-index-rcv #0-index, f 5;
+#X obj 190 404 bng 15 250 50 0 \$0-append empty append 17 7 0 10 -262144
+-1 -1;
+#X obj 190 434 bng 15 250 50 0 \$0-reset empty delete 17 7 0 10 -262144
+-1 -1;
+#X obj 190 419 bng 15 250 50 0 \$0-update empty update 17 7 0 10 -262144
+-1 -1;
+#X floatatom 146 365 5 0 0 0 fid_class #0-fid-rcv #0-fid, f 5;
+#X obj 107 401 tgl 15 0 empty \$0-scratch_on scratch 17 7 0 10 -262144
+-1 -1 0 1;
+#X floatatom 104 436 10 0 127 0 start_note #0-start_note-rcv #0-start_note
+, f 10;
+#X symbolatom 132 436 6 0 0 0 - #0-start_note_display-rcv -, f 6;
+#X text 24 63 déclenchée par noteEvent;
+#X text 207 176 <- zone de scratch;
+#X text 250 132 PLAY : moteur d'entrainement du plateau;
+#X text 251 198 WAV 1 2 3 4 : chargement d'un fichier wav ou utilisation
+d'un fichier tampon stocké en mémoire, f 50;
+#X text 248 153 Automute : le son est muté quand le stylet wacom est
+relaché;
+#X text 38 238 Le bouton EDIT permet d'accéder au popup suivant;
+#X text 302 286 Pour le sample utilisé \, on peut régler les points
+de début et de fin de boucle (from/to) \, le point de départ de lecture
+(start at pos) \, la vitesse et les RPM (Pitch \, Speed \, Disc).;
+#X text 305 331 L'idée est de charger un sample différent pour chaque
+note jouée sur le clavier. Pour cela \, on définit la note de départ
+qui va activer l'instrument (start_note). Si on joue 1/2 ton au dessus
+\, c'est le deuxième sample qui sera activé \, etc...;
+#X obj 14 121 inst_turntable;
+#X text 189 367 liste sampl;
+#X text 308 409 Chaque sample est un élément de la "liste sampl"
+que l'on peut éditer.;
+#X text 13 482 utilisable avec contrôleur midi (notein en data_inlet
+\, ctlin mappé sur la zone de scratch), f 55;
+#X text 15 514 utilisable avec data_wintablet (à tester);
+#X text 130 462 TO DO;
+#X text 18 533 utilisable avec data_fidtouch (à tester);
+#X coords 0 552 1 551 190 70 0;

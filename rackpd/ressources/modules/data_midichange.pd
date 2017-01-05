@@ -1,0 +1,29 @@
+#N canvas 0 50 643 300 10;
+#X obj 207 87 data_inlet \$0;
+#X obj 210 258 data_outlet \$0;
+#X obj 370 115 module_declare data_patch \$0;
+#X obj 408 210 module_loader data_patch \$0;
+#X obj 160 116 route note;
+#X obj 214 140 unpack f f;
+#X obj 227 196 + 30;
+#X obj 220 223 pack f f;
+#X msg 129 249 note \$1 \$2;
+#X obj 356 87 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 341 230 5 0 0 0 - - -, f 5;
+#X obj 297 167 * 1;
+#X obj 300 196 min 127;
+#X obj 330 35 vsl 15 128 0 10 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X connect 0 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 1 11 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 1 0;
+#X connect 9 0 6 1;
+#X connect 9 0 10 0;
+#X connect 11 0 12 0;
+#X connect 12 0 7 1;
+#X connect 13 0 11 1;

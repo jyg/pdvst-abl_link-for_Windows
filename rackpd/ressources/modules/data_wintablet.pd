@@ -1,0 +1,195 @@
+#N canvas 0 50 1004 673 10;
+#N canvas 172 83 586 377 LICENSE-GPL 0;
+#X text 57 88 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version.;
+#X text 58 168 This program is distributed in the hope that it will
+be useful \, but WITHOUT ANY WARRANTY \; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.;
+#X text 57 261 You should have received a copy of the GNU General Public
+License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X text 61 54 Copyright (C) 2009 \, Reality Jockey Ltd.;
+#X text 60 325 See the file LICENSE.txt for the full license text.
+;
+#X restore 298 15 pd LICENSE-GPL;
+#X obj 475 94 switch~;
+#X obj 29 260 stereo_inlet~ \$0;
+#X obj 29 306 stereo_outlet~ \$0;
+#X obj 182 389 data_inlet \$0;
+#X obj 165 430 data_outlet \$0;
+#X obj 358 375 wintablet/wintablet;
+#X obj 362 440 pack f f f f f;
+#X obj 354 473 list prepend wintablet;
+#X obj 388 513 list trim;
+#X obj 383 262 u_parameter \$0 ccx;
+#X obj 378 285 u_parameter \$0 ccy;
+#X obj 379 305 u_parameter \$0 ccz;
+#X floatatom 565 403 5 0 0 0 - - -, f 5;
+#X floatatom 508 416 5 0 0 0 - - -, f 5;
+#X obj 687 219 t f f;
+#X obj 720 244 & 1;
+#X obj 689 247 & 6;
+#X obj 657 283 +;
+#X floatatom 661 314 5 0 0 0 - - -, f 5;
+#X obj 655 249 * 8;
+#X obj 708 300 - 8;
+#X obj 708 322 / 2;
+#X msg 700 375 0;
+#X msg 734 374 1;
+#X msg 772 373 2;
+#X msg 807 371 3;
+#X obj 395 346 u_parameter \$0 stylet;
+#X obj 715 411 r \$0-stylet;
+#X obj 687 444 ==;
+#X obj 681 475 spigot;
+#X obj 681 497 spigot;
+#X obj 551 507 / 8;
+#X obj 581 507 / 8;
+#X obj 611 507 / 8;
+#X obj 550 534 pack f f f;
+#X obj 680 519 unpack f f f;
+#X obj 617 565 r \$0-ccx;
+#X obj 566 593 pack f f 1;
+#X obj 656 593 pack f f 1;
+#X obj 707 565 r \$0-ccy;
+#X obj 736 593 pack f f 1;
+#X obj 787 565 r \$0-ccz;
+#X obj 628 434 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 677 398 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 696 349 select 0 1 2 4 5;
+#X msg 837 371 4;
+#X obj 324 558 t b;
+#X msg 435 592 1;
+#X obj 655 637 s CTLIN;
+#X obj 575 627 t b l;
+#X msg 435 612 1;
+#X msg 435 632 1;
+#X obj 265 605 r \$0-testx;
+#X obj 265 625 r \$0-testy;
+#X obj 265 645 r \$0-testz;
+#X obj 433 136 u_parameter \$0 ccx_enable;
+#X obj 433 156 u_parameter \$0 ccy_enable;
+#X obj 433 176 u_parameter \$0 ccz_enable;
+#X obj 836 523 spigot;
+#X obj 871 497 r \$0-ccx_enable;
+#X obj 856 563 spigot;
+#X obj 891 537 r \$0-ccy_enable;
+#X obj 866 603 spigot;
+#X obj 901 577 r \$0-ccz_enable;
+#X obj 101 101 cnv 15 188 68 empty \$0-background data_wintablet 0
+7 0 14 -260818 -1 0;
+#X obj 100 140 bng 30 250 50 0 empty empty open_wintablet 17 7 0 10
+-262144 -1 -1;
+#X obj 100 125 hradio 15 1 0 5 \$0-stylet \$0-stylet-rcv stylet_mode
+0 -8 0 10 -262144 -1 -1 0;
+#X obj 220 102 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv PRESETS
+4 5 0 10 -232576 -232576 -1 0 1;
+#X obj 198 118 cnv 10 90 50 empty empty empty 20 12 0 14 -262138 -66577
+0;
+#X obj 275 117 tgl 15 0 \$0-ccout_enable \$0-ccout_enable-rcv CC_OUT
+-36 6 0 10 -262144 -1 -1 0 1;
+#X obj 229 119 bng 8 50 10 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 276 128 tgl 14 0 \$0-ccx_enable \$0-ccx_enable-rcv empty 0 6
+0 10 -203904 -1 -1 0 1;
+#X obj 200 128 bng 14 250 50 0 \$0-testx empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 200 142 bng 14 250 50 0 \$0-testy empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 200 156 bng 14 250 50 0 \$0-testz empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 276 142 tgl 14 0 \$0-ccy_enable \$0-ccy_enable-rcv empty 0 6
+0 10 -203904 -1 -1 1 1;
+#X obj 276 156 tgl 14 0 \$0-ccz_enable \$0-ccz_enable-rcv empty 0 6
+0 10 -203904 -1 -1 0 1;
+#X floatatom 214 128 5 0 127 1 ccx #0-ccx-rcv #0-ccx, f 5;
+#X floatatom 214 142 5 0 127 1 ccy #0-ccy-rcv #0-ccy, f 5;
+#X floatatom 214 156 5 0 127 1 ccz #0-ccz-rcv #0-ccz, f 5;
+#X obj 476 18 module_declare data_wintablet \$0;
+#X obj 381 240 module_loader data_wintablet \$0;
+#X connect 2 0 3 0;
+#X connect 2 1 3 1;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
+#X connect 6 0 32 0;
+#X connect 6 1 7 1;
+#X connect 6 1 33 0;
+#X connect 6 2 7 2;
+#X connect 6 2 34 0;
+#X connect 6 3 7 3;
+#X connect 6 3 14 0;
+#X connect 6 3 20 0;
+#X connect 6 4 7 4;
+#X connect 6 4 13 0;
+#X connect 6 4 15 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 5 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 56 0;
+#X connect 15 0 17 0;
+#X connect 15 1 16 0;
+#X connect 16 0 31 1;
+#X connect 17 0 18 1;
+#X connect 18 0 21 0;
+#X connect 20 0 18 0;
+#X connect 21 0 22 0;
+#X connect 22 0 19 0;
+#X connect 22 0 45 0;
+#X connect 23 0 29 0;
+#X connect 23 0 44 0;
+#X connect 24 0 29 0;
+#X connect 25 0 29 0;
+#X connect 26 0 29 0;
+#X connect 28 0 29 1;
+#X connect 29 0 30 1;
+#X connect 29 0 43 0;
+#X connect 30 0 31 0;
+#X connect 31 0 36 0;
+#X connect 32 0 35 0;
+#X connect 33 0 35 1;
+#X connect 34 0 35 2;
+#X connect 35 0 30 0;
+#X connect 36 0 59 0;
+#X connect 36 1 61 0;
+#X connect 36 2 63 0;
+#X connect 37 0 38 1;
+#X connect 38 0 50 0;
+#X connect 39 0 50 0;
+#X connect 40 0 39 1;
+#X connect 41 0 50 0;
+#X connect 42 0 41 1;
+#X connect 45 0 23 0;
+#X connect 45 1 24 0;
+#X connect 45 2 25 0;
+#X connect 45 3 26 0;
+#X connect 45 4 46 0;
+#X connect 46 0 29 0;
+#X connect 47 0 71 0;
+#X connect 48 0 38 0;
+#X connect 50 0 47 0;
+#X connect 50 1 49 0;
+#X connect 51 0 39 0;
+#X connect 52 0 41 0;
+#X connect 53 0 48 0;
+#X connect 54 0 51 0;
+#X connect 55 0 52 0;
+#X connect 56 0 57 0;
+#X connect 57 0 58 0;
+#X connect 58 0 27 0;
+#X connect 59 0 38 0;
+#X connect 60 0 59 1;
+#X connect 61 0 39 0;
+#X connect 62 0 61 1;
+#X connect 63 0 41 0;
+#X connect 64 0 63 1;
+#X connect 66 0 6 0;
+#X connect 81 0 1 0;
+#X connect 82 0 10 0;
+#X coords 0 -1 1 1 190 70 1 100 100;

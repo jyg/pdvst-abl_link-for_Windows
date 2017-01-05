@@ -1,0 +1,4 @@
+Preset1 dell 0 @ delr 2 @ del 1483.02 @ wet 0.783673 @ fb 0.993871
+@ bq 2 @ bpitch 92.2857 @;
+Preset2 dell 0 @ delr 2 @ del 276.458 @ wet 0.783673 @ fb 0.993871
+@ bq 2 @ bpitch 92.2857 @;
