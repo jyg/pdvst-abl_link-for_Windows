@@ -1,4 +1,4 @@
-v 0.6
+v 0.5.1
 -les messages hasFocus sont générés dans la fenêtre de rack (cf [pd hasFocus]) et non plus dans le module_declare de chaque module.
 -modification de module_loader et module_declare pour bien dissocier les fonctions. module_loader (vanilia) gère les numéros d'instance et les sauvegardes de présets, tandis que module_declare (iemguts/iemlib) gère le patchage "dynamique" sous forme de rack. 
 (A terme, chaque module ne contiendra que module_loader, avec des inlets et des outlets, pour pouvoir être patchable directement comme n'importe quel objet pd. Un embeddeur (pour l'instant, l'objet pending/_.pd) le raccordera à des stereo_inlet~/outlet~ et ajoutera l'objet module_declare pour gérer l'utilisation sous forme de rack.)
