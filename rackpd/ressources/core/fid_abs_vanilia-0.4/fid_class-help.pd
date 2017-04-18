@@ -1,0 +1,76 @@
+#N canvas 105 88 853 579 12;
+#X declare -lib iemmatrix;
+#X obj 342 352 cnv 15 350 60 empty empty class1 100 35 0 14 -233017
+-66577 0;
+#X obj 371 352 cnv 15 25 60 empty empty class3 2 35 0 14 -260097 -86277
+0;
+#X obj 529 353 cnv 15 15 60 empty empty class2 2 35 0 14 -4034 -66577
+0;
+#X text 22 162 à des classes différentes \, suivant les bornes spécifiées
+;
+#X text 21 145 Il est ainsi possible d'associer les indices fiduciaux
+;
+#X obj 38 108 cnv 15 370 30 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 44 110 fid_class <nom_de_classe> <indice_min> <indice_max>
+;
+#X text 27 186 L'intérêt est de pouvoir développer des fonctionnalités
+différentes suivant le type d'objet/classe considéré;
+#X text 227 368 -> -> -> -> ->;
+#X text 344 349 1 2 3 4 5 .............32 33 34 ...............50;
+#X obj 447 -1 about_fid_abs;
+#X obj 18 2 cnv 15 200 30 empty empty fid_class 5 12 0 20 -211601 -66577
+0;
+#X text 17 48 * Permet de définir une classe statique \, en fonction
+du;
+#X text 30 60 numéro de fiducial;
+#X text 19 87 * syntaxe :;
+#X obj 27 222 cnv 15 390 70 empty empty empty 2 35 0 14 -257985 -86277
+0;
+#X text 228 270 (par défaut \, [-1 -1]);
+#X obj 67 341 fid_class class2 33 33;
+#X obj 67 367 fid_class class3 3 4;
+#X obj 67 394 fid_class class1 1 50;
+#X obj 67 315 fid_preprocess;
+#X text 18 296 * exemple :;
+#N canvas 0 0 846 328 classes-dérivées 0;
+#X obj 43 93 fid_class class4 51 80;
+#X obj 43 220 fid_class class5 81 100;
+#X obj 43 26 inlet;
+#X obj 427 102 cnv 15 200 30 empty empty empty 2 35 0 14 -258113 -86277
+0;
+#X obj 427 130 cnv 15 150 30 empty empty empty 2 35 0 14 -4034 -66577
+0;
+#X text 427 79 51 52 ..........70 71.....80 81 .............100;
+#X obj 577 130 cnv 15 50 30 empty empty empty 2 35 0 14 -257985 -66577
+0;
+#X obj 628 102 cnv 15 150 30 empty empty empty 2 35 0 14 -159808 -66577
+0;
+#X text 494 103 class4;
+#X text 664 105 class5;
+#X obj 194 148 fid_class classA 51 70;
+#X obj 192 175 fid_class classB 71 80;
+#X text 440 136 classA;
+#X text 574 135 classB;
+#X connect 0 0 1 0;
+#X connect 0 1 10 0;
+#X connect 2 0 0 0;
+#X connect 10 0 11 0;
+#X restore 67 454 pd classes-dérivées;
+#X obj 70 422 cnv 15 180 30 empty empty empty 2 35 0 14 -257985 -86277
+0;
+#X obj 77 428 fid_class finger -1 -1;
+#X text 259 429 <-- classe pour la gestion des événements 'cursor'
+;
+#X text 27 224 NOUVEAU ! les événements de type cursor (blobs \, fingers
+\, etc...) peuvent être affectés à une classe en spécifiant des paramètres
+négatifs pour les indices de fid_class;
+#X text 751 522 15/11/2009;
+#X text 311 456 Pour les messages "cursor" \, fid_class compare la
+valeur du paramètre cursor_id. Toute valeur nulle ou positive est traitée
+comme s'il s'agissait de la valeur -1;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 24 0;
+#X connect 20 0 17 0;
+#X connect 24 0 22 0;

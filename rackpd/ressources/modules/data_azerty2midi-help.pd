@@ -1,4 +1,4 @@
-#N canvas 713 50 613 297 10;
+#N canvas 414 84 729 297 10;
 #X declare -path ../core;
 #X declare -path ../rj;
 #X obj 466 38 declare -path ../core;

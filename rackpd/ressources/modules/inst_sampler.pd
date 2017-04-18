@@ -15,7 +15,6 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X text 60 325 See the file LICENSE.txt for the full license text.
 ;
 #X restore 298 15 pd LICENSE-GPL;
-#X obj 343 161 switch~;
 #X obj 577 18 r \$0-rec;
 #X obj 162 448 s \$0-rec;
 #X obj 578 68 s \$0-rec-rcv;
@@ -24,8 +23,6 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 157 401 midi-colors \$0 rec \$0-rec-rcv;
 #X obj 574 118 r \$0-duree;
 #X obj 497 51 select 0;
-#X obj 173 221 data_inlet \$0;
-#X obj 179 362 data_outlet \$0;
 #X msg 205 319 filesource \$2 \$1;
 #X obj 544 175 s \$0-samplename;
 #X msg 549 95 label recording...;
@@ -53,33 +50,11 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 165 267 route note;
 #X msg 531 399 set \$1;
 #X obj 516 424 s \$0-index-rcv;
-#X obj 29 260 stereo_inlet~ \$0;
-#X obj 28 377 stereo_outlet~ \$0;
 #X obj 45 216 pack f f;
 #X obj 52 187 spigot;
-#X obj 418 210 module_loader inst_sampler \$0;
 #X obj 192 194 r \$0-midiNoteIn;
 #X obj 419 238 u_parameter \$0 midiNoteIn;
 #N canvas 0 50 675 305 gestion 0;
-#X obj 177 151 cnv 15 80 84 empty empty empty 20 12 0 14 -262130 -66577
-0;
-#X obj 234 169 bng 15 250 50 0 \$0-next_file \$0-next_file-rcv > 5
-7 0 10 -262144 -1 -1;
-#X obj 180 169 bng 15 250 50 0 \$0-prev_file \$0-prev_file-rcv < 5
-7 0 10 -262144 -1 -1;
-#X floatatom 196 170 5 0 0 0 - #0-index-rcv #0-index, f 5;
-#X obj 180 189 bng 15 250 50 0 \$0-append empty append 17 7 0 10 -262144
--1 -1;
-#X obj 180 219 bng 15 250 50 0 \$0-reset empty delete 17 7 0 10 -262144
--1 -1;
-#X obj 180 204 bng 15 250 50 0 \$0-update empty update 17 7 0 10 -262144
--1 -1;
-#X obj 26 221 cnv 15 150 15 empty empty empty 20 12 0 14 -262130 -66577
-0;
-#X floatatom 104 221 10 0 127 0 start_note #0-start_note-rcv #0-start_note
-, f 10;
-#X symbolatom 132 221 6 0 0 0 - #0-start_note_display-rcv -, f 6;
-#X text 176 150 liste sampl;
 #X msg 336 119 append;
 #X obj 342 93 delay 1;
 #X obj 327 57 r \$0-append;
@@ -88,13 +63,13 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 283 149 s \$0-subset;
 #X obj 520 46 r \$0-update;
 #X msg 523 88 update;
-#X connect 11 0 16 0;
-#X connect 12 0 11 0;
-#X connect 13 0 12 0;
-#X connect 14 0 15 0;
-#X connect 15 0 16 0;
-#X connect 17 0 18 0;
-#X connect 18 0 16 0;
+#X connect 0 0 5 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
+#X connect 7 0 5 0;
 #X restore 492 487 pd gestion subset;
 #X text 666 465 au rappel d'un élément du subset \, ne changer que
 les autres parameters;
@@ -104,8 +79,8 @@ tous les samples dans des samplebank (à réception de lfilename);
 #X text 654 421 voir si la création dynamique d'une table ne fait
 pas du glitch;
 #X obj 101 101 cnv 15 188 68 empty \$0-background inst_sampler 0 7
-0 14 -260818 -1 0;
-#X obj 187 131 tgl 25 0 \$0-rec \$0-rec-rcv REC 2 7 0 10 -262144 -1
+0 14 -262144 -1 0;
+#X obj 190 110 tgl 25 0 \$0-rec \$0-rec-rcv REC 2 7 0 10 -262144 -1
 -1 0 56;
 #X obj 156 139 bng 15 250 50 0 \$0-next_file \$0-next_file-rcv > 5
 7 0 10 -262144 -1 -1;
@@ -115,62 +90,112 @@ pas du glitch;
 -1 -1;
 #X floatatom 118 140 5 0 0 0 - #0-index-rcv #0-index, f 5;
 #X obj 220 102 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv Atelier
-2 5 0 10 -232576 -232576 -1 800 1;
+2 5 0 10 -232576 -232576 -1 0 1;
 #X obj 214 115 ui_vs \$0 f.freq 0 1;
 #X obj 252 115 ui_vs \$0 f.Q 0 1;
-#X obj 101 157 cnv 12 1 1 empty \$0-samplename Concret1.wav 2 6 0 10
--262144 -66577 0;
+#X obj 101 156 cnv 12 1 1 empty \$0-samplename FourmiVerset2.wav 2
+6 0 10 -262144 -66577 0;
 #X obj 32 163 notein 1;
-#X obj 197 114 tgl 15 0 \$0-midiNoteIn \$0-midiNoteIn-rcv midiNoteIn
+#X obj 174 114 tgl 15 0 \$0-midiNoteIn \$0-midiNoteIn-rcv midiNoteIn
 -50 7 0 10 -262144 -1 -1 0 1;
-#X obj 341 90 module_declare inst_sampler \$0;
 #X obj 764 200 s \$0-prev_file;
 #X obj 764 330 s \$0-next_file;
-#X connect 2 0 5 0;
-#X connect 2 0 9 0;
-#X connect 5 0 4 0;
-#X connect 6 0 3 0;
-#X connect 7 0 6 0;
-#X connect 8 0 15 0;
-#X connect 9 1 14 0;
-#X connect 10 0 11 0;
-#X connect 10 0 36 0;
-#X connect 12 0 11 0;
-#X connect 14 0 13 0;
-#X connect 15 0 13 0;
-#X connect 16 0 17 0;
-#X connect 17 0 30 0;
-#X connect 18 0 21 0;
+#X obj 407 443 u_subset \$0 offset;
+#X obj 407 466 u_subset \$0 sustain;
+#X obj 406 516 u_subset \$0 reverse;
+#N canvas 139 118 369 300 \$0-advanced 0;
+#X obj 247 81 cnv 15 80 84 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X obj 304 99 bng 15 250 50 0 \$0-next_file \$0-next_file-rcv > 5 7
+0 10 -262144 -1 -1;
+#X obj 250 99 bng 15 250 50 0 \$0-prev_file \$0-prev_file-rcv < 5 7
+0 10 -262144 -1 -1;
+#X floatatom 266 100 5 0 0 0 - #0-index-rcv #0-index, f 5;
+#X obj 250 119 bng 15 250 50 0 \$0-append empty append 17 7 0 10 -262144
+-1 -1;
+#X obj 250 149 bng 15 250 50 0 \$0-reset empty delete 17 7 0 10 -262144
+-1 -1;
+#X obj 250 134 bng 15 250 50 0 \$0-update empty update 17 7 0 10 -262144
+-1 -1;
+#X obj 96 151 cnv 15 150 15 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X floatatom 174 151 10 0 127 0 start_note #0-start_note-rcv #0-start_note
+, f 10;
+#X symbolatom 202 151 6 0 0 0 - #0-start_note_display-rcv -, f 6;
+#X text 246 80 liste sampl;
+#X obj 109 63 bng 20 250 50 0 empty empty add_sample... 2 7 0 10 -262144
+-1 -1;
+#X obj 163 83 ui_vs \$0 offset 0 1;
+#X obj 110 120 tgl 15 0 \$0-loop \$0-loop-rcv LOOP 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 101 139 cnv 12 1 1 empty \$0-samplename FourmiVerset2.wav 2
+6 0 10 -262144 -66577 0;
+#X obj 205 83 ui_vsl \$0 sustain 0.004 1;
+#X restore 235 508 pd \$0-advanced;
+#X obj 406 538 u_parameter_subset \$0 loop;
+#X obj 180 134 bng 30 250 50 0 empty empty Edit 2 15 0 10 -257985 -1
+-1;
+#X msg 76 487 vis 1;
+#X obj 73 525 s pd-\$0-advanced;
+#X obj 124 129 tgl 15 0 \$0-loop \$0-loop-rcv LOOP 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 29 260 inlet~;
+#X obj 106 251 inlet~;
+#X obj 28 377 outlet~;
+#X obj 100 360 outlet~;
+#X obj 173 221 inlet data;
+#X obj 179 362 outlet data;
+#X obj 418 210 module_loader inst_sampler \$0 \$1;
+#X connect 1 0 4 0;
+#X connect 1 0 8 0;
+#X connect 4 0 3 0;
+#X connect 5 0 2 0;
+#X connect 6 0 5 0;
+#X connect 7 0 12 0;
+#X connect 8 1 11 0;
+#X connect 9 0 73 0;
+#X connect 11 0 10 0;
+#X connect 12 0 10 0;
+#X connect 13 0 14 0;
+#X connect 14 0 27 0;
+#X connect 15 0 18 0;
+#X connect 17 0 16 0;
+#X connect 18 0 17 0;
+#X connect 19 0 25 0;
 #X connect 20 0 19 0;
-#X connect 21 0 20 0;
-#X connect 22 0 28 0;
-#X connect 23 0 22 0;
-#X connect 24 0 29 0;
-#X connect 25 0 24 0;
-#X connect 26 0 23 0;
-#X connect 27 0 25 0;
-#X connect 28 0 64 0;
-#X connect 29 0 65 0;
-#X connect 30 1 37 0;
-#X connect 31 0 40 0;
-#X connect 31 1 40 1;
-#X connect 31 2 12 0;
-#X connect 32 0 33 0;
-#X connect 33 0 34 0;
-#X connect 35 0 16 0;
-#X connect 36 0 31 2;
-#X connect 37 0 38 0;
-#X connect 39 0 31 0;
-#X connect 39 0 40 0;
-#X connect 39 1 31 1;
-#X connect 39 1 40 1;
-#X connect 41 0 31 2;
-#X connect 42 0 41 0;
-#X connect 43 0 45 0;
-#X connect 44 0 42 1;
-#X connect 45 0 35 0;
-#X connect 55 0 31 3;
-#X connect 61 0 42 0;
-#X connect 61 1 41 1;
-#X connect 63 0 1 0;
+#X connect 21 0 26 0;
+#X connect 22 0 21 0;
+#X connect 23 0 20 0;
+#X connect 24 0 22 0;
+#X connect 25 0 57 0;
+#X connect 26 0 58 0;
+#X connect 27 0 59 0;
+#X connect 27 1 34 0;
+#X connect 28 0 70 0;
+#X connect 28 1 71 0;
+#X connect 28 2 9 0;
+#X connect 29 0 30 0;
+#X connect 30 0 31 0;
+#X connect 32 0 13 0;
+#X connect 33 0 28 2;
+#X connect 34 0 35 0;
+#X connect 36 0 28 2;
+#X connect 37 0 36 0;
+#X connect 38 0 37 1;
+#X connect 39 0 32 0;
+#X connect 49 0 28 3;
+#X connect 55 0 37 0;
+#X connect 55 1 36 1;
+#X connect 59 0 60 0;
+#X connect 60 0 61 0;
+#X connect 61 0 63 0;
+#X connect 64 0 65 0;
+#X connect 65 0 66 0;
+#X connect 68 0 28 0;
+#X connect 68 0 70 0;
+#X connect 69 0 71 0;
+#X connect 69 0 28 1;
+#X connect 72 0 33 0;
+#X connect 72 0 73 0;
+#X connect 74 0 39 0;
 #X coords 0 -1 1 1 190 70 1 100 100;

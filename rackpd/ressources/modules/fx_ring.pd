@@ -16,7 +16,6 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 ;
 #X restore 298 15 pd LICENSE-GPL;
 #X text 35 69 ui_hsl \$0 name min max;
-#X obj 425 183 switch~;
 #X obj 347 374 u_dispatch \$0 wet;
 #X text 51 17 ring modulator abstraction;
 #N canvas 0 50 590 548 ring~ 0;
@@ -48,21 +47,24 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X connect 11 0 8 2;
 #X restore 30 284 pd ring~;
 #X obj 347 352 u_dispatch \$0 freq;
-#X obj 425 115 module_declare fx_ring \$0;
-#X obj 346 310 module_loader fx_ring \$0;
-#X obj 29 306 stereo_outlet~ \$0;
-#X obj 29 260 stereo_inlet~ \$0;
 #X obj 101 101 cnv 15 188 68 empty \$0-background fx_ring 0 7 0 14
 -262144 -1 0;
 #X obj 139 115 ui_vs \$0 wet 0 1;
 #X obj 101 115 ui_vsl \$0 freq 0.1 3000;
 #X obj 220 102 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv PRESETS
 2 5 0 10 -232576 -232576 -1 0 1;
-#X connect 5 0 9 0;
-#X connect 5 1 9 1;
-#X connect 6 0 3 0;
-#X connect 7 0 2 0;
-#X connect 8 0 6 0;
+#X obj 346 310 module_loader fx_ring \$0 \$1;
+#X obj 29 260 inlet~;
+#X obj 125 262 inlet~;
+#X obj 93 317 outlet~;
+#X obj 29 306 outlet~;
+#X obj 195 271 inlet data;
+#X obj 195 293 outlet data;
+#X connect 4 0 14 0;
+#X connect 4 1 13 0;
+#X connect 5 0 2 0;
 #X connect 10 0 5 0;
-#X connect 10 1 5 1;
+#X connect 11 0 4 0;
+#X connect 12 0 4 1;
+#X connect 15 0 16 0;
 #X coords 0 -1 1 1 190 70 1 100 100;

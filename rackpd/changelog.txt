@@ -1,12 +1,27 @@
+v 0.5.3
+- Réécriture des modules pour pouvoir les utiliser en autonome (statique) ou en mode rack.
+- nettoyage des modules existants
+- nouveaux modules
+	- inst_modular, permettant de charger dynamiquement un patch modulaire AUTOMATONISM_1.1, et de gérer l'interface entre signaux CV et messages midi ctl, dans les deux sens.
+	- note_16steps, mini séquenceur inspiré de celui fourni par AUTOMATONISM
+	- note_randomize, générateur d'accents aléatoires sur un flux de notes midi
+
+v 0.5.2
+
+-Gestion de la session video sous forme de subprocess pd~
+
 v 0.5.1
 -les messages hasFocus sont générés dans la fenêtre de rack (cf [pd hasFocus]) et non plus dans le module_declare de chaque module.
 -modification de module_loader et module_declare pour bien dissocier les fonctions. module_loader (vanilia) gère les numéros d'instance et les sauvegardes de présets, tandis que module_declare (iemguts/iemlib) gère le patchage "dynamique" sous forme de rack. 
 (A terme, chaque module ne contiendra que module_loader, avec des inlets et des outlets, pour pouvoir être patchable directement comme n'importe quel objet pd. Un embeddeur (pour l'instant, l'objet pending/_.pd) le raccordera à des stereo_inlet~/outlet~ et ajoutera l'objet module_declare pour gérer l'utilisation sous forme de rack.)
 -suppression de l'objet fx_vst (aka vst~) qui fait disparaitre les périphériques dans le menu media/asio, va savoir pourquoi.
--bugfix sur la gestion de abl_link~ dans le métronome global.
+-amélioration de la gestion de abl_link~ (mode reprise) dans le métronome global.
+-abstraction core/morphing (idée à développer pour permettre le morphing de plusieurs parametres à partir d'un seul curseur général) 
+-Ajout de modules : inst_bassdrum, inst_headrush
 
 TO DO
 	pouvoir définir le type de mesure dans le métronome.
+	messages setFocus redondants - trouver l'erreur
 
 
 v 0.5

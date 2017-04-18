@@ -1,13 +1,17 @@
-#N canvas 135 150 840 192 10;
+#N canvas 135 150 840 341 10;
 #X declare -path ../core;
 #X declare -path ../rj;
-#X obj 346 46 declare -path ../core;
-#X obj 346 76 declare -path ../rj;
-#X obj 509 131 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
-#X text 531 129 Instances multiples possibles;
-#X obj 51 29 audio_in;
-#X text 20 147 Pour se connecter à une entrée audio physique ou à
+#X obj 346 65 declare -path ../core;
+#X obj 346 95 declare -path ../rj;
+#X obj 509 150 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X text 531 148 Instances multiples possibles;
+#X obj 50 54 audio_in;
+#X text 20 166 Pour se connecter à une entrée audio physique ou à
 un bus;
-#X obj 509 151 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
-#X text 531 149 PureData Vanilia;
-#X coords 0 192 1 191 190 70 0;
+#X obj 509 170 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X text 531 168 PureData Vanilia;
+#X obj 24 192 bng 18 250 50 0 empty empty SetModule-> 0 10 0 10 -261682
+-1 -1;
+#X text 18 212 permet de choisir comme entrée audio la sortie d'un
+autre module;
+#X coords 0 341 1 340 190 70 0;

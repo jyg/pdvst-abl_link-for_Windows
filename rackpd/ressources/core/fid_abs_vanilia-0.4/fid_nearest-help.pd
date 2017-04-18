@@ -1,0 +1,102 @@
+#N canvas 631 28 748 657 12;
+#X obj -4 261 cnv 15 530 230 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X obj 15 105 TuioClient;
+#X floatatom 154 439 5 0 0 0 class1_id - -, f 5;
+#X floatatom 237 466 5 0 0 0 class2_id - -, f 5;
+#X floatatom 72 411 5 0 0 0 Distance - -, f 5;
+#X text 16 504 fid_nearest <class1> <class2>;
+#X text 2 61 FID_NEAREST : trouver le voisin le plus proche;
+#X text 71 532 1er inlet : sid de la classe 1;
+#X text 74 553 2eme inlet : sid de la classe 2;
+#X obj 62 337 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144 -1
+-1;
+#X obj 18 293 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144 -1
+-1;
+#X obj 112 294 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144
+-1 -1;
+#X text 248 313 <- obtenir la liste de tous;
+#X text 283 353 (ici : rien ou objet 1);
+#X text 74 586 1er outlet : valeur de la distance;
+#X text 72 611 2ème outlet : sid de l'objet 'élu' de <class1>;
+#X text 71 633 3ème outlet : sid de l'objet 'élu' de <class2>;
+#X obj 14 177 fid_class green 1 1;
+#X obj -3 269 r green.update;
+#X obj 111 268 r yellow.update;
+#X obj 72 384 fid_nearest green yellow;
+#X text 299 333 les objets 'green';
+#X obj 75 314 fid_get_instances green;
+#X obj 412 11 about_fid_abs;
+#X obj 11 208 fid_class yellow 2 8;
+#X floatatom 170 291 5 0 0 0 - - -, f 5;
+#X obj 134 290 fid;
+#X floatatom 84 361 5 0 0 0 - - -, f 5;
+#X obj 84 337 fid;
+#X obj 218 91 fid_table;
+#X obj 154 409 fid;
+#X obj 237 418 fid;
+#X text 25 571 LES DEUX ENTREES SONT DES ENTREES CHAUDES (ACTIVES)
+;
+#N canvas 0 50 1024 692 retour_visuel 0;
+#X obj 57 38 inlet;
+#X obj 97 358 f;
+#X msg 172 344 \$1 color 13 -1;
+#X msg 105 408 \$1 color -1.6777e+007 -1;
+#X text 288 343 couleur rouge;
+#X text 289 406 couleur jaune;
+#X obj 78 297 t f f b;
+#X text 185 316 l'heureux élu;
+#X text 214 381 le déchu;
+#X text 225 276 CHANGER LA COULEUR;
+#X text 148 447 (les messages sont envoyés à l'abstraction "fid_table")
+;
+#X obj 177 68 r yellow.remove;
+#X text 165 33 lorsqu'un élément 'yellow' sort du champ \, le repeindre
+en jaune;
+#X text 214 112 lorsque l'élément 'green' sort du champ \, repeindre
+;
+#X text 224 134 tous les objets 'yellow' en jaune.;
+#X obj 234 158 r green.remove;
+#X obj 235 181 fid_get_instances yellow;
+#X obj 78 264 fid;
+#X obj 234 206 fid;
+#X obj 177 91 fid;
+#X obj 104 468 outlet to_fid_table;
+#X connect 0 0 17 0;
+#X connect 1 0 3 0;
+#X connect 2 0 20 0;
+#X connect 3 0 20 0;
+#X connect 6 0 1 1;
+#X connect 6 1 2 0;
+#X connect 6 2 1 0;
+#X connect 11 0 19 0;
+#X connect 15 0 16 0;
+#X connect 16 0 18 0;
+#X connect 17 0 6 0;
+#X connect 18 0 3 0;
+#X connect 19 0 3 0;
+#X restore 310 420 pd retour_visuel;
+#X obj 5 18 cnv 15 200 30 empty empty fid_nearest 5 12 0 20 -211601
+-66577 0;
+#X obj 15 146 fid_preprocess;
+#X connect 1 0 35 0;
+#X connect 17 0 24 0;
+#X connect 18 0 10 0;
+#X connect 18 0 20 0;
+#X connect 19 0 11 0;
+#X connect 19 0 22 0;
+#X connect 19 0 26 0;
+#X connect 20 0 4 0;
+#X connect 20 1 30 0;
+#X connect 20 2 31 0;
+#X connect 20 2 33 0;
+#X connect 22 0 20 0;
+#X connect 22 0 28 0;
+#X connect 22 0 9 0;
+#X connect 26 0 25 0;
+#X connect 28 0 27 0;
+#X connect 29 0 35 0;
+#X connect 30 0 2 0;
+#X connect 31 0 3 0;
+#X connect 33 0 29 0;
+#X connect 35 0 17 0;

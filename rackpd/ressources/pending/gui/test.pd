@@ -1,0 +1,12 @@
+#N canvas 0 50 439 248 10;
+#X obj 0 0 inlet;
+#X obj 0 20 ui_vs_listener 48 14 bpitch 50 120;
+#X obj 0 40 ui_vs_listener 152 14 wet 0 1;
+#X obj 0 60 ui_vs_listener 114 14 fb 0 1;
+#X obj 0 80 ui_vs_listener 10 14 del 100 3000;
+#X obj 0 100 tgl_listener 63 0 15 0;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;

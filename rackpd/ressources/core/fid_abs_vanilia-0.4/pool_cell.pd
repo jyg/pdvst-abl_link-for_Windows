@@ -1,0 +1,4 @@
+#N canvas 0 50 450 300 10;
+#X obj 44 122 text define \$1-pool;
+#X obj 66 36 inlet;
+#X connect 1 0 0 0;

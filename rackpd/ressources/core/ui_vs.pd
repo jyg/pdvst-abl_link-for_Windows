@@ -27,8 +27,8 @@
 #X msg 626 248 0;
 #X obj 359 515 cnv 15 15 15 \$0-cnv-pos \$0-cnv-pos-rcv empty 20 12
 0 14 -233017 -66577 0;
-#X obj 100 102 vsl 38 50 0 127 0 0 \$0-snd \$0-rcv gain 0 20 0 10 -166441
--1 -1 0 1;
+#X obj 100 102 vsl 38 50 0 127 0 0 \$0-snd \$0-rcv empty 0 20 0 10
+-166441 -1 -1 0 1;
 #X obj 361 565 unpack f f;
 #X floatatom 342 590 5 0 0 0 - - -, f 5;
 #X floatatom 433 597 5 0 0 0 - - -, f 5;
@@ -36,7 +36,7 @@
 #X obj 373 481 s \$0-cnv-pos-rcv;
 #X obj 273 473 r \$0-cnv-pos;
 #X msg 553 492 pos 0 0;
-#X obj 100 130 cnv 1 1 1 empty \$0-cnv =88.89 0 12 0 10 -233017 -66577
+#X obj 100 130 cnv 1 1 1 empty \$0-cnv empty 0 12 0 10 -233017 -66577
 0;
 #X obj 627 127 midi-colors \$1 \$2 \$0-rcv \$3 \$4 lin;
 #N canvas 0 50 450 300 speed_lim 0;

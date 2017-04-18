@@ -6,6 +6,7 @@
 #X obj 269 176 data_outlet \$0;
 #X obj 389 173 module_declare \$1 \$0;
 #X obj 100 100 ../pending/\$1 \$0;
+#X text 301 122 version cablée de fx_chorus;
 #X connect 1 0 6 0;
 #X connect 1 1 6 1;
 #X connect 3 0 6 2;

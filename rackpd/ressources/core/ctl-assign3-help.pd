@@ -1,0 +1,15 @@
+#N canvas 0 50 1366 715 12;
+#X text 204 89 syntaxe : [ ctl-assign3 <id> ];
+#X text 272 252 fonctionne conjointement avec [pd midi-learn];
+#X obj 254 138 ctl-assign3;
+#X text 236 333 chargement d'une scène;
+#X text 280 361 les items ctl-assign sont recopiés les uns à la suite
+des autres dans l'objet text define midi-mapping;
+#X text 284 415 puis \, itérativement \, chaque ligne est transmise
+à un objet ctl-assign3 par le bias du canal ctl-assign3-<id>;
+#X text 889 413 ctl-assign fx_dubdel2-1 bpitch 30 50 120 lin;
+#X text 877 363 exemple d'item ctl-assign stocké dans la structure
+de sauvegarde rjdj :;
+#X text 281 523 l'objet ctl-assign3 invoqué met à jour les champs
+de son interface avec les valeurs reçues;
+#X coords 0 715 1 714 720 20 0;

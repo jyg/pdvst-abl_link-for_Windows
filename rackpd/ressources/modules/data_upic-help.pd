@@ -1,7 +1,7 @@
 #N canvas 399 87 864 545 10;
 #X declare -path ../core;
 #X declare -path ../rj;
-#X obj 436 76 declare -path ../core;
+#X obj 436 16 declare -path ../core;
 #X text 45 309 EXPERIMENTAL ALPHA;
 #X obj 26 309 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
 #X obj 25 372 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
@@ -9,29 +9,37 @@
 #X obj 25 396 tgl 15 0 empty empty ? 4 8 0 12 -260097 -260097 -1 0
 1;
 #X obj 26 339 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
-#X obj 436 106 declare -path ../rj;
+#X obj 436 46 declare -path ../rj;
 #X obj 32 86 data_upic;
 #X text 49 371 Instances multiples;
 #X text 48 339 Une seule instance;
-#X text 168 230 en connexion avec le process video 'robosonic';
-#X text 162 260 machine UPIC;
+#X text 27 16 machine UPIC;
 #X text 260 309 quarters : durée totale du cycle en nombre de noires
 ;
-#X text 224 281 MODE SYNC ON;
-#X text 266 146 OFFSET : décalage vers l'avant en nombre de ticks
-(0-24);
-#X text 270 166 MARGINS : marge de sécurité autour du contour défini
+#X text 309 286 MODE SYNC ON;
+#X text 276 76 OFFSET : décalage vers l'avant en nombre de ticks (0-24)
+;
+#X text 280 96 MARGINS : marge de sécurité autour du contour défini
 ;
 #X text 406 338 débit ( noire/ croche/ triolet croche/double croche)
 ;
 #X text 255 339 1/4 1/8 1/12 1/16;
-#X text 276 180 TRANSPOSE : numéro de la note centrale (de 24 à 103)
-Pour l'instant upic a une amplitude de 4 octaves (non réglable) cenitrée
-sur cette note;
-#X obj 333 488 bng 15 250 50 0 \$0-get_calibration_points empty cal.
-2 -5 0 8 -257985 -1 -1;
-#X text 275 453 Nécessite éventuellement en amont un module data_feuilleA4
-\, sinon possibilité de calibrer en fixe en cliquenat sur le bouton
-;
 #X text 275 409 renvoie les notes en sortie;
+#X obj 257 165 bng 15 250 50 0 empty empty ! 4 9 0 12 -262130 -1 -258113
+;
+#X text 289 161 midi panic (all notes off);
+#X obj 257 189 tgl 15 0 \$0-flip \$0-flip-rcv FLIP 0 7 0 10 -262144
+-1 -1 0 1;
+#X obj 486 481 bng 15 250 50 0 \$0-get_calibration_points empty CAL
+0 8 0 8 -257985 -1 -1;
+#X text 286 110 TRANSPOSE : numéro de la note basse (de 0 à 79) Pour
+l'instant upic a une amplitude de 4 octaves (non réglable);
+#X text 295 190 (pour inverser le sens de lecture suivant axe y);
+#X text 27 35 en connexion avec le process video 'videoSession.pd'
+;
+#X obj 262 287 tgl 15 0 \$0-sync \$0-sync-rcv Sync 7 7 0 10 -4032 -1
+-1 0 1;
+#X text 275 453 Nécessite éventuellement en amont un module data_feuilleA4
+\, sinon possibilité de calibrer avec la souris dans la fenêtre GEM
+en cliquant sur le bouton;
 #X coords 0 545 1 544 190 70 0;

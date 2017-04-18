@@ -1,0 +1,10 @@
+#N canvas 0 50 542 520 10;
+#X text 35 69 ui_tgl \$0 name <color_back> <color_front> <color_text>
+;
+#X obj 226 156 ui_tgl \$0 REC 1 13 -1;
+#X text 198 117 ui_tgl \$0 REC 1 13 -1;
+#X obj 294 231 r \$0-REC;
+#X obj 296 264 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X connect 3 0 4 0;
+#X coords 0 520 1 519 135 18 0;

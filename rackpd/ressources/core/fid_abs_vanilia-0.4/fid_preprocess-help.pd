@@ -1,0 +1,79 @@
+#N canvas 0 0 994 675 12;
+#X declare -lib iemmatrix;
+#X declare -lib iemmatrix;
+#X declare -lib iemmatrix;
+#X declare -lib iemmatrix;
+#X declare -lib iemmatrix;
+#X declare -lib iemmatrix;
+#X declare -lib iemmatrix;
+#X declare -lib iemmatrix;
+#X declare -lib iemmatrix;
+#X obj 64 257 print;
+#X obj 18 60 cnv 15 400 50 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X obj 17 -13 cnv 15 200 30 empty empty fid_preprocess 5 12 0 20 -211601
+-66577 0;
+#X obj 23 177 cnv 15 200 40 empty empty empty 20 12 0 14 -260889 -66577
+0;
+#X text 166 121 <- cliquer ici pour voir quoi connecter;
+#X obj 64 124 tuio_clients;
+#X obj 464 2 about_fid_abs;
+#X text 17 22 Contient les structures de stockage nécessaires à l'environnement
+fid_abs.;
+#X text 16 65 fid_preprocess est à placer immédiatement après le client
+(TuioClient \, gem_mouse_gui \, fid_table(3) \, ou fid_tracker);
+#X text 740 446 <=>;
+#X text 753 469 <=>;
+#X text 739 413 <=>;
+#X text 989 410 etc....;
+#X text 585 387 exemples :;
+#X text 260 252 * Avec argument de création : format de la fenêtre
+GEM;
+#X obj 64 187 fid_preprocess;
+#X text 255 169 * fid_preprocess extrait les informations contenues
+dans les messages issus de TuioClient et les copie dans des structures
+de données \, auxquelles il est ensuite possible d'accéder avec les
+objets fid_get et fid_set;
+#X text 276 355 a) conversion statique;
+#X text 298 275 Permet de convertir les coordonnées canoniques vers
+le système de coordonnées utilisés par GEM \, en fonction de la taille
+de la fenêtre GEM;
+#X obj 574 441 fid_preprocess GEM=4:3;
+#X obj 574 468 fid_preprocess GEM=16:10;
+#X obj 573 413 fid_preprocess GEM=1:1;
+#X obj 772 442 fid_preprocess GEM=1024:768;
+#X obj 786 468 fid_preprocess GEM=1200:800;
+#X obj 772 414 fid_preprocess GEM=500:500;
+#X text 298 379 les dimensions de la fenêtre sont;
+#X text 298 395 spécifiées une fois pour toutes;
+#X text 277 509 fid_preprocess utilise l'external wmangle (http://grrrr.org/ext/beta/)
+pour prendre en compte les redimensionnements de la fenêtre GEM avec
+la souris.;
+#N canvas 0 0 831 246 beta-experimental-obsolete 0;
+#X text 43 38 en fonction de la position de la camera \, du format
+d'écran et des paramètres de la projection perspective;
+#X obj 463 155 gemwin;
+#X obj 490 130 t a a;
+#X obj 521 153 s synchro;
+#X obj 624 40 r synchro;
+#X msg 490 108 dimen 320 240 \, create \, 1;
+#X msg 677 109 view 0 0 3;
+#X text 25 90 Les effets de zoom et de rotation de la caméra deviennent
+possibles \, à condition de renvoyer vers fid_preprocess tous les messages
+envoyés à gemwin (voir ci-contre -----> );
+#X obj 468 63 fid_preprocess GEM=auto;
+#X text 23 18 b) conversion / mapping dynamique automatique (NOUVEAU
+!);
+#N canvas 0 0 531 147 TODO 0;
+#X text 50 69 -Gestion des suppression d'instances avec liens dynamiques
+;
+#X text 33 46 TODO :;
+#X restore 52 195 pd TODO LIST;
+#X connect 2 0 1 0;
+#X connect 2 1 3 0;
+#X connect 4 0 8 1;
+#X connect 5 0 2 0;
+#X connect 6 0 2 0;
+#X restore 773 614 pd beta-experimental-obsolete;
+#X connect 5 0 15 0;
+#X connect 15 0 0 0;

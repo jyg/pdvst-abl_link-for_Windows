@@ -25,7 +25,7 @@
 #X text 281 205 Pour le moment \, les points de départ de lecture
 (offset) et de durée (sustain) de lecture sont définis par des ctlin
 ;
-#X text 283 297 la vitesse est définie par le numéro de note joué
+#X text 283 293 la vitesse est définie par le numéro de note joué
 au clavier;
 #X text 483 410 utilisable avec contrôleur midi (notein en data_inlet
 ou en omni \, ctlin;
@@ -33,7 +33,7 @@ ou en omni \, ctlin;
 (à terminer);
 #X obj 365 362 ctlin 113 1;
 #X text 351 345 reverse mode;
-#X text 289 323 le mode ecture à l'envers également défini par ctlin
+#X text 279 332 le mode ecture à l'envers également défini par ctlin
 ;
 #X text 35 458 cf inst_turntable pour les fonctions d'édition et de
 modification du subset;
@@ -41,4 +41,7 @@ modification du subset;
 #X text 278 175 possibilité d'enregistrer à la volée (bouton REC)
 ;
 #X text 280 152 mode omni pour midi note (cocher case midiNoteIn);
+#X text 282 312 La note 60 correspond à la lecture du sample à vitesse
+normale, f 63;
+#X text 281 393 polyphonie de 16;
 #X coords 0 552 1 551 190 70 0;

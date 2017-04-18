@@ -176,15 +176,15 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X restore 298 15 pd LICENSE-GPL;
 #X text 51 17 embedded rjdj e_chorus abstraction;
 #X text 35 69 ui_hsl \$0 name min max;
-#X obj 543 378 u_parameter \$0 bypass;
+#X obj 537 378 u_parameter \$0 bypass;
 #X obj 404 437 midi-colors \$0 bypass \$0-bypass-rcv;
 #X obj 342 527 s \$0-bypass;
 #X obj 404 464 < 1;
 #X obj 101 101 cnv 15 188 68 empty \$0-background fx_chorus 0 7 0 14
--262144 -1 0;
+-260818 -1 0;
 #X obj 138 115 ui_vsl \$0 freq 0.05 10;
 #X obj 100 115 ui_vs \$0 mod 0 2;
-#X obj 220 102 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv PRESETS
+#X obj 220 102 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv Preset4
 2 5 0 10 -232576 -232576 -1 0 1;
 #X obj 182 130 tgl 40 1 \$0-bypass \$0-bypass-rcv BYPASS 17 7 0 10
 -262144 -1 -1 0 1;
@@ -194,9 +194,10 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 102 340 outlet~;
 #X obj 192 344 outlet data;
 #X obj 196 264 inlet data;
-#X floatatom 248 120 5 0 0 0 #0-UI #0-ID -, f 5;
 #X text 536 27 Numéro d'instance;
-#X obj 536 241 module_loader fx_chorus \$0 \$1;
+#X obj 555 225 module_loader fx_chorus \$0 \$1;
+#X obj 475 107 morphing \$0 freq;
+#X obj 475 137 morphing \$0 mod;
 #X connect 0 0 19 0;
 #X connect 0 1 20 0;
 #X connect 1 0 2 0;
@@ -208,5 +209,5 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X connect 17 0 0 0;
 #X connect 18 0 0 1;
 #X connect 22 0 21 0;
-#X connect 25 0 1 0;
+#X connect 24 0 1 0;
 #X coords 0 -1 1 1 190 70 2 100 100;

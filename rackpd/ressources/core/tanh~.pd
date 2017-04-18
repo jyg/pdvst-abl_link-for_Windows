@@ -1,0 +1,6 @@
+#N canvas 0 50 450 300 10;
+#X obj 82 144 expr~ tanh($v1);
+#X obj 112 75 inlet~;
+#X obj 83 226 outlet~;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;

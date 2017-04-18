@@ -1,7 +1,6 @@
-#N canvas 713 50 653 438 10;
+#N canvas 515 98 653 438 10;
 #X declare -path ../core;
 #X declare -path ../rj;
-#X declare -stdlib extra/iemguts;
 #X obj 436 59 declare -path ../core;
 #X obj 436 89 declare -path ../rj;
 #X text 45 292 EXPERIMENTAL ALPHA;
@@ -19,7 +18,6 @@ du cc, f 17;
 wacom en messages ctl sur le canal CTLIN;
 #X text 19 52 Renvoie sur sa sortie data_out les messages délivrés
 par l'objet wintablet (préfixe wintablet);
-#X obj 491 212 declare -stdlib extra/iemguts;
 #X text 344 298 cf inst_turntable;
 #X text 241 163 1;
 #X text 280 165 2;
@@ -32,4 +30,5 @@ par l'objet wintablet (préfixe wintablet);
 #X text 282 190 |;
 #X text 282 180 |;
 #X text 329 218 <- 3;
+#X text 402 208 stylet mode :;
 #X coords 0 438 1 437 190 70 0;

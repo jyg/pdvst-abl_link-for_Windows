@@ -1,21 +1,14 @@
-#N canvas 0 50 899 595 10;
-#X obj 109 283 stereo_inlet~ \$0;
-#X obj 95 344 stereo_outlet~ \$0;
+#N canvas 0 50 1042 595 10;
 #X text 90 415 TODO;
 #X text 25 450 sauvegarde;
 #X text 27 473 multiple patterns;
-#X obj 697 99 switch~;
-#X obj 155 529 data_outlet \$0;
-#X obj 155 496 data_inlet \$0;
-#X obj 697 34 module_declare audio_features \$0;
-#X obj 715 150 module_loader audio_features \$0;
 #X obj 723 174 u_parameter \$0 ccx;
 #X obj 718 197 u_parameter \$0 ccy;
 #X obj 719 217 u_parameter \$0 ccz;
 #X obj 718 240 u_parameter \$0 ccx_enable;
 #X obj 718 260 u_parameter \$0 ccy_enable;
 #X obj 718 280 u_parameter \$0 ccz_enable;
-#N canvas 609 39 803 496 features_extraction 0;
+#N canvas 609 50 803 496 features_extraction 0;
 #X obj 396 118 audio_features/perceptualBrightness;
 #X obj 499 146 max 20;
 #X obj 566 155 min 20020;
@@ -366,7 +359,7 @@
 #X connect 36 0 32 0;
 #X connect 36 0 31 0;
 #X connect 36 0 30 0;
-#X restore 510 303 pd ctl_conversion;
+#X restore 525 202 pd ctl_conversion;
 #X obj 730 345 u_parameter \$0 learn;
 #X msg 217 426 env \$1;
 #X msg 322 428 harmo \$1;
@@ -374,7 +367,7 @@
 #X obj 730 323 u_parameter \$0 seuil;
 #X obj 545 108 r \$0-busy;
 #X obj 101 101 cnv 15 188 68 empty \$0-background audio_features 0
-7 0 14 -260818 -1 0;
+7 0 14 -262144 -1 0;
 #X obj 218 104 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv PRESETS
 2 5 0 10 -232576 -232576 -1 0 1;
 #X obj 224 128 bng 14 250 50 0 \$0-testx empty empty 17 7 0 10 -262144
@@ -384,38 +377,38 @@
 #X obj 224 156 bng 14 250 50 0 \$0-testz empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 127 139 tgl 15 0 empty \$0-detect-rcv detect 2 7 0 10 -250685
--250685 -1 1 1;
+-250685 -1 0 1;
 #X text 192 130 env.;
 #X text 171 142 harmon.;
 #X text 178 155 brill.;
 #X obj 128 124 tgl 15 0 \$0-send_data \$0-send_data-rcv send_data 17
 7 0 10 -262144 -1 -1 0 1;
 #X obj 100 122 vsl 25 45 0 100 0 0 \$0-seuil \$0-seuil-rcv seuil 0
-14 0 10 -232576 -1 -1 1800 1;
+14 0 10 -232576 -1 -1 0 1;
 #X obj 238 128 cnv 2 16 14 empty \$0-cca_cnv-rcv empty 20 12 0 14 -260097
 -66577 0;
 #X obj 238 142 cnv 2 1 14 empty \$0-ccb_cnv-rcv empty 20 12 0 14 -260097
 -66577 0;
-#X obj 238 156 cnv 2 8 14 empty \$0-ccc_cnv-rcv empty 20 12 0 14 -260097
+#X obj 238 156 cnv 2 1 14 empty \$0-ccc_cnv-rcv empty 20 12 0 14 -260097
 -66577 0;
 #X floatatom 239 128 5 0 127 1 - #0-ccx-rcv #0-ccx, f 5;
 #X floatatom 239 142 5 0 127 1 - #0-ccy-rcv #0-ccy, f 5;
 #X floatatom 239 156 5 0 127 1 - #0-ccz-rcv #0-ccz, f 5;
 #N canvas 500 223 468 97 \$0-autoscale_gui 0;
 #X obj 22 12 hsl 128 15 0 127 0 0 \$0-env-min \$0-env-min-rcv env-min
-5 7 0 10 -262144 -1 -1 5111 1;
+5 7 0 10 -262144 -1 -1 0 1;
 #X obj 22 32 hsl 128 15 0 127 0 0 \$0-env-max \$0-env-max-rcv env-max
-5 7 0 10 -262144 -1 -1 9311 1;
+5 7 0 10 -262144 -1 -1 0 1;
 #X obj 162 12 hsl 128 15 0 127 0 0 \$0-harmo-min \$0-harmo-min-rcv
-harmo-min 5 7 0 10 -260818 -1 -1 2300 1;
+harmo-min 5 7 0 10 -260818 -1 -1 0 1;
 #X obj 302 12 hsl 128 15 0 127 0 0 \$0-bright-min \$0-bright-min-rcv
-bright-min 5 7 0 10 -262144 -1 -1 3052 1;
+bright-min 5 7 0 10 -262144 -1 -1 0 1;
 #X obj 162 32 hsl 128 15 0 127 0 0 \$0-harmo-max \$0-harmo-max-rcv
-harmo-max 5 7 0 10 -262144 -1 -1 9296 1;
+harmo-max 5 7 0 10 -262144 -1 -1 0 1;
 #X obj 302 32 hsl 128 15 0 127 0 0 \$0-bright-max \$0-bright-max-rcv
-bright-max 5 7 0 10 -262144 -1 -1 10980 1;
+bright-max 5 7 0 10 -262144 -1 -1 0 1;
 #X obj 22 52 hsl 128 15 0 1000 0 0 \$0-env-filt \$0-env-filt-rcv env-filtering
-5 7 0 10 -262144 -1 -1 12700 1;
+5 7 0 10 -262144 -1 -1 0 1;
 #X obj 162 52 hsl 128 15 0 127 0 0 \$0-harmo-filt \$0-harmo-filt-rcv
 harmo-filtering 5 7 0 10 -262144 -1 -1 0 1;
 #X obj 302 52 hsl 128 15 0 127 0 0 \$0-bright-filt \$0-bright-filt-rcv
@@ -432,39 +425,55 @@ bright-filtering 5 7 0 10 -262144 -1 -1 0 1;
 #X obj 351 160 select 1 0;
 #X msg 418 215 vis 0;
 #X obj 276 128 tgl 14 0 \$0-ccx_enable \$0-ccx_enable-rcv A 4 7 0 10
--203904 -1 -1 1 1;
+-203904 -1 -1 0 1;
 #X obj 276 142 tgl 14 0 \$0-ccy_enable \$0-ccy_enable-rcv B 4 7 0 10
 -203904 -1 -1 0 1;
 #X obj 276 156 tgl 14 0 \$0-ccz_enable \$0-ccz_enable-rcv C 4 7 0 10
 -203904 -1 -1 0 1;
-#X connect 0 0 1 0;
-#X connect 0 0 16 0;
-#X connect 0 1 1 1;
-#X connect 0 1 16 0;
-#X connect 7 0 6 0;
-#X connect 8 0 5 0;
-#X connect 9 0 10 0;
-#X connect 10 0 11 0;
-#X connect 11 0 12 0;
-#X connect 12 0 13 0;
-#X connect 13 0 14 0;
-#X connect 14 0 15 0;
-#X connect 15 0 20 0;
-#X connect 17 0 26 0;
-#X connect 18 0 27 0;
-#X connect 19 0 25 0;
-#X connect 20 0 28 0;
-#X connect 21 0 6 0;
-#X connect 22 0 21 1;
-#X connect 25 0 21 0;
-#X connect 26 0 21 0;
-#X connect 27 0 21 0;
-#X connect 28 0 24 0;
-#X connect 29 0 16 1;
-#X connect 48 0 49 0;
-#X connect 52 0 48 0;
-#X connect 53 0 54 0;
-#X connect 54 0 48 0;
-#X connect 54 1 55 0;
-#X connect 55 0 49 0;
+#X obj 690 426 midi-colors;
+#X obj 449 312 route showLastUsed;
+#X obj 451 287 r RACK_ADMIN;
+#X obj 444 342 == 0;
+#X obj 466 369 &&;
+#X obj 715 150 module_loader audio_features \$0 \$1;
+#X obj 106 244 inlet~;
+#X obj 216 244 inlet~;
+#X obj 99 364 outlet~;
+#X obj 169 364 outlet~;
+#X obj 531 494 inlet data;
+#X obj 531 527 outlet data;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 13 0;
+#X connect 10 0 19 0;
+#X connect 11 0 20 0;
+#X connect 12 0 18 0;
+#X connect 13 0 21 0;
+#X connect 14 0 63 0;
+#X connect 15 0 14 1;
+#X connect 18 0 14 0;
+#X connect 19 0 14 0;
+#X connect 20 0 14 0;
+#X connect 21 0 17 0;
+#X connect 22 0 9 1;
+#X connect 22 0 56 1;
+#X connect 41 0 42 0;
+#X connect 45 0 41 0;
+#X connect 46 0 47 0;
+#X connect 47 0 41 0;
+#X connect 47 1 48 0;
+#X connect 48 0 42 0;
+#X connect 53 0 55 0;
+#X connect 54 0 53 0;
+#X connect 55 0 56 0;
+#X connect 56 0 9 1;
+#X connect 57 0 3 0;
+#X connect 58 0 9 0;
+#X connect 58 0 60 0;
+#X connect 59 0 9 0;
+#X connect 59 0 61 0;
+#X connect 62 0 63 0;
 #X coords 0 -1 1 1 190 70 1 100 100;

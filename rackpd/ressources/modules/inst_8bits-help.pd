@@ -21,4 +21,6 @@ ou en omni \, ctlin;
 ;
 #X text 296 272 Fonctionnement : la forme d'onde générée est déterminée
 par une équation;
+#X obj 456 384 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X text 476 382 monodique;
 #X coords 0 552 1 551 190 70 0;

@@ -1,6 +1,6 @@
-#N canvas 18 8 913 620 10;
-#X obj 246 126 text define gui;
-#X msg 248 87 read \$1;
+#N canvas 18 50 913 620 10;
+#X obj 248 109 text define gui;
+#X msg 250 84 read \$1;
 #X obj 253 41 openpanel;
 #X obj 245 22 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -34,7 +34,7 @@
 #X msg 442 427 1e+006;
 #X obj 442 405 loadbang;
 #X obj 380 208 f;
-#X obj 188 149 select 0 1 2;
+#X obj 190 146 select 0 1 2;
 #X obj 356 257 text get gui;
 #X obj 73 18 t b b;
 #X obj 35 14 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1

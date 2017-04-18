@@ -1,0 +1,54 @@
+#N canvas 269 94 954 407 10;
+#X obj 36 31 inlet;
+#X obj 139 31 inlet;
+#X obj 36 344 outlet~;
+#X obj 139 344 outlet~;
+#N canvas 228 198 627 317 LICENSE-BSD 0;
+#X text 121 56 This software is copyrighted by Miller Puckette \, Reality
+Jockey Ltd. and others. The terms (the "Standard Improved BSD License")
+apply to all files associated with the software unless explicitly disclaimed
+in individual files.;
+#X text 123 148 See the file LICENSE.txt for the full license text.
+;
+#X restore 680 103 pd LICENSE-BSD;
+#X obj 75 245 fid_multiplex \$1 \$2;
+#X obj 78 98 route list;
+#X obj 78 150 route 0;
+#X text 140 147 note off;
+#X msg 78 120 \$2 \$1;
+#X msg 178 198 \$2 add \, \$2 \$2 \$1;
+#X msg 22 196 \$1 \$1 0 \, \$1 remove;
+#X text 495 29 usage: u_makepoly2 <number of objects> <voice stealing:
+0/1> <abstraction name> <up to 4 creation args>;
+#X obj 326 225 list prepend all;
+#X obj 326 247 list trim;
+#X obj 263 74 list split 2;
+#X msg 263 96 \$2 \$1;
+#X obj 263 118 list append;
+#X obj 23 60 route stop clear;
+#X msg 27 101 stop;
+#X msg 19 146 clear;
+#X obj 75 291 clone -x -s 1 \$1 \$3 \$4 \$5 \$6 \$7;
+#X connect 0 0 18 0;
+#X connect 1 0 13 0;
+#X connect 5 0 21 0;
+#X connect 6 0 9 0;
+#X connect 6 1 15 0;
+#X connect 7 0 11 0;
+#X connect 7 1 10 0;
+#X connect 9 0 7 0;
+#X connect 10 0 5 0;
+#X connect 11 0 5 0;
+#X connect 13 0 14 0;
+#X connect 14 0 21 1;
+#X connect 15 0 16 0;
+#X connect 15 1 17 1;
+#X connect 16 0 17 0;
+#X connect 17 0 5 0;
+#X connect 18 0 19 0;
+#X connect 18 1 20 0;
+#X connect 18 2 6 0;
+#X connect 19 0 5 0;
+#X connect 20 0 5 0;
+#X connect 21 0 2 0;
+#X connect 21 1 3 0;

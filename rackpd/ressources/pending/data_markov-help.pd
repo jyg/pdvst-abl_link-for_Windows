@@ -1,0 +1,20 @@
+#N canvas 713 50 613 398 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X obj 346 39 declare -path ../core;
+#X obj 346 69 declare -path ../rj;
+#X obj 465 148 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 465 185 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
+1;
+#X text 485 144 Instances multiples;
+#X obj 47 73 data_markov;
+#X text 12 160 générateur de mélodies aléatoires basées sur les
+statistiques des paires de notes reçues en entrée;
+#X text 16 209 Synchronisé sur CLOCK \, ne génère pour l'instant
+que des noires;
+#X text 13 263 La phase d'apprentissage s'effectue en cliquant sur
+LEARN \, à partir des messages note reçues sur l'entrée data_inlet
+;
+#X text 28 297 le bouton start permet de démarrer le générateur
+de markov sur la dernière note jouée;
+#X coords 0 398 1 397 190 70 0;

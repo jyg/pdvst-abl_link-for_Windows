@@ -1,0 +1,146 @@
+#N canvas 209 50 946 682 12;
+#X obj 24 204 fid_get coords;
+#X obj 26 361 fid_get vitesse;
+#X text 12 40 fid_get permet d'extraire les propriétés stockées en
+interne pour chaque blob/fiducial \, à partir de son sid.;
+#X obj 697 247 cnv 15 30 20 empty empty Oui 4 12 0 14 -4034 -66577
+0;
+#X text 30 74 Syntaxe : fid_get <param_name>;
+#X text 62 90 inlet : sid;
+#X text 63 107 outlet 1 : resultat;
+#X text 63 122 outlet 2 : bang si vide;
+#X obj 18 5 cnv 15 200 30 empty empty fid_get 5 12 0 20 -211601 -66577
+0;
+#X obj 24 179 fid_get x;
+#X obj 94 179 fid_get y;
+#X obj 28 251 fid_get alpha;
+#X obj 24 328 fid_get Vx;
+#X obj 104 327 fid_get Vy;
+#X text 178 173 position en x y du fiducial/blob \, telle qu'elle est
+délivrée par TuioClient;
+#X text 177 204 position convertie dans le système GEM \, sous forme
+d'un doublet (X Y);
+#X obj 785 247 cnv 15 30 20 empty empty Non 4 12 0 14 -258113 -66577
+0;
+#X obj 695 211 cnv 15 30 20 empty empty Oui 4 12 0 14 -4034 -66577
+0;
+#X obj 789 174 cnv 15 30 20 empty empty Oui 4 12 0 14 -4034 -66577
+0;
+#X obj 789 214 cnv 15 30 20 empty empty Oui 4 12 0 14 -4034 -66577
+0;
+#X obj 696 176 cnv 15 30 20 empty empty Oui 4 12 0 14 -4034 -66577
+0;
+#X text 170 318 vitesse du fiducial/blob \, telle qu'elle est délivrée
+par TuioClient;
+#X text 176 247 angle du fiducial \, en radians \, tel qu'il est délivré
+par TuioClient;
+#X text 172 359 vitesse convertie dans le système GEM \, sous forme
+d'un doublet (X' Y');
+#X obj 697 324 cnv 15 30 20 empty empty Oui 4 12 0 14 -4034 -66577
+0;
+#X obj 789 324 cnv 15 30 20 empty empty Oui 4 12 0 14 -4034 -66577
+0;
+#X obj 700 361 cnv 15 30 20 empty empty Oui 4 12 0 14 -4034 -66577
+0;
+#X obj 789 361 cnv 15 30 20 empty empty Oui 4 12 0 14 -4034 -66577
+0;
+#X obj 26 397 fid_get Valpha;
+#X text 16 299 * DERIVEES PREMIERES PAR RAPPORT AU TEMPS (VITESSES):
+;
+#X obj 699 400 cnv 15 30 20 empty empty Oui 4 12 0 14 -4034 -66577
+0;
+#X obj 785 394 cnv 15 30 20 empty empty Non 4 12 0 14 -258113 -66577
+0;
+#X obj 303 413 cnv 15 130 16 empty empty empty 20 12 0 14 -260097 -66577
+0;
+#X text 168 396 vitesse de rotation du fiducial \, telle qu'elle est
+délivrée par TuioClient (en radians par seconde ? );
+#X obj 433 -1 about_fid_abs;
+#X text 17 452 * DERIVEES SECONDES PAR RAPPORT AU TEMPS (ACCELERATIONS):
+;
+#X obj 26 473 fid_get accel;
+#X obj 25 496 fid_get raccel;
+#X obj 704 498 cnv 15 30 20 empty empty Oui 4 12 0 14 -4034 -66577
+0;
+#X obj 800 499 cnv 15 30 20 empty empty Non 4 12 0 14 -258113 -66577
+0;
+#X obj 703 472 cnv 15 30 20 empty empty Oui 4 12 0 14 -4034 -66577
+0;
+#X obj 789 474 cnv 15 30 20 empty empty Oui 4 12 0 14 -4034 -66577
+0;
+#X text 16 150 * PARAMETRES GEOMETRIQUES (POSITIONS \, ANGLES):;
+#X text 14 520 * POUR ALLER PLUS LOIN :;
+#N canvas 0 50 869 608 AUTRES_PARAMETRES 0;
+#X obj 5 167 fid_get status;
+#X obj 415 304 fid_get area;
+#X obj 6 223 fid_get gemlist;
+#X obj 395 338 fid_get life_time;
+#X text 7 51 Projet d'extention des paramètres disponibles;
+#X obj 7 135 fid_get ticks;
+#X obj 598 174 cnv 15 30 20 empty empty Oui 4 12 0 14 -4034 -66577
+0;
+#X obj 705 144 cnv 15 30 20 empty empty Oui 4 12 0 14 -4034 -66577
+0;
+#X obj 704 167 cnv 15 30 20 empty empty Oui 4 12 0 14 -4034 -66577
+0;
+#X obj 598 146 cnv 15 30 20 empty empty Oui 4 12 0 14 -4034 -66577
+0;
+#X obj 704 301 cnv 15 30 20 empty empty Non 4 12 0 14 -258113 -66577
+0;
+#X text 119 138 Nombre de messages reçus de mises à jour d'une instance
+;
+#X text 590 109 Objects (1);
+#X text 690 107 Cursors / blobs (2);
+#X text 517 383 (1) ReacTiVision fiducials;
+#X text 517 406 (2) ReacTiVision Fingers \, Touchlib \, TBeta \, CCV
+;
+#X obj 602 339 cnv 15 30 20 empty empty Non 4 12 0 14 -258113 -66577
+0;
+#X obj 603 302 cnv 15 30 20 empty empty Non 4 12 0 14 -258113 -66577
+0;
+#X obj 704 337 cnv 15 30 20 empty empty Non 4 12 0 14 -258113 -66577
+0;
+#X text 8 73 Liste non définitive.;
+#X text 178 194 (1 == existante \, bang sur outlet2 == inexistante)
+;
+#X text 118 170 Status d'une instance;
+#X text 302 170 (classes dynamiques seulement);
+#X obj 27 454 fid_get angle;
+#X text 178 454 angle du fiducial \, en degrés \, converti dans le
+système GEM;
+#X obj 600 453 cnv 15 30 20 empty empty A_FAIRE 4 12 0 14 -260097 -66577
+0;
+#X obj 695 452 cnv 15 30 20 empty empty Non 4 12 0 14 -258113 -66577
+0;
+#X obj 28 486 fid_get rotation;
+#X text 171 484 vitesse de rotation du fiducial \, convertie dans le
+système GEM \, (en degrés par seconde ?);
+#X text 17 533 * QUANTITE DE DEPLACEMENT;
+#X obj 25 563 fid_get Dcoords;
+#X obj 24 587 fid_get Dangle;
+#X obj 695 484 cnv 15 30 20 empty empty Non 4 12 0 14 -258113 -66577
+0;
+#X obj 599 483 cnv 15 30 20 empty empty A_FAIRE 4 12 0 14 -260097 -66577
+0;
+#X text 240 570 voir fid_delta (experimental);
+#X obj 490 240 fid_save_gemlist;
+#X text 231 239 Disponible si invocation de l'objet;
+#X text 131 222 matrice gemlist pour la représentation graphique;
+#X obj 703 542 cnv 15 30 20 empty empty Non 4 12 0 14 -258113 -66577
+0;
+#X obj 601 580 cnv 15 30 20 empty empty Non 4 12 0 14 -258113 -66577
+0;
+#X obj 602 543 cnv 15 30 20 empty empty Non 4 12 0 14 -258113 -66577
+0;
+#X obj 703 578 cnv 15 30 20 empty empty Non 4 12 0 14 -258113 -66577
+0;
+#X restore 32 542 pd AUTRES_PARAMETRES;
+#X text 678 154 Objects (1);
+#X text 778 152 Cursors / blobs (2);
+#X text 562 555 (1) ReacTiVision fiducials;
+#X text 562 578 (2) ReacTiVision Fingers \, Touchlib \, TBeta \, CCV
+;
+#X obj 38 597 fid_set;
+#X obj 251 598 fid_get_instances;
+#X obj 104 597 fid_count_instances;
+#X text 19 571 * VOIR_AUSSI;

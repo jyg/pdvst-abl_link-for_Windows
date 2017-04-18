@@ -1,0 +1,50 @@
+#N canvas 115 70 909 611 12;
+#X text 34 254 Format des messages d'entrée :;
+#X msg 95 372 <sid> <any_header> <packets.......>;
+#X msg 83 331 <sid> remove;
+#X msg 566 168 5 sustain 56;
+#X msg 444 170 4 vibrato 22;
+#X msg 475 200 4 remove;
+#X msg 569 198 5 remove;
+#X msg 682 166 6 create jhgf iuyd hj;
+#X msg 683 196 6 remove;
+#X text 200 332 le tag 'remove' permet de libérer la ressource.;
+#X text 13 201 Le premier argument de création spécifie le nombre d'unités
+de traitement disponible ('polyphonie');
+#X obj 157 538 route 1 2 3 4;
+#N canvas 0 50 450 300 unit 0;
+#X obj 70 40 inlet;
+#X restore 99 566 pd unit;
+#N canvas 0 50 450 300 unit 0;
+#X obj 70 40 inlet;
+#X restore 160 568 pd unit;
+#N canvas 0 50 450 300 unit 0;
+#X obj 70 40 inlet;
+#X restore 220 570 pd unit;
+#N canvas 0 50 450 300 unit 0;
+#X obj 70 40 inlet;
+#X restore 281 572 pd unit;
+#X text 31 60 C'est une extension de l'objet poly \, qui permet de
+gérer non plus des note on / note off \, mais des messages indexés
+par un sid quelconque.;
+#X obj 474 307 print fid_multiplex_4;
+#X text 45 471 fid_multiplex peut s'inscrire dans une structure de
+patch comme celle-ci :;
+#X text 28 122 fid_multiplex_ permet d'affecter un sid à une unité
+de traitement disponible.;
+#X text 55 29 FID_MULTIPLEX;
+#X obj 499 261 fid_multiplex 4;
+#X obj 158 513 fid_multiplex 4;
+#X msg 92 300 <sid> add;
+#X connect 3 0 21 0;
+#X connect 4 0 21 0;
+#X connect 5 0 21 0;
+#X connect 6 0 21 0;
+#X connect 7 0 21 0;
+#X connect 8 0 21 0;
+#X connect 11 0 12 0;
+#X connect 11 1 13 0;
+#X connect 11 2 14 0;
+#X connect 11 3 15 0;
+#X connect 21 0 17 0;
+#X connect 22 0 11 0;

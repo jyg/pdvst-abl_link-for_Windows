@@ -1,0 +1,45 @@
+#N canvas 92 49 739 654 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X obj 112 164 midi-colors \$0 square \$0-square-rcv 0.001 1000 log
+;
+#X obj 54 161 vsl 15 128 0.001 1000 1 0 \$0-square \$0-square-rcv square
+0 -9 0 10 -262144 -1 -1 0 1;
+#X text 72 58 Midi colors permet la gestion des mappings midi pour
+les objets GUI autres que ui_vs et ui_vsl;
+#X text 43 106 ARGS : \$0 <param_name> <param-rcv_name> [<minval> <maxval>
+[lin|log]], f 76;
+#X obj 399 298 u_parameter \$0 square;
+#X obj 399 318 u_parameter \$0 bypass;
+#X obj 109 343 midi-colors \$0 bypass \$0-bypass-rcv;
+#X obj 109 391 s \$0-bypass;
+#X obj 109 370 < 1;
+#X obj 27 346 tgl 40 1 \$0-bypass \$0-bypass-rcv BYPASS 17 7 0 10 -262144
+-1 -1 0 1;
+#X text 391 199 à utiliser conjointement avec u_dispatch/u_parameter
+;
+#X obj 399 277 module_loader midi-colors-help \$0;
+#N canvas 696 133 166 141 test 1;
+#X obj 26 11 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X msg 23 144 \; CTLIN \$1 1 1;
+#X connect 0 0 1 0;
+#X restore 576 123 pd test;
+#X obj 526 16 declare -path ../core;
+#X obj 526 46 declare -path ../rj;
+#X text 216 365 si \$4 \$5 \$6 ne sont pas spécifiés \, midi_colors
+renvoie en sortie la valeur midi du ctl-change mappé. Il faut alors
+tisser dans le patch le comportement souhaité (par exemple \, seuil
+\, bascule \, etc....);
+#X text 108 222 si les arguments \$4 \$5 \$6 sont spécifiés (ex 0.001
+1000 log) \, le mapping est assuré automatiquement par le trinôme
+ctl-assign3 + module_loader + u_dispatch/u_parameter --------------->
+, f 40;
+#X text 89 482 l'inlet permet d'envoyer un message midiout (noteon)
+pour par exemple obtenir un feedback visuel (allumage LED) sur un contrôleur
+midi. Le réglage du numéro pour la cible s'effectue dans la fenêtre
+des mappings (dernière colonne : F.B.out), f 63;
+#X connect 4 0 5 0;
+#X connect 6 0 8 0;
+#X connect 8 0 7 0;
+#X connect 11 0 4 0;

@@ -1,8 +1,8 @@
 #N canvas 713 50 613 604 10;
 #X declare -path ../core;
 #X declare -path ../rj;
-#X obj 346 45 declare -path ../core;
-#X obj 346 75 declare -path ../rj;
+#X obj 446 45 declare -path ../core;
+#X obj 446 75 declare -path ../rj;
 #X obj 360 140 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
 #X text 380 136 Instances multiples;
 #X text 11 37 effet de tape delay avec filtre;
@@ -79,6 +79,15 @@ l'autre valeur possible, f 44;
 #X text 46 401 fb : feedback \, réinjection de la sortie dans l'entrée
 (à travers le filtre) \, mode pingpong si les deux canaux ont une
 valeur identique \, sinon canaux séparés;
-#X text 10 57 inspiré de l'abstraction rjdj e_dubdel;
+#X obj 58 502 tgl 12 0 \$0-noclick_mode \$0-noclick_mode-rcv empty
+17 7 0 10 -159808 -1 -1 0 1;
+#X text 121 520 0 : la variation du delay entraine des variations de
+hauteurs, f 62;
+#X text 118 536 1 : la variation du delay n'entraine pas de variations
+de hauteurs \, mais la nouvelle valeur de delay est mise à jour toutes
+les 200ms \, sans clic;
+#X text 95 498 mode noclic;
+#X text 10 57 inspiré des abstractions rjdj e_dubdel et e_noclickdelsig
+;
 #X connect 69 0 67 0;
 #X coords 0 604 1 603 190 70 0;

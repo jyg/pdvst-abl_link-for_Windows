@@ -1,0 +1,17 @@
+#N canvas 467 112 678 486 10;
+#X obj 420 259 switch~;
+#X obj 100 77 stereo_inlet~ \$0;
+#X obj 100 175 stereo_outlet~ \$0;
+#X obj 322 78 data_inlet \$0;
+#X obj 269 176 data_outlet \$0;
+#X obj 389 173 module_declare \$1 \$0;
+#X text 301 122 version cablée de fx_chorus;
+#X obj 100 100 ../modules/\$1 \$0;
+#X connect 1 0 7 0;
+#X connect 1 1 7 1;
+#X connect 3 0 7 2;
+#X connect 5 0 0 0;
+#X connect 7 0 2 0;
+#X connect 7 1 2 1;
+#X connect 7 2 4 0;
+#X coords 0 -1 1 1 190 70 2 100 100;

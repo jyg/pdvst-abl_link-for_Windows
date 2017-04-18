@@ -1,0 +1,60 @@
+#N canvas 448 85 894 586 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X obj 595 60 declare -path ../core;
+#X obj 595 80 declare -path ../rj;
+#X text 292 552 Instances multiples;
+#X obj 270 553 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 47 228 inst_tabosc;
+#X text 43 158 Oscillateur à table d'onde;
+#X obj 807 370 vsl 15 40 95 70 0 0 \$0-sens \$0-sens-rcv sens -7 -9
+0 10 -261234 -1 -1 0 1;
+#X obj 308 291 bng 30 250 50 0 \$0-recButton \$0-recButton-rcv REC
+4 15 0 10 -261234 -1 -1;
+#X text 355 330 1ère pression : armement;
+#X text 355 350 2ème pression : lancement manuel de l'enregistrement
+;
+#X text 374 369 ou lancement automatique :seuil de sensibilité réglable
+avec, f 62;
+#X obj 270 573 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X text 292 572 Polyphonie : 16 voix;
+#X obj 359 165 vradio 14 1 0 5 \$0-tabsize \$0-tabsize-rcv empty 0
+-8 0 10 -262144 -1 -1 4;
+#X text 442 166 2048;
+#X text 441 178 4096;
+#X text 442 192 8192;
+#X text 442 207 16384;
+#X text 442 221 32768;
+#X text 337 259 sustain : attenuation après noteoff;
+#X text 330 468 tabosc : table d'onde;
+#X text 348 489 la table d'onde est jouée à la hauteur originale
+pour la note C3, f 65;
+#X obj 303 454 vsl 20 27 1 0 0 0 \$0-mode \$0-mode-rcv mode 0 -7 0
+10 -262144 -1 -1 0 1;
+#X text 332 452 sinsum : somme des 8 premières harmoniques.;
+#X obj 850 456 bng 15 250 50 0 empty empty edit -15 -6 0 10 -262130
+-1 -1;
+#X text 664 454 Pour éditer \, appuyer sur;
+#X text 350 296 pour enregistrer une autre table d'onde à la volée
+(source audio en audio_inlet~);
+#X text 380 221 740ms;
+#X text 382 207 371ms;
+#X text 383 194 186ms;
+#X text 390 180 92ms;
+#X text 387 164 46ms;
+#X text 369 129 choix de la taille de la table d'onde (en ms \, en
+échantillons), f 38;
+#X obj 343 505 hradio 15 1 0 4 \$0-bank \$0-bank-rcv A 50 8 0 12 -261234
+-260097 -1 0;
+#X text 342 502 tabosc;
+#X text 419 507 Choix de la table d'onde (A/B/C/D) courante (soit 4
+mémoires), f 63;
+#X obj 304 408 bng 15 250 50 0 \$0-save empty S 5 7 0 10 -4034 -1 -1
+;
+#X obj 319 408 bng 15 250 50 0 \$0-open empty O 5 7 0 10 -203904 -1
+-1;
+#X text 358 407 pour sauver / enregistrer la table d'onde en cours
+;
+#X obj 270 533 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X text 293 531 MONOPHONIQUE;
+#X coords 0 586 1 585 190 70 0;

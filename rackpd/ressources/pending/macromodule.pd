@@ -1,0 +1,28 @@
+#N canvas 0 50 673 442 10;
+#X obj 343 24 inst_metro;
+#X obj 343 105 ../pending/fx_chorus;
+#X obj 343 186 ../modules-static/audio_out;
+#X text 30 8 implémentation statique de modules;
+#X msg 50 287 \; CTLIN \$1 1001 1;
+#X text 59 371 préfiguration d'un bouton de macro "à la Ableton Live"
+, f 34;
+#X obj 152 112 ui_vs \$0 macro1 0 127;
+#X obj 202 111 ui_vs \$0 macro2;
+#X obj 112 208 r \$0-macro1;
+#X obj 452 296 module_loader macro \$0;
+#X obj 452 321 u_dispatch \$0 macro1;
+#X obj 452 351 u_dispatch \$0 macro2;
+#X obj 566 51 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X msg 563 184 \; CTLIN \$1 1 1;
+#X obj 408 405 midi-colors;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 0 2 1 2;
+#X connect 1 0 2 0;
+#X connect 1 1 2 1;
+#X connect 1 2 2 2;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 12 0 13 0;
+#X coords 0 -1 1 1 190 70 1 100 100;

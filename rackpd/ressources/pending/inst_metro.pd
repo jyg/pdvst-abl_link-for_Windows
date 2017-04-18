@@ -27,10 +27,12 @@
 #X msg 173 249 0.1 1;
 #X msg 242 271 0 5;
 #X obj 239 248 del 10;
+#X obj 111 266 s \$0-led;
 #X connect 0 0 11 0;
 #X connect 1 0 0 1;
 #X connect 2 0 15 0;
 #X connect 2 1 17 0;
+#X connect 2 1 18 0;
 #X connect 3 0 0 0;
 #X connect 4 0 9 0;
 #X connect 5 0 8 0;
@@ -71,6 +73,8 @@
 #X obj 532 273 u_dispatch \$0 vol;
 #X obj 175 114 ui_vs \$0 vol 0 100;
 #X obj 536 241 module_loader inst_metro \$0;
+#X obj 130 135 bng 15 100 30 0 empty \$0-led empty 17 7 0 10 -45076
+-258113 -1;
 #X connect 0 0 5 0;
 #X connect 0 1 6 0;
 #X connect 3 0 0 0;

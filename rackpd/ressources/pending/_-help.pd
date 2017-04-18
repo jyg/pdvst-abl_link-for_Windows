@@ -1,0 +1,7 @@
+#N canvas 713 50 613 398 10;
+#X obj 146 137 iemguts/sendcanvas;
+#X msg 154 86 menuclose;
+#X obj 150 57 loadbang;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X coords 0 398 1 397 190 70 0;

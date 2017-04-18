@@ -10,4 +10,4 @@ de module);
 #X text 369 375 copier le slider suivant dans le conteneur parent;
 #X text 375 395 pour accéder à 'interface de gestion des présets.
 ;
-#X obj 228 129 module_loader <nom_type_de_module> \$0;
+#X obj 228 129 module_loader <nom_type_de_module> \$0 \$1;

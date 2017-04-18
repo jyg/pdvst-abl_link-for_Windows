@@ -17,7 +17,6 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 ;
 #X restore 347 11 pd LICENSE-GPL;
 #X text 35 69 ui_hsl \$0 name min max;
-#X obj 475 94 switch~;
 #N canvas 200 58 989 545 filter 0;
 #X obj 77 38 inlet~;
 #X obj 278 25 inlet~;
@@ -51,16 +50,23 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 142 115 ui_vs \$0 Q 0 10;
 #X obj 220 102 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv <no_preset>
 2 7 0 10 -232576 -232576 -1 0 1;
-#X obj 466 23 module_declare fx_lop \$0;
-#X obj 437 250 module_loader fx_lop \$0;
-#X obj 29 260 stereo_inlet~ \$0;
-#X obj 30 321 stereo_outlet~ \$0;
-#X obj 32 356 data_thru \$0;
-#X connect 0 0 5 0;
-#X connect 4 0 14 0;
-#X connect 4 1 14 1;
-#X connect 11 0 3 0;
-#X connect 12 0 0 0;
-#X connect 13 0 4 0;
-#X connect 13 1 4 1;
+#X text 212 363 messages transitant entre module_loader et module_declare
+;
+#X text 235 454 \$0-slot (pour être sauvegardé dans scenes);
+#X text 236 423 \$0-hasFocus (pour retour / interaction gui);
+#X text 237 399 \$0-busy (pour activation / désactivation);
+#X obj 437 250 module_loader fx_lop \$0 \$1;
+#X obj 29 260 inlet~;
+#X obj 112 262 inlet~;
+#X obj 30 321 outlet~;
+#X obj 120 329 outlet~;
+#X obj 217 240 inlet data;
+#X obj 217 262 outlet data;
+#X connect 0 0 4 0;
+#X connect 3 0 17 0;
+#X connect 3 1 18 0;
+#X connect 14 0 0 0;
+#X connect 15 0 3 0;
+#X connect 16 0 3 1;
+#X connect 19 0 20 0;
 #X coords 0 -1 1 1 190 70 1 100 100;

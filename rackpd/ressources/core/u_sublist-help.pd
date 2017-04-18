@@ -1,0 +1,29 @@
+#N canvas 94 177 1184 392 10;
+#X msg 590 123 get \$1;
+#X msg 627 161 append;
+#X msg 648 203 reset;
+#X msg 648 263 delete \$1;
+#X floatatom 389 190 5 0 0 0 index - -, f 5;
+#X obj 503 251 s \$0-subset;
+#X obj 252 157 u_sublist \$0 <param> 8;
+#X text 170 22 s'utilise comme u_dispatch mais permet de gérer des
+collections de listes au sein d'un même préset;
+#X msg 649 316 update;
+#X text 668 126 pour rappeler la nième liste de la collection;
+#X text 711 161 pour ajouter une autre liste à la collection;
+#X text 718 205 pour effacer la collection entière;
+#X text 735 264 pour supprimer la nièeme liste d'une collection;
+#X text 721 311 pour mettre à jour la liste courante de la collection
+;
+#X msg 661 355 set \$1;
+#X text 726 352 pour mettre à jour la nième liste de la collection
+;
+#X text 170 68 Pour pouvoir utiliser set \, il faut que l'index spécifié
+ait déjà été initialisé (avec append);
+#X connect 0 0 5 0;
+#X connect 1 0 5 0;
+#X connect 2 0 5 0;
+#X connect 3 0 5 0;
+#X connect 6 1 4 0;
+#X connect 8 0 5 0;
+#X connect 14 0 5 0;

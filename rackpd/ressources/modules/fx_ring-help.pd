@@ -10,13 +10,5 @@
 #X text 11 30 modulateur en anneau;
 #X text 10 50 le signal d'entrée est multiplié par une onde sinus
 pure;
-#N canvas 0 50 450 250 (subpatch) 0;
-#X coords 0 1 100 -1 190 70 1 0 0;
-#X restore 100 100 graph;
-#X obj 101 101 cnv 15 188 68 empty \$0-background fx_ring 0 7 0 14
--262144 -1 0;
-#X obj 139 115 ui_vs \$0 wet 0 1;
-#X obj 101 115 ui_vsl \$0 freq 0.1 3000;
-#X obj 220 102 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv PRESETS
-2 5 0 10 -232576 -232576 -1 0 1;
+#X obj 74 121 fx_ring;
 #X coords 0 297 1 296 190 70 0;

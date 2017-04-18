@@ -1,0 +1,27 @@
+#N canvas 0 50 693 443 10;
+#X obj 336 197 text define -k menu;
+#A set 1erChoix peut contenir ensuite divers objets \; 2èmeChoix 1
+2 3 4 \; 3èmeChoix etc... \;;
+#X floatatom 272 165 5 0 0 0 - - -, f 5;
+#X obj 233 192 u_rollmenu menu 0;
+#X obj 233 222 print;
+#X text 100 168 u_rollmenu menu 0;
+#X text 97 304 u_rollmenu wav 1;
+#X obj 340 314 text define -k wav;
+#A set 1 bla bla.wav \; 2 gha gha.wav \; 3 bip bip.wav \;;
+#X obj 239 307 u_rollmenu wav 1;
+#X obj 239 334 print;
+#X obj 246 271 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text 32 11 menu glissant;
+#X obj 145 8 u_rollmenu u_rollmenu;
+#X text 64 41 syntaxe : u_rollmenu <text_name> |<row>|;
+#X text 92 66 <row> (optionnel) : numéro de la colonne (partant de
+0) à afficher dans le menu, f 81;
+#X text 50 148 Exemples :;
+#X text 68 94 Les données à afficher sont stockées dans un objet
+[text define], f 66;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 7 0 8 0;
+#X connect 9 0 7 0;

@@ -1,0 +1,15 @@
+#N canvas 0 50 766 542 10;
+#X obj 120 81 inlet;
+#X obj 104 230 fid_get class-\$1;
+#X msg 105 194 0;
+#X obj 105 137 route bang;
+#X obj 104 317 outlet;
+#X obj 119 285 list length;
+#X msg 219 338 0;
+#X connect 0 0 3 0;
+#X connect 1 0 5 0;
+#X connect 1 1 6 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;

@@ -1,0 +1,3 @@
+#N canvas 54 50 1194 562 10;
+#X obj 156 97 module_declare <nom_type_de_module> \$0;
+#X text 486 105 gestion d'un module sous forme de module de rack;
