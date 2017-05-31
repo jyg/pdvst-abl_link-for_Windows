@@ -2,8 +2,8 @@ Preset1 oct 0 @ chain ($v1%6536)|($v1%(555+$f2)) @ f2 211.827 @;
 Preset2 oct 0 @ chain ($v1%656)|($v1%(555+$f2)) @ f2 105.409 @;
 Preset3 oct 0 @ chain ($v1>>(11*$f2))|($v1%(11.2*$f2)) @ f2 61.2362
 @;
-Preset4 oct 0 @ chain ($v1>>(11*$f2))|($v1%(11.2*$f2)) @ f2 93.3622
-@;
+Preset4 vol 105.747 @ slot 3 @ B 89.8857 @ A 54.9143 @ oct 0 @ chain
+($v1%656)|($v1%(555+$f2)) @;
 Preset5 oct 3 @ chain ($v1>>(11*$f2))|($v1%(11.2*$f2)) @ f2 53.2047
 @ f3 1 @;
 test chain t @;

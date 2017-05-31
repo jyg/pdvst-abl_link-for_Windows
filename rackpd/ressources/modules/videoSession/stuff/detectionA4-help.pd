@@ -1,0 +1,6 @@
+#N canvas 0 50 450 300 12;
+#X obj 92 129 detectionA4 544;
+#X text 186 67 argument = nb pixels par mètre;
+#X text 104 65 inlet 1 =;
+#X text 42 166 outlet 1=contour A4;
+#X text 168 195 outlet 2= autres contours;

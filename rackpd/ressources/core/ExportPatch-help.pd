@@ -1,0 +1,7 @@
+#N canvas 0 50 777 300 16;
+#X obj 330 132 ExportPatch;
+#X text 143 137 1) cocher la case;
+#X text 143 212 2) cliquer sur la scène à exporter;
+#X text 42 19 ExportPatch permet d'exporter une scène sous forme de
+patch statique (modules interconnectés avec des fils);
+#X text 143 242 3) choisir un nom_de_patch.pd pour l'export;

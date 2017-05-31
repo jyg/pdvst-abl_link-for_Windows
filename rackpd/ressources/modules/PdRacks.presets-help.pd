@@ -1,0 +1,11 @@
+#N canvas 590 95 991 595 10;
+#X text 84 286 au niveau d'une scène \, sauvegarde des mappings midi
+\, des paramètres globaux (main) \, des parametres de slot \, des
+modules presets;
+#X obj 62 85 PdRacks.presets;
+#X text 66 37 Gestionnaire de présets à l'intérieur d'une scène
+;
+#X text 309 90 sauvegarde des floats \, symbols \, lists;
+#X text 84 234 les paramètres dynamiques (slots \, modules actifs)
+doivent être gérés dans le gestionnaire de scènes;
+#X coords 0 595 1 594 190 70 0;

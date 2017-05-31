@@ -1,4 +1,4 @@
-#N canvas 243 222 1112 607 10;
+#N canvas 305 56 1112 607 10;
 #X obj 447 26 table SLOTS_MAP 10000;
 #X obj 66 239 r FROM_GUI;
 #X text 618 18 table de correspondance entre slots et modules actifs
@@ -95,6 +95,7 @@ donné;
 #X obj 216 454 tabwrite SLOTS_MAP;
 #X obj 553 401 f;
 #X obj 548 435 - 1;
+#X text 575 131 grille avec 10 de hauteur;
 #X connect 0 0 8 0;
 #X connect 1 1 6 0;
 #X connect 2 0 1 0;
@@ -339,6 +340,8 @@ donné;
 #X obj 62 268 route add remove focus help;
 #X obj 236 313 s HELP;
 #X text 288 311 cf pd setfocus/help;
+#X obj 114 321 r REMOVE;
+#X obj 23 325 r INSERT;
 #X connect 1 0 12 0;
 #X connect 7 0 12 0;
 #X connect 10 0 9 0;
@@ -347,3 +350,5 @@ donné;
 #X connect 12 1 5 0;
 #X connect 12 2 11 0;
 #X connect 12 3 13 0;
+#X connect 15 0 5 0;
+#X connect 16 0 8 0;

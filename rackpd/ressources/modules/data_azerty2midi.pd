@@ -1,3 +1,5 @@
+#N struct 1014-symarray float x array symbols 1014-sym;
+#N struct 1014-sym symbol name float on;
 #N canvas 407 237 678 486 10;
 #N canvas 172 83 586 377 LICENSE-GPL 0;
 #X text 57 88 This program is free software: you can redistribute it
@@ -305,7 +307,7 @@ midi;
 #X connect 42 0 41 0;
 #X restore 201 221 pd keyboard;
 #X obj 101 101 cnv 15 188 68 empty \$0-background data_azerty2midi
-0 7 0 14 -260818 -1 0;
+0 7 0 14 -262144 -1 0;
 #X msg 191 259 note \$1 \$2;
 #X floatatom 253 111 5 0 0 0 velocite #0-velo-rcv #0-velo, f 5;
 #X obj 367 268 u_parameter \$0 velo;
@@ -430,4 +432,5 @@ a# \, b;
 #X connect 29 0 30 0;
 #X connect 31 0 32 0;
 #X connect 33 0 34 0;
+#X connect 33 0 28 0;
 #X coords 0 -1 1 1 190 70 1 100 100;

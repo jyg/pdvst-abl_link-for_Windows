@@ -1,0 +1,14 @@
+#N canvas 234 186 991 595 10;
+#X obj 81 56 hsl 128 30 0 1 0 0 \$0-morph \$0-morph-rcv A<--------->B
+10 15 0 14 -204786 -1 -1 0 1;
+#X obj 72 103 bng 20 250 50 0 MORPH-setA empty A 4 10 0 10 -261234
+-1 -1;
+#X obj 73 127 bng 20 250 50 0 MORPH-setB empty B 4 10 0 10 -261234
+-1 -1;
+#X text 248 65 Curseur d'interpolation entre les réglages A et B;
+#X text 74 17 Permettre l'interpolation entre deux valeurs de réglages
+distinctes (instantanés);
+#X text 119 102 Capture de l'instantané A;
+#X text 119 122 Capture de l'instantané B;
+#X text 134 173 TO DO : interpolation entre 3/4 instantanés;
+#X coords 0 595 1 594 190 70 0;

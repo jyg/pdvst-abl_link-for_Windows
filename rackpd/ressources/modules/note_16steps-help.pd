@@ -3,10 +3,10 @@
 #X declare -path ../rj;
 #X obj 346 65 declare -path ../core;
 #X obj 346 95 declare -path ../rj;
-#X obj 340 190 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
-#X obj 340 227 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
+#X obj 390 230 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 390 267 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
 1;
-#X text 360 186 Instances multiples;
+#X text 410 226 Instances multiples;
 #X obj 32 117 note_16steps;
 #X obj 50 252 hsl 64 15 0 127 0 1 \$0-scale \$0-scale-rcv dorian 3
 7 0 10 -203904 -228856 -1 800 1;
@@ -61,4 +61,8 @@
 au tour suivant;
 #X text 33 45 séquenceur style analogique inspiré des objets 8steps
 et megasequencer de AUTOMATONISM_1.1;
+#X obj 37 193 hradio 10 1 0 3 \$0-div \$0-div-rcv div 1 6 0 10 -159808
+-258113 -4034 0;
+#X text 120 192 div : choix de l'unité (double \, croche \, noire)
+;
 #X coords 0 434 1 433 190 70 0;

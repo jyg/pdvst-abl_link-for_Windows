@@ -1,19 +1,21 @@
 #N struct mappings float y symbol module_name symbol param_name float
 ccnum float min float max symbol mapping;
+#N struct 2235-symarray float x array symbols 2235-sym;
+#N struct 2235-sym symbol name float on;
+#N struct 5161-symarray float x array symbols 5161-sym;
+#N struct 5161-sym symbol name float on;
+#N struct 5319-symarray float x array symbols 5319-sym;
+#N struct 5319-sym symbol name float on;
+#N struct 5598-symarray float x array symbols 5598-sym;
+#N struct 5598-sym symbol name float on;
+#N struct 5619-symarray float x array symbols 5619-sym;
+#N struct 5619-sym symbol name float on;
+#N struct 6760-symarray float x array symbols 6760-sym;
+#N struct 6760-sym symbol name float on;
+#N struct 6880-symarray float x array symbols 6880-sym;
+#N struct 6880-sym symbol name float on;
 #N struct text-help-struct float x float y text z;
-#N struct 2018-symarray float x array symbols 2018-sym;
-#N struct 2018-sym symbol name float on;
-#N struct 2351-symarray float x array symbols 2351-sym;
-#N struct 2351-sym symbol name float on;
-#N struct 5002-symarray float x array symbols 5002-sym;
-#N struct 5002-sym symbol name float on;
-#N struct 5152-symarray float x array symbols 5152-sym;
-#N struct 5152-sym symbol name float on;
-#N struct 5409-symarray float x array symbols 5409-sym;
-#N struct 5409-sym symbol name float on;
-#N struct 5430-symarray float x array symbols 5430-sym;
-#N struct 5430-sym symbol name float on;
-#N canvas 920 64 389 319 12;
+#N canvas 920 64 389 384 12;
 #X declare -stdpath extra/iemguts/;
 #X declare -stdpath extra/iemlib/;
 #X declare -stdpath extra/zexy/;
@@ -22,7 +24,7 @@ ccnum float min float max symbol mapping;
 #X declare -path ressources/modules/;
 #X declare -path ressources/rj/;
 #X declare -path ressources/core/fid_abs_vanilia-0.4/;
-#N canvas 8 50 1326 625 stuff 0;
+#N canvas 0 58 1326 625 stuff 1;
 #X obj 100 100 bng 100 250 50 0 \$0-save empty SAVE 17 40 0 20 -258113
 -1 -1;
 #X obj 207 100 tgl 60 0 \$0-rackEdit \$0-rackEdit-rcv RACK_EDIT 3 30
@@ -84,23 +86,24 @@ f 17;
 #X text 22 203 couleur du mode midilearn -->, f 15;
 #X msg 141 215 44, f 5;
 #X obj 464 267 print MIDI_CTL_IN;
-#N canvas 677 71 752 256 dynamic-ctl-assign 0;
+#N canvas 221 227 752 256 dynamic-ctl-assign 0;
 #X obj 0 0 r MIDI_CTL_IN;
 #X text 185 0 param;
 #X text 282 -1 cc;
 #X text 344 -1 val min;
 #X text 434 -1 val max;
 #X text 541 -1 scale log/lin;
+#X text 654 -1 f.b.out;
+#X obj 0 40 ctl-assign3 1;
+#X obj 0 80 ctl-assign3 3;
 #X obj 0 560 ctl-assign3 27;
 #X obj 0 100 ctl-assign3 4;
 #X obj 0 540 ctl-assign3 26;
 #X obj 0 140 ctl-assign3 6;
 #X obj 0 120 ctl-assign3 5;
 #X obj 0 20 ctl-assign3 0;
-#X obj 0 40 ctl-assign3 1;
 #X obj 0 60 ctl-assign3 2;
 #X obj 0 200 ctl-assign3 9;
-#X obj 0 80 ctl-assign3 3;
 #X obj 0 480 ctl-assign3 23;
 #X obj 0 160 ctl-assign3 7;
 #X obj 0 180 ctl-assign3 8;
@@ -191,22 +194,20 @@ f 17;
 #X obj 0 1960 ctl-assign3 97;
 #X obj 0 1980 ctl-assign3 98;
 #X obj 0 2000 ctl-assign3 99;
-#X text 654 -1 f.b.out;
-#X connect 0 0 11 0;
-#X connect 6 0 34 0;
-#X connect 7 0 10 0;
-#X connect 8 0 6 0;
-#X connect 9 0 17 0;
-#X connect 10 0 9 0;
-#X connect 11 0 12 0;
-#X connect 12 0 13 0;
-#X connect 13 0 15 0;
-#X connect 14 0 19 0;
-#X connect 15 0 7 0;
-#X connect 16 0 32 0;
-#X connect 17 0 18 0;
-#X connect 18 0 14 0;
-#X connect 19 0 20 0;
+#X connect 0 0 14 0;
+#X connect 7 0 15 0;
+#X connect 8 0 10 0;
+#X connect 9 0 35 0;
+#X connect 10 0 13 0;
+#X connect 11 0 9 0;
+#X connect 12 0 18 0;
+#X connect 13 0 12 0;
+#X connect 14 0 7 0;
+#X connect 15 0 8 0;
+#X connect 16 0 20 0;
+#X connect 17 0 33 0;
+#X connect 18 0 19 0;
+#X connect 19 0 16 0;
 #X connect 20 0 21 0;
 #X connect 21 0 22 0;
 #X connect 22 0 23 0;
@@ -218,10 +219,10 @@ f 17;
 #X connect 28 0 29 0;
 #X connect 29 0 30 0;
 #X connect 30 0 31 0;
-#X connect 31 0 16 0;
-#X connect 32 0 33 0;
-#X connect 33 0 8 0;
-#X connect 34 0 35 0;
+#X connect 31 0 32 0;
+#X connect 32 0 17 0;
+#X connect 33 0 34 0;
+#X connect 34 0 11 0;
 #X connect 35 0 36 0;
 #X connect 36 0 37 0;
 #X connect 37 0 38 0;
@@ -292,6 +293,7 @@ f 17;
 #X connect 102 0 103 0;
 #X connect 103 0 104 0;
 #X connect 104 0 105 0;
+#X connect 105 0 106 0;
 #X restore 643 76 pd dynamic-ctl-assign;
 #N canvas 0 50 998 439 dynamic-ctl-assign3-populating 0;
 #X obj 132 300 s pd-dynamic-ctl-assign;
@@ -559,7 +561,7 @@ float ccnum float min float max symbol mapping;
 #X coords 0 -1 1 1 85 60 1 100 100;
 #X restore 103 216 pd midi-learn;
 #X obj 103 313 text define -k midi-mapping;
-#A set fx_hip-3 freq 8 39.2644 4721.89 log 0 \;;
+#A set;
 #X obj 277 100 tgl 60 0 \$0-conduiteEdit empty CONDUITE_EDIT 3 30 0
 10 -260097 -1 -1 0 1;
 #X obj 291 176 bng 15 50 30 0 empty empty note_in 17 7 0 10 -262144
@@ -569,434 +571,6 @@ float ccnum float min float max symbol mapping;
 #X msg 990 322 delete_inactive;
 #X obj 264 2 notein;
 #X obj 270 29 spigot;
-#N canvas 422 20 817 544 ConduitePresets 1;
-#X scalar text-help-struct 40 420.73 \; main-0 note2cc_chan_out 2 \\\;
-main-0 note2cc_chan_in 1 \\\; main-0 note2cc_enable 1 \\\; fx_hip-3
-slot 3 \\\; fx_hip-3 Q 7.63265 \\\; fx_hip-3 freq 584.524 \\\; fx_freeverb-2
-slot 34 \\\; fx_freeverb-2 freeze 0 \\\; fx_freeverb-2 wet 0.286326
-\\\; fx_freeverb-2 damp 60 \\\; fx_freeverb-2 hall 80 \\\; fx_freeverb-2
-amp 80 \\\; fx_dubdel2-1 noclick_mode 0 \\\; fx_dubdel2-1 slot 33 \\\;
-fx_dubdel2-1 dell 4 \\\; fx_dubdel2-1 delr 4 \\\; fx_dubdel2-1 sync
-1 \\\; fx_dubdel2-1 del 475.076 \\\; fx_dubdel2-1 wet 0.465306 \\\;
-fx_dubdel2-1 fb 0.453061 \\\; fx_dubdel2-1 bq 2 \\\; fx_dubdel2-1 bpitch
-102 \\\; fx_ring-1 slot 4 \\\; fx_ring-1 freq 97.844 \\\; fx_ring-1
-wet 0.000490355 \\\; fx_sub-0 slot 13 \\\; fx_sub-0 wet 0.999752 \\\;
-fx_sub-0 bypass 0 \\\; fx_sub-0 direct 78.3061 \\\; fx_sub-0 oct2 91.0202
-\\\; fx_sub-0 oct1 99.967 \\\; audio_out-3 slot 35 \\\; audio_out-3
-pan 0 \\\; audio_out-3 mute 0 \\\; audio_out-3 vol 112.538 \\\; audio_out-3
-out OUT(1/2) \\\; audio_out-2 slot 5 \\\; audio_out-2 pan 0 \\\; audio_out-2
-mute 0 \\\; audio_out-2 vol 106.784 \\\; audio_out-2 out MASTER \\\;
-audio_out-1 slot 14 \\\; audio_out-1 pan 0 \\\; audio_out-1 vol 81.4874
-\\\; audio_out-1 out MASTER \\\; audio_in-3 slot 1 \\\; audio_in-3
-module-slot 0 \\\; audio_in-3 mute 0 \\\; audio_in-3 gain -2.98755
-\\\; audio_in-3 in IN(1/2) \\\; audio_in-2 slot 12 \\\; audio_in-2
-module-slot 0 \\\; audio_in-2 mute 1 \\\; audio_in-2 gain -0.0587769
-\\\; audio_in-2 in IN(1/2) \\\; audio_in-1 slot 32 \\\; audio_in-1
-module-slot 0 \\\; audio_in-1 gain -11.3592 \\\; audio_in-1 in MASTER
-\\\; audio_features-0 slot 2 \\\; audio_features-0 seuil 72.7273 \\\;
-audio_features-0 learn 0 \\\; audio_features-0 send_data 0 \\\; audio_features-0
-bright-max 76.2833 \\\; audio_features-0 bright-min 28.7656 \\\; audio_features-0
-env-max 105.077 \\\; audio_features-0 env-min 53.7131 \\\; audio_features-0
-harmo-max 115.639 \\\; audio_features-0 harmo-min 11.9132 \\\; audio_features-0
-ccz_enable 0 \\\; audio_features-0 ccy_enable 0 \\\; audio_features-0
-ccx_enable 1 \\\; audio_features-0 ccz 8 \\\; audio_features-0 ccy
-9 \\\; audio_features-0 ccx 8 \\\; ctl-assign fx_hip-3 freq 8 39.2644
-4721.89 log 0 \\\; \;;
-#X scalar text-help-struct 40 100 \; audio_out-4 slot 14 \\\; audio_out-4
-pan 0 \\\; audio_out-4 vol 92.7878 \\\; audio_out-4 out OUT(1/2) \\\;
-inst_turntable-0 slot 13 \\\; inst_turntable-0 start_note 48 \\\; inst_turntable-0
-scroutch 127 \\\; inst_turntable-0 vol 96.9796 \\\; inst_turntable-0
-lvol <undefined> <undefined> <undefined> 96.9796 \\\; inst_turntable-0
-wave_file C:/Users/jyg/Desktop/Projets/AtelierSonMao/AtelierSon2015-2016/TravailSurSample/sounds/Dj.wav
-\\\; inst_turntable-0 lwave_file C:/Users/jyg/Desktop/Projets/AtelierSonMao/AtelierSon2015-2016/TravailSurSample/sounds/Basson.wav
-C:/Users/jyg/Desktop/Projets/AtelierSonMao/AtelierSon2015-2016/TravailSurSample/sounds/Cello.wav
-C:/Users/jyg/Desktop/Projets/AtelierSonMao/AtelierSon2015-2016/TravailSurSample/sounds/Concret1.wav
-C:/Users/jyg/Desktop/Projets/AtelierSonMao/AtelierSon2015-2016/TravailSurSample/sounds/Dj.wav
-\\\; inst_turntable-0 pitch 1 \\\; inst_turntable-0 lpitch <undefined>
-<undefined> <undefined> 1 \\\; inst_turntable-0 automute 0 \\\; inst_turntable-0
-pos 0.212598 \\\; inst_turntable-0 lpos <undefined> <undefined> 0.346457
-0.212598 \\\; inst_turntable-0 lturntable_rpm <undefined> <undefined>
-<undefined> <undefined> \\\; inst_turntable-0 wavtable 0 \\\; inst_turntable-0
-lwavtable 0 0 0 0 \\\; inst_turntable-0 from 0 \\\; inst_turntable-0
-lfrom 0 0 0.322835 0 \\\; inst_turntable-0 start 1 \\\; inst_turntable-0
-to 1 \\\; inst_turntable-0 lto 1 0.574803 0.724409 1 \\\; inst_turntable-0
-ldisc_rpm <undefined> <undefined> <undefined> <undefined> \\\; data_wintablet-0
-slot 12 \\\; ctl-assign inst_turntable-0 scroutch 27 \\\; ctl-assign
-inst_turntable-0 scratch 27 \\\; ctl-assign inst_turntable-2 scratch
-21 \\\; ctl-assign fx_dubdel-2 del 26 \\\; ctl-assign inst_turntable-2
-scroutch 26 \\\; \;;
-#X scalar text-help-struct 40 212.284 \; inst_headrush-1 slot 14 \\\;
-inst_headrush-1 vol 102.118 \\\; inst_headrush-1 wet 0.859999 \\\;
-audio_out-3 slot 15 \\\; audio_out-3 pan 0 \\\; audio_out-3 mute 0
-\\\; audio_out-3 vol 99.5265 \\\; audio_out-3 out OUT(1/2) \\\; audio_in-3
-slot 13 \\\; audio_in-3 module-slot 0 \\\; audio_in-3 gain -3.06531
-\\\; audio_in-3 in IN(1/2) \\\; ctl-assign inst_headrush-5 led-play
-113 \\\; ctl-assign inst_headrush-5 led-rec 114 \\\; \;;
-#X scalar text-help-struct 40 319.482 \; s_rhodey-4647-MYINST decay
-2449.16 \\\; s_rhodey-4647-MYINST tone 0.432653 \\\; s_rhodey-4647-MYINST
-decay 2449.16 \\\; s_rhodey-4647-MYINST tone 0.432653 \\\; s_rhodey-4647-MYINST
-decay 2449.16 \\\; s_rhodey-4647-MYINST tone 0.432653 \\\; s_rhodey-4647-MYINST
-decay 2449.16 \\\; s_rhodey-4647-MYINST tone 0.432653 \\\; s_rhodey-4647-MYINST
-decay 2449.16 \\\; s_rhodey-4647-MYINST tone 0.432653 \\\; s_rhodey-4647-MYINST
-decay 2449.16 \\\; s_rhodey-4647-MYINST tone 0.432653 \\\; s_rhodey-4647-MYINST
-decay 2449.16 \\\; s_rhodey-4647-MYINST tone 0.432653 \\\; s_rhodey-4647-MYINST
-decay 2449.16 \\\; s_rhodey-4647-MYINST tone 0.432653 \\\; main-0 note2cc_chan_out
-2 \\\; main-0 note2cc_chan_in 1 \\\; main-0 note2cc_enable 1 \\\; inst_tabosc-0
-slot 13 \\\; inst_tabosc-0 monit 0 \\\; inst_tabosc-0 taboscfile-3
-D:/Users/jyg/Projets/CMA_10/PSM/Pingouin.wav \\\; inst_tabosc-0 taboscfile-2
-D:/Users/jyg/Projets/CMA_10/PSM/Pas.wav \\\; inst_tabosc-0 taboscfile-1
-D:/Users/jyg/Projets/CMA_10/PSM/Tete.wav \\\; inst_tabosc-0 taboscfile-0
-D:/Users/jyg/Projets/CMA_10/PSM/Fourmi.wav \\\; inst_tabosc-0 bank
-3 \\\; inst_tabosc-0 harmo8 0.11811 \\\; inst_tabosc-0 harmo7 0.0944882
-\\\; inst_tabosc-0 harmo6 0.3 \\\; inst_tabosc-0 harmo5 0.205512 \\\;
-inst_tabosc-0 harmo4 0.3 \\\; inst_tabosc-0 harmo3 0.0755906 \\\; inst_tabosc-0
-harmo2 0.210236 \\\; inst_tabosc-0 harmo1 0.217323 \\\; inst_tabosc-0
-sens 73.4483 \\\; inst_tabosc-0 sustain 36.5427 \\\; inst_tabosc-0
-vol 97.4531 \\\; inst_tabosc-0 mode 0 \\\; inst_tabosc-0 midiNoteIn
-1 \\\; fx_chorus-2 slot 14 \\\; fx_chorus-2 bypass 0 \\\; fx_chorus-2
-mod 1.01796 \\\; fx_chorus-2 freq 0.60319 \\\; data_azerty2midi-0 slot
-12 \\\; data_azerty2midi-0 enable 1 \\\; data_azerty2midi-0 oct 3 \\\;
-data_azerty2midi-0 velo 100 \\\; audio_out-3 slot 15 \\\; audio_out-3
-pan 0 \\\; audio_out-3 mute 0 \\\; audio_out-3 vol 104.607 \\\; audio_out-3
-out OUT(1/2) \\\; audio_in-3 slot 11 \\\; audio_in-3 module-slot 0
-\\\; audio_in-3 mute 0 \\\; audio_in-3 gain -0.473473 \\\; audio_in-3
-in IN(1/2) \\\; ctl-assign inst_tabosc-0 bank 115 \\\; \;;
-#X scalar text-help-struct 40 541.9 \; s_rhodey-4647-MYINST decay 149.111
-\\\; s_rhodey-4647-MYINST tone 0.706122 \\\; s_rhodey-4647-MYINST decay
-149.111 \\\; s_rhodey-4647-MYINST tone 0.706122 \\\; s_rhodey-4647-MYINST
-decay 149.111 \\\; s_rhodey-4647-MYINST tone 0.706122 \\\; s_rhodey-4647-MYINST
-decay 149.111 \\\; s_rhodey-4647-MYINST tone 0.706122 \\\; s_rhodey-4647-MYINST
-decay 149.111 \\\; s_rhodey-4647-MYINST tone 0.706122 \\\; s_rhodey-4647-MYINST
-decay 149.111 \\\; s_rhodey-4647-MYINST tone 0.706122 \\\; s_rhodey-4647-MYINST
-decay 149.111 \\\; s_rhodey-4647-MYINST tone 0.706122 \\\; s_rhodey-4647-MYINST
-decay 149.111 \\\; s_rhodey-4647-MYINST tone 0.706122 \\\; main-0 note2cc_chan_out
-2 \\\; main-0 note2cc_chan_in 1 \\\; main-0 note2cc_enable 1 \\\; note_16steps-1
-slot 22 \\\; note_16steps-1 cycle 15 \\\; note_16steps-1 lcycle 16
-16 16 16 \\\; note_16steps-1 randoms 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0
-0 \\\; note_16steps-1 lrandoms 0 0 1 0 1 0 0 0 1 0 1 0 0 0 0 0 \\\;
-note_16steps-1 steps 16.4333 17.4 24.1668 14.5 24.1667 10.6333 20.3001
-9.66664 0 14.5 20 13.5333 10.6333 12.5667 14.5 19.3333 \\\; note_16steps-1
-lsteps 16.4333 16.4333 12.4333 16.4333 14.4333 9.66667 9.66667 9.66667
-17.5667 12.5667 13.6333 18.3667 18.3667 18.3667 17.4 19.3333 16.4333
-16.4333 18.3667 24.1667 29 13.5333 9.66664 9.66664 23.5667 14.5 15.4333
-13.5333 10.6333 12.5667 14.5 19.3333 <undefined> undefined undefined
-undefined undefined undefined undefined undefined undefined undefined
-undefined undefined undefined undefined undefined undefined <undefined>
-undefined undefined undefined undefined undefined undefined undefined
-undefined undefined undefined undefined undefined undefined undefined
-undefined \\\; note_16steps-1 xpose 3.4387 \\\; note_16steps-1 lxpose
-3.03448 6.06897 4.55172 4.55172 \\\; note_16steps-1 offset 63.4921
-\\\; note_16steps-1 loffset 34.9206 41.2698 53.9683 53.9683 \\\; note_16steps-1
-scale 38.3016 \\\; note_16steps-1 lscale 10.0794 38.3016 26.2063 26.2063
-\\\; note_16steps-0 slot 12 \\\; note_16steps-0 cycle 12 \\\; note_16steps-0
-lcycle 12 16 16 16 \\\; note_16steps-0 randoms 1 0 1 0 1 0 1 0 1 0
-1 0 1 0 1 0 \\\; note_16steps-0 lrandoms 1 0 1 0 1 0 1 0 1 0 1 0 1
-0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
-0 <undefined> undefined undefined undefined undefined undefined undefined
-undefined undefined undefined undefined undefined undefined undefined
-undefined undefined \\\; note_16steps-0 steps 29 12.5667 4 12.5667
-1 12.5667 18 10.6333 12 9.66666 25 8.69999 12.7 8.69999 0 10.6333 \\\;
-note_16steps-0 lsteps 29 12.5667 7.5667 12.5667 16 12.5667 0 10.6333
-14 9.66666 14 8.69999 12.7 8.69999 0 10.6333 15.4667 6.76668 14.5 3.86667
-9.66668 14.5 2.9 4.83334 9.66668 20.6334 5.8 5.8 10.6333 14.5 12.5667
-14.5 15.4667 6.76668 14.5 3.86667 16.4334 15.4667 2.9 4.83334 9.66668
-5.6334 5.8 5.8 10.6333 14.5 12.5667 14.5 <undefined> undefined undefined
-undefined undefined undefined undefined undefined undefined undefined
-undefined undefined undefined undefined undefined undefined \\\; note_16steps-0
-xpose 3.78543 \\\; note_16steps-0 lxpose 3.78543 3.41379 4.55172 <undefined>
-\\\; note_16steps-0 offset 19.0476 \\\; note_16steps-0 loffset 19.0476
-15.873 53.9683 <undefined> \\\; note_16steps-0 scale 26.2063 \\\; note_16steps-0
-lscale 26.2063 127 70.5556 <undefined> \\\; note_randomize-1 slot 23
-\\\; note_randomize-1 accent 56.1633 \\\; note_randomize-1 prob 90.2041
-\\\; note_randomize-0 slot 13 \\\; note_randomize-0 accent 30.8571
-\\\; note_randomize-0 prob 81.898 \\\; inst_rhodey-0 slot 24 \\\; inst_rhodey-0
-vol 99.5265 \\\; inst_rhodey-0 tone 0.706122 \\\; inst_rhodey-0 decay
-149.111 \\\; inst_bassdrum-0 slot 14 \\\; inst_bassdrum-0 gain 0.475939
-\\\; inst_bassdrum-0 decay 21.7826 \\\; inst_bassdrum-0 freq2 111.833
-\\\; inst_bassdrum-0 square 19.8551 \\\; inst_bassdrum-0 curve 27.9775
-\\\; inst_bassdrum-0 noize 0.787234 \\\; inst_bassdrum-0 lowpass 4140.2
-\\\; inst_modular-0 CV5 0.78347 \\\; inst_modular-0 CV4 0.595918 \\\;
-inst_modular-0 CV3 0.77551 \\\; inst_modular-0 CV2 0.797143 \\\; inst_modular-0
-CV1 0.0263046 \\\; inst_modular-0 cvE 1 \\\; inst_modular-0 cvD 0 \\\;
-inst_modular-0 cvA 0 \\\; inst_modular-0 modular_name main1 \\\; inst_modular-0
-slot 2 \\\; fx_freeverb-1 slot 33 \\\; fx_freeverb-1 freeze 0 \\\;
-fx_freeverb-1 wet 0.0979592 \\\; fx_freeverb-1 damp 60 \\\; fx_freeverb-1
-hall 80 \\\; fx_freeverb-1 amp 80 \\\; fx_dubdel2-2 noclick_mode 0
-\\\; fx_dubdel2-2 slot 26 \\\; fx_dubdel2-2 dell 4 \\\; fx_dubdel2-2
-delr 4 \\\; fx_dubdel2-2 del 0 \\\; fx_dubdel2-2 wet 0.732653 \\\;
-fx_dubdel2-2 fb 0.2 \\\; fx_dubdel2-2 bq 2 \\\; fx_dubdel2-2 bpitch
-60 \\\; fx_dubdel2-1 noclick_mode 0 \\\; fx_dubdel2-1 slot 3 \\\; fx_dubdel2-1
-dell 3 \\\; fx_dubdel2-1 delr 6 \\\; fx_dubdel2-1 sync 1 \\\; fx_dubdel2-1
-del 629.728 \\\; fx_dubdel2-1 wet 0.534694 \\\; fx_dubdel2-1 fb 0.0979592
-\\\; fx_dubdel2-1 bq 2 \\\; fx_dubdel2-1 bpitch 94.5714 \\\; fx_chorus-1
-slot 16 \\\; fx_chorus-1 bypass 0 \\\; fx_chorus-1 mod 1.56327 \\\;
-fx_chorus-1 freq 1.01468 \\\; fx_ring-1 slot 25 \\\; fx_ring-1 freq
-845.487 \\\; fx_ring-1 wet 0.966323 \\\; fx_hip-1 slot 4 \\\; fx_hip-1
-Q 1.18367 \\\; fx_hip-1 freq 457.313 \\\; fx_lowhip-1 slot 15 \\\;
-fx_lowhip-1 f.Q 0.673469 \\\; fx_lowhip-1 f.freq 0.632653 \\\; audio_out-3
-slot 17 \\\; audio_out-3 pan 0.0510204 \\\; audio_out-3 mute 0 \\\;
-audio_out-3 vol 112.123 \\\; audio_out-3 out MASTER \\\; audio_out-2
-slot 5 \\\; audio_out-2 pan 0 \\\; audio_out-2 mute 0 \\\; audio_out-2
-vol 100.175 \\\; audio_out-2 out MASTER \\\; audio_out-1 slot 34 \\\;
-audio_out-1 pan 0 \\\; audio_out-1 mute 0 \\\; audio_out-1 vol 110.412
-\\\; audio_out-1 out OUT(1/2) \\\; audio_out-0 slot 27 \\\; audio_out-0
-pan 0 \\\; audio_out-0 mute 0 \\\; audio_out-0 vol 95.898 \\\; audio_out-0
-out MASTER \\\; audio_in-3 slot 32 \\\; audio_in-3 module-slot 0 \\\;
-audio_in-3 mute 0 \\\; audio_in-3 gain 0.563271 \\\; audio_in-3 in
-MASTER \\\; ctl-assign fx_chorus-2 mod 49 0 2 lin \\\; ctl-assign fx_sub-0
-bypass 132 \\\; ctl-assign fx_pitchshift-0 wet 57 0 1 lin \\\; ctl-assign
-audio_out-0 vol 53 0 127 lin \\\; ctl-assign fx_chorus-2 bypass 49
-\\\; ctl-assign audio_out-2 vol 62 0 100 lin \\\; ctl-assign fx_pitchshift-0
-fback 55 0 100 lin \\\; ctl-assign fx_chorus-2 freq 46 0.05 10 log
-\\\; ctl-assign fx_ring-1 wet 27 0 1 lin \\\; ctl-assign fx_lowhip-1
-f.Q 51 0 1 lin \\\; ctl-assign fx_freeverb-2 damp 60 0 100 lin \\\;
-ctl-assign fx_lowhip-0 f.freq 28 0 1 lin \\\; ctl-assign fx_lowhip-0
-f.Q 29 0 1 lin \\\; ctl-assign fx_sub-0 direct 22 0 100 lin \\\; ctl-assign
-inst_headrush-1 led-rec 146 0 0 lin 19 \\\; ctl-assign fx_sub-0 oct1
-20 0 100 lin \\\; ctl-assign fx_dubdel2-1 wet 31 0 1 lin \\\; ctl-assign
-audio_in-3 mute 129 0 1 lin 2 \\\; ctl-assign fx_dubdel2-1 fb 29 0
-1 lin \\\; ctl-assign fx_dubdel2-1 del 28 100 3000 log \\\; ctl-assign
-fx_pitchshift-0 pitch 54 -12 12 lin \\\; ctl-assign fx_lowhip-1 f.freq
-2 0 1 lin \\\; ctl-assign fx_freeverb-2 freeze 152 \\\; ctl-assign
-fx_sub-0 wet 23 0 1 lin \\\; ctl-assign inst_headrush-1 led-play 144
-0 0 lin 17 \\\; ctl-assign fx_freeverb-2 wet 61 0 1 lin \\\; ctl-assign
-fx_dubdel2-1 bpitch 30 50 120 lin \\\; ctl-assign fx_ring-1 freq 10116
-73.8169 3000 log 0 \\\; ctl-assign audio_in-3 gain 16 -100 27 lin \\\;
-ctl-assign fx_freeverb-2 hall 58 0 100 lin \\\; ctl-assign fx_sub-0
-oct2 21 0 100 lin \\\; ctl-assign fx_pitchshift-0 del 56 1.5 4800 log
-\\\; ctl-assign fx_hip-3 freq 2 20 20000 log \\\; \;;
-#X scalar text-help-struct 79 489.92 \; main-0 note2cc_chan_out 2 \\\;
-main-0 note2cc_chan_in 1 \\\; main-0 note2cc_enable 1 \\\; inst_modular-0
-modular_name main3 \\\; inst_modular-0 slot 2 \\\; s_playolap-sample16-1
-table-stereo /sample5505 \\\; s_playolap-sample16-1 reverse-offset
-0 \\\; s_playolap-sample16-1 transposition 0 \\\; s_playolap-sample16-1
-chunk-size 5 \\\; s_playolap-sample16-1 sr 44100 \\\; s_loopsmooth-sample16-1
-reverse 0 \\\; s_loopsmooth-sample16-1 sr 44100 \\\; s_playolap-sample15-1
-table-stereo /sample5471 \\\; s_playolap-sample15-1 reverse-offset
-0 \\\; s_playolap-sample15-1 transposition 0 \\\; s_playolap-sample15-1
-chunk-size 5 \\\; s_playolap-sample15-1 sr 44100 \\\; s_loopsmooth-sample15-1
-reverse 0 \\\; s_loopsmooth-sample15-1 sr 44100 \\\; s_playolap-sample14-1
-table-stereo /sample5437 \\\; s_playolap-sample14-1 reverse-offset
-0 \\\; s_playolap-sample14-1 transposition 0 \\\; s_playolap-sample14-1
-chunk-size 5 \\\; s_playolap-sample14-1 sr 44100 \\\; s_loopsmooth-sample14-1
-reverse 0 \\\; s_loopsmooth-sample14-1 sr 44100 \\\; s_playolap-sample13-1
-table-stereo /sample5403 \\\; s_playolap-sample13-1 reverse-offset
-0 \\\; s_playolap-sample13-1 transposition 0 \\\; s_playolap-sample13-1
-chunk-size 5 \\\; s_playolap-sample13-1 sr 44100 \\\; s_loopsmooth-sample13-1
-reverse 0 \\\; s_loopsmooth-sample13-1 sr 44100 \\\; s_playolap-sample12-1
-table-stereo /sample5369 \\\; s_playolap-sample12-1 reverse-offset
-0 \\\; s_playolap-sample12-1 transposition 0 \\\; s_playolap-sample12-1
-chunk-size 5 \\\; s_playolap-sample12-1 sr 44100 \\\; s_loopsmooth-sample12-1
-reverse 0 \\\; s_loopsmooth-sample12-1 sr 44100 \\\; s_playolap-sample11-1
-table-stereo /sample5335 \\\; s_playolap-sample11-1 reverse-offset
-0 \\\; s_playolap-sample11-1 transposition 0 \\\; s_playolap-sample11-1
-chunk-size 5 \\\; s_playolap-sample11-1 sr 44100 \\\; s_loopsmooth-sample11-1
-reverse 0 \\\; s_loopsmooth-sample11-1 sr 44100 \\\; s_playolap-sample10-1
-table-stereo /sample5301 \\\; s_playolap-sample10-1 reverse-offset
-0 \\\; s_playolap-sample10-1 transposition 0 \\\; s_playolap-sample10-1
-chunk-size 5 \\\; s_playolap-sample10-1 sr 44100 \\\; s_loopsmooth-sample10-1
-reverse 0 \\\; s_loopsmooth-sample10-1 sr 44100 \\\; s_playolap-sample9-1
-table-stereo /sample5267 \\\; s_playolap-sample9-1 reverse-offset 0
-\\\; s_playolap-sample9-1 transposition 0 \\\; s_playolap-sample9-1
-chunk-size 5 \\\; s_playolap-sample9-1 sr 44100 \\\; s_loopsmooth-sample9-1
-reverse 0 \\\; s_loopsmooth-sample9-1 sr 44100 \\\; s_playolap-sample8-1
-table-stereo /sample5233 \\\; s_playolap-sample8-1 reverse-offset 0
-\\\; s_playolap-sample8-1 transposition 0 \\\; s_playolap-sample8-1
-chunk-size 5 \\\; s_playolap-sample8-1 sr 44100 \\\; s_loopsmooth-sample8-1
-reverse 0 \\\; s_loopsmooth-sample8-1 sr 44100 \\\; s_playolap-sample7-1
-table-stereo /sample5199 \\\; s_playolap-sample7-1 reverse-offset 0
-\\\; s_playolap-sample7-1 transposition 0 \\\; s_playolap-sample7-1
-chunk-size 5 \\\; s_playolap-sample7-1 sr 44100 \\\; s_loopsmooth-sample7-1
-reverse 0 \\\; s_loopsmooth-sample7-1 sr 44100 \\\; s_playolap-sample6-1
-table-stereo /sample5165 \\\; s_playolap-sample6-1 reverse-offset 0
-\\\; s_playolap-sample6-1 transposition 0 \\\; s_playolap-sample6-1
-chunk-size 5 \\\; s_playolap-sample6-1 sr 44100 \\\; s_loopsmooth-sample6-1
-reverse 0 \\\; s_loopsmooth-sample6-1 sr 44100 \\\; s_playolap-sample5-1
-table-stereo /sample5131 \\\; s_playolap-sample5-1 reverse-offset 0
-\\\; s_playolap-sample5-1 transposition 0 \\\; s_playolap-sample5-1
-chunk-size 5 \\\; s_playolap-sample5-1 sr 44100 \\\; s_loopsmooth-sample5-1
-reverse 0 \\\; s_loopsmooth-sample5-1 sr 44100 \\\; s_playolap-sample4-1
-table-stereo /sample5097 \\\; s_playolap-sample4-1 reverse-offset 0
-\\\; s_playolap-sample4-1 transposition 0 \\\; s_playolap-sample4-1
-chunk-size 5 \\\; s_playolap-sample4-1 sr 44100 \\\; s_loopsmooth-sample4-1
-reverse 0 \\\; s_loopsmooth-sample4-1 sr 44100 \\\; s_playolap-sample3-1
-table-stereo /sample5063 \\\; s_playolap-sample3-1 reverse-offset 0
-\\\; s_playolap-sample3-1 transposition 0 \\\; s_playolap-sample3-1
-chunk-size 5 \\\; s_playolap-sample3-1 sr 44100 \\\; s_loopsmooth-sample3-1
-reverse 0 \\\; s_loopsmooth-sample3-1 sr 44100 \\\; s_playolap-sample2-1
-table-stereo /sample5029 \\\; s_playolap-sample2-1 reverse-offset 0
-\\\; s_playolap-sample2-1 transposition 0 \\\; s_playolap-sample2-1
-chunk-size 5 \\\; s_playolap-sample2-1 sr 44100 \\\; s_loopsmooth-sample2-1
-reverse 0 \\\; s_loopsmooth-sample2-1 sr 44100 \\\; s_playolap-sample1-1
-table-stereo /sample4995 \\\; s_playolap-sample1-1 reverse-offset 0
-\\\; s_playolap-sample1-1 transposition 0 \\\; s_playolap-sample1-1
-chunk-size 5 \\\; s_playolap-sample1-1 sr 44100 \\\; s_loopsmooth-sample1-1
-reverse 0 \\\; s_loopsmooth-sample1-1 sr 44100 \\\; audio_out-2 mono
-0 \\\; audio_out-2 slot 3 \\\; audio_out-2 pan 0 \\\; audio_out-2 mute
-0 \\\; audio_out-2 vol 79.9582 \\\; audio_out-2 out OUT(1/2) \\\; ctl-assign
-fx_chorus-2 mod 49 0 2 lin \\\; ctl-assign audio_in-3 gain 16 -100
-27 lin \\\; ctl-assign fx_sub-0 bypass 132 \\\; ctl-assign fx_pitchshift-0
-pitch 54 -12 12 lin \\\; ctl-assign fx_freeverb-2 wet 61 0 1 lin \\\;
-ctl-assign fx_sub-0 oct2 21 0 100 lin \\\; ctl-assign fx_lowhip-1 f.freq
-2 0 1 lin \\\; ctl-assign fx_pitchshift-0 fback 55 0 100 lin \\\; ctl-assign
-audio_out-0 vol 53 0 127 lin \\\; ctl-assign fx_freeverb-2 freeze 152
-\\\; ctl-assign fx_freeverb-2 damp 60 0 100 lin \\\; ctl-assign fx_lowhip-0
-f.freq 28 0 1 lin \\\; ctl-assign fx_lowhip-0 f.Q 29 0 1 lin \\\; ctl-assign
-fx_sub-0 direct 22 0 100 lin \\\; ctl-assign inst_headrush-1 led-rec
-146 0 0 lin 19 \\\; ctl-assign fx_sub-0 oct1 20 0 100 lin \\\; ctl-assign
-fx_dubdel2-1 wet 31 0 1 lin \\\; ctl-assign audio_in-3 mute 129 0 1
-lin 2 \\\; ctl-assign fx_dubdel2-1 fb 29 0 1 lin \\\; ctl-assign fx_dubdel2-1
-del 28 100 3000 log \\\; ctl-assign fx_sub-0 wet 23 0 1 lin \\\; ctl-assign
-fx_freeverb-2 hall 58 0 100 lin \\\; ctl-assign inst_headrush-1 led-play
-144 0 0 lin 17 \\\; ctl-assign fx_lowhip-1 f.Q 51 0 1 lin \\\; ctl-assign
-fx_chorus-2 freq 46 0.05 10 log \\\; ctl-assign fx_dubdel2-1 bpitch
-30 50 120 lin \\\; ctl-assign fx_chorus-2 bypass 49 \\\; ctl-assign
-fx_ring-1 freq 2 0.1 3000 log \\\; ctl-assign fx_pitchshift-0 wet 57
-0 1 lin \\\; ctl-assign fx_ring-1 wet 27 0 1 lin \\\; ctl-assign fx_pitchshift-0
-del 56 1.5 4800 log \\\; ctl-assign audio_out-2 vol 62 0 100 lin \\\;
-ctl-assign fx_hip-3 freq 2 20 20000 log \\\; \;;
-#X scalar text-help-struct 40 491.88 \; main-0 note2cc_chan_out 2 \\\;
-main-0 note2cc_chan_in 1 \\\; main-0 note2cc_enable 1 \\\; inst_modular-0
-modular_name main2 \\\; inst_modular-0 slot 2 \\\; s_playolap-sample16-1
-table-stereo /sample5505 \\\; s_playolap-sample16-1 reverse-offset
-0 \\\; s_playolap-sample16-1 transposition 0 \\\; s_playolap-sample16-1
-chunk-size 5 \\\; s_playolap-sample16-1 sr 44100 \\\; s_loopsmooth-sample16-1
-reverse 0 \\\; s_loopsmooth-sample16-1 sr 44100 \\\; s_playolap-sample15-1
-table-stereo /sample5471 \\\; s_playolap-sample15-1 reverse-offset
-0 \\\; s_playolap-sample15-1 transposition 0 \\\; s_playolap-sample15-1
-chunk-size 5 \\\; s_playolap-sample15-1 sr 44100 \\\; s_loopsmooth-sample15-1
-reverse 0 \\\; s_loopsmooth-sample15-1 sr 44100 \\\; s_playolap-sample14-1
-table-stereo /sample5437 \\\; s_playolap-sample14-1 reverse-offset
-0 \\\; s_playolap-sample14-1 transposition 0 \\\; s_playolap-sample14-1
-chunk-size 5 \\\; s_playolap-sample14-1 sr 44100 \\\; s_loopsmooth-sample14-1
-reverse 0 \\\; s_loopsmooth-sample14-1 sr 44100 \\\; s_playolap-sample13-1
-table-stereo /sample5403 \\\; s_playolap-sample13-1 reverse-offset
-0 \\\; s_playolap-sample13-1 transposition 0 \\\; s_playolap-sample13-1
-chunk-size 5 \\\; s_playolap-sample13-1 sr 44100 \\\; s_loopsmooth-sample13-1
-reverse 0 \\\; s_loopsmooth-sample13-1 sr 44100 \\\; s_playolap-sample12-1
-table-stereo /sample5369 \\\; s_playolap-sample12-1 reverse-offset
-0 \\\; s_playolap-sample12-1 transposition 0 \\\; s_playolap-sample12-1
-chunk-size 5 \\\; s_playolap-sample12-1 sr 44100 \\\; s_loopsmooth-sample12-1
-reverse 0 \\\; s_loopsmooth-sample12-1 sr 44100 \\\; s_playolap-sample11-1
-table-stereo /sample5335 \\\; s_playolap-sample11-1 reverse-offset
-0 \\\; s_playolap-sample11-1 transposition 0 \\\; s_playolap-sample11-1
-chunk-size 5 \\\; s_playolap-sample11-1 sr 44100 \\\; s_loopsmooth-sample11-1
-reverse 0 \\\; s_loopsmooth-sample11-1 sr 44100 \\\; s_playolap-sample10-1
-table-stereo /sample5301 \\\; s_playolap-sample10-1 reverse-offset
-0 \\\; s_playolap-sample10-1 transposition 0 \\\; s_playolap-sample10-1
-chunk-size 5 \\\; s_playolap-sample10-1 sr 44100 \\\; s_loopsmooth-sample10-1
-reverse 0 \\\; s_loopsmooth-sample10-1 sr 44100 \\\; s_playolap-sample9-1
-table-stereo /sample5267 \\\; s_playolap-sample9-1 reverse-offset 0
-\\\; s_playolap-sample9-1 transposition 0 \\\; s_playolap-sample9-1
-chunk-size 5 \\\; s_playolap-sample9-1 sr 44100 \\\; s_loopsmooth-sample9-1
-reverse 0 \\\; s_loopsmooth-sample9-1 sr 44100 \\\; s_playolap-sample8-1
-table-stereo /sample5233 \\\; s_playolap-sample8-1 reverse-offset 0
-\\\; s_playolap-sample8-1 transposition 0 \\\; s_playolap-sample8-1
-chunk-size 5 \\\; s_playolap-sample8-1 sr 44100 \\\; s_loopsmooth-sample8-1
-reverse 0 \\\; s_loopsmooth-sample8-1 sr 44100 \\\; s_playolap-sample7-1
-table-stereo /sample5199 \\\; s_playolap-sample7-1 reverse-offset 0
-\\\; s_playolap-sample7-1 transposition 0 \\\; s_playolap-sample7-1
-chunk-size 5 \\\; s_playolap-sample7-1 sr 44100 \\\; s_loopsmooth-sample7-1
-reverse 0 \\\; s_loopsmooth-sample7-1 sr 44100 \\\; s_playolap-sample6-1
-table-stereo /sample5165 \\\; s_playolap-sample6-1 reverse-offset 0
-\\\; s_playolap-sample6-1 transposition 0 \\\; s_playolap-sample6-1
-chunk-size 5 \\\; s_playolap-sample6-1 sr 44100 \\\; s_loopsmooth-sample6-1
-reverse 0 \\\; s_loopsmooth-sample6-1 sr 44100 \\\; s_playolap-sample5-1
-table-stereo /sample5131 \\\; s_playolap-sample5-1 reverse-offset 0
-\\\; s_playolap-sample5-1 transposition 0 \\\; s_playolap-sample5-1
-chunk-size 5 \\\; s_playolap-sample5-1 sr 44100 \\\; s_loopsmooth-sample5-1
-reverse 0 \\\; s_loopsmooth-sample5-1 sr 44100 \\\; s_playolap-sample4-1
-table-stereo /sample5097 \\\; s_playolap-sample4-1 reverse-offset 0
-\\\; s_playolap-sample4-1 transposition 0 \\\; s_playolap-sample4-1
-chunk-size 5 \\\; s_playolap-sample4-1 sr 44100 \\\; s_loopsmooth-sample4-1
-reverse 0 \\\; s_loopsmooth-sample4-1 sr 44100 \\\; s_playolap-sample3-1
-table-stereo /sample5063 \\\; s_playolap-sample3-1 reverse-offset 0
-\\\; s_playolap-sample3-1 transposition 0 \\\; s_playolap-sample3-1
-chunk-size 5 \\\; s_playolap-sample3-1 sr 44100 \\\; s_loopsmooth-sample3-1
-reverse 0 \\\; s_loopsmooth-sample3-1 sr 44100 \\\; s_playolap-sample2-1
-table-stereo /sample5029 \\\; s_playolap-sample2-1 reverse-offset 0
-\\\; s_playolap-sample2-1 transposition 0 \\\; s_playolap-sample2-1
-chunk-size 5 \\\; s_playolap-sample2-1 sr 44100 \\\; s_loopsmooth-sample2-1
-reverse 0 \\\; s_loopsmooth-sample2-1 sr 44100 \\\; s_playolap-sample1-1
-table-stereo /sample4995 \\\; s_playolap-sample1-1 reverse-offset 0
-\\\; s_playolap-sample1-1 transposition 0 \\\; s_playolap-sample1-1
-chunk-size 5 \\\; s_playolap-sample1-1 sr 44100 \\\; s_loopsmooth-sample1-1
-reverse 0 \\\; s_loopsmooth-sample1-1 sr 44100 \\\; audio_out-2 mono
-0 \\\; audio_out-2 slot 3 \\\; audio_out-2 pan 0 \\\; audio_out-2 mute
-0 \\\; audio_out-2 vol 86.1786 \\\; audio_out-2 out OUT(1/2) \\\; ctl-assign
-fx_ring-1 freq 2 0.1 3000 log \\\; ctl-assign fx_chorus-2 bypass 49
-\\\; ctl-assign fx_dubdel2-1 bpitch 30 50 120 lin \\\; ctl-assign fx_lowhip-1
-f.Q 51 0 1 lin \\\; ctl-assign audio_out-2 vol 62 0 100 lin \\\; ctl-assign
-fx_pitchshift-0 wet 57 0 1 lin \\\; ctl-assign fx_ring-1 wet 27 0 1
-lin \\\; ctl-assign fx_freeverb-2 hall 58 0 100 lin \\\; ctl-assign
-fx_sub-0 wet 23 0 1 lin \\\; ctl-assign fx_chorus-2 freq 46 0.05 10
-log \\\; ctl-assign fx_dubdel2-1 del 28 100 3000 log \\\; ctl-assign
-fx_dubdel2-1 fb 29 0 1 lin \\\; ctl-assign audio_in-3 mute 129 0 1
-lin 2 \\\; ctl-assign fx_dubdel2-1 wet 31 0 1 lin \\\; ctl-assign fx_sub-0
-oct1 20 0 100 lin \\\; ctl-assign inst_headrush-1 led-rec 146 0 0 lin
-19 \\\; ctl-assign fx_sub-0 direct 22 0 100 lin \\\; ctl-assign fx_lowhip-0
-f.Q 29 0 1 lin \\\; ctl-assign fx_lowhip-0 f.freq 28 0 1 lin \\\; ctl-assign
-fx_freeverb-2 damp 60 0 100 lin \\\; ctl-assign fx_freeverb-2 freeze
-152 \\\; ctl-assign audio_out-0 vol 53 0 127 lin \\\; ctl-assign fx_pitchshift-0
-fback 55 0 100 lin \\\; ctl-assign inst_headrush-1 led-play 144 0 0
-lin 17 \\\; ctl-assign fx_lowhip-1 f.freq 2 0 1 lin \\\; ctl-assign
-fx_sub-0 oct2 21 0 100 lin \\\; ctl-assign fx_pitchshift-0 del 56 1.5
-4800 log \\\; ctl-assign fx_hip-3 freq 2 20 20000 log \\\; ctl-assign
-fx_freeverb-2 wet 61 0 1 lin \\\; ctl-assign fx_pitchshift-0 pitch
-54 -12 12 lin \\\; ctl-assign fx_sub-0 bypass 132 \\\; ctl-assign audio_in-3
-gain 16 -100 27 lin \\\; ctl-assign fx_chorus-2 mod 49 0 2 lin \\\;
-\;;
-#X scalar text-help-struct 40 370.6 \; audio_out-3 slot 14 \\\; audio_out-3
-pan 0 \\\; audio_out-3 vol 110.931 \\\; audio_out-3 out OUT(1/2) \\\;
-data_azerty2midi-0 enable 1 \\\; data_azerty2midi-0 slot 12 \\\; data_azerty2midi-0
-oct 3 \\\; data_azerty2midi-0 velo 100 \\\; inst_rhodey-0 vol 95.3796
-\\\; inst_rhodey-0 slot 13 \\\; inst_rhodey-0 tone 0.432653 \\\; inst_rhodey-0
-decay 2449.16 \\\; \;;
-#X scalar text-help-struct 40 151.258 \; inst_bassdrum-0 B_curve 82.2041
-\\\; inst_bassdrum-0 A_curve 11.5832 \\\; inst_bassdrum-0 B_decay 445.409
-\\\; inst_bassdrum-0 A_decay 248.385 \\\; inst_bassdrum-0 B_freq2 475.715
-\\\; inst_bassdrum-0 A_freq2 15.257 \\\; inst_bassdrum-0 B_lowpass
-10000 \\\; inst_bassdrum-0 A_lowpass 643.444 \\\; inst_bassdrum-0 B_square
-0.0434808 \\\; inst_bassdrum-0 A_square 479.569 \\\; inst_bassdrum-0
-gain 2.58372 \\\; inst_bassdrum-0 decay 248.385 \\\; inst_bassdrum-0
-freq2 15.257 \\\; inst_bassdrum-0 square 479.569 \\\; inst_bassdrum-0
-curve 11.5832 \\\; inst_bassdrum-0 noize 0.319149 \\\; inst_bassdrum-0
-lowpass 643.444 \\\; inst_bassdrum-0 slot 13 \\\; fx_chorus-2 B_mod
-0.979592 \\\; fx_chorus-2 A_mod 0.979592 \\\; fx_chorus-2 B_freq 0.32252
-\\\; fx_chorus-2 A_freq 0.32252 \\\; fx_chorus-2 slot 15 \\\; fx_chorus-2
-bypass 0 \\\; fx_chorus-2 mod 0.979592 \\\; fx_chorus-2 freq 0.32252
-\\\; fx_dubdel2-1 dell 4 \\\; fx_dubdel2-1 delr 3 \\\; fx_dubdel2-1
-slot 16 \\\; fx_dubdel2-1 sync 1 \\\; fx_dubdel2-1 del 819.226 \\\;
-fx_dubdel2-1 wet 0.655714 \\\; fx_dubdel2-1 fb 0.444898 \\\; fx_dubdel2-1
-bq 2 \\\; fx_dubdel2-1 bpitch 80.2857 \\\; audio_out-3 slot 17 \\\;
-audio_out-3 pan 0 \\\; audio_out-3 mute 0 \\\; audio_out-3 vol 100.045
-\\\; audio_out-3 out OUT(1/2) \\\; data_azerty2midi-0 enable 1 \\\;
-data_azerty2midi-0 slot 11 \\\; data_azerty2midi-0 oct 4 \\\; data_azerty2midi-0
-velo 80 \\\; fx_lowhip-0 f.Q 0.700787 \\\; fx_lowhip-0 f.freq 0.669291
-\\\; fx_lowhip-0 slot 14 \\\; midi_arpeggiator-0 slot 12 \\\; midi_arpeggiator-0
-beat 3 \\\; ctl-assign fx_lowhip-0 f.freq 20 0 1 lin \\\; ctl-assign
-fx_lowhip-0 f.Q 21 0 1 lin \\\; ctl-assign inst_bassdrum-0 decay 22
-10 2000 log \\\; \;;
-#X scalar text-help-struct 40 1.008 \; \;;
-#X obj 0 435 cnv 2 10000 2 empty ducon empty 20 12 0 14 -86853 -66577
-0;
-#X obj 0 0 vsl 30 2000 2000 0 0 0 \$0-pos \$0-pos-rcv empty 0 -9 0
-10 -260097 -1 -1 156349 0;
-#X text 101 -1 RESET;
-#X text 88 107 test turntable;
-#X text 118 205 test headrush;
-#X text 104 318 test tabosc+chorus;
-#X text 105 360 test rodey;
-#X text 105 411 autowah;
-#X text 109 538 Test modulaire + sequenceur note_16steps;
-#X text 114 488 test modulaire;
-#X text 98 140 test bassdrum + midi_arpeggiator (lancer le metronome
-pour activer l'arpeggiateur);
-#X text 243 0 POUR RAPPELER UNE SCENE \, CLIQUER SUR UN CARRE;
-#X text 243 35 POUR ENREGISTRER UNE NOUVELLE SCENE OU ECRASER UNE ANCIENNE
-\, CLIQUER SUR LA COLONNE ORANGE A L'EMPLACEMENT DESIRE \, PUIS CLIQUER
-SUR LE BOUTON ROUGE 'SAVE';
-#X restore 477 23 pd ConduitePresets;
 #N canvas 0 50 607 453 declare 0;
 #X obj 65 248 declare -stdpath extra/iemguts/;
 #X obj 65 268 declare -stdpath extra/iemlib/;
@@ -1008,16 +582,8 @@ SUR LE BOUTON ROUGE 'SAVE';
 #X obj 64 175 declare -path ressources/core/fid_abs_vanilia-0.4/;
 #X restore 475 130 pd declare;
 #N canvas 0 50 1366 685 rack 1;
-#X obj -3 -3 cnv 1 804 644 empty grid empty 20 12 0 14 -228856 -66577
+#X obj -9 70 cnv 1 808 730 empty grid empty 20 12 0 14 -228856 -66577
 0;
-#X msg 1224 41 audio_in;
-#X msg 1224 61 audio_out;
-#X msg 1224 81 audio_record;
-#X msg 1224 348 fx_chorus;
-#X msg 1224 368 fx_dubdel;
-#X msg 1224 205 fx_hip;
-#X msg 1224 245 fx_ring;
-#X msg 1224 458 fx_freeverb;
 #X obj 1224 628 s ACTION;
 #N canvas 55 181 1125 537 GO 0;
 #X obj 73 14 receivecanvas 1;
@@ -1037,7 +603,7 @@ SUR LE BOUTON ROUGE 'SAVE';
 #X obj 11 190 moses 801;
 #X obj 205 237 > 0;
 #X obj 179 278 spigot;
-#N canvas 0 50 686 567 scene_recall 0;
+#N canvas 161 56 937 567 scene_recall 0;
 #X obj 461 271 int;
 #X msg 481 306 label p.\$1;
 #X obj 488 342 s \$0-get_preset-rcv;
@@ -1050,21 +616,15 @@ SUR LE BOUTON ROUGE 'SAVE';
 #X obj 397 316 max 0;
 #X msg 289 424 -1;
 #X obj 410 361 * 40;
-#X obj 425 123 r \$0-pos-rcv;
-#X obj 425 165 route set;
-#X obj 400 76 r \$0-pos;
 #X obj 459 209 - 15;
 #X obj 465 235 / 40;
 #X obj 428 399 + 15;
-#X obj 526 443 s \$0-pos;
 #X msg 440 443 set \$1;
-#X obj 435 483 s \$0-pos-rcv;
 #X obj 317 23 pgmin 17;
 #X text 426 14 Gestion scenes;
 #X obj 28 573 s pd-ConduitePresets;
 #X msg 6 541 editmode 0 \, mouse 50 \$1 0 0 \, mouseup 50 \$1 0;
 #X obj 42 511 f;
-#X obj 71 470 r \$0-pos;
 #X obj 29 409 delay 20;
 #X obj 312 75 t b f;
 #X obj -85 320 r \$0-get_preset;
@@ -1073,8 +633,29 @@ SUR LE BOUTON ROUGE 'SAVE';
 #X msg 289 499 vis 1;
 #X obj 358 446 delay 20;
 #X obj 371 411 t b;
+#X obj 400 76 r SCENE-pos;
+#X obj 526 443 s SCENE-pos;
+#X obj 435 483 s SCENE-pos-rcv;
+#X obj 71 470 r SCENE-pos;
+#X obj 542 250 + 0.5;
+#X obj 700 361 * 40;
+#X obj 718 399 + 15;
+#X msg 692 446 pos 0 \$1;
+#X obj 690 472 s ducon;
+#X obj -66 443 delay 40;
+#X obj 89 76 r CTLIN;
+#X msg 100 142 \$2 \$1;
+#X obj 85 206 select 127;
+#X floatatom 51 182 5 0 0 0 - - -, f 5;
+#X obj 115 174 route 2095 2090;
+#X text 69 41 su10 comme switch controler;
+#X obj 175 216 select 127;
+#X obj 85 231 t b b;
+#X obj 175 241 t b b;
+#X obj -53 260 r \$0-save;
 #X connect 0 0 1 0;
 #X connect 0 0 6 1;
+#X connect 0 0 33 0;
 #X connect 1 0 2 0;
 #X connect 3 0 4 0;
 #X connect 3 0 9 0;
@@ -1083,31 +664,48 @@ SUR LE BOUTON ROUGE 'SAVE';
 #X connect 7 0 6 0;
 #X connect 8 0 0 0;
 #X connect 8 0 10 0;
-#X connect 8 0 33 0;
+#X connect 8 0 27 0;
 #X connect 9 0 6 0;
-#X connect 10 0 16 0;
+#X connect 10 0 13 0;
 #X connect 11 0 12 0;
-#X connect 12 0 14 0;
+#X connect 12 0 32 0;
 #X connect 13 0 14 0;
-#X connect 14 0 15 0;
-#X connect 15 0 0 0;
-#X connect 16 0 17 0;
-#X connect 16 0 18 0;
-#X connect 18 0 19 0;
-#X connect 20 0 27 0;
-#X connect 23 0 22 0;
-#X connect 24 0 23 0;
-#X connect 25 0 24 1;
-#X connect 26 0 24 0;
+#X connect 13 0 29 0;
+#X connect 14 0 30 0;
+#X connect 15 0 21 0;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;
+#X connect 20 0 19 0;
+#X connect 21 0 20 0;
+#X connect 21 0 25 0;
+#X connect 21 1 8 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 24 0 20 0;
+#X connect 24 0 37 0;
+#X connect 25 0 17 0;
+#X connect 26 0 25 0;
 #X connect 27 0 26 0;
-#X connect 27 0 31 0;
-#X connect 27 1 8 0;
-#X connect 28 0 29 0;
-#X connect 29 0 30 0;
-#X connect 30 0 26 0;
-#X connect 31 0 22 0;
-#X connect 32 0 31 0;
-#X connect 33 0 32 0;
+#X connect 28 0 11 0;
+#X connect 31 0 19 1;
+#X connect 32 0 0 0;
+#X connect 33 0 34 0;
+#X connect 34 0 14 0;
+#X connect 34 0 35 0;
+#X connect 35 0 36 0;
+#X connect 37 0 25 0;
+#X connect 38 0 39 0;
+#X connect 39 0 41 0;
+#X connect 39 0 42 0;
+#X connect 40 0 45 0;
+#X connect 42 0 40 0;
+#X connect 42 1 44 0;
+#X connect 44 0 46 0;
+#X connect 45 0 20 0;
+#X connect 45 1 7 0;
+#X connect 46 0 20 0;
+#X connect 46 1 9 0;
+#X connect 47 0 37 0;
 #X restore 475 38 pd scene_recall;
 #X connect 0 0 11 0;
 #X connect 1 0 14 0;
@@ -1129,16 +727,13 @@ SUR LE BOUTON ROUGE 'SAVE';
 #X connect 14 0 2 0;
 #X connect 15 0 16 1;
 #X connect 16 0 7 0;
-#X restore 108 63 pd GO;
-#X obj 177 7 cnv 15 400 40 empty COMMAND-rcv audio_in(3:2) 2 20 0 35
--261682 -66577 0;
-#X obj 954 525 s REFRESH_CONNEXIONS;
-#X obj 956 506 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 579 8 tgl 30 1 INSERT_MODE empty INSERT_MODE 32 7 0 10 -262144
+#X restore 1090 506 pd GO;
+#X obj 177 24 cnv 15 400 40 empty COMMAND-rcv (2:4) 2 20 0 35 -261682
+-66577 0;
+#X obj 1089 611 bng 30 250 50 0 empty REFRESH_CONNEXIONS Refresh_Connexions
+32 7 0 10 -262144 -1 -1;
+#X obj 283 2 tgl 30 1 INSERT_MODE empty INSERT_MODE 32 7 0 10 -262144
 -1 -1 1 1;
-#X msg 1224 526 data_wintablet;
-#X msg 1224 305 fx_dynproc;
 #N canvas 637 72 547 472 todo 0;
 #X msg 354 236 fx_graindelay;
 #X msg 354 264 fx_granulator;
@@ -1164,7 +759,7 @@ SUR LE BOUTON ROUGE 'SAVE';
 #X obj 193 40 r CLOCK;
 #X floatatom 143 284 5 0 0 0 - - -, f 5;
 #X floatatom 97 284 5 0 0 0 - - -, f 5;
-#X obj 89 222 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 89 222 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 289 91 r BPM;
 #X floatatom 289 116 5 0 0 0 - - -, f 5;
@@ -1218,51 +813,20 @@ SUR LE BOUTON ROUGE 'SAVE';
 #X connect 23 0 9 0;
 #X connect 24 0 25 0;
 #X restore 21 107 pd essais groove;
-#X restore 1160 105 pd todo;
-#X msg 1083 301 inst_sampler;
-#X obj 684 0 tgl 30 0 MIDI_LEARN MIDI_LEARN-rcv midi-learn(1:cc9) 2
-7 0 10 -262144 -1 -1 0 1;
-#X obj 108 3 bng 60 250 50 0 \$0-save empty SAVE 5 30 0 20 -258113
--1 -1;
-#X msg 1224 506 data_fidtouch;
-#X msg 1224 225 fx_filter;
-#X msg 1224 265 fx_freqshift;
-#X msg 1224 285 fx_pitchshift;
-#X msg 1224 438 fx_resonator;
-#X msg 1082 322 inst_turntable;
-#X msg 1224 185 fx_lop;
-#X msg 1083 252 inst_8bits;
-#X obj 175 52 cnv 15 600 20 empty COMMAND-HELP-rcv entrée_audio 2
-8 0 16 -261682 -66577 0;
-#X msg 1081 272 inst_rhodey;
-#X obj 9 7 bng 40 250 50 0 \$0-prev empty << 5 20 0 25 -262144 -1 -1
-;
-#X obj 49 7 bng 40 250 50 0 \$0-next empty >> 5 20 0 25 -262144 -1
+#X restore 1092 554 pd todo;
+#X obj 6 -3 bng 40 250 50 0 \$0-prev empty << 5 20 0 25 -262144 -1
 -1;
-#X obj 9 50 hsl 90 30 0 127 0 0 \$0-get_preset \$0-get_preset-rcv p.10
+#X obj 46 -3 bng 40 250 50 0 \$0-next empty >> 5 20 0 25 -262144 -1
+-1;
+#X obj 9 37 hsl 90 30 0 127 0 0 \$0-get_preset \$0-get_preset-rcv p.5
 20 20 0 20 -204786 -204786 -1 0 1;
-#X msg 1056 478 data_upic;
-#X obj 610 20 tgl 15 0 \$0-video \$0-video-rcv video 17 7 0 10 -262144
+#X obj 1062 77 tgl 15 0 \$0-video \$0-video-rcv video 17 7 0 10 -262144
 -1 -1 0 1;
-#X msg 1224 546 data_fidcontrol;
-#X msg 1224 566 data_feuilleA4;
-#X obj 859 103 hsl 200 300 0 127 0 0 empty empty empty -2 -8 0 10 -261682
+#X obj 897 168 hsl 100 100 0 127 0 0 empty empty empty -2 -8 0 10 -261682
 -261682 -261682 0 1;
-#X msg 892 404 vis 1;
-#X obj 848 423 s pd-ConduitePresets;
-#X msg 1224 11 remove;
-#X text 1131 493 midi_upic;
-#X msg 1077 386 midi_arpeggiator;
-#X msg 1224 101 audio_features;
-#X text 897 188 CONDUITE;
-#X text 896 256 CLIQUER ICI;
-#X msg 1062 454 data_azerty2midi;
-#X msg 1224 140 fx_lowhip;
-#X obj 722 13 bng 30 250 50 0 \$0-mappings empty Mappings... 17 7 0
-10 -262144 -1 -1;
-#X msg 1224 388 fx_dubdel2;
-#X msg 1224 160 fx_sub;
-#X msg 1083 183 inst_soundfile;
+#X msg 895 270 vis 1;
+#X msg 1224 532 remove;
+#X text 899 231 CLIQUER ICI;
 #N canvas 0 50 450 300 mesure_latence 0;
 #N canvas 0 50 576 577 latence 0;
 #X obj 83 224 delay 2000;
@@ -1329,7 +893,7 @@ SUR LE BOUTON ROUGE 'SAVE';
 #X obj 225 157 adc~;
 #X obj 230 227 dac~;
 #X obj 221 101 nbx 5 14 0 200 0 1 LATENCY LATENCY-rcv LATENCY(ms) -70
-7 0 10 -262144 -1 -1 27.3923 256;
+7 0 10 -262144 -1 -1 12 256;
 #X obj 154 118 cnv 15 120 20 empty latence-rcv LATENCE=27.3923 2 12
 0 12 -233017 -66577 0;
 #X msg 130 212 label \$1;
@@ -1342,25 +906,528 @@ SUR LE BOUTON ROUGE 'SAVE';
 #X connect 2 1 0 1;
 #X connect 6 0 7 0;
 #X coords 0 -1 1 1 180 40 2 100 100;
-#X restore 486 40 pd mesure_latence;
-#N canvas 0 50 450 300 etude_morphing 0;
-#X obj 125 100 hsl 128 30 0 1 0 0 MORPH MORPH-rcv A<--------->B 10
-15 0 14 -262144 -1 -1 0 1;
-#X obj 101 109 bng 20 250 50 0 MORPH-setA empty A 4 10 0 10 -262144
--1 -1;
-#X obj 256 108 bng 20 250 50 0 MORPH-setB empty B 4 10 0 10 -262144
--1 -1;
-#X obj 261 162 r MORPH;
-#X msg 261 187 set \$1;
-#X obj 261 212 s MORPH-rcv;
+#X restore 818 115 pd mesure_latence;
+#X msg 1224 512 help;
+#N canvas 333 50 885 605 video_subprocess 0;
+#X msg 155 108 pd~ stop;
+#X msg 265 213 gemwin destroy;
+#X obj 98 245 r TO_VIDEO;
+#X obj 347 8 r \$0-video;
+#X obj 347 33 change;
+#X obj 351 56 select 0 1;
+#X obj 183 86 delay 500;
+#X obj 406 214 delay 6000;
+#X obj 95 395 list trim;
+#X obj 95 420 route send;
+#X obj 129 451 list split 1;
+#X obj 138 486 t b s;
+#X obj 155 518 list append;
+#X obj 155 546 list trim;
+#X obj 155 571 s;
+#X obj 99 271 list trim;
+#X msg 177 148 pd~ start -nogui ressources/modules/videoSession/videoSession.pd
+, f 62;
+#X obj 137 330 pd~ -ninsig 0 -noutsig 0;
+#X msg 405 241 gemwin reset \, gemwin dimen 640 480 \, gemwin create
+\, gemwin 1 \, pd dsp 0;
+#X obj 271 370 r TO_AUDIO_SESSION;
+#X text 428 371 dans le cas d'une utilisation dans le même thread
+;
+#X obj 283 288 s TO_VIDEO;
+#X connect 0 0 17 0;
+#X connect 1 0 21 0;
+#X connect 2 0 15 0;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
-#X coords 0 -1 1 1 180 30 1 100 100;
-#X restore 248 -21 pd etude_morphing;
-#X msg 1083 163 inst_headrush;
-#X msg 1083 212 inst_tabosc;
-#X msg 1082 233 inst_bassdrum;
-#N canvas 8 50 647 141 midi_devices 0;
+#X connect 5 0 1 0;
+#X connect 5 0 6 0;
+#X connect 5 1 16 0;
+#X connect 5 1 7 0;
+#X connect 6 0 0 0;
+#X connect 7 0 18 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 10 1 12 1;
+#X connect 11 0 12 0;
+#X connect 11 1 14 1;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 15 0 17 0;
+#X connect 16 0 17 0;
+#X connect 17 0 8 0;
+#X connect 18 0 21 0;
+#X connect 19 0 8 0;
+#X restore 1092 455 pd video_subprocess;
+#X obj 821 80 u_loadmeter;
+#X obj 1042 506 tuio;
+#N canvas 542 50 810 621 setFocus/help 0;
+#X obj 251 82 unpack f f;
+#X obj 255 119 / 200;
+#X obj 325 118 / 80;
+#X obj 248 8 receivecanvas 1;
+#X obj 255 144 int;
+#X obj 325 143 int;
+#X obj 255 169 * 10;
+#X obj 255 194 +;
+#X obj 420 56 route done-popup;
+#X obj 411 78 route 2;
+#X obj 423 105 unpack f f;
+#X obj 425 130 / 200;
+#X obj 498 132 / 80;
+#X obj 428 155 int;
+#X obj 498 154 int;
+#X obj 465 186 * 10;
+#X obj 465 211 +;
+#X obj 462 288 select 0;
+#X obj 462 266 tabread SLOTS_MAP;
+#X obj 635 76 hcs/folder_list;
+#X obj 635 101 spigot 1;
+#X obj 634 153 t s b;
+#X msg 687 195 0;
+#X obj 605 275 iemlib/splitfilename /;
+#X obj 538 316 pack f s;
+#X obj 628 24 loadbang;
+#X obj 589 84 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 535 229 r HELP;
+#X msg 528 347 \; \$1-channel help symbol \$2/ressources/modules/;
+#X obj 171 244 s HELP;
+#X obj 162 212 f;
+#X obj 160 183 t b;
+#X obj 92 222 f;
+#X obj 90 193 t b;
+#X obj 83 249 s REMOVE;
+#N canvas 166 50 987 627 ADD/INSERT 0;
+#X msg 276 142 fx_parameq2;
+#X msg 753 298 PdRacks.presets;
+#X msg 276 422 fx_compressor;
+#X msg 276 265 fx_chorus;
+#X msg 276 285 fx_dubdel;
+#X msg 276 82 fx_hip;
+#X msg 276 192 fx_ring;
+#X msg 276 375 fx_freeverb;
+#X msg 276 442 fx_dynproc;
+#X msg 276 102 fx_filter;
+#X msg 276 212 fx_freqshift;
+#X msg 276 232 fx_pitchshift;
+#X msg 276 355 fx_resonator;
+#X msg 276 62 fx_lop;
+#X msg 276 42 fx_lowhip;
+#X msg 276 305 fx_dubdel2;
+#X msg 276 469 fx_sub;
+#X msg 276 325 fx_reverse;
+#X msg 276 395 fx_everb;
+#X msg 276 162 fx_eq3;
+#X msg 276 122 fx_parameq;
+#X msg 46 263 inst_sampler;
+#X msg 46 283 inst_turntable;
+#X msg 46 223 inst_8bits;
+#X msg 46 243 inst_rhodey;
+#X msg 46 163 inst_soundfile;
+#X msg 46 143 inst_headrush;
+#X msg 46 183 inst_tabosc;
+#X msg 46 203 inst_bassdrum;
+#X msg 46 93 inst_modular;
+#X msg 484 51 audio_in;
+#X msg 484 71 audio_out;
+#X msg 484 91 audio_record;
+#X msg 484 111 audio_features;
+#X msg 484 456 data_wintablet;
+#X msg 484 436 data_fidtouch;
+#X msg 484 476 data_fidcontrol;
+#X msg 484 496 data_feuilleA4;
+#X msg 484 260 data_azerty2midi;
+#X msg 739 71 midi_arpeggiator;
+#X msg 739 91 note_randomize;
+#X msg 739 111 note_2param;
+#X msg 753 278 PdRacks.morphing;
+#X msg 753 258 PdRacks.transport;
+#X obj 46 521 s ADD;
+#X obj 276 564 s ADD;
+#X obj 484 538 s ADD;
+#X obj 484 158 s ADD;
+#X obj 739 156 s ADD;
+#X obj 753 342 s ADD;
+#X msg 92 451 cancel;
+#X text 39 30 INSTRUMENTS;
+#X text 265 7 AUDIO EFFECTS;
+#X text 477 15 IN OUT;
+#X msg 484 280 note_16steps;
+#X msg 484 300 data_upic;
+#X obj 484 348 s ADD;
+#X text 486 226 MIDI NOTE GENERATORS;
+#X text 731 30 MIDI FILTERS;
+#X text 485 403 DATA CONTROL;
+#X text 72 422 CLOSE THIS WINDOW;
+#X text 749 226 GLOBAL;
+#X msg 335 523 fx_bitcrush;
+#X msg 46 303 inst_euclidrums;
+#X connect 0 0 45 0;
+#X connect 1 0 49 0;
+#X connect 2 0 45 0;
+#X connect 3 0 45 0;
+#X connect 4 0 45 0;
+#X connect 5 0 45 0;
+#X connect 6 0 45 0;
+#X connect 7 0 45 0;
+#X connect 8 0 45 0;
+#X connect 9 0 45 0;
+#X connect 10 0 45 0;
+#X connect 11 0 45 0;
+#X connect 12 0 45 0;
+#X connect 13 0 45 0;
+#X connect 14 0 45 0;
+#X connect 15 0 45 0;
+#X connect 16 0 45 0;
+#X connect 17 0 45 0;
+#X connect 18 0 45 0;
+#X connect 19 0 45 0;
+#X connect 20 0 45 0;
+#X connect 21 0 44 0;
+#X connect 22 0 44 0;
+#X connect 23 0 44 0;
+#X connect 24 0 44 0;
+#X connect 25 0 44 0;
+#X connect 26 0 44 0;
+#X connect 27 0 44 0;
+#X connect 28 0 44 0;
+#X connect 29 0 44 0;
+#X connect 30 0 47 0;
+#X connect 31 0 47 0;
+#X connect 32 0 47 0;
+#X connect 33 0 47 0;
+#X connect 34 0 46 0;
+#X connect 35 0 46 0;
+#X connect 36 0 46 0;
+#X connect 37 0 46 0;
+#X connect 38 0 56 0;
+#X connect 39 0 48 0;
+#X connect 40 0 48 0;
+#X connect 41 0 48 0;
+#X connect 42 0 49 0;
+#X connect 43 0 49 0;
+#X connect 50 0 44 0;
+#X connect 54 0 56 0;
+#X connect 55 0 56 0;
+#X connect 62 0 45 0;
+#X connect 63 0 44 0;
+#X restore 35 339 pd ADD/INSERT;
+#X msg 42 295 \; pd-ADD/INSERT vis 1;
+#X obj 49 382 r ADD;
+#X obj 65 579 s INSERT;
+#X obj 83 476 pack s f;
+#X obj 49 407 route cancel;
+#X obj 97 446 symbol;
+#X msg 64 552 \$2 \$1;
+#X msg 162 555 \; pd-ADD/INSERT vis 0;
+#X obj 252 273 s \$0-current_slot;
+#X obj 114 99 r \$0-current_slot;
+#X obj 202 411 r \$0-current_slot;
+#X text 430 34 menu contextuel help;
+#N canvas 0 50 450 300 messages'hasfocus' 0;
+#X obj 48 95 tabread SLOTS_MAP;
+#X obj 24 150 t f f b;
+#X obj 48 220 f;
+#X obj 36 269 t b f;
+#X obj 56 125 change;
+#X msg 72 308 symbol \$1-hasFocus;
+#X msg 36 294 0;
+#X obj 37 334 send;
+#X obj 246 169 t b f;
+#X msg 282 208 symbol \$1-hasFocus;
+#X obj 247 234 send;
+#X msg 246 194 1;
+#X obj 29 67 r \$0-current_slot;
+#X connect 0 0 4 0;
+#X connect 1 0 2 1;
+#X connect 1 1 8 0;
+#X connect 1 2 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 6 0;
+#X connect 3 1 5 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 1;
+#X connect 6 0 7 0;
+#X connect 8 0 11 0;
+#X connect 8 1 9 0;
+#X connect 9 0 10 1;
+#X connect 11 0 10 0;
+#X connect 12 0 0 0;
+#X restore 323 331 pd messages'hasfocus';
+#X obj 182 518 s \$0-current_slot;
+#X obj 182 487 +;
+#X obj 86 522 t l b b;
+#X msg 180 457 1;
+#X obj 378 577 s COMMAND-rcv;
+#X obj 368 374 r \$0-current_slot;
+#X obj 374 444 t f f;
+#X obj 378 509 pack f f;
+#X msg 376 541 label (\$1:\$2);
+#X obj 378 484 div 10;
+#X obj 497 479 mod 10;
+#X obj 593 440 * 200;
+#X obj 675 438 * 80;
+#X obj 586 516 pack f f;
+#X obj 556 571 s \$0-focus_canvas;
+#X msg 586 541 pos \$1 \$2;
+#X obj 592 468 - 5;
+#X obj 675 463 - 5;
+#N canvas 0 50 520 425 arrow_keys 0;
+#X obj 141 66 inlet;
+#X obj 154 116 select Up Down Left Right;
+#X obj 392 119 r \$0-current_slot;
+#X obj 331 204 +;
+#X obj 160 250 moses 1;
+#X obj 155 331 s \$0-current_slot;
+#X msg 210 161 1;
+#X msg 330 162 10;
+#X msg 153 159 -1;
+#X msg 256 157 -10;
+#X obj 117 143 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 216 291 select 10 20 30;
+#X obj 160 225 moses 40;
+#X connect 0 0 1 0;
+#X connect 0 0 10 0;
+#X connect 1 0 8 0;
+#X connect 1 1 6 0;
+#X connect 1 2 9 0;
+#X connect 1 3 7 0;
+#X connect 2 0 3 1;
+#X connect 3 0 12 0;
+#X connect 4 1 11 0;
+#X connect 6 0 3 0;
+#X connect 7 0 3 0;
+#X connect 8 0 3 0;
+#X connect 9 0 3 0;
+#X connect 11 3 5 0;
+#X connect 12 0 4 0;
+#X restore 211 329 pd arrow_keys;
+#X obj 246 29 route mouse key;
+#X obj 33 36 route 1;
+#X obj 28 82 list split 1;
+#X obj 25 113 select 127;
+#X obj 16 144 select Insert F1;
+#X obj 310 220 moses 1;
+#X obj 266 244 select 10 20 30;
+#X obj 310 195 moses 40;
+#X obj 383 400 moses 40;
+#X obj 128 6 r \$0-INS;
+#X obj 138 36 r \$0-DEL;
+#X obj 148 66 r \$0-HELP;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 68 0;
+#X connect 4 0 6 0;
+#X connect 5 0 7 1;
+#X connect 6 0 7 0;
+#X connect 7 0 75 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 10 1 12 0;
+#X connect 11 0 13 0;
+#X connect 12 0 14 0;
+#X connect 13 0 15 0;
+#X connect 14 0 16 1;
+#X connect 15 0 16 0;
+#X connect 16 0 18 0;
+#X connect 17 1 24 0;
+#X connect 18 0 17 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 21 0 23 0;
+#X connect 21 1 22 0;
+#X connect 22 0 20 1;
+#X connect 23 0 24 1;
+#X connect 24 0 28 0;
+#X connect 25 0 19 0;
+#X connect 26 0 19 0;
+#X connect 27 0 18 0;
+#X connect 30 0 29 0;
+#X connect 31 0 30 0;
+#X connect 32 0 34 0;
+#X connect 33 0 32 0;
+#X connect 37 0 40 0;
+#X connect 39 0 51 0;
+#X connect 40 0 43 0;
+#X connect 40 1 41 0;
+#X connect 41 0 39 0;
+#X connect 42 0 38 0;
+#X connect 45 0 32 1;
+#X connect 45 0 30 1;
+#X connect 46 0 39 1;
+#X connect 46 0 50 1;
+#X connect 50 0 49 0;
+#X connect 51 0 42 0;
+#X connect 51 1 43 0;
+#X connect 51 2 52 0;
+#X connect 52 0 50 0;
+#X connect 54 0 76 0;
+#X connect 55 0 58 0;
+#X connect 55 1 59 0;
+#X connect 56 0 57 0;
+#X connect 57 0 53 0;
+#X connect 58 0 56 0;
+#X connect 58 0 60 0;
+#X connect 59 0 56 1;
+#X connect 59 0 61 0;
+#X connect 60 0 65 0;
+#X connect 61 0 66 0;
+#X connect 62 0 64 0;
+#X connect 64 0 63 0;
+#X connect 65 0 62 0;
+#X connect 66 0 62 1;
+#X connect 68 0 0 0;
+#X connect 68 1 69 0;
+#X connect 68 2 8 0;
+#X connect 69 0 70 0;
+#X connect 70 0 71 0;
+#X connect 71 0 33 0;
+#X connect 71 1 72 0;
+#X connect 72 0 36 0;
+#X connect 72 1 31 0;
+#X connect 72 2 67 0;
+#X connect 73 1 74 0;
+#X connect 74 3 44 0;
+#X connect 75 0 73 0;
+#X connect 76 0 55 0;
+#X connect 77 0 36 0;
+#X connect 78 0 33 0;
+#X connect 79 0 31 0;
+#X restore 1088 581 pd setFocus/help;
+#X text 897 188 CONDUITE SCENES, f 12;
+#X msg 1224 579 focus;
+#X obj 395 315 cnv 15 200 80 empty \$0-focus_canvas empty 20 12 0 14
+-257985 -66577 0;
+#X obj 1400 0 _ fx_lop;
+#X obj 1400 0 inst_modular;
+#X obj 1400 0 inst_modular;
+#N canvas 689 74 450 300 remote 0;
+#X obj 104 7 r REMOTE;
+#X obj 105 56 print REMOTE;
+#X obj 104 30 spigot;
+#X obj 191 9 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X text 75 114 l'idée est de transmettre tous les parametres du module
+on focus à une tablette remote client;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 1;
+#X restore 1091 528 pd remote;
+#X obj 963 75 bng 50 250 50 0 RESET empty RESET 17 7 0 10 -262144 -1
+-1;
+#X obj 1023 -3 PdRacks.audiosettings;
+#X obj 1400 0 _ audio_features;
+#X obj 1400 0 _ audio_features;
+#X obj 1400 0 _ audio_in;
+#X obj 1400 0 _ audio_in;
+#X obj 1400 0 _ audio_in;
+#X obj 1400 0 _ audio_in;
+#X obj 1400 0 _ audio_out;
+#X obj 1400 0 _ audio_out;
+#X obj 1400 0 _ audio_out;
+#X obj 1400 0 _ audio_out;
+#X obj 1400 0 _ audio_record;
+#X obj 1400 0 _ audio_record;
+#X obj 1400 0 _ data_azerty2midi;
+#X obj 1400 0 _ data_feuilleA4;
+#X obj 1400 0 _ data_fidcontrol;
+#X obj 1400 0 _ fx_reverse;
+#X obj 1400 0 _ fx_reverse;
+#X obj 1400 0 _ fx_lowhip;
+#X obj 1400 0 _ fx_lowhip;
+#X obj 1400 0 _ fx_lowhip;
+#X obj 1400 0 _ fx_lowhip;
+#X obj 1400 0 _ fx_hip;
+#X obj 1400 0 _ fx_lop;
+#X obj 1400 0 _ fx_hip;
+#X obj 1400 0 _ fx_filter;
+#X obj 1400 0 _ fx_filter;
+#X obj 1400 0 _ fx_ring;
+#X obj 1400 0 _ fx_ring;
+#X obj 1400 0 _ fx_ring;
+#X obj 1400 0 _ fx_freqshift;
+#X obj 1400 0 _ fx_freqshift;
+#X obj 1400 0 _ fx_pitchshift;
+#X obj 1400 0 _ fx_pitchshift;
+#X obj 1400 0 _ fx_pitchshift;
+#X obj 1400 0 _ fx_dynproc;
+#X obj 1400 0 _ fx_chorus;
+#X obj 1400 0 _ fx_chorus;
+#X obj 1400 0 _ fx_chorus;
+#X obj 1400 0 _ fx_dubdel;
+#X obj 1400 0 _ fx_dubdel;
+#X obj 1400 0 _ fx_dubdel2;
+#X obj 1400 0 _ fx_dubdel2;
+#X obj 1400 0 _ fx_dubdel2;
+#X obj 1400 0 _ fx_resonator;
+#X obj 1400 0 _ fx_freeverb;
+#X obj 1400 0 _ fx_freeverb;
+#X obj 1400 0 _ fx_everb;
+#X obj 1400 0 _ fx_everb;
+#X obj 1400 0 _ data_fidtouch;
+#X obj 1400 0 _ data_wintablet;
+#X obj 1400 0 _ data_wintablet;
+#X obj 1400 0 _ data_fidcontrol;
+#X obj 1400 0 _ inst_headrush;
+#X obj 1400 0 _ inst_headrush;
+#X obj 1400 0 _ inst_soundfile;
+#X obj 1400 0 _ inst_tabosc;
+#X obj 1400 0 _ inst_tabosc;
+#X obj 1400 0 _ inst_bassdrum;
+#X obj 1400 0 _ inst_bassdrum;
+#X obj 1400 0 _ inst_8bits;
+#X obj 1400 0 _ inst_rhodey;
+#X obj 1400 0 _ inst_rhodey;
+#X obj 1400 0 _ inst_sampler;
+#X obj 1400 0 _ inst_sampler;
+#X obj 1400 0 _ inst_turntable;
+#X obj 1400 0 _ inst_turntable;
+#X obj 1400 0 _ midi_arpeggiator;
+#X obj 1400 0 _ data_upic;
+#X obj 1400 0 _ data_azerty2midi;
+#X obj 1400 0 _ data_azerty2midi;
+#X obj 1400 0 _ note_randomize;
+#X obj 1400 0 _ note_randomize;
+#X obj 1400 0 _ note_16steps;
+#X obj 1400 0 _ fx_freeverb;
+#X obj 1400 0 _ audio_out;
+#X obj 1400 0 _ audio_in;
+#X obj 1400 0 _ fx_hip;
+#X obj 1400 0 _ fx_hip;
+#X obj 1400 0 _ presets;
+#X obj 1400 0 _ note_2param;
+#X obj 1400 0 _ fx_eq3;
+#X obj 1400 0 _ fx_parameq;
+#X obj 1400 0 _ fx_parameq;
+#X obj 1400 0 _ fx_parameq;
+#X obj 1400 0 _ fx_parameq;
+#X obj 1400 0 _ fx_parameq2;
+#X obj 1400 0 _ PdRacks.presets;
+#X obj 1400 0 _ fx_compressor;
+#X obj 1400 0 _ fx_compressor;
+#X obj 1400 0 _ fx_parameq;
+#X obj 1400 0 _ fx_bitcrush;
+#X obj 1400 0 _ note_16steps;
+#X obj 418 1 bng 30 250 50 0 \$0-INS empty INS 5 14 0 12 -257985 -1
+-1;
+#X obj 449 1 bng 30 250 50 0 \$0-DEL empty DEL 5 14 0 12 -1 -262144
+-258113;
+#X obj 108 3 bng 60 250 50 0 \$0-save empty SAVE 5 30 0 20 -258113
+-1 -1;
+#X obj 175 59 cnv 15 600 20 empty COMMAND-HELP-rcv empty 2 8 0 16 -261682
+-66577 0;
+#X obj 387 1 bng 30 250 50 0 \$0-HELP empty HELP 1 14 0 12 -13381 -4034
+-4034;
+#X obj 684 0 tgl 30 0 MIDI_LEARN MIDI_LEARN-rcv midi-learn(17:cc42)
+2 7 0 10 -262144 -1 -1 0 1;
+#X obj 724 17 bng 30 250 50 0 \$0-mappings empty Mappings... 17 7 0
+10 -262144 -1 -1;
+#N canvas 8 50 656 229 midi_devices 0;
 #X obj 307 12 bng 20 250 50 0 empty empty REFRESH 22 7 0 10 -262144
 -1 -1;
 #X text 111 13 MIDI IN;
@@ -1457,7 +1524,7 @@ SUR LE BOUTON ROUGE 'SAVE';
 #X obj 694 488 list append 0 0 0 0 0 0 0 0 0;
 #X obj 694 513 list split 9;
 #X obj 209 471 list prepend set;
-#X msg 159 535 2 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 0 2 4;
+#X msg 159 535 1 2 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 2 4;
 #X obj 402 404 delay 100;
 #X obj 156 97 r \$0-refresh;
 #X obj 228 383 delay 2000;
@@ -1507,734 +1574,29 @@ SUR LE BOUTON ROUGE 'SAVE';
 #X connect 35 0 1 0;
 #X connect 36 0 33 0;
 #X restore 561 10 pd stuff;
-#X restore 669 74 pd midi_devices;
-#X msg 1224 -9 help;
-#X msg 1061 589 focus;
-#X obj 972 12 u_loadmeter;
-#N canvas 689 74 450 300 remote/focus 0;
-#X obj 104 7 r REMOTE;
-#X obj 105 56 print REMOTE;
-#X obj 104 30 spigot;
-#X obj 191 9 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X obj 95 84 cnv 15 100 60 empty empty empty 20 12 0 14 -258113 -66577
-0;
-#X obj 99 91 route focus;
-#X obj 99 115 s FOCUS;
-#X connect 0 0 2 0;
-#X connect 0 0 5 0;
-#X connect 2 0 1 0;
-#X connect 3 0 2 1;
-#X connect 5 0 6 0;
-#X restore 1091 78 pd remote/focus;
-#X msg 1238 122 fx_reverse;
-#X obj 972 61 tuio;
-#X msg 1075 427 note_16steps;
-#X msg 1070 412 note_randomize;
-#X msg 1086 123 inst_modular;
-#N canvas 542 50 810 536 setFocus/help 0;
-#X obj 251 82 unpack f f;
-#X obj 255 119 / 200;
-#X obj 325 118 / 80;
-#X obj 246 29 route mouse motion;
-#X obj 248 8 receivecanvas 1;
-#X obj 255 144 int;
-#X obj 325 143 int;
-#X obj 255 169 * 10;
-#X obj 255 194 +;
-#X obj 164 280 tabread SLOTS_MAP;
-#X obj 204 340 t f f b;
-#X obj 228 410 f;
-#X obj 216 459 t b f;
-#X obj 174 311 change;
-#X msg 252 498 symbol \$1-hasFocus;
-#X msg 216 484 0;
-#X obj 217 524 send;
-#X obj 426 359 t b f;
-#X msg 462 398 symbol \$1-hasFocus;
-#X obj 427 424 send;
-#X msg 426 384 1;
-#X floatatom 301 239 5 0 0 0 - - -, f 5;
-#X obj 154 356 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 399 78 route done-popup;
-#X obj 404 122 route 2;
-#X obj 401 162 unpack f f;
-#X obj 405 199 / 200;
-#X obj 475 198 / 80;
-#X obj 405 224 int;
-#X obj 475 223 int;
-#X obj 405 249 * 10;
-#X obj 405 274 +;
-#X obj 462 288 select 0;
-#X obj 462 266 tabread SLOTS_MAP;
-#X obj 635 76 hcs/folder_list;
-#X obj 635 101 spigot 1;
-#X obj 634 153 t s b;
-#X msg 687 195 0;
-#X obj 605 275 iemlib/splitfilename /;
-#X obj 538 316 pack f s;
-#X obj 628 24 loadbang;
-#X obj 589 84 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 535 229 r HELP;
-#X msg 528 347 \; \$1-channel help symbol \$2/ressources/modules/;
-#X connect 0 0 1 0;
-#X connect 0 1 2 0;
-#X connect 1 0 5 0;
-#X connect 2 0 6 0;
-#X connect 3 0 0 0;
-#X connect 3 2 23 0;
-#X connect 4 0 3 0;
-#X connect 5 0 7 0;
-#X connect 6 0 8 1;
-#X connect 7 0 8 0;
-#X connect 8 0 9 0;
-#X connect 8 0 21 0;
-#X connect 9 0 13 0;
-#X connect 10 0 11 1;
-#X connect 10 1 17 0;
-#X connect 10 2 11 0;
+#X obj 23 127 u_item midi-in 5;
+#X obj 23 149 u_item midi-in 6;
+#X obj 23 171 u_item midi-in 7;
+#X obj 23 193 u_item midi-in 8;
+#X obj 336 127 u_item midi-out 5;
+#X obj 336 149 u_item midi-out 6;
+#X obj 336 171 u_item midi-out 7;
+#X obj 336 193 u_item midi-out 8;
+#X restore 671 53 pd midi_devices;
+#X obj 481 -4 PdRacks.morphing;
+#X obj 1400 0 _ fx_sub;
+#X obj 1025 107 PdRacks.midi;
+#X obj 1025 187 PdRacks.midi;
+#X obj 824 -3 PdRacks.transport;
+#X obj 1400 0 _ inst_euclidrums;
+#X obj 1020 285 ExportPatch;
+#X obj 950 384 Tutoriel;
+#X obj 895 288 s pd-conduite;
 #X connect 11 0 12 0;
-#X connect 12 0 15 0;
-#X connect 12 1 14 0;
-#X connect 13 0 10 0;
-#X connect 13 0 22 0;
-#X connect 14 0 16 1;
-#X connect 15 0 16 0;
-#X connect 17 0 20 0;
-#X connect 17 1 18 0;
-#X connect 18 0 19 1;
-#X connect 20 0 19 0;
-#X connect 23 0 24 0;
-#X connect 24 0 25 0;
-#X connect 25 0 26 0;
-#X connect 25 1 27 0;
-#X connect 26 0 28 0;
-#X connect 27 0 29 0;
-#X connect 28 0 30 0;
-#X connect 29 0 31 1;
-#X connect 30 0 31 0;
-#X connect 31 0 33 0;
-#X connect 32 1 39 0;
-#X connect 33 0 32 0;
-#X connect 34 0 35 0;
-#X connect 35 0 36 0;
-#X connect 36 0 38 0;
-#X connect 36 1 37 0;
-#X connect 37 0 35 1;
-#X connect 38 0 39 1;
-#X connect 39 0 43 0;
-#X connect 40 0 34 0;
-#X connect 41 0 34 0;
-#X connect 42 0 33 0;
-#X restore 668 32 pd setFocus/help;
-#X obj 0 160 _ audio_features;
-#X obj 1400 0 _ audio_features;
-#X obj 1400 0 _ audio_in;
-#X obj 600 160 _ audio_in;
-#X obj 200 160 _ audio_in;
-#X obj 0 80 _ audio_in;
-#X obj 1400 0 _ audio_out;
-#X obj 200 320 _ audio_out;
-#X obj 0 400 _ audio_out;
-#X obj 600 400 _ audio_out;
-#X obj 1400 0 _ audio_record;
-#X obj 1400 0 _ audio_record;
-#X obj 1400 0 _ data_azerty2midi;
-#X obj 1400 0 _ data_feuilleA4;
-#X obj 1400 0 _ data_fidcontrol;
-#X obj 1400 0 _ fx_reverse;
-#X obj 1400 0 _ fx_reverse;
-#X obj 1400 0 _ fx_lowhip;
-#X obj 1400 0 _ fx_lowhip;
-#X obj 1400 0 _ fx_lowhip;
-#X obj 1400 0 _ fx_lowhip;
-#X obj 1400 75;
-#X obj 200 240 _ fx_sub;
-#X obj 1400 0 _ fx_hip;
-#X obj 1400 0 _ fx_lop;
-#X obj 1400 0 _ fx_lop;
-#X obj 1400 0 _ fx_hip;
-#X obj 1400 0 _ fx_filter;
-#X obj 1400 0 _ fx_filter;
-#X obj 1400 0 _ fx_ring;
-#X obj 0 320 _ fx_ring;
-#X obj 1400 0 _ fx_ring;
-#X obj 1400 0 _ fx_freqshift;
-#X obj 1400 0 _ fx_freqshift;
-#X obj 1400 0 _ fx_pitchshift;
-#X obj 1400 0 _ fx_pitchshift;
-#X obj 1400 0 _ fx_pitchshift;
-#X obj 1400 0 _ fx_dynproc;
-#X obj 1400 0 _ fx_chorus;
-#X obj 1400 0 _ fx_chorus;
-#X obj 1400 0 _ fx_chorus;
-#X obj 1400 0 _ fx_dubdel;
-#X obj 1400 0 _ fx_dubdel;
-#X obj 1400 0 _ fx_dubdel2;
-#X obj 600 240 _ fx_dubdel2;
-#X obj 1400 0 _ fx_dubdel2;
-#X obj 1400 0 _ fx_resonator;
-#X obj 1400 0 _ fx_freeverb;
-#X obj 1400 0 _ fx_freeverb;
-#X obj 1400 0 _ fx_everb;
-#X obj 1400 0 _ fx_everb;
-#X msg 1234 478 fx_everb;
-#X obj 1400 0 _ data_fidtouch;
-#X obj 1400 0 _ data_wintablet;
-#X obj 1400 0 _ data_wintablet;
-#X obj 1400 0 _ data_fidcontrol;
-#X obj 1400 0 inst_modular;
-#X obj 1400 0 inst_modular;
-#X obj 1400 0 _ inst_headrush;
-#X obj 1400 0 _ inst_headrush;
-#X obj 1400 0 _ inst_soundfile;
-#X obj 1400 0 _ inst_tabosc;
-#X obj 1400 0 _ inst_tabosc;
-#X obj 1400 0 _ inst_bassdrum;
-#X obj 1400 0 _ inst_bassdrum;
-#X obj 1400 0 _ inst_8bits;
-#X obj 1400 0 _ inst_rhodey;
-#X obj 1400 0 _ inst_rhodey;
-#X obj 1400 0 _ inst_sampler;
-#X obj 1400 0 _ inst_sampler;
-#X obj 1400 0 _ inst_turntable;
-#X obj 1400 0 _ inst_turntable;
-#X obj 1400 0 _ midi_arpeggiator;
-#X obj 1400 0 _ data_upic;
-#X obj 1400 0 _ data_azerty2midi;
-#X obj 1400 0 _ data_azerty2midi;
-#X obj 1400 0 _ note_randomize;
-#X obj 1400 0 _ note_randomize;
-#X obj 1400 0 _ note_16steps;
-#X obj 1400 0 _ note_16steps;
-#X obj 600 320 _ fx_freeverb;
-#X obj 1400 0 _ audio_out;
-#X obj 1400 0 _ audio_in;
-#X obj 1400 0 _ fx_hip;
-#X obj 0 240 _ fx_hip;
-#N canvas 59 50 1206 578 clock 0;
-#X obj 237 459 i;
-#X obj 253 494 change;
-#N canvas 438 108 468 537 audio_feedback 0;
-#X obj 132 400 *~;
-#X obj 132 456 dac~;
-#X obj 196 298 line~;
-#X obj 186 213 t b b;
-#X obj 239 248 del 5;
-#X msg 242 271 0 5;
-#X obj 75 351 osc~ 880;
-#X obj 301 59 inlet;
-#X obj 116 22 inlet;
-#X msg 24 290 1600;
-#X msg 80 292 880;
-#X obj 146 81 spigot 0, f 25;
-#X msg 173 249 0.1 5;
-#X obj 173 150 mod 24;
-#X obj 44 188 == 0;
-#X obj 29 252 sel 1;
-#X obj 71 155 mod 96;
-#X obj 42 221 change;
-#X obj 193 186 select 0;
-#X obj 165 105 t f f;
-#X connect 0 0 1 0;
-#X connect 0 0 1 1;
-#X connect 2 0 0 1;
-#X connect 3 0 12 0;
-#X connect 3 1 4 0;
-#X connect 4 0 5 0;
-#X connect 5 0 2 0;
-#X connect 6 0 0 0;
-#X connect 7 0 11 1;
-#X connect 8 0 11 0;
-#X connect 9 0 6 0;
-#X connect 10 0 6 0;
-#X connect 11 0 19 0;
-#X connect 12 0 2 0;
-#X connect 13 0 18 0;
-#X connect 14 0 17 0;
-#X connect 15 0 9 0;
-#X connect 15 1 10 0;
-#X connect 16 0 14 0;
-#X connect 17 0 15 0;
-#X connect 18 0 3 0;
-#X connect 19 0 16 0;
-#X connect 19 1 13 0;
-#X restore 307 547 pd audio_feedback;
-#X obj 311 26 midirealtimein;
-#X obj 340 116 route 250 248 252;
-#X obj 258 361 f;
-#X obj 323 363 + 1;
-#X obj 219 521 mod 4;
-#X obj 251 527 div 4;
-#X obj 249 557 + 1;
-#X obj 209 554 + 1;
-#X obj 237 437 / 24;
-#X obj 428 139 s STOP;
-#N canvas 0 50 727 534 tempo_calc 0;
-#X obj 92 -2 inlet;
-#X obj 89 119 t b b;
-#X msg 86 200 60000 \$1;
-#X obj 86 229 /;
-#X obj 91 143 timer;
-#X obj 66 335 +;
-#X obj 91 170 moses 2000;
-#X obj 65 370 + 0.5;
-#X obj 69 405 int;
-#X obj 94 438 t f f;
-#X obj 69 573 s \$0-bpm-rcv;
-#X text 286 501 si le tempo diverge trop \, passer outre le filtrage
-pour atteindre la nouvelle valeur;
-#X obj 47 485 change;
-#X obj 197 568 outlet;
-#X msg 51 536 set \$1;
-#X obj 66 282 * 0.1;
-#X obj 134 327 * 0.9;
-#X floatatom 39 263 5 0 0 0 - - -, f 5;
-#X floatatom 32 440 5 0 0 0 - - -, f 5;
-#X obj 144 463 -;
-#X obj 148 488 abs;
-#X obj 193 505 > 1;
-#X obj 263 431 change;
-#X obj 284 172 select 1 0;
-#X msg 312 238 1;
-#X msg 330 272 0;
-#X msg 386 247 0.1;
-#X msg 403 276 0.9;
-#X msg 253 136 1;
-#X obj 96 254 t f;
-#X obj 91 26 f;
-#X obj 127 27 + 1;
-#X obj 98 52 mod 24;
-#X obj 93 78 select 0;
-#X connect 0 0 30 0;
-#X connect 1 0 4 0;
-#X connect 1 1 4 1;
-#X connect 2 0 3 0;
-#X connect 3 0 17 0;
-#X connect 3 0 29 0;
-#X connect 4 0 6 0;
-#X connect 5 0 7 0;
-#X connect 5 0 16 0;
-#X connect 6 0 2 0;
-#X connect 6 1 28 0;
-#X connect 7 0 8 0;
-#X connect 8 0 9 0;
-#X connect 8 0 12 0;
-#X connect 8 0 18 0;
-#X connect 9 0 19 1;
-#X connect 9 1 19 0;
-#X connect 12 0 13 0;
-#X connect 12 0 14 0;
-#X connect 14 0 10 0;
-#X connect 15 0 5 0;
-#X connect 16 0 5 1;
-#X connect 19 0 20 0;
-#X connect 20 0 21 0;
-#X connect 21 0 22 0;
-#X connect 22 0 23 0;
-#X connect 23 0 24 0;
-#X connect 23 0 25 0;
-#X connect 23 1 26 0;
-#X connect 23 1 27 0;
-#X connect 24 0 15 1;
-#X connect 25 0 16 1;
-#X connect 25 0 5 1;
-#X connect 26 0 15 1;
-#X connect 27 0 16 1;
-#X connect 28 0 23 0;
-#X connect 29 0 15 0;
-#X connect 30 0 32 0;
-#X connect 31 0 30 1;
-#X connect 32 0 31 0;
-#X connect 32 0 33 0;
-#X connect 33 0 1 0;
-#X restore 403 222 pd tempo_calc;
-#X obj 276 146 s PLAY;
-#X floatatom 509 132 5 0 0 0 - - -, f 5;
-#X obj 405 279 s BPM;
-#X obj 239 206 r PLAY;
-#X obj 385 163 t b b b;
-#X obj 200 261 r \$0-localMetro;
-#X msg 233 232 0;
-#X obj 310 86 spigot 1;
-#X obj 369 53 r \$0-slave;
-#X obj 213 351 +;
-#X msg 22 215 -2;
-#X msg 44 279 2;
-#X obj 102 140 cnv 15 118 60 empty \$0-bang-rcv empty 20 12 0 14 -262144
--262144 0;
-#X floatatom 100 150 5 0 0 0 - - -, f 5;
-#X floatatom 101 167 5 0 0 0 - CLOCK -, f 5;
-#X floatatom 101 133 5 0 0 0 - - -, f 5;
-#X floatatom 101 116 5 0 0 0 - - -, f 5;
-#X floatatom 160 182 5 20 300 2 bpm #0-bpm-rcv #0-bpm, f 5;
-#X obj 169 34 tgl 15 0 \$0-slave \$0-slave-rcv SYNC 17 7 0 10 -4032
--1 -1 0 1;
-#X obj 138 185 bng 15 250 50 0 empty empty + 5 7 0 10 -4032 -1 -1;
-#X obj 107 185 bng 15 250 50 0 empty empty -resync 5 7 0 10 -4032 -1
--1;
-#X obj 459 468 t b b;
-#X obj 575 541 s \$0-bang-rcv;
-#X msg 579 502 color 0 0;
-#X obj 467 510 delay 100;
-#X msg 577 479 color 17 17;
-#X obj 324 463 spigot;
-#X obj 248 327 spigot;
-#X obj 415 409 r PLAY;
-#X obj 451 377 r STOP;
-#X msg 371 418 1;
-#X msg 444 437 0;
-#X msg 341 362 0;
-#X msg 70 435 248;
-#X obj 186 405 t f f b;
-#X obj 44 366 r PLAY;
-#X obj 38 343 r STOP;
-#X msg 50 389 250;
-#X msg 32 432 252;
-#N canvas 0 50 450 300 barre 0;
-#X obj 239 15 key;
-#X obj 239 48 select 32;
-#X obj 41 169 r PLAY;
-#X obj 116 172 r STOP;
-#X msg 63 202 1;
-#X msg 116 211 0;
-#X obj 65 242 f;
-#X obj 66 267 select 1 0;
-#X obj 107 297 s PLAY;
-#X obj 47 298 s STOP;
-#X obj 239 80 r TRANSPORT;
-#X obj 239 107 route spacebar;
-#X obj 241 155 t b;
-#X obj 303 166 spigot 1;
-#X connect 0 0 1 0;
-#X connect 1 0 13 0;
-#X connect 2 0 4 0;
-#X connect 3 0 5 0;
-#X connect 4 0 6 1;
-#X connect 5 0 6 1;
-#X connect 6 0 7 0;
-#X connect 7 0 9 0;
-#X connect 7 1 8 0;
-#X connect 10 0 11 0;
-#X connect 11 0 12 0;
-#X connect 12 0 13 0;
-#X connect 13 0 6 0;
-#X restore 710 19 pd barre _espace;
-#N canvas 0 50 450 300 initialisation@120bpm 0;
-#X obj 105 42 loadbang;
-#X obj 110 100 s \$0-bpm-rcv;
-#X msg 123 67 120;
-#X msg 158 130 0;
-#X obj 157 164 s \$0-slave-rcv;
-#X connect 0 0 2 0;
-#X connect 0 0 3 0;
-#X connect 2 0 1 0;
-#X connect 3 0 4 0;
-#X restore 696 56 pd initialisation@120bpm;
-#N canvas 561 56 588 536 local_clock 0;
-#X obj 154 64 inlet;
-#X obj 156 104 t b b;
-#X obj 172 136 delay 200;
-#X obj 235 220 change;
-#X obj 282 295 r BPM;
-#X msg 282 318 60000 \$1;
-#X obj 182 363 spigot;
-#X msg 188 186 1;
-#X msg 226 170 0;
-#X obj 106 296 r PLAY;
-#X obj 164 252 r STOP;
-#X msg 174 292 0;
-#X obj 116 335 delay 100;
-#X obj 282 344 /;
-#X obj 282 371 / 24;
-#X obj 214 443 s \$0-localMetro;
-#X obj 213 394 metro 100;
-#X obj 55 179 == 0;
-#X obj 45 221 s \$0-slave-rcv;
-#X msg 246 281 0;
-#X msg 51 198 set \$1;
-#X obj 272 185 == 0;
-#X obj 299 65 r \$0-sync-mode;
-#X obj 244 258 select 0 1;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 1 1 8 0;
-#X connect 2 0 7 0;
-#X connect 3 0 6 1;
-#X connect 3 0 17 0;
-#X connect 3 0 23 0;
-#X connect 4 0 5 0;
-#X connect 5 0 13 0;
-#X connect 6 0 16 0;
-#X connect 7 0 3 0;
-#X connect 8 0 3 0;
-#X connect 9 0 12 0;
-#X connect 10 0 11 0;
-#X connect 11 0 16 0;
-#X connect 12 0 6 0;
-#X connect 13 0 14 0;
-#X connect 14 0 16 1;
-#X connect 16 0 15 0;
-#X connect 17 0 20 0;
-#X connect 19 0 16 0;
-#X connect 20 0 18 0;
-#X connect 21 0 3 0;
-#X connect 22 0 21 0;
-#X connect 23 0 19 0;
-#X connect 23 1 6 0;
-#X restore 475 187 pd local_clock;
-#N canvas 0 50 762 490 boutonPlayPause_Gui 0;
-#X obj 47 86 r STOP;
-#X obj 120 200 r PLAY;
-#X obj 332 420 select 0 1;
-#X obj 397 447 s PLAY;
-#X obj 337 448 s STOP;
-#X obj 357 380 spigot 1;
-#X obj 34 274 s \$0-playBtn-rcv;
-#X obj 359 349 r \$0-playBtn;
-#X msg 45 116 set 0 \, label [> \, color 20 20 -1;
-#X msg 119 237 set 1 \, label || \, color 16 16 -1;
-#X connect 0 0 8 0;
-#X connect 1 0 9 0;
-#X connect 2 0 4 0;
-#X connect 2 1 3 0;
-#X connect 5 0 2 0;
-#X connect 7 0 5 0;
-#X connect 8 0 6 0;
-#X connect 9 0 6 0;
-#X restore 694 87 pd boutonPlayPause_Gui;
-#X obj 207 168 tgl 30 0 empty empty click 1 14 0 10 -262144 -1 -1 0
-1;
-#X obj 32 469 spigot;
-#X obj 23 535 midiout;
-#X obj 703 118 r PLAY;
-#X obj 703 143 t b b;
-#X msg 703 168 1;
-#X obj 643 118 r STOP;
-#X msg 643 143 0;
-#X msg 814 152 tempo \$1;
-#X obj 559 231 r \$0-bpm;
-#X obj 943 251 s BPM;
-#X obj 959 373 s \$0-bpm-rcv;
-#X msg 941 336 set \$1;
-#X obj 148 101 vradio 15 1 1 3 \$0-sync-mode empty empty 0 -8 0 10
--4032 -1 -1 2;
-#X obj 119 15 r \$0-sync-mode;
-#X obj 107 42 == 1;
-#X obj 928 47 r \$0-sync-mode;
-#X obj 916 74 == 2;
-#X msg 1033 128 connect \$1;
-#X obj 914 102 change;
-#X obj 774 555 s CLOCK;
-#X obj 316 293 r \$0-sync-mode;
-#X obj 309 324 == 1;
-#X text 164 99 OFF;
-#X text 163 113 SYNC;
-#X obj 162 131 cnv 15 40 15 empty empty empty 20 12 0 14 -257985 -66577
-0;
-#X text 163 128 LINK;
-#X obj 199 100 tgl 40 0 \$0-playBtn \$0-playBtn-rcv || 2 20 0 30 -24198
--24198 -1 1 1;
-#X obj 277 400 s CLOCK;
-#X obj 188 381 r CLOCK;
-#X obj 746 531 bng 15 50 10 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 877 373 r CLOCK;
-#X obj 398 334 r CLOCK;
-#X obj 796 306 spigot;
-#X obj 768 456 spigot;
-#X floatatom 198 157 5 0 0 0 peers - -, f 5;
-#X obj 767 429 spigot;
-#X obj 892 432 select 0;
-#X msg 905 459 1;
-#X obj 261 35 r #abl_link_num_peers;
-#X obj 934 491 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X floatatom 798 204 5 0 0 0 - - -, f 5;
-#X text 918 405 (=4x24);
-#X obj 967 493 spigot;
-#X obj 967 518 t b b;
-#X msg 1052 469 0;
-#X msg 851 263 0;
-#X obj 114 487 r \$0-midiout;
-#X obj 100 100 ui_tgl \$0 midiout 1 -1 18;
-#X obj 122 527 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 892 548 + 24;
-#X obj 798 179 abl_link~ 24 0 8 120;
-#X obj 861 405 mod 192;
-#X obj 782 377 t f f;
-#X obj 771 502 +;
-#X obj 845 490 f;
-#X obj 845 515 + 192;
-#X obj 1052 244 r QUANTUM;
-#X msg 1060 282 reset 0 \$1;
-#X obj 1095 321 * 24;
-#X floatatom 198 139 5 0 0 0 quantum - QUANTUM, f 5;
-#X obj 582 354 r QUANTUM;
-#X obj 534 65 loadbang;
-#X msg 534 90 4;
-#X connect 0 0 1 0;
-#X connect 1 0 7 0;
-#X connect 1 0 8 0;
-#X connect 1 0 27 0;
-#X connect 1 0 35 0;
-#X connect 3 0 21 0;
-#X connect 4 0 14 0;
-#X connect 4 1 18 0;
-#X connect 4 2 12 0;
-#X connect 5 0 23 1;
-#X connect 5 0 85 0;
-#X connect 6 0 5 1;
-#X connect 7 0 10 0;
-#X connect 8 0 9 0;
-#X connect 9 0 30 0;
-#X connect 10 0 29 0;
-#X connect 11 0 0 0;
-#X connect 13 0 16 0;
-#X connect 17 0 20 0;
-#X connect 17 0 46 0;
-#X connect 18 0 5 0;
-#X connect 18 1 13 0;
-#X connect 18 2 55 0;
-#X connect 19 0 5 0;
-#X connect 20 0 41 0;
-#X connect 21 0 4 0;
-#X connect 22 0 21 1;
-#X connect 23 0 5 1;
-#X connect 24 0 23 0;
-#X connect 25 0 23 0;
-#X connect 33 0 25 0;
-#X connect 34 0 24 0;
-#X connect 35 0 38 0;
-#X connect 35 1 39 0;
-#X connect 37 0 36 0;
-#X connect 38 0 37 0;
-#X connect 39 0 36 0;
-#X connect 40 0 2 0;
-#X connect 41 0 5 1;
-#X connect 42 0 44 0;
-#X connect 43 0 45 0;
-#X connect 44 0 40 1;
-#X connect 45 0 40 1;
-#X connect 46 0 5 1;
-#X connect 47 0 58 0;
-#X connect 48 0 11 0;
-#X connect 48 1 40 0;
-#X connect 48 2 47 0;
-#X connect 49 0 51 0;
-#X connect 50 0 52 0;
-#X connect 51 0 58 0;
-#X connect 52 0 58 0;
-#X connect 57 0 2 1;
-#X connect 58 0 59 0;
-#X connect 60 0 61 0;
-#X connect 61 0 62 0;
-#X connect 62 0 90 1;
-#X connect 62 0 100 1;
-#X connect 63 0 64 0;
-#X connect 64 0 90 1;
-#X connect 64 0 93 1;
-#X connect 64 0 112 1;
-#X connect 65 0 108 0;
-#X connect 66 0 16 0;
-#X connect 66 0 65 0;
-#X connect 69 0 68 0;
-#X connect 71 0 72 0;
-#X connect 72 0 32 0;
-#X connect 73 0 74 0;
-#X connect 74 0 76 0;
-#X connect 75 0 108 0;
-#X connect 76 0 75 0;
-#X connect 76 0 91 1;
-#X connect 78 0 79 0;
-#X connect 79 0 41 1;
-#X connect 86 0 48 0;
-#X connect 89 0 6 0;
-#X connect 90 0 110 0;
-#X connect 91 0 111 0;
-#X connect 93 0 91 0;
-#X connect 94 0 95 0;
-#X connect 94 0 97 0;
-#X connect 94 0 100 0;
-#X connect 94 0 112 0;
-#X connect 95 0 93 1;
-#X connect 96 0 92 0;
-#X connect 100 0 101 0;
-#X connect 101 0 103 0;
-#X connect 101 1 102 0;
-#X connect 102 0 100 1;
-#X connect 104 0 58 1;
-#X connect 104 0 106 0;
-#X connect 107 0 77 0;
-#X connect 108 0 98 0;
-#X connect 108 0 90 0;
-#X connect 108 3 67 0;
-#X connect 108 3 69 0;
-#X connect 109 0 94 0;
-#X connect 110 0 93 0;
-#X connect 110 1 109 0;
-#X connect 111 0 77 0;
-#X connect 112 0 111 1;
-#X connect 112 0 113 0;
-#X connect 113 0 112 1;
-#X connect 114 0 115 0;
-#X connect 114 0 116 0;
-#X connect 115 0 108 0;
-#X connect 116 0 109 1;
-#X connect 116 0 113 1;
-#X connect 118 0 8 1;
-#X connect 118 0 7 1;
-#X connect 119 0 120 0;
-#X connect 120 0 117 0;
-#X coords 0 -1 1 1 140 100 2 100 100;
-#X restore 822 0 pd clock;
-#X connect 1 0 9 0;
-#X connect 2 0 9 0;
-#X connect 3 0 9 0;
-#X connect 4 0 9 0;
-#X connect 5 0 9 0;
-#X connect 6 0 9 0;
-#X connect 7 0 9 0;
-#X connect 8 0 9 0;
-#X connect 13 0 12 0;
-#X connect 15 0 9 0;
-#X connect 16 0 9 0;
-#X connect 18 0 9 0;
-#X connect 21 0 9 0;
-#X connect 22 0 9 0;
-#X connect 23 0 9 0;
-#X connect 24 0 9 0;
-#X connect 25 0 9 0;
-#X connect 26 0 9 0;
-#X connect 27 0 9 0;
-#X connect 28 0 9 0;
-#X connect 30 0 9 0;
-#X connect 34 0 9 0;
-#X connect 36 0 9 0;
-#X connect 37 0 9 0;
-#X connect 38 0 39 0;
-#X connect 39 0 40 0;
-#X connect 41 0 9 0;
-#X connect 43 0 9 0;
-#X connect 44 0 9 0;
-#X connect 47 0 9 0;
-#X connect 48 0 9 0;
-#X connect 50 0 9 0;
-#X connect 51 0 9 0;
-#X connect 52 0 9 0;
-#X connect 55 0 9 0;
-#X connect 56 0 9 0;
-#X connect 57 0 9 0;
-#X connect 59 0 9 0;
-#X connect 60 0 9 0;
-#X connect 63 0 9 0;
-#X connect 65 0 9 0;
-#X connect 66 0 9 0;
-#X connect 67 0 9 0;
-#X connect 120 0 9 0;
+#X connect 12 0 138 0;
+#X connect 13 0 1 0;
+#X connect 16 0 1 0;
+#X connect 22 0 1 0;
 #X restore 474 51 pd rack;
 #X obj 940 46 text define -k colors;
 #A set amp 3 \; vol 39 \; pitch 4 \; freq 5 \; wet 6 \; damp 7 \; Q
@@ -2249,7 +1611,7 @@ OUT4 OUT4 OUT4 \;;
 #A set no-in no-in no-in \; IN(1/2) IN1 IN2 \; IN(3/4) IN3 IN4 \; IN1
 IN1 IN1 \; IN2 IN2 IN2 \; IN3 IN3 IN3 \; IN4 IN4 IN4 \; MASTER MASTER-r
 MASTER-l \; MODULE no-in no-in \;;
-#N canvas 91 65 1097 554 mecanisme_sauvegarde_presets_dans_data_structures
+#N canvas 251 50 1097 554 mecanisme_sauvegarde_presets_dans_data_structures
 0;
 #N canvas 327 232 571 382 text-help-struct 0;
 #X scalar text-help-struct 20 20 \; a b c d \;;
@@ -2270,11 +1632,11 @@ MASTER-l \; MODULE no-in no-in \;;
 #X connect 9 0 1 0;
 #X restore 348 131 pd text-help-struct;
 #X text 88 466 bug - saving multi-line texts inside structures;
-#N canvas 175 50 1205 690 gestion_conduite 0;
+#N canvas 81 50 1366 685 gestion_conduite 0;
 #X obj 206 59 route click;
 #X obj 188 103 list split 1;
 #X obj 394 58 + 15;
-#X obj 210 354 text sequence -s text-help-struct z;
+#X obj 210 334 text sequence -s text-help-struct z;
 #X msg 476 248 bang;
 #X text 358 228 rewind;
 #X msg 428 248 step;
@@ -2286,11 +1648,10 @@ MASTER-l \; MODULE no-in no-in \;;
 #X msg 943 250 0;
 #X obj 916 286 f;
 #X obj 975 284 + 1;
-#X obj 170 383 s RJ_SCENE_LOAD;
+#X obj 185 417 s RJ_SCENE_LOAD;
 #X obj 177 219 t b b;
 #X obj 245 273 s RJ_SCENE_RELOAD;
 #X msg 395 633 editmode 0;
-#X obj 354 694 s pd-ConduitePresets;
 #X obj 275 431 delay 100;
 #X obj 256 489 f;
 #X obj 382 458 t b f;
@@ -2300,16 +1661,13 @@ MASTER-l \; MODULE no-in no-in \;;
 #X obj 440 377 r \$0-save;
 #X obj 189 603 pointer;
 #X obj 20 636 append text-help-struct x y;
-#X msg 173 572 traverse pd-ConduitePresets \, bang;
 #X obj 174 508 - 15;
 #X obj 123 537 t b f b;
 #X obj 701 539 delay 100;
 #X obj 189 667 t b a;
 #X msg 107 569 40 \$1;
-#X obj 519 28 r \$0-pos;
 #X msg 418 489 editmode 1 \, mouse 40 \$1 0 0 \, mouseup 50 \$1 0;
 #X msg 590 318 set \$1;
-#X obj 437 192 s \$0-pos-rcv;
 #X msg 437 166 set \$1;
 #X text 518 377 gros bouton rouge;
 #X text 746 647 variable globale pour communiquer avec le module rj_808
@@ -2318,7 +1676,7 @@ MASTER-l \; MODULE no-in no-in \;;
 ;
 #X msg 374 563 cut \, editmode 0;
 #X text 514 272 voir "creation_dynamique_d'objets";
-#X msg 211 330 line 0;
+#X msg 211 310 line 0;
 #X text 31 444 cf module_declare;
 #X obj 239 245 s RJ_SCENE_PRELOAD;
 #X obj 19 422 s RJ_SCENE_POSTLOAD;
@@ -2336,79 +1694,98 @@ MASTER-l \; MODULE no-in no-in \;;
 #X obj 825 268 t b l b;
 #X obj 773 211 delay 0;
 #X obj 879 233 list;
-#X msg 470 113 pos 0 \$1;
+#X msg 492 116 pos 0 \$1;
 #X obj 446 86 f;
-#X obj 468 139 s ducon;
+#X obj 490 142 s ducon;
 #X obj 96 246 delay 10;
+#X msg 576 0 \; RJ_SCENE_PRELOAD bang \; RJ_SCENE_RELOAD bang \; RJ_SCENE_LOAD
+bang \; RJ_SCENE_POSTLOAD bang \; REFRESH_CONNEXIONS bang;
+#X msg 145 306 step;
+#X obj 226 363 t b a;
+#X obj 174 378 delay 0;
+#X obj 325 364 delay 1;
+#X obj 325 389 t b b;
+#X obj 437 192 s SCENE-pos-rcv;
+#X obj 435 -7 r SCENE-pos-rcv;
+#X obj 471 41 route set;
+#X msg 173 572 traverse pd-conduite \, bang;
+#X obj 354 694 s pd-conduite;
 #X connect 0 0 1 0;
 #X connect 1 0 7 0;
 #X connect 1 1 2 0;
-#X connect 2 0 24 1;
-#X connect 2 0 39 0;
-#X connect 2 0 64 0;
-#X connect 3 0 15 0;
+#X connect 2 0 23 1;
+#X connect 2 0 35 0;
+#X connect 2 0 60 0;
+#X connect 3 0 65 0;
+#X connect 3 1 67 0;
 #X connect 7 0 11 0;
 #X connect 8 0 0 0;
-#X connect 10 0 53 0;
+#X connect 10 0 49 0;
 #X connect 11 0 16 0;
 #X connect 11 1 3 1;
 #X connect 12 0 13 1;
 #X connect 13 0 14 0;
 #X connect 13 0 9 1;
 #X connect 14 0 13 1;
-#X connect 16 0 66 0;
+#X connect 16 0 62 0;
 #X connect 16 1 17 0;
-#X connect 16 1 47 0;
-#X connect 18 0 19 0;
-#X connect 20 0 23 0;
-#X connect 21 0 30 0;
+#X connect 16 1 43 0;
+#X connect 18 0 73 0;
+#X connect 19 0 22 0;
+#X connect 20 0 28 0;
+#X connect 21 0 19 0;
+#X connect 21 1 33 0;
+#X connect 21 1 20 1;
 #X connect 22 0 20 0;
-#X connect 22 1 36 0;
-#X connect 22 1 21 1;
+#X connect 22 1 39 0;
 #X connect 23 0 21 0;
-#X connect 23 1 43 0;
-#X connect 24 0 22 0;
+#X connect 24 0 23 0;
 #X connect 25 0 24 0;
-#X connect 26 0 25 0;
-#X connect 27 0 28 2;
-#X connect 28 0 33 0;
-#X connect 29 0 27 0;
-#X connect 30 0 31 0;
-#X connect 31 1 34 0;
-#X connect 31 2 29 0;
-#X connect 32 0 56 0;
-#X connect 33 0 32 0;
-#X connect 33 1 9 3;
-#X connect 34 0 28 0;
-#X connect 35 0 24 1;
-#X connect 35 0 64 0;
-#X connect 36 0 19 0;
-#X connect 39 0 38 0;
-#X connect 43 0 19 0;
-#X connect 45 0 3 0;
+#X connect 26 0 27 2;
+#X connect 27 0 31 0;
+#X connect 28 0 29 0;
+#X connect 29 1 32 0;
+#X connect 29 2 72 0;
+#X connect 30 0 52 0;
+#X connect 31 0 30 0;
+#X connect 31 1 9 3;
+#X connect 32 0 27 0;
+#X connect 33 0 73 0;
+#X connect 35 0 69 0;
+#X connect 39 0 73 0;
+#X connect 41 0 3 0;
+#X connect 45 2 64 0;
+#X connect 45 3 41 0;
+#X connect 47 0 58 0;
 #X connect 49 0 50 0;
-#X connect 49 1 48 0;
-#X connect 49 2 3 0;
-#X connect 49 3 45 0;
-#X connect 51 0 62 0;
+#X connect 49 0 53 0;
+#X connect 50 0 47 0;
+#X connect 51 0 47 0;
+#X connect 52 0 48 0;
+#X connect 52 1 12 0;
+#X connect 52 2 51 0;
 #X connect 53 0 54 0;
-#X connect 53 0 57 0;
-#X connect 54 0 51 0;
-#X connect 55 0 51 0;
-#X connect 56 0 52 0;
-#X connect 56 1 12 0;
-#X connect 56 2 55 0;
-#X connect 57 0 58 0;
-#X connect 58 0 59 0;
-#X connect 59 0 51 0;
-#X connect 60 0 61 0;
-#X connect 60 1 9 0;
-#X connect 60 2 13 0;
-#X connect 61 0 51 0;
-#X connect 62 0 60 0;
-#X connect 63 0 65 0;
-#X connect 64 0 63 0;
-#X connect 66 0 49 0;
+#X connect 54 0 55 0;
+#X connect 55 0 47 0;
+#X connect 56 0 57 0;
+#X connect 56 1 9 0;
+#X connect 56 2 13 0;
+#X connect 57 0 47 0;
+#X connect 58 0 56 0;
+#X connect 59 0 61 0;
+#X connect 60 0 59 0;
+#X connect 62 0 45 0;
+#X connect 64 0 3 0;
+#X connect 65 0 66 0;
+#X connect 65 1 15 0;
+#X connect 66 0 64 0;
+#X connect 67 0 68 0;
+#X connect 68 0 46 0;
+#X connect 68 1 44 0;
+#X connect 70 0 71 0;
+#X connect 71 0 23 1;
+#X connect 71 0 60 0;
+#X connect 72 0 26 0;
 #X restore 354 172 pd gestion_conduite;
 #X obj 546 85 r \$0-load;
 #X text 701 152 if the load button is pressed;
@@ -2430,7 +1807,6 @@ MASTER-l \; MODULE no-in no-in \;;
 #X obj 771 226 list prepend add RJ_SCENE_LOAD;
 #X msg 661 281 dirty 1;
 #X obj 456 242 t b a b b b b;
-#X obj 654 311 sendcanvas 1;
 #X obj 421 266 t b b;
 #X msg 379 321 menusave;
 #X obj 377 299 delay 1000;
@@ -2438,9 +1814,10 @@ MASTER-l \; MODULE no-in no-in \;;
 #X obj 550 112 t b b, f 27;
 #X obj 621 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
+#X obj 248 428 s pd-conduite;
 #X connect 0 0 2 0;
 #X connect 2 0 9 0;
-#X connect 3 0 28 0;
+#X connect 3 0 27 0;
 #X connect 5 0 7 0;
 #X connect 6 0 11 0;
 #X connect 7 0 6 0;
@@ -2452,65 +1829,36 @@ MASTER-l \; MODULE no-in no-in \;;
 #X connect 18 0 20 0;
 #X connect 19 0 16 0;
 #X connect 20 0 19 0;
-#X connect 21 0 23 0;
-#X connect 22 0 24 0;
+#X connect 21 0 29 0;
+#X connect 22 0 23 0;
 #X connect 22 1 10 0;
 #X connect 22 1 17 0;
 #X connect 22 2 12 0;
 #X connect 22 4 14 0;
 #X connect 22 5 21 0;
-#X connect 24 0 26 0;
-#X connect 24 1 13 0;
-#X connect 25 0 23 0;
-#X connect 26 0 25 0;
-#X connect 28 0 16 0;
-#X connect 28 1 27 0;
-#X connect 29 0 14 0;
+#X connect 23 0 25 0;
+#X connect 23 1 13 0;
+#X connect 24 0 29 0;
+#X connect 25 0 24 0;
+#X connect 27 0 16 0;
+#X connect 27 1 26 0;
+#X connect 28 0 14 0;
 #X restore 473 201 pd mecanisme_sauvegarde_presets_dans_data_structures
 ;
 #N canvas 0 50 681 300 ctlin 0;
 #X obj 163 219 s CTLIN;
-#X obj 342 280 s SPEED_LIM;
-#X msg 303 252 0;
-#X msg 359 255 20;
 #X obj 243 81 - 1;
 #X obj 243 106 * 128;
 #X obj 221 131 +;
 #X obj 160 154 pack f f;
-#X obj 351 26 notein;
-#X obj 429 112 ==;
-#X obj 327 206 spigot;
-#X msg 32 17 \$2 \$1 \$3;
 #X obj 160 36 ctlin;
-#X obj 21 57 unpack f f f;
-#X obj 328 144 pack f f 1;
-#X obj 436 151 r \$0-note2cc_chan_out;
-#X obj 451 59 r \$0-note2cc_chan_in;
-#X obj 323 178 spigot;
-#X obj 509 119 r \$0-note2cc_enable;
-#X connect 2 0 1 0;
-#X connect 3 0 1 0;
-#X connect 4 0 5 0;
-#X connect 5 0 6 1;
-#X connect 6 0 7 1;
-#X connect 7 0 0 0;
-#X connect 8 0 14 0;
-#X connect 8 1 14 1;
-#X connect 8 2 9 0;
-#X connect 9 0 10 1;
-#X connect 10 0 11 0;
-#X connect 11 0 13 0;
-#X connect 12 0 7 0;
-#X connect 12 1 6 0;
-#X connect 12 2 4 0;
-#X connect 13 0 7 0;
-#X connect 13 1 6 0;
-#X connect 13 2 4 0;
-#X connect 14 0 17 0;
-#X connect 15 0 14 2;
-#X connect 16 0 9 1;
-#X connect 17 0 10 0;
-#X connect 18 0 17 1;
+#X connect 1 0 2 0;
+#X connect 2 0 3 1;
+#X connect 3 0 4 1;
+#X connect 4 0 0 0;
+#X connect 5 0 4 0;
+#X connect 5 1 3 0;
+#X connect 5 2 1 0;
 #X restore 471 103 pd ctlin;
 #X obj 951 126 text define -k modules;
 #A set audio_in entrée audio \; audio_out sortie audio \; audio_record
@@ -2656,7 +2004,6 @@ sans utiliser iem_receive;
 #X obj 361 143 tgl 20 1 empty empty RACK 22 10 0 15 -262144 -1 -1 1
 1;
 #X msg 244 546 \; pd-rack vis \$1;
-#X msg 204 586 \; pd-ConduitePresets vis \$1;
 #X obj 351 213 tgl 20 1 empty empty interface 22 10 0 15 -262144 -1
 -1 0 1;
 #N canvas 323 80 1150 566 remote 0;
@@ -2712,41 +2059,39 @@ dans midi_colors);
 #X text 144 442 gère les insertions/suppressions/connexions dynamiques
 de modules;
 #X msg 541 585 \; pd-dynamic_linker.pd vis \$1;
-#X text 263 246 NOTEIN AS CTL;
-#X obj 314 279 tgl 15 0 \$0-note2cc_enable \$0-note2cc_enable-rcv enable
--10 -8 0 10 -262144 -1 -1 1 1;
-#X floatatom 265 278 5 0 0 0 Channel_in #0-note2cc_chan_in-rcv #0-note2cc_chan_in
-, f 5;
 #X floatatom 239 174 5 0 0 0 chan - -, f 5;
-#X floatatom 337 278 5 1 128 1 Chan_out #0-note2cc_chan_out-rcv #0-note2cc_chan_out
-, f 5;
-#X obj 947 525 u_parameter \$0 note2cc_enable;
-#X obj 947 475 u_parameter \$0 note2cc_chan_in;
-#X obj 948 500 u_parameter \$0 note2cc_chan_out;
-#X obj 947 442 module_loader main \$0;
 #X msg 1186 200 color \$1 \$1 \$1;
 #X obj 1186 240 tgl 40 0 empty empty empty 17 7 0 10 -62784 -62784
 -62784 0 1;
 #X floatatom 1167 154 5 0 0 0 - - -, f 5;
+#X obj 947 442 module_loader main \$0;
+#X obj 1133 375 u_loader;
+#X msg 684 527 \; RJ_SCENE_PRELOAD bang \; RJ_SCENE_RELOAD bang \;
+RJ_SCENE_LOAD bang \; RJ_SCENE_POSTLOAD bang \; REFRESH_CONNEXIONS
+bang;
+#X obj 731 498 r RESET;
+#X obj 578 496 loadbang;
+#X obj 578 521 delay 1000;
+#X msg 204 586 \; pd-conduite vis \$1;
 #X connect 2 0 3 0;
 #X connect 6 0 7 0;
 #X connect 8 0 7 0;
 #X connect 9 0 10 0;
 #X connect 9 1 10 1;
-#X connect 9 2 46 0;
+#X connect 9 2 41 0;
 #X connect 10 0 5 0;
-#X connect 21 0 22 0;
-#X connect 25 0 24 0;
-#X connect 28 0 31 0;
-#X connect 30 0 29 0;
-#X connect 31 0 32 0;
-#X connect 33 0 36 0;
-#X connect 34 0 35 0;
-#X connect 37 0 42 0;
+#X connect 20 0 21 0;
+#X connect 24 0 23 0;
+#X connect 27 0 30 0;
+#X connect 29 0 28 0;
+#X connect 30 0 31 0;
+#X connect 32 0 51 0;
+#X connect 33 0 34 0;
+#X connect 35 0 40 0;
+#X connect 42 0 43 0;
+#X connect 44 0 42 0;
+#X connect 48 0 47 0;
 #X connect 49 0 50 0;
-#X connect 50 0 48 0;
-#X connect 51 0 49 0;
-#X connect 52 0 53 0;
-#X connect 54 0 52 0;
+#X connect 50 0 47 0;
 #X coords 0 -1 1 1 360 300 1 100 100;
 #X restore 7 6 pd stuff;

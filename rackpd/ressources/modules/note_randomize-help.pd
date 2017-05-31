@@ -1,0 +1,18 @@
+#N canvas 713 50 613 297 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X obj 346 38 declare -path ../core;
+#X obj 346 68 declare -path ../rj;
+#X obj 480 173 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 480 210 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
+1;
+#X text 500 169 Instances multiples;
+#X obj 45 56 note_randomize;
+#X text 26 237 Decay est un générateur d'enveloppe simple appliqué
+aux signaux audio entrants en suivant le flux midi.;
+#X text 23 205 accent ajoute des accentuations de dynamique en modifiant
+la vélocité des messages note_on;
+#X text 23 152 Fait passer un flux de notes avec une certaine probabilité
+(prob). Si Euclid steps > 0 \, la répartition des notes n'est plus
+probabilistique \, mais euclidiene.;
+#X coords 0 297 1 296 190 70 0;

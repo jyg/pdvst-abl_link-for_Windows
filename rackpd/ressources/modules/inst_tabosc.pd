@@ -148,7 +148,7 @@
 #X obj 221 523 route note stop;
 #X msg 274 555 stop;
 #X obj 101 101 cnv 15 188 68 empty \$0-background inst_tabosc 0 7 0
-12 -262144 -1 0;
+12 -260818 -1 0;
 #X obj 32 163 notein 1;
 #X obj 252 100 tgl 15 0 \$0-midiNoteIn \$0-midiNoteIn-rcv Midi 16 7
 0 8 -262144 -1 -1 0 1;
@@ -156,7 +156,7 @@
 -8 0 10 -262144 -1 -1 4;
 #X obj 252 115 ui_vs \$0 vol 0 127;
 #X obj 103 114 hsl 50 15 8 500 1 0 \$0-sustain \$0-sustain-rcv sustain
--2 8 0 10 -262144 -1 -1 0 1;
+-2 8 0 10 -262144 -1 -1 4500 1;
 #X obj 205 110 vsl 15 30 95 70 0 0 \$0-sens \$0-sens-rcv sens -7 -7
 0 10 -261234 -1 -1 0 1;
 #X obj 182 144 bng 25 250 50 0 \$0-recButton \$0-recButton-rcv REC
@@ -171,13 +171,13 @@
 #X obj 189 123 bng 15 250 50 0 \$0-open empty O 5 7 0 10 -203904 -1
 -1;
 #X obj 100 140 vsl 20 27 1 0 0 0 \$0-mode \$0-mode-rcv mode 0 -7 0
-10 -262144 -1 -1 0 1;
+10 -262144 -1 -1 900 1;
 #N canvas 0 50 517 502 \$0-sinesum 0;
 #N canvas 572 63 1103 563 reglages 0;
 #X obj 400 169 vsl 50 128 0 0.3 0 0 \$0-harmo7 \$0-harmo7-rcv empty
-0 -9 0 10 -262144 -1 -1 0 1;
+0 -9 0 10 -262144 -1 -1 4400 1;
 #X obj 450 169 vsl 50 128 0 0.3 0 0 \$0-harmo8 \$0-harmo8-rcv empty
-0 -9 0 10 -262144 -1 -1 0 1;
+0 -9 0 10 -262144 -1 -1 6900 1;
 #X obj 328 21 unpack f f f f f f f f;
 #X msg 313 -136 1 0 0 0 0 0 0 0;
 #X msg 336 -106 0 1 0 0 0 0 0 0;
@@ -192,17 +192,17 @@
 #X obj 450 117 bng 50 250 50 0 empty empty 8' 17 20 0 30 -262144 -1
 -1;
 #X obj 300 169 vsl 50 128 0 0.3 0 0 \$0-harmo5 \$0-harmo5-rcv empty
-0 -9 0 10 -262144 -1 -1 0 1;
+0 -9 0 10 -262144 -1 -1 7800 1;
 #X obj 350 169 vsl 50 128 0 0.3 0 0 \$0-harmo6 \$0-harmo6-rcv empty
-0 -9 0 10 -262144 -1 -1 0 1;
+0 -9 0 10 -262144 -1 -1 8700 1;
 #X obj 300 117 bng 50 250 50 0 empty empty 5' 17 20 0 30 -262144 -1
 -1;
 #X obj 350 117 bng 50 250 50 0 empty empty 6' 17 20 0 30 -262144 -1
 -1;
 #X obj 200 169 vsl 50 128 0 0.3 0 0 \$0-harmo3 \$0-harmo3-rcv empty
-0 -9 0 10 -262144 -1 -1 0 1;
+0 -9 0 10 -262144 -1 -1 7700 1;
 #X obj 250 169 vsl 50 128 0 0.3 0 0 \$0-harmo4 \$0-harmo4-rcv empty
-0 -9 0 10 -262144 -1 -1 0 1;
+0 -9 0 10 -262144 -1 -1 12700 1;
 #X obj 200 117 bng 50 250 50 0 empty empty 3' 17 20 0 30 -262144 -1
 -1;
 #X obj 250 117 bng 50 250 50 0 empty empty 4' 17 20 0 30 -262144 -1
@@ -210,7 +210,7 @@
 #X obj 100 169 vsl 50 128 0 0.3 0 0 \$0-harmo1 \$0-harmo1-rcv empty
 0 -9 0 10 -262144 -1 -1 12700 1;
 #X obj 150 169 vsl 50 128 0 0.3 0 0 \$0-harmo2 \$0-harmo2-rcv empty
-0 -9 0 10 -262144 -1 -1 0 1;
+0 -9 0 10 -262144 -1 -1 5700 1;
 #X obj 100 117 bng 50 250 50 0 empty empty 1' 17 20 0 30 -262144 -1
 -1;
 #X obj 150 117 bng 50 250 50 0 empty empty 2' 17 20 0 30 -262144 -1
@@ -244,7 +244,7 @@
 #X coords 0 -1 1 1 400 200 1 100 100;
 #X restore 64 26 pd reglages;
 #X obj 370 270 vsl 20 120 1 0 0 0 \$0-mode \$0-mode-rcv mode 0 -7 0
-10 -262144 -1 -1 0 1;
+10 -262144 -1 -1 4119 1;
 #X obj 188 288 s pd-\$0-sinesum;
 #X msg 182 250 vis 0;
 #X msg 256 247 vis 1;
@@ -493,8 +493,6 @@
 #X msg 475 297 size \$1;
 #X obj 518 274 tabread \$0-sizes;
 #X obj 596 549 u_parameter \$0 bank;
-#X obj 43 274 u_makepoly2 16 1 inst_tabosc/module_tabosc \$0 \$0-tabosc
-;
 #X obj 596 457 u_dispatch \$0 taboscfile-0;
 #X obj 596 479 u_dispatch \$0 taboscfile-1;
 #X obj 596 501 u_dispatch \$0 taboscfile-2;
@@ -603,19 +601,21 @@
 #X obj 331 493 inlet data;
 #X obj 358 529 outlet data;
 #X obj 596 303 module_loader inst_tabosc \$0 \$1;
-#X connect 0 0 52 0;
+#X obj 43 274 u_makepoly2 16 1 inst_tabosc/module_tabosc \$0 \$0-tabosc
+;
+#X connect 0 0 72 0;
 #X connect 1 0 0 0;
 #X connect 2 0 1 1;
 #X connect 3 0 4 0;
-#X connect 4 0 63 0;
+#X connect 4 0 62 0;
 #X connect 5 0 7 0;
-#X connect 6 0 68 0;
-#X connect 6 1 69 0;
+#X connect 6 0 67 0;
+#X connect 6 1 68 0;
 #X connect 7 0 9 0;
-#X connect 9 0 53 0;
-#X connect 12 0 52 0;
+#X connect 9 0 52 0;
+#X connect 12 0 72 0;
 #X connect 12 1 13 0;
-#X connect 13 0 52 0;
+#X connect 13 0 72 0;
 #X connect 15 0 1 0;
 #X connect 15 1 0 1;
 #X connect 32 0 31 0;
@@ -624,27 +624,27 @@
 #X connect 46 0 47 0;
 #X connect 46 0 50 0;
 #X connect 47 0 48 0;
-#X connect 48 0 52 1;
-#X connect 49 0 52 1;
+#X connect 48 0 72 1;
+#X connect 49 0 72 1;
 #X connect 50 0 49 0;
-#X connect 50 0 58 0;
+#X connect 50 0 57 0;
 #X connect 51 0 35 0;
-#X connect 52 0 6 0;
-#X connect 52 1 6 1;
+#X connect 52 0 53 0;
 #X connect 53 0 54 0;
 #X connect 54 0 55 0;
-#X connect 55 0 56 0;
-#X connect 56 0 51 0;
-#X connect 60 0 61 1;
-#X connect 60 0 62 1;
+#X connect 55 0 51 0;
+#X connect 59 0 60 1;
+#X connect 59 0 61 1;
+#X connect 60 0 67 0;
 #X connect 61 0 68 0;
-#X connect 62 0 69 0;
-#X connect 63 0 5 0;
-#X connect 66 0 8 0;
+#X connect 62 0 5 0;
+#X connect 65 0 8 0;
+#X connect 65 0 60 0;
 #X connect 66 0 61 0;
-#X connect 67 0 62 0;
-#X connect 67 0 8 0;
-#X connect 70 0 12 0;
-#X connect 70 0 71 0;
-#X connect 72 0 3 0;
+#X connect 66 0 8 0;
+#X connect 69 0 12 0;
+#X connect 69 0 70 0;
+#X connect 71 0 3 0;
+#X connect 72 0 6 0;
+#X connect 72 1 6 1;
 #X coords 0 -1 1 1 190 70 1 100 100;

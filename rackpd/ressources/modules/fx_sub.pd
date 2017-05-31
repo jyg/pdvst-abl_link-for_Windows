@@ -1,5 +1,5 @@
-#N struct 1043-symarray float x array symbols 1043-sym;
-#N struct 1043-sym symbol name float on;
+#N struct 2352-symarray float x array symbols 2352-sym;
+#N struct 2352-sym symbol name float on;
 #N canvas 451 88 853 532 10;
 #X declare -path ../core;
 #N canvas 172 83 586 377 LICENSE-GPL 0;
@@ -329,4 +329,5 @@ a# \, b;
 #X connect 38 0 1 0;
 #X connect 38 0 30 0;
 #X connect 41 0 42 0;
+#X connect 41 0 36 0;
 #X coords 0 -1 1 1 190 70 1 100 100;

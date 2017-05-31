@@ -1,4 +1,4 @@
-#N canvas 0 50 658 424 10;
+#N canvas 274 64 658 424 10;
 #X obj 479 299 list append;
 #X obj 301 136 r \$2-\$1, f 8;
 #X obj 234 253 s \$0-label;
@@ -22,6 +22,11 @@
 #X obj 476 194 t b;
 #X obj 476 216 f \$2;
 #X obj 52 148 t b f;
+#X obj 333 103 hradio 15 1 0 4 empty empty 1_2_3_4 2 8 0 13 -128992
+-262144 -1 0;
+#X obj 429 235 delay;
+#X obj 371 204 t b f b;
+#X msg 330 278 1;
 #X connect 0 0 13 0;
 #X connect 1 0 6 0;
 #X connect 1 0 18 0;
@@ -35,7 +40,7 @@
 #X connect 10 0 8 0;
 #X connect 10 1 11 0;
 #X connect 11 0 12 0;
-#X connect 12 0 0 0;
+#X connect 12 0 22 0;
 #X connect 15 0 14 0;
 #X connect 16 0 15 0;
 #X connect 16 1 17 0;
@@ -44,4 +49,9 @@
 #X connect 19 0 0 1;
 #X connect 20 0 16 0;
 #X connect 20 1 11 1;
+#X connect 21 0 23 0;
+#X connect 22 0 0 0;
+#X connect 23 0 24 0;
+#X connect 23 1 22 1;
+#X connect 24 0 9 0;
 #X coords 0 -1 1 1 300 20 1 100 100;

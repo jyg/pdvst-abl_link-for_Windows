@@ -21,24 +21,9 @@ DIY;
 de l'attaque, f 65;
 #X text 356 185 decay (10-2000 ms) : durée de résonance de la note
 ;
-#X text 355 210 sq (square) (0.001 - 1000) : "carré-itude" de la forme
-d'onde (i.e. saturation de la sinusïde), f 66;
-#X text 361 244 nz (noize) : composante bruiteuse de l'attaque;
 #X text 359 266 lp (lowpass) (100-10000Hz) : filtre passe-bas appliqué
 en sortie;
-#N canvas 0 50 450 300 etude_morphing 0;
-#X obj 125 100 hsl 128 30 0 1 0 0 MORPH MORPH-rcv A<--------->B 10
-15 0 14 -262144 -1 -1 8600 1;
-#X obj 101 109 bng 20 250 50 0 MORPH-setA empty A 4 10 0 10 -262144
--1 -1;
-#X obj 256 108 bng 20 250 50 0 MORPH-setB empty B 4 10 0 10 -262144
--1 -1;
-#X obj 261 162 r MORPH;
-#X msg 261 187 set \$1;
-#X obj 261 212 s MORPH-rcv;
-#X connect 3 0 4 0;
-#X connect 4 0 5 0;
-#X coords 0 -1 1 1 180 30 1 100 100;
-#X restore 68 469 pd etude_morphing;
-#X text 103 450 morphing;
+#X text 355 210 sq (square) (0.001 - 1000) : "carré-itude" de la forme
+d'onde (i.e. saturation de la sinusoïde), f 66;
+#X text 361 244 nz (noize) : composante bruiteuse de l'attaque;
 #X coords 0 552 1 551 190 70 0;

@@ -1,8 +1,0 @@
-#N canvas 0 0 200 200 10;
-#X obj 0 0 focus_listener inst_headrush;
-#X obj 0 20 tgl_listener 136 40 led-rec 30;
-#X connect 0 0 1 0;
-#X obj 0 40 tgl_listener 72 40 led-play 30;
-#X connect 1 0 2 0;
-#X obj 0 60 tgl_listener 28 27 ty 15;
-#X connect 2 0 3 0;

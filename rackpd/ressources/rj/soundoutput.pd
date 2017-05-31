@@ -15,8 +15,8 @@
 #X msg 241 282 set rec1;
 #X msg 353 280 set rec2;
 #X obj 296 411 pack 0 20;
-#X obj 114 121 hsl 50 15 0 1 0 0 \$0-vol \$0-vol volume 5 8 1 10 -4034
--1 -1 0 1;
+#X obj 114 121 hsl 50 15 1e-006 1 1 0 \$0-vol \$0-vol volume 5 8 1
+10 -4034 -1 -1 2800 1;
 #X obj 296 389 r \$0-vol;
 #X obj 538 93 r \$0-vol;
 #X msg 538 116 \; pd dsp 1;
@@ -31,7 +31,7 @@
 #X obj 451 208 route record play;
 #X obj 593 301 r #volume;
 #X obj 593 322 route set;
-#N canvas 0 0 450 300 meter 0;
+#N canvas 0 50 450 300 meter 0;
 #X obj 22 27 inlet~;
 #X obj 26 69 env~;
 #X obj 192 113 f;
@@ -56,8 +56,8 @@
 #X restore 23 250 pd meter;
 #X obj 23 272 int;
 #X obj 23 293 - 100;
-#X obj 169 121 nbx 3 14 -1e+37 1e+37 0 0 empty \$0-meter empty 0 -8
-0 10 -262144 -1 -1 0 256;
+#X obj 169 121 nbx 3 14 -1e+037 1e+037 0 0 empty \$0-meter empty 0
+-8 0 10 -262144 -1 -1 -5 256;
 #X obj 23 319 s \$0-meter;
 #X connect 1 0 28 0;
 #X connect 2 0 8 0;

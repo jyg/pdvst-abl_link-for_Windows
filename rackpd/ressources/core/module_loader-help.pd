@@ -11,3 +11,5 @@ de module);
 #X text 375 395 pour accéder à 'interface de gestion des présets.
 ;
 #X obj 228 129 module_loader <nom_type_de_module> \$0 \$1;
+#X text 646 131 les arguments \$0 et \$1 sont nécessaires pour permettre
+une utilisation statique ou dynamique en (rack);

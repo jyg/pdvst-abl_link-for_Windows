@@ -1,0 +1,24 @@
+#N canvas 713 50 613 453 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X obj 346 44 declare -path ../core;
+#X obj 346 74 declare -path ../rj;
+#X obj 340 169 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 340 206 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
+1;
+#X text 360 165 Instances multiples;
+#X obj 57 64 note_2param;
+#X text 15 152 convertit un message noteon en entrée en message de
+contrôle de paramètre en sortie, f 42;
+#X text 13 225 min : valeur de sortie correspondant à noteon 0;
+#X text 13 245 max : valeur de sortie correspondant à noteon 127;
+#X obj 25 269 ui_tgl \$0 log 2 1 -1;
+#X text 54 268 : commutateur courbe logarithme ou linéaire;
+#X symbolatom 98 298 10 0 0 0 target #0-target-rcv #0-target, f 10
+;
+#X symbolatom 97 319 10 0 0 0 param_name #0-param_name-rcv #0-param_name
+, f 10;
+#X text 191 299 nom du module cible;
+#X text 193 319 nom du parametre cible (dans le module spécifié)
+;
+#X coords 0 453 1 452 190 70 0;

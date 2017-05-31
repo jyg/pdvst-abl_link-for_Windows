@@ -107,7 +107,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 29 306 outlet~;
 #X obj 89 260 inlet~;
 #X obj 89 306 outlet~;
-#X obj 182 389 inlet data;
+#X obj 430 16 inlet data;
 #X obj 165 430 outlet data;
 #X obj 435 48 module_loader data_wintablet \$0 \$1;
 #X connect 1 0 2 0;
@@ -130,6 +130,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X connect 16 0 21 0;
 #X connect 17 0 21 0;
 #X connect 18 0 21 0;
+#X connect 19 0 79 0;
 #X connect 20 0 21 1;
 #X connect 21 0 22 1;
 #X connect 21 0 35 0;
@@ -185,6 +186,6 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X connect 73 4 7 0;
 #X connect 74 0 75 0;
 #X connect 76 0 77 0;
-#X connect 78 0 79 0;
+#X connect 78 0 80 0;
 #X connect 80 0 4 0;
 #X coords 0 -1 1 1 190 70 1 100 100;

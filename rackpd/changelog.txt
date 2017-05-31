@@ -2,9 +2,14 @@ v 0.5.3
 - Réécriture des modules pour pouvoir les utiliser en autonome (statique) ou en mode rack.
 - nettoyage des modules existants
 - nouveaux modules
-	- inst_modular, permettant de charger dynamiquement un patch modulaire AUTOMATONISM_1.1, et de gérer l'interface entre signaux CV et messages midi ctl, dans les deux sens.
+	- inst_modular, permettant de charger dynamiquement un patch modulaire (par exemple AUTOMATONISM_1.1), et de gérer l'interface entre signaux CV et messages midi ctl, dans les deux sens.
 	- note_16steps, mini séquenceur inspiré de celui fourni par AUTOMATONISM
 	- note_randomize, générateur d'accents aléatoires sur un flux de notes midi
+- Ecriture  sous forme de modules des fonctions basiques de PdRacks
+	- PdRacks.presets	Gestion de présets à l'intérieur d'une scène
+	- PdRacks.transport	Gestion de l'horloge et de la synchro
+	- PdRacks.morphing	Curseur de morphing entre deux instantanés
+(TODO : midi learn/mapping, sauvegarde de scènes, rappel automatique de préréglages interfaces audio/midi)
 
 v 0.5.2
 

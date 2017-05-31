@@ -1,0 +1,44 @@
+#N canvas 713 50 653 438 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X declare -path C:/Users/jyg/Desktop/pd/Patches/2010/fid_abs_0.3.6
+;
+#X obj 436 59 declare -path ../core;
+#X obj 436 89 declare -path ../rj;
+#X text 45 292 EXPERIMENTAL ALPHA;
+#X obj 26 292 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 25 355 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
+1;
+#X text 47 316 Instances multiples;
+#X obj 25 379 tgl 15 0 empty empty ? 4 8 0 12 -260097 -260097 -1 0
+1;
+#X obj 142 143 data_fiducial;
+#X text 41 148 nb de touch events simultanés ->, f 16;
+#X text 51 236 fidmin / fidmax : intervalle de valeurs de fiducial
+actives;
+#X text 241 113 1;
+#X text 280 115 2;
+#X text 242 140 |;
+#X text 242 149 V;
+#X text 242 130 |;
+#X text 282 155 |;
+#X text 282 164 V;
+#X text 282 145 |;
+#X text 282 140 |;
+#X text 282 130 |;
+#X text 329 168 <- 3;
+#X text 401 110 1) bouton de test 2) numéro de cc 3) bouton d'activation
+du cc, f 17;
+#X text 240 373 TODO : pouvoir ajuster la zône active du fiducial
+;
+#X text 27 13 convertit des touchevents (class touch) en control change
+events \, activés \, centrés et normalisés en fonction de l'apparition
+d'un fiducial qui va activer une zone d'interaction (listenener),
+f 50;
+#X text 242 269 Fonctionne avec environnement fid_abs (écoute le canal
+FID_CLASSES), f 38;
+#X text 246 347 renvoie les messages ctl sur le canal CTLIN;
+#X text 242 304 Un seul fiducial actif à la fois;
+#X text 242 324 Monotouch;
+#X obj 26 322 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X coords 0 438 1 437 190 70 0;

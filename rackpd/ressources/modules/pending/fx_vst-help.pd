@@ -1,0 +1,19 @@
+#N canvas 498 72 738 408 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X obj 346 19 declare -path ../core;
+#X obj 346 49 declare -path ../rj;
+#X obj 263 176 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 233 233 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
+1;
+#X text 283 172 Instances multiples;
+#X obj 36 122 fx_vst;
+#X text 259 230 sauvegarde de parametres inefficace;
+#X obj 233 253 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
+1;
+#X text 219 214 BUGS;
+#X text 259 250 l'external vst~ fait disparaître les périphériques
+asio dans le menu Media/Asio;
+#X text 19 28 Hôte de plugin vst (windows);
+#X text 229 308 Dépendances : eternal vst~ (Thomas Grill);
+#X coords 0 408 1 407 190 70 0;

@@ -123,9 +123,9 @@
 #X restore 307 326 pd audio_stuff;
 #X obj 138 395 c_tobus no-out;
 #X obj 271 394 c_tobus no-out;
-#X obj 415 433 u_dispatch \$0 out;
-#X obj 416 412 u_dispatch \$0 vol;
-#X obj 416 454 u_parameter \$0 mute;
+#X obj 585 363 u_dispatch \$0 out;
+#X obj 586 342 u_dispatch \$0 vol;
+#X obj 586 384 u_parameter \$0 mute;
 #X obj 292 607 s \$0-mute;
 #X obj 354 517 midi-colors \$0 mute \$0-mute-rcv;
 #X obj 412 555 r \$0-mute;
@@ -207,9 +207,9 @@
 #X connect 15 0 7 0;
 #X restore 581 42 pd selection_bus_sortie;
 #X obj 606 422 u_parameter \$0 pan;
-#X obj 716 279 loadbang;
-#X obj 686 319 s \$0-pan;
-#X msg 672 292 0;
+#X obj 736 179 loadbang;
+#X obj 706 219 s \$0-pan;
+#X msg 692 192 0;
 #X obj 101 101 cnv 15 188 68 empty \$0-background audio_out 0 7 0 14
 -262144 -1 0;
 #X obj 100 115 ui_vs \$0 vol 0 127;
@@ -239,9 +239,9 @@
 #X obj 460 274 outlet~;
 #X obj 307 248 inlet~;
 #X obj 322 272 outlet~;
-#X obj 534 258 inlet data;
-#X obj 534 280 outlet data;
-#X obj 412 381 module_loader audio_out \$0 \$1;
+#X obj 586 277 inlet data;
+#X obj 582 311 module_loader audio_out \$0 \$1;
+#X obj 614 450 outlet data;
 #X connect 0 0 1 0;
 #X connect 0 0 14 0;
 #X connect 0 1 2 0;
@@ -257,6 +257,7 @@
 #X connect 12 0 9 0;
 #X connect 13 0 1 0;
 #X connect 14 0 2 0;
+#X connect 16 0 45 0;
 #X connect 17 0 19 0;
 #X connect 19 0 18 0;
 #X connect 25 0 13 1;
@@ -280,5 +281,5 @@
 #X connect 41 0 0 0;
 #X connect 41 0 42 0;
 #X connect 43 0 44 0;
-#X connect 45 0 4 0;
+#X connect 44 0 4 0;
 #X coords 0 -1 1 1 190 70 1 100 100;

@@ -1,0 +1,174 @@
+#N canvas 25 70 1098 620 10;
+#N canvas 172 83 586 377 LICENSE-GPL 0;
+#X text 57 88 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version.;
+#X text 58 168 This program is distributed in the hope that it will
+be useful \, but WITHOUT ANY WARRANTY \; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.;
+#X text 57 261 You should have received a copy of the GNU General Public
+License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X text 61 54 Copyright (C) 2009 \, Reality Jockey Ltd.;
+#X text 60 325 See the file LICENSE.txt for the full license text.
+;
+#X restore 298 15 pd LICENSE-GPL;
+#X obj 343 161 switch~;
+#X obj 187 131 tgl 25 0 \$0-rec \$0-rec-rcv REC 2 7 0 10 -262144 -1
+-1 0 56;
+#X obj 577 18 r \$0-rec;
+#X obj 162 448 s \$0-rec;
+#X obj 578 68 s \$0-rec-rcv;
+#X msg 578 48 set \$1;
+#X obj 159 425 > 64;
+#X obj 157 401 midi-colors \$0 rec \$0-rec-rcv;
+#X obj 156 139 bng 15 250 50 0 \$0-next_file \$0-next_file-rcv > 5
+7 0 10 -262144 -1 -1;
+#X obj 100 141 bng 15 250 50 0 \$0-prev_file \$0-prev_file-rcv < 5
+7 0 10 -262144 -1 -1;
+#X obj 574 118 r \$0-duree;
+#X obj 497 51 select 0;
+#X obj 101 120 bng 20 250 50 0 empty empty add_sample... 2 7 0 10 -262144
+-1 -1;
+#X floatatom 118 140 5 0 0 0 - #0-index-rcv #0-index, f 5;
+#X obj 173 221 data_inlet \$0;
+#X obj 179 362 data_outlet \$0;
+#X msg 205 319 filesource \$2 \$1;
+#X obj 544 175 s \$0-samplename;
+#X msg 549 95 label recording...;
+#X msg 576 139 label ext-sample(\$1ms);
+#X obj 416 300 u_dispatch \$0 f.freq;
+#X obj 416 320 u_dispatch \$0 f.Q;
+#X obj 220 102 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv Atelier
+2 5 0 10 -232576 -232576 -1 0 1;
+#X obj 214 115 ui_vs \$0 f.freq 0 1;
+#X obj 252 115 ui_vs \$0 f.Q 0 1;
+#X obj 101 157 cnv 12 1 1 empty \$0-samplename ext-sample(1393.2ms)
+2 6 0 10 -262144 -66577 0;
+#X obj 765 21 midi-colors \$0 rec \$0-rec-rcv;
+#X obj 764 81 s \$0-rec;
+#X obj 764 60 change;
+#X obj 765 41 > 30;
+#X obj 764 149 change;
+#X obj 765 130 > 30;
+#X obj 764 269 change;
+#X obj 765 250 > 30;
+#X obj 765 110 midi-colors \$0 prev_file \$0-prev_file-rcv;
+#X obj 765 230 midi-colors \$0 next_file \$0-next_file-rcv;
+#X obj 764 172 select 1;
+#X obj 764 292 select 1;
+#X obj 764 330 s \$0-next_file-rcv;
+#X obj 764 200 s \$0-prev_file-rcv;
+#X obj 416 346 u_subset \$0 filename;
+#X obj 25 296 inst_sampler/02_sampler \$0;
+#X obj 276 238 r \$0-index;
+#X msg 271 265 set \$1;
+#X obj 271 287 s \$0-index-rcv;
+#X obj 416 267 u_dispatch \$0 index;
+#X obj 165 267 route note;
+#X msg 531 399 set \$1;
+#X obj 516 424 s \$0-index-rcv;
+#X obj 29 260 stereo_inlet~ \$0;
+#X obj 28 377 stereo_outlet~ \$0;
+#X obj 32 163 notein 1;
+#X obj 45 216 pack f f;
+#X obj 197 114 tgl 15 0 \$0-midiNoteIn \$0-midiNoteIn-rcv midiNoteIn
+-50 7 0 10 -262144 -1 -1 0 1;
+#X obj 52 187 spigot;
+#X obj 192 194 r \$0-midiNoteIn;
+#X obj 419 238 u_parameter \$0 midiNoteIn;
+#N canvas 0 50 450 300 gestion 0;
+#X obj 177 151 cnv 15 80 84 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X obj 234 169 bng 15 250 50 0 \$0-next_file \$0-next_file-rcv > 5
+7 0 10 -262144 -1 -1;
+#X obj 180 169 bng 15 250 50 0 \$0-prev_file \$0-prev_file-rcv < 5
+7 0 10 -262144 -1 -1;
+#X floatatom 196 170 5 0 0 0 - #0-index-rcv #0-index, f 5;
+#X obj 180 189 bng 15 250 50 0 \$0-append empty append 17 7 0 10 -262144
+-1 -1;
+#X obj 180 219 bng 15 250 50 0 \$0-reset empty delete 17 7 0 10 -262144
+-1 -1;
+#X obj 180 204 bng 15 250 50 0 \$0-update empty update 17 7 0 10 -262144
+-1 -1;
+#X obj 26 221 cnv 15 150 15 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X floatatom 104 221 10 0 127 0 start_note #0-start_note-rcv #0-start_note
+, f 10;
+#X symbolatom 132 221 6 0 0 0 - #0-start_note_display-rcv -, f 6;
+#X text 176 150 liste sampl;
+#X msg 336 119 append;
+#X obj 342 93 delay 1;
+#X obj 327 57 r \$0-append;
+#X obj 419 63 r \$0-reset;
+#X msg 426 104 reset;
+#X obj 283 149 s \$0-subset;
+#X obj 520 46 r \$0-update;
+#X msg 523 88 update;
+#X connect 11 0 16 0;
+#X connect 12 0 11 0;
+#X connect 13 0 12 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 17 0 18 0;
+#X connect 18 0 16 0;
+#X restore 492 487 pd gestion subset;
+#X text 666 465 au rappel d'un élément du subset \, ne changer que
+les autres parameters;
+#X text 641 363 au chargement de la scène / du préset : précharger
+tous les samples dans des samplebank (à réception de lfilename);
+#X text 668 402 u_multisamplebank modifié;
+#X text 654 421 voir si la création dynamique d'une table ne fait
+pas du glitch;
+#X obj 418 210 module_loader inst_sampler2 \$0;
+#X obj 341 90 module_declare inst_sampler2 \$0;
+#X connect 3 0 6 0;
+#X connect 3 0 12 0;
+#X connect 6 0 5 0;
+#X connect 7 0 4 0;
+#X connect 8 0 7 0;
+#X connect 11 0 20 0;
+#X connect 12 1 19 0;
+#X connect 13 0 42 3;
+#X connect 15 0 16 0;
+#X connect 15 0 47 0;
+#X connect 17 0 16 0;
+#X connect 19 0 18 0;
+#X connect 20 0 18 0;
+#X connect 21 0 22 0;
+#X connect 22 0 41 0;
+#X connect 27 0 30 0;
+#X connect 29 0 28 0;
+#X connect 30 0 29 0;
+#X connect 31 0 37 0;
+#X connect 32 0 31 0;
+#X connect 33 0 38 0;
+#X connect 34 0 33 0;
+#X connect 35 0 32 0;
+#X connect 36 0 34 0;
+#X connect 37 0 40 0;
+#X connect 38 0 39 0;
+#X connect 41 1 48 0;
+#X connect 42 0 51 0;
+#X connect 42 1 51 1;
+#X connect 42 2 17 0;
+#X connect 43 0 44 0;
+#X connect 44 0 45 0;
+#X connect 46 0 21 0;
+#X connect 47 0 42 2;
+#X connect 48 0 49 0;
+#X connect 50 0 42 0;
+#X connect 50 0 51 0;
+#X connect 50 1 42 1;
+#X connect 50 1 51 1;
+#X connect 52 0 55 0;
+#X connect 52 1 53 1;
+#X connect 53 0 42 2;
+#X connect 55 0 53 0;
+#X connect 56 0 55 1;
+#X connect 57 0 46 0;
+#X connect 63 0 57 0;
+#X connect 64 0 1 0;
+#X coords 0 -1 1 1 190 70 1 100 100;

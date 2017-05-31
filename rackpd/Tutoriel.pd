@@ -1,0 +1,124 @@
+#N struct text-help-struct float x float y text z;
+#N canvas 353 63 936 609 16;
+#X scalar text-help-struct 522 106.6 \; audio_out-3 slot 14 \\\; audio_out-3
+pan 0 \\\; audio_out-3 vol 110.931 \\\; audio_out-3 out OUT(1/2) \\\;
+data_azerty2midi-0 enable 1 \\\; data_azerty2midi-0 slot 12 \\\; data_azerty2midi-0
+oct 3 \\\; data_azerty2midi-0 velo 100 \\\; inst_rhodey-0 vol 95.3796
+\\\; inst_rhodey-0 slot 13 \\\; inst_rhodey-0 tone 0.432653 \\\; inst_rhodey-0
+decay 2449.16 \\\; \;;
+#X scalar text-help-struct 525 149 \; inst_euclidrums-0 set 1 \\\;
+inst_euclidrums-0 bd 11.1804 \\\; inst_euclidrums-0 sn 17.182 \\\;
+inst_euclidrums-0 hh 25.169 \\\; inst_euclidrums-0 slot 14 \\\; audio_out-4
+slot 16 \\\; audio_out-4 pan 0 \\\; audio_out-4 vol 100.563 \\\; audio_out-4
+out OUT(1/2) \\\; data_wintablet-1 slot 13 \\\; fx_dubdel2-2 noclick_mode
+0 \\\; fx_dubdel2-2 slot 15 \\\; fx_dubdel2-2 dell 3 \\\; fx_dubdel2-2
+delr 3 \\\; fx_dubdel2-2 sync 1 \\\; fx_dubdel2-2 del 459.508 \\\;
+fx_dubdel2-2 wet 0.42449 \\\; fx_dubdel2-2 fb 0.138776 \\\; fx_dubdel2-2
+bq 2 \\\; fx_dubdel2-2 bpitch 60 \\\; \;;
+#X text 117 563 Session EucliDrums;
+#X scalar text-help-struct 303 557 \; inst_euclidrums-0 set 0 \\\;
+inst_euclidrums-0 bd 11.1804 \\\; inst_euclidrums-0 sn 17.182 \\\;
+inst_euclidrums-0 hh 25.169 \\\; inst_euclidrums-0 slot 14 \\\; fx_compressor-1
+lookahead 0 \\\; fx_compressor-1 response 40 \\\; fx_compressor-1 gain
+7.10204 \\\; fx_compressor-1 ratio 5.21857 \\\; fx_compressor-1 thresh
+-10.9796 \\\; fx_compressor-1 rmspeak 0 \\\; fx_compressor-1 slot 15
+\\\; audio_out-4 slot 17 \\\; audio_out-4 pan 0 \\\; audio_out-4 vol
+100.563 \\\; audio_out-4 out OUT(1/2) \\\; data_wintablet-1 slot 13
+\\\; fx_dubdel2-2 noclick_mode 0 \\\; fx_dubdel2-2 slot 16 \\\; fx_dubdel2-2
+dell 3 \\\; fx_dubdel2-2 delr 3 \\\; fx_dubdel2-2 sync 1 \\\; fx_dubdel2-2
+del 459.508 \\\; fx_dubdel2-2 wet 0.42449 \\\; fx_dubdel2-2 fb 0.138776
+\\\; fx_dubdel2-2 bq 2 \\\; fx_dubdel2-2 bpitch 60 \\\; \;;
+#X text 333 152 Une autre scène :;
+#X text 53 208 En cliquant sur une scène \, la configuration de rack
+et les réglages associés à cette scène sont chargés.;
+#X text 54 255 Il est possible de placer un carré de scène n'importe
+où dans un patch;
+#N canvas 639 121 450 300 conduite 1;
+#X scalar text-help-struct 40 80 \; inst_rhodey-0 slot 13 \\\; inst_rhodey-0
+vol 95.3796 \\\; inst_rhodey-0 tone 0.432653 \\\; inst_rhodey-0 decay
+2449.16 \\\; data_azerty2midi-0 slot 12 \\\; data_azerty2midi-0 enable
+1 \\\; data_azerty2midi-0 oct 3 \\\; data_azerty2midi-0 velo 1 \\\;
+audio_out-3 slot 14 \\\; audio_out-3 pan 0 \\\; audio_out-3 vol 110.931
+\\\; audio_out-3 out OUT(1/2) \\\; \;;
+#X scalar text-help-struct 68 195 \; inst_euclidrums-0 set 0 \\\; inst_euclidrums-0
+bd 11.1804 \\\; inst_euclidrums-0 sn 17.182 \\\; inst_euclidrums-0
+hh 25.169 \\\; inst_euclidrums-0 slot 14 \\\; note_16steps-1 randoms
+0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 \\\; note_16steps-1 lrandoms <sublist>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> \\\; note_16steps-1
+div 0 \\\; note_16steps-1 slot 23 \\\; note_16steps-1 cycle 16 \\\;
+note_16steps-1 lcycle <subset> 16 16 16 16 \\\; note_16steps-1 steps
+11.6 12 14.5 14.5 -1 0 14.5 -1 5.8 29 17.4 17.4 10.6333 8.69995 21.2667
+20.3 \\\; note_16steps-1 lsteps <sublist> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> \\\; note_16steps-1 xpose 0 \\\; note_16steps-1 lxpose
+<subset> 0 0 0 0 \\\; note_16steps-1 offset 50 \\\; note_16steps-1
+loffset <subset> 50 50 50 50 \\\; note_16steps-1 scale 0 \\\; note_16steps-1
+lscale <subset> 0 0 0 0 \\\; fx_compressor-1 lookahead 0 \\\; fx_compressor-1
+response 40 \\\; fx_compressor-1 gain 7.10204 \\\; fx_compressor-1
+ratio 5.21857 \\\; fx_compressor-1 thresh -10.9796 \\\; fx_compressor-1
+rmspeak 0 \\\; fx_compressor-1 slot 15 \\\; audio_out-4 slot 17 \\\;
+audio_out-4 pan 0 \\\; audio_out-4 vol 100.563 \\\; audio_out-4 out
+OUT(1/2) \\\; note_randomize-1 euclid 24 \\\; note_randomize-1 wet
+0.999894 \\\; note_randomize-1 decay 88.8358 \\\; note_randomize-1
+slot 25 \\\; note_randomize-1 accent 8.16327 \\\; note_randomize-1
+prob 77.6531 \\\; inst_bassdrum-1 slot 24 \\\; inst_bassdrum-1 gain
+0.542868 \\\; inst_bassdrum-1 decay 61.507 \\\; inst_bassdrum-1 freq2
+112.763 \\\; inst_bassdrum-1 square 1000 \\\; inst_bassdrum-1 curve
+34.0341 \\\; inst_bassdrum-1 noize 0.659574 \\\; inst_bassdrum-1 lowpass
+3085.76 \\\; data_wintablet-1 slot 13 \\\; data_wintablet-1 ccz_enable
+1 \\\; data_wintablet-1 ccy_enable 1 \\\; data_wintablet-1 ccx_enable
+1 \\\; data_wintablet-1 ccz 6 \\\; data_wintablet-1 ccy 4 \\\; data_wintablet-1
+ccx 2 \\\; fx_dubdel2-2 noclick_mode 0 \\\; fx_dubdel2-2 slot 16 \\\;
+fx_dubdel2-2 dell 3 \\\; fx_dubdel2-2 delr 3 \\\; fx_dubdel2-2 sync
+1 \\\; fx_dubdel2-2 del 459.508 \\\; fx_dubdel2-2 wet 0.42449 \\\;
+fx_dubdel2-2 fb 0.138776 \\\; fx_dubdel2-2 bq 2 \\\; fx_dubdel2-2 bpitch
+60 \\\; fx_dubdel2-1 noclick_mode 0 \\\; fx_dubdel2-1 slot 26 \\\;
+fx_dubdel2-1 dell 3 \\\; fx_dubdel2-1 delr 3 \\\; fx_dubdel2-1 sync
+1 \\\; fx_dubdel2-1 del 462.387 \\\; fx_dubdel2-1 wet 0.17551 \\\;
+fx_dubdel2-1 fb 0.0857143 \\\; fx_dubdel2-1 bq 2 \\\; fx_dubdel2-1
+bpitch 88.3143 \\\; audio_out-3 slot 27 \\\; audio_out-3 pan 0 \\\;
+audio_out-3 vol 104.71 \\\; audio_out-3 out OUT(1/2) \\\; ctl-assign
+note_16steps-1 cycle 6 1 16 lin \\\; ctl-assign note_randomize-1 prob
+4 0 100 lin 0 \\\; ctl-assign inst_bassdrum-1 freq2 2 1 1000 log \\\;
+ctl-assign inst_bassdrum-1 decay 0 10 2000 log \\\; \;;
+#X obj 0 121 cnv 2 10000 2 empty ducon empty 20 12 0 14 -86853 -66577
+0;
+#X obj 0 0 vsl 30 4000 4000 0 0 0 SCENE-pos SCENE-pos-rcv empty 0 -9
+0 10 -260097 -1 -1 387743 0;
+#X restore 216 392 pd conduite;
+#X obj 613 399 bng 60 250 50 0 \$0-save empty SAVE 5 30 0 20 -258113
+-1 -1;
+#X text 33 173 RAPPEL D'UNE SCENE;
+#X text 30 311 MEMORISATION D'UNE SCENE;
+#X text 50 421 Pour enregistrer une scène \, cliquer sur le bouton
+rouge;
+#X text 23 9 DEFINITION D'UNE SCENE;
+#X text 46 109 Une scène est matérialisée par un carré noir :;
+#X text 48 35 Dans PdRacks \, une scène définit l'agencement des
+différents modules (instruments \, effets) d'un rack \, ainsi que
+les réglages des différents paramètres associés à ces modules.
+;
+#X text 51 343 Les scènes sont sauvegardées uniquement à l'intérieur
+du sous-patch pd-conduite \, à l'emplacement indiqué par le curseur
+orange.;
+#X text 48 460 Remarque : il est possible de copier le carré noir
+créé et de le placer à n'importe quel autre endroit d'un patch;
