@@ -2,19 +2,19 @@
 #X declare -stdpath extra/iemguts/;
 #X declare -stdpath extra/rj/;
 #X obj 0 0 tgl 36 0 \$0-tgl \$0-tgl-rcv empty 17 7 0 10 -262144 -262144
--262144 0 1;
-#X obj 0 17 cnv 1 36 1 empty \$0-y-rcv empty 20 12 0 14 -4160 -66577
+-262144 1 1;
+#X obj 0 35 cnv 1 36 1 empty \$0-y-rcv empty 20 12 0 14 -4160 -66577
 0;
-#X obj 17 0 cnv 1 1 36 empty \$0-x-rcv empty 20 12 0 14 -258113 -66577
+#X obj 0 0 cnv 1 1 36 empty \$0-x-rcv empty 20 12 0 14 -258113 -66577
 0;
 #X obj 481 -40 declare -stdpath extra/iemguts/;
 #X obj 122 -54 receivecanvas 0;
 #X obj 272 -54 receivecanvas 1;
 #X obj 282 -24 receivecanvas 2;
-#N canvas 13 68 1040 617 stuff 0;
+#N canvas 106 98 1040 617 stuff 0;
 #X obj 211 -15 inlet;
-#X obj 250 491 s \$0-x-rcv;
-#X obj 379 471 s \$0-y-rcv;
+#X obj 240 561 s \$0-x-rcv;
+#X obj 379 551 s \$0-y-rcv;
 #X obj 315 27 r \$0-tgl;
 #X obj 284 97 spigot;
 #X msg 315 55 1;
@@ -67,8 +67,8 @@
 #X obj 363 379 clip 0 1;
 #X obj 215 412 t f f;
 #X obj 364 407 t f f;
-#X msg 249 471 pos \$1 0;
-#X msg 377 450 pos 0 \$1;
+#X msg 239 541 pos \$1 0;
+#X msg 377 530 pos 0 \$1;
 #X obj 533 93 select 0 1;
 #X msg 527 170 color 0 0 0;
 #X obj 539 222 s \$0-tgl-rcv;
@@ -110,6 +110,13 @@
 #X obj 646 486 expr ((abs($f1)<abs($f2))+1)*(abs($f1*$f2)>0) \;;
 #X obj 608 368 change;
 #X obj 207 267 t f f;
+#X obj 901 370 outlet;
+#X obj 239 517 * 1;
+#X obj 292 466 r ZOOM;
+#X obj 292 488 t b f;
+#X obj 479 537 * 1;
+#X obj 532 486 r ZOOM;
+#X obj 532 508 t b f;
 #X connect 0 0 4 0;
 #X connect 3 0 5 0;
 #X connect 4 0 7 0;
@@ -117,8 +124,10 @@
 #X connect 5 0 12 1;
 #X connect 5 0 9 1;
 #X connect 5 0 27 0;
+#X connect 5 0 68 0;
 #X connect 6 0 4 1;
 #X connect 6 0 27 0;
+#X connect 6 0 68 0;
 #X connect 7 0 6 0;
 #X connect 7 1 8 0;
 #X connect 8 0 11 0;
@@ -174,8 +183,8 @@
 #X connect 46 0 40 0;
 #X connect 48 0 16 0;
 #X connect 49 0 15 0;
-#X connect 50 0 25 0;
-#X connect 51 0 26 0;
+#X connect 50 0 69 0;
+#X connect 51 0 72 0;
 #X connect 52 0 58 0;
 #X connect 52 1 56 0;
 #X connect 53 0 54 1;
@@ -197,6 +206,14 @@
 #X connect 64 0 59 0;
 #X connect 65 0 47 0;
 #X connect 66 0 63 0;
+#X connect 69 0 25 0;
+#X connect 70 0 71 0;
+#X connect 71 0 69 0;
+#X connect 71 1 69 1;
+#X connect 72 0 26 0;
+#X connect 73 0 74 0;
+#X connect 74 0 72 0;
+#X connect 74 1 72 1;
 #X restore 183 52 pd stuff;
 #X msg 181 14 0.5;
 #X obj 192 -34 loadbang;
@@ -411,12 +428,16 @@
 #X obj 447 50 r \$1-\$6-midi-ctl;
 #X obj 608 403 s \$1-RACK_ADMIN;
 #X obj 793 232 r RACK_ADMIN;
+#X obj 294 43 change;
+#X obj 294 65 s \$1-\$2-\$6-click;
+#X obj 282 -4 receivecanvas 3;
 #X connect 4 0 7 0;
 #X connect 5 0 7 0;
 #X connect 6 0 7 0;
 #X connect 7 0 22 0;
 #X connect 7 1 28 0;
 #X connect 7 2 58 0;
+#X connect 7 3 71 0;
 #X connect 8 0 7 1;
 #X connect 8 0 7 2;
 #X connect 9 0 8 0;
@@ -486,4 +507,6 @@
 #X connect 67 0 47 0;
 #X connect 68 0 49 0;
 #X connect 70 0 57 0;
+#X connect 71 0 72 0;
+#X connect 73 0 7 0;
 #X coords 0 -1 1 1 36 36 2 0 0;

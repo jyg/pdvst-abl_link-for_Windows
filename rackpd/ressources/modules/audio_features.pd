@@ -541,7 +541,7 @@
 #X obj 730 323 u_parameter \$0 seuil;
 #X obj 545 108 r \$0-busy;
 #X obj 101 101 cnv 15 188 68 empty \$0-background audio_features 0
-7 0 14 -260818 -1 0;
+7 0 14 -262144 -1 0;
 #X obj 218 104 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv PRESETS
 2 5 0 10 -232576 -232576 -1 0 1;
 #X obj 224 128 bng 14 250 50 0 \$0-testx empty empty 17 7 0 10 -262144
@@ -615,6 +615,17 @@ bright-filtering 5 7 0 10 -262144 -1 -1 0 1;
 #X obj 169 364 outlet~;
 #X obj 711 118 inlet data;
 #X obj 716 505 outlet data;
+#N canvas 0 50 450 300 sigmund 0;
+#X obj 116 93 inlet~;
+#X obj 102 208 outlet;
+#X obj 100 174 sigmund~ -npts 512 notes;
+#X obj 219 137 block~ 64 1 0.0625;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X restore 376 551 pd sigmund;
+#X obj 484 557 makenote 500 100;
+#X obj 484 579 pack f f;
+#X msg 676 553 note \$1 \$2;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
 #X connect 5 0 6 0;
@@ -649,5 +660,11 @@ bright-filtering 5 7 0 10 -262144 -1 -1 0 1;
 #X connect 57 0 59 0;
 #X connect 58 0 9 0;
 #X connect 58 0 60 0;
+#X connect 58 0 63 0;
 #X connect 61 0 56 0;
+#X connect 63 0 64 0;
+#X connect 64 0 65 0;
+#X connect 64 1 65 1;
+#X connect 65 0 66 0;
+#X connect 66 0 62 0;
 #X coords 0 -1 1 1 190 70 1 100 100;

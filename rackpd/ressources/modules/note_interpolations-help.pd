@@ -1,0 +1,17 @@
+#N canvas 448 85 894 552 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X obj 466 63 declare -path ../core;
+#X obj 466 93 declare -path ../rj;
+#X obj 38 129 note_interpolations;
+#X text 45 56 interpolations http://poset.labri.fr/interpolations/
+écriture de contraintes réactives pour improvisations pianistiques
+(from JIM2016);
+#X text 42 31 Inspiré du projet;
+#X obj 69 246 hradio 15 1 0 8 \$0-mode \$0-mode-rcv empty 0 -8 0 10
+-262144 -1 -1 2;
+#X obj 66 290 tgl 15 0 \$0-direct \$0-direct-rcv direct 17 7 0 10 -262144
+-1 -1 0 1;
+#X text 209 250 choix du mode d'interpolation;
+#X text 203 286 transmission directe de la note originale;
+#X coords 0 552 1 551 190 70 0;

@@ -227,9 +227,9 @@
 #X obj 215 101 cnv 15 74 29 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #X obj 214 113 nbx 3 14 0 500 0 0 \$0-response \$0-response-rcv time
-0 -6 0 10 -262144 -1 -1 40 256;
+0 -6 0 10 -262144 -1 -1 39 256;
 #X obj 254 113 nbx 3 14 0 500 0 0 \$0-lookahead \$0-lookahead-rcv lkahd
-0 -6 0 10 -262144 -1 -1 0 256;
+0 -6 0 10 -262144 -1 -1 9 256;
 #X obj 275 140 vradio 15 1 0 2 \$0-rmspeak \$0-rmspeak-rcv RMS -10
 -7 0 10 -262144 -1 -1 0;
 #X text 387 67 60 40;
@@ -305,7 +305,7 @@
 #X connect 30 0 22 0;
 #X connect 31 0 19 0;
 #X restore 65 446 pd calculateGraph;
-#N canvas 0 50 578 428 animation_point_transfert 0;
+#N canvas 0 50 578 428 animation_point_transfert 1;
 #X obj 144 49 env~;
 #X obj 144 121 dbtorms;
 #X obj 148 340 s \$0-curseur;
@@ -315,29 +315,6 @@
 #X obj 216 13 inlet~ out;
 #X obj 141 152 * 60;
 #X obj 139 210 int;
-#N canvas 0 50 450 300 speed_lim 0;
-#X obj 87 20 inlet;
-#X obj 87 105 t b b a;
-#X obj 83 278 list append;
-#X obj 83 307 list trim;
-#X msg 129 200 1;
-#X msg 57 177 0;
-#X obj 83 332 outlet;
-#X obj 55 145 delay 100;
-#X obj 83 249 metro 100;
-#X obj 33 226 change;
-#X connect 0 0 1 0;
-#X connect 1 0 7 0;
-#X connect 1 1 4 0;
-#X connect 1 2 2 1;
-#X connect 2 0 3 0;
-#X connect 3 0 6 0;
-#X connect 4 0 9 0;
-#X connect 5 0 9 0;
-#X connect 7 0 5 0;
-#X connect 8 0 2 0;
-#X connect 9 0 8 0;
-#X restore 99 96 pd speed_lim;
 #X obj 238 198 + 166;
 #X obj 218 36 env~;
 #X obj 230 87 dbtorms;
@@ -348,27 +325,28 @@
 #X obj 144 71 change;
 #X obj 218 58 change;
 #X obj 141 174 min 64;
-#X connect 0 0 17 0;
+#X obj 99 96 speed_lim;
+#X connect 0 0 16 0;
 #X connect 1 0 7 0;
 #X connect 3 0 4 0;
 #X connect 4 0 2 0;
 #X connect 5 0 0 0;
-#X connect 6 0 11 0;
-#X connect 7 0 19 0;
-#X connect 8 0 14 0;
-#X connect 9 0 1 0;
-#X connect 10 0 3 1;
-#X connect 11 0 18 0;
-#X connect 12 0 13 0;
-#X connect 13 0 16 0;
-#X connect 14 0 3 0;
-#X connect 15 0 10 0;
-#X connect 16 0 15 0;
-#X connect 17 0 9 0;
-#X connect 18 0 12 0;
-#X connect 19 0 8 0;
+#X connect 6 0 10 0;
+#X connect 7 0 18 0;
+#X connect 8 0 13 0;
+#X connect 9 0 3 1;
+#X connect 10 0 17 0;
+#X connect 11 0 12 0;
+#X connect 12 0 15 0;
+#X connect 13 0 3 0;
+#X connect 14 0 9 0;
+#X connect 15 0 14 0;
+#X connect 16 0 19 0;
+#X connect 17 0 11 0;
+#X connect 18 0 8 0;
+#X connect 19 0 1 0;
 #X restore 25 398 pd animation_point_transfert;
-#X obj 221 161 cnv 2 4 4 empty \$0-curseur empty 20 12 0 14 -258113
+#X obj 215 164 cnv 2 4 4 empty \$0-curseur empty 20 12 0 14 -258113
 -66577 0;
 #X obj 77 197 inlet~;
 #X obj 81 314 outlet~;

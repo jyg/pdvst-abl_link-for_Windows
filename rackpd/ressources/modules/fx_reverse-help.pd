@@ -11,6 +11,10 @@
 #X text 36 33 Lecture de l'entrée à l'envers;
 #X obj 36 138 fx_reverse;
 #X obj 39 222 soundoutput;
+#X text 198 232 rev-att : atténuation du signal direct en mode reverse
+;
+#X text 201 257 time : durée de l alecture en reverse;
+#X text 194 276 loop : lecture répétée en mode reverse;
 #X connect 5 0 7 0;
 #X connect 5 1 7 1;
 #X connect 7 0 8 0;

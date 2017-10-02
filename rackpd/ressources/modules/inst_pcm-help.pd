@@ -1,0 +1,52 @@
+#N struct 1055-symarray float x array symbols 1055-sym;
+#N struct 1055-sym symbol name float on;
+#N struct 1056-symarray float x array symbols 1056-sym;
+#N struct 1056-sym symbol name float on;
+#N struct 1057-symarray float x array symbols 1057-sym;
+#N struct 1057-sym symbol name float on;
+#N struct 1197-symarray float x array symbols 1197-sym;
+#N struct 1197-sym symbol name float on;
+#N canvas 558 70 873 552 12;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X declare -path ../modules;
+#X obj 346 63 declare -path ../core;
+#X obj 346 93 declare -path ../rj;
+#X obj 356 123 declare -path ../modules;
+#X obj 82 391 dac~;
+#X obj 267 69 notein;
+#X obj 268 116 pack f f;
+#X msg 268 138 note \$1 \$2;
+#X obj 269 93 + 48;
+#X obj 52 245 inst_pcm;
+#X obj 44 86 data_azerty2midi;
+#X text 128 221 0 1 2 3 4;
+#X text 399 326 SampleRate = 44100 par défaut;
+#X text 340 283 1) Choix du sample;
+#X text 398 309 Ajout / modification d'un sample;
+#X text 340 460 3) réglage des points de bouclage;
+#X text 389 439 choix des notes de début \, de fin et de référence
+;
+#X text 340 422 2) mapping;
+#X text 340 487 4) gestion des différents samples en mémoire;
+#X text 339 355 ATTENTION : les fichiers doivent être obligatoirement
+stockés dans un sous dossier du dossier modules/pcm_synth/soundfonts/
+;
+#X text 314 199 Paramètres avancés : ils sont divisés en 4 sections
+;
+#X text 330 217 (pour faire apparaitre le sélecteur d'onglet \, appuyer
+sur EDIT);
+#X text 18 433 TO DO;
+#X text 36 454 switch~ 0 sur voix non utilisées;
+#X text 36 474 implémenter loop en fin de sample;
+#X text 36 494 implémenter attack / decay;
+#X text 27 20 inst_pcm : lecteur multisample stereo;
+#X connect 4 0 7 0;
+#X connect 4 1 5 1;
+#X connect 5 0 6 0;
+#X connect 6 0 8 2;
+#X connect 7 0 5 0;
+#X connect 8 0 3 0;
+#X connect 8 1 3 1;
+#X connect 9 2 8 2;
+#X coords 0 552 1 551 190 70 0;

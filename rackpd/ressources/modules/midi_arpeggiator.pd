@@ -5,7 +5,7 @@
 #X obj 625 292 u_parameter \$0 beat;
 #X text 132 45 1/4;
 #X text 132 60 1/8;
-#N canvas 529 62 1237 658 arpeggiator 1;
+#N canvas 240 65 1237 658 arpeggiator 0;
 #X obj 377 59 route note;
 #X obj 346 238 - 1;
 #X obj 350 260 t b b f;
@@ -99,7 +99,7 @@
 #X connect 4 0 5 0;
 #X connect 5 0 1 0;
 #X restore 401 193 pd 1oct;
-#N canvas 0 50 450 300 2oct 1;
+#N canvas 0 50 450 300 2oct 0;
 #X obj 308 90 inlet;
 #X obj 308 215 outlet;
 #X obj 219 95 unpack f f;
@@ -215,7 +215,7 @@
 #X connect 76 0 72 1;
 #X connect 77 0 70 0;
 #X connect 78 0 70 0;
-#X restore 114 407 pd arpeggiator;
+#X restore 164 387 pd arpeggiator;
 #X obj 654 340 u_dispatch \$0 duration;
 #X obj 548 276 r STOP;
 #X text 506 57 |;
@@ -309,8 +309,10 @@
 -1 -1 2;
 #X obj 654 406 u_parameter \$0 oct;
 #X obj 329 445 midi-colors \$0 oct \$0-oct-rcv 0 2 lin;
+#X obj 215 421 spigot 1;
+#X obj 289 404 == 0;
 #X connect 3 0 7 0;
-#X connect 6 0 47 0;
+#X connect 6 0 92 0;
 #X connect 7 0 31 0;
 #X connect 8 0 53 0;
 #X connect 27 0 38 0;
@@ -322,6 +324,7 @@
 #X connect 33 0 34 0;
 #X connect 36 0 90 0;
 #X connect 37 0 38 1;
+#X connect 37 0 93 0;
 #X connect 38 0 39 0;
 #X connect 39 0 6 0;
 #X connect 39 1 47 0;
@@ -333,4 +336,6 @@
 #X connect 52 0 53 0;
 #X connect 84 0 27 0;
 #X connect 88 0 3 0;
+#X connect 92 0 47 0;
+#X connect 93 0 92 1;
 #X coords 0 -1 1 1 190 70 1 100 100;

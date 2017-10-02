@@ -1,4 +1,4 @@
-#N canvas 0 50 1366 685 10;
+#N canvas 0 50 1362 685 10;
 #X declare -path patch_editor_abs;
 #X obj 7 222 declare -path patch_editor_abs;
 #N canvas 392 117 718 398 patch-editor-do-not-delete 0;
@@ -4673,7 +4673,7 @@ for more details.;
 #X obj 599 250 inst_bassdrum 100;
 #X text 831 257 inst_bassdrum 100;
 #X obj 820 145 hsl 128 15 10 1000 1 0 empty empty empty -2 -8 0 10
--262144 -1 -1 11577 1;
+-262144 -1 -1 8869 1;
 #X obj 329 398 snapshot~;
 #X obj 383 348 loadbang;
 #X obj 357 356 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -4700,6 +4700,7 @@ for more details.;
 #X connect 10 1 9 1;
 #X connect 11 0 10 0;
 #X connect 11 1 10 1;
+#X connect 11 2 10 2;
 #X connect 12 0 13 0;
 #X connect 14 0 18 0;
 #X connect 15 0 11 0;
@@ -4718,6 +4719,7 @@ for more details.;
 #X connect 28 0 11 0;
 #X connect 28 1 11 1;
 #X connect 29 0 15 0;
+#X connect 29 1 15 1;
 #X connect 29 2 15 2;
 #X connect 30 0 11 2;
 #X connect 31 0 37 0;

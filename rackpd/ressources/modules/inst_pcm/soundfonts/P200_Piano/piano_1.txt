@@ -1,0 +1,836 @@
+[Samples]
+
+    SampleName=P200 Piano D2(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano D2(R)
+
+    SampleName=P200 Piano D2(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano D2(L)
+
+    SampleName=P200 Piano F#2(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano F#2(R)
+
+    SampleName=P200 Piano F#2(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano F#2(L)
+
+    SampleName=P200 Piano A#2(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano A#2(R)
+
+    SampleName=P200 Piano A#2(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano A#2(L)
+
+    SampleName=P200 Piano D3(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano D3(R)
+
+    SampleName=P200 Piano D3(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano D3(L)
+
+    SampleName=P200 Piano F#3(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano F#3(R)
+
+    SampleName=P200 Piano F#3(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano F#3(L)
+
+    SampleName=P200 Piano A#3(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano A#3(R)
+
+    SampleName=P200 Piano A#3(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano A#3(L)
+
+    SampleName=P200 Piano D4(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano D4(R)
+
+    SampleName=P200 Piano D4(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano D4(L)
+
+    SampleName=P200 Piano F#4(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano F#4(R)
+
+    SampleName=P200 Piano F#4(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano F#4(L)
+
+    SampleName=P200 Piano A#4(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano A#4(R)
+
+    SampleName=P200 Piano A#4(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano A#4(L)
+
+    SampleName=P200 Piano D5(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano D5(R)
+
+    SampleName=P200 Piano D5(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano D5(L)
+
+    SampleName=P200 Piano F#5(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano F#5(R)
+
+    SampleName=P200 Piano F#5(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano F#5(L)
+
+    SampleName=P200 Piano A#5(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano A#5(R)
+
+    SampleName=P200 Piano A#5(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano A#5(L)
+
+    SampleName=P200 Piano D6(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano D6(R)
+
+    SampleName=P200 Piano D6(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano D6(L)
+
+    SampleName=P200 Piano F#6(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano F#6(R)
+
+    SampleName=P200 Piano F#6(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano F#6(L)
+
+    SampleName=P200 Piano C7(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano C7(R)
+
+    SampleName=P200 Piano C7(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano C7(L)
+
+    SampleName=P200 Piano F#7(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano F#7(R)
+
+    SampleName=P200 Piano F#7(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano F#7(L)
+
+    SampleName=P200 Piano A#7(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano A#7(R)
+
+    SampleName=P200 Piano A#7(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano A#7(L)
+
+    SampleName=P200 Piano D#8(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano D#8(R)
+
+    SampleName=P200 Piano D#8(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano D#8(L)
+
+    SampleName=P200 Piano G#9(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano G#9(R)
+
+    SampleName=P200 Piano G#9(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano G#9(L)
+
+    SampleName=P200 Piano C10(L)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=4
+        Link=P200 Piano C10(R)
+
+    SampleName=P200 Piano C10(R)
+        SampleRate=32000
+        Key=60
+        FineTune=0
+        Type=2
+        Link=P200 Piano C10(L)
+
+
+[Instruments]
+
+    InstrumentName=Bright Yamaha Grand
+
+        Sample=P200 Piano C10(L)
+            Z_LowKey=105
+            Z_HighKey=108
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=53577
+            Z_decayVolEnv=2265
+            Z_sampleModes=1
+            Z_overridingRootKey=108
+
+        Sample=P200 Piano C10(R)
+            Z_LowKey=105
+            Z_HighKey=108
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_startloopAddrsOffset=0
+            Z_endloopAddrsOffset=0
+            Z_pan=500
+            Z_holdVolEnv=53577
+            Z_decayVolEnv=2265
+            Z_startloopAddrsCoarseOffset=0
+            Z_endloopAddrsCoarseOffset=0
+            Z_sampleModes=1
+            Z_overridingRootKey=108
+
+        Sample=P200 Piano G#9(L)
+            Z_LowKey=100
+            Z_HighKey=104
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_startloopAddrsOffset=0
+            Z_endloopAddrsOffset=0
+            Z_pan=65036
+            Z_decayVolEnv=2716
+            Z_startloopAddrsCoarseOffset=0
+            Z_endloopAddrsCoarseOffset=0
+            Z_sampleModes=1
+            Z_overridingRootKey=104
+
+        Sample=P200 Piano G#9(R)
+            Z_LowKey=100
+            Z_HighKey=104
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_decayVolEnv=2716
+            Z_sampleModes=1
+            Z_overridingRootKey=104
+
+        Sample=P200 Piano D#8(L)
+            Z_LowKey=95
+            Z_HighKey=99
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=53577
+            Z_decayVolEnv=2854
+            Z_sampleModes=1
+            Z_overridingRootKey=99
+
+        Sample=P200 Piano D#8(R)
+            Z_LowKey=95
+            Z_HighKey=99
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_holdVolEnv=53577
+            Z_decayVolEnv=2854
+            Z_sampleModes=1
+            Z_overridingRootKey=99
+
+        Sample=P200 Piano A#7(L)
+            Z_LowKey=91
+            Z_HighKey=94
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=53577
+            Z_decayVolEnv=3986
+            Z_sampleModes=1
+            Z_overridingRootKey=94
+
+        Sample=P200 Piano A#7(R)
+            Z_LowKey=91
+            Z_HighKey=94
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_decayVolEnv=3986
+            Z_sampleModes=1
+            Z_overridingRootKey=94
+
+        Sample=P200 Piano F#7(L)
+            Z_LowKey=85
+            Z_HighKey=90
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=64336
+            Z_decayVolEnv=4151
+            Z_sampleModes=1
+            Z_overridingRootKey=90
+
+        Sample=P200 Piano F#7(R)
+            Z_LowKey=85
+            Z_HighKey=90
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_holdVolEnv=64336
+            Z_decayVolEnv=4151
+            Z_sampleModes=1
+            Z_overridingRootKey=90
+
+        Sample=P200 Piano C7(L)
+            Z_LowKey=79
+            Z_HighKey=84
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_startloopAddrsOffset=0
+            Z_endloopAddrsOffset=0
+            Z_pan=65036
+            Z_holdVolEnv=64336
+            Z_decayVolEnv=5204
+            Z_startloopAddrsCoarseOffset=0
+            Z_endloopAddrsCoarseOffset=0
+            Z_sampleModes=1
+            Z_overridingRootKey=84
+
+        Sample=P200 Piano C7(R)
+            Z_LowKey=79
+            Z_HighKey=84
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_holdVolEnv=64336
+            Z_decayVolEnv=5204
+            Z_sampleModes=1
+            Z_overridingRootKey=84
+
+        Sample=P200 Piano F#6(L)
+            Z_LowKey=75
+            Z_HighKey=78
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=702
+            Z_decayVolEnv=5212
+            Z_sampleModes=1
+            Z_overridingRootKey=78
+
+        Sample=P200 Piano F#6(R)
+            Z_LowKey=75
+            Z_HighKey=78
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_holdVolEnv=702
+            Z_decayVolEnv=5212
+            Z_sampleModes=1
+            Z_overridingRootKey=78
+
+        Sample=P200 Piano D6(L)
+            Z_LowKey=71
+            Z_HighKey=74
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=1200
+            Z_decayVolEnv=4688
+            Z_sampleModes=1
+            Z_overridingRootKey=74
+
+        Sample=P200 Piano D6(R)
+            Z_LowKey=71
+            Z_HighKey=74
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_holdVolEnv=1200
+            Z_decayVolEnv=4688
+            Z_sampleModes=1
+            Z_overridingRootKey=74
+
+        Sample=P200 Piano A#5(L)
+            Z_LowKey=67
+            Z_HighKey=70
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=583
+            Z_decayVolEnv=4800
+            Z_sampleModes=1
+            Z_overridingRootKey=70
+
+        Sample=P200 Piano A#5(R)
+            Z_LowKey=67
+            Z_HighKey=70
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_holdVolEnv=583
+            Z_decayVolEnv=4800
+            Z_sampleModes=1
+            Z_overridingRootKey=70
+
+        Sample=P200 Piano F#5(L)
+            Z_LowKey=63
+            Z_HighKey=66
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=64652
+            Z_decayVolEnv=5573
+            Z_sampleModes=1
+            Z_overridingRootKey=66
+
+        Sample=P200 Piano F#5(R)
+            Z_LowKey=63
+            Z_HighKey=66
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_holdVolEnv=64652
+            Z_decayVolEnv=5573
+            Z_sampleModes=1
+            Z_overridingRootKey=66
+
+        Sample=P200 Piano D5(L)
+            Z_LowKey=59
+            Z_HighKey=62
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=64652
+            Z_decayVolEnv=5830
+            Z_sampleModes=1
+            Z_overridingRootKey=62
+
+        Sample=P200 Piano D5(R)
+            Z_LowKey=59
+            Z_HighKey=62
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_holdVolEnv=64652
+            Z_decayVolEnv=5830
+            Z_sampleModes=1
+            Z_overridingRootKey=62
+
+        Sample=P200 Piano A#4(L)
+            Z_LowKey=55
+            Z_HighKey=58
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=0
+            Z_decayVolEnv=6386
+            Z_sampleModes=1
+            Z_overridingRootKey=58
+
+        Sample=P200 Piano A#4(R)
+            Z_LowKey=55
+            Z_HighKey=58
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_holdVolEnv=0
+            Z_decayVolEnv=6386
+            Z_sampleModes=1
+            Z_overridingRootKey=58
+
+        Sample=P200 Piano F#4(L)
+            Z_LowKey=51
+            Z_HighKey=54
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=0
+            Z_decayVolEnv=6491
+            Z_sampleModes=1
+            Z_overridingRootKey=54
+
+        Sample=P200 Piano F#4(R)
+            Z_LowKey=51
+            Z_HighKey=54
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_holdVolEnv=0
+            Z_decayVolEnv=6491
+            Z_sampleModes=1
+            Z_overridingRootKey=54
+
+        Sample=P200 Piano D4(L)
+            Z_LowKey=47
+            Z_HighKey=50
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=1902
+            Z_decayVolEnv=6386
+            Z_sampleModes=1
+            Z_overridingRootKey=50
+
+        Sample=P200 Piano D4(R)
+            Z_LowKey=47
+            Z_HighKey=50
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_holdVolEnv=1902
+            Z_decayVolEnv=6386
+            Z_sampleModes=1
+            Z_overridingRootKey=50
+
+        Sample=P200 Piano A#3(L)
+            Z_LowKey=43
+            Z_HighKey=46
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=2169
+            Z_decayVolEnv=6495
+            Z_sampleModes=1
+            Z_overridingRootKey=46
+
+        Sample=P200 Piano A#3(R)
+            Z_LowKey=43
+            Z_HighKey=46
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_holdVolEnv=2169
+            Z_decayVolEnv=6495
+            Z_sampleModes=1
+            Z_overridingRootKey=46
+
+        Sample=P200 Piano F#3(L)
+            Z_LowKey=39
+            Z_HighKey=42
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=2786
+            Z_decayVolEnv=6471
+            Z_sampleModes=1
+            Z_overridingRootKey=42
+
+        Sample=P200 Piano F#3(R)
+            Z_LowKey=39
+            Z_HighKey=42
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_holdVolEnv=2786
+            Z_decayVolEnv=6471
+            Z_sampleModes=1
+            Z_overridingRootKey=42
+
+        Sample=P200 Piano D3(L)
+            Z_LowKey=35
+            Z_HighKey=38
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=1783
+            Z_decayVolEnv=6590
+            Z_sampleModes=1
+            Z_overridingRootKey=38
+
+        Sample=P200 Piano D3(R)
+            Z_LowKey=35
+            Z_HighKey=38
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_holdVolEnv=1783
+            Z_decayVolEnv=6590
+            Z_sampleModes=1
+            Z_overridingRootKey=38
+
+        Sample=P200 Piano A#2(L)
+            Z_LowKey=31
+            Z_HighKey=34
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=2951
+            Z_decayVolEnv=6471
+            Z_sampleModes=1
+            Z_overridingRootKey=34
+
+        Sample=P200 Piano A#2(R)
+            Z_LowKey=31
+            Z_HighKey=34
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_holdVolEnv=2951
+            Z_decayVolEnv=6471
+            Z_sampleModes=1
+            Z_overridingRootKey=34
+
+        Sample=P200 Piano F#2(L)
+            Z_LowKey=27
+            Z_HighKey=30
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=3214
+            Z_decayVolEnv=6471
+            Z_sampleModes=1
+            Z_overridingRootKey=30
+
+        Sample=P200 Piano F#2(R)
+            Z_LowKey=27
+            Z_HighKey=30
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_holdVolEnv=3214
+            Z_decayVolEnv=6471
+            Z_sampleModes=1
+            Z_overridingRootKey=30
+
+        Sample=P200 Piano D2(L)
+            Z_LowKey=0
+            Z_HighKey=26
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=65036
+            Z_holdVolEnv=3102
+            Z_decayVolEnv=6429
+            Z_sampleModes=1
+            Z_overridingRootKey=26
+
+        Sample=P200 Piano D2(R)
+            Z_LowKey=0
+            Z_HighKey=26
+            Z_LowVelocity=0
+            Z_HighVelocity=127
+            Z_pan=500
+            Z_holdVolEnv=3102
+            Z_decayVolEnv=6429
+            Z_sampleModes=1
+            Z_overridingRootKey=26
+
+        GlobalZone
+            GZ_initialFilterFc=13508
+            GZ_modEnvToFilterFc=65036
+            GZ_reverbEffectsSend=50
+            GZ_releaseModEnv=7973
+            GZ_attackVolEnv=57177
+            GZ_sustainVolEnv=1000
+            GZ_releaseVolEnv=0
+
+
+[Presets]
+
+    PresetName=Bright Yamaha Grand
+        Bank=0
+        Program=0
+
+        Instrument=Bright Yamaha Grand
+            L_LowKey=0
+            L_HighKey=127
+            L_LowVelocity=121
+            L_HighVelocity=127
+            L_releaseVolEnv=316
+
+        Instrument=Bright Yamaha Grand
+            L_LowKey=0
+            L_HighKey=127
+            L_LowVelocity=113
+            L_HighVelocity=120
+            L_releaseVolEnv=165
+
+        Instrument=Bright Yamaha Grand
+            L_LowKey=0
+            L_HighKey=127
+            L_LowVelocity=105
+            L_HighVelocity=112
+            L_releaseVolEnv=0
+
+        Instrument=Bright Yamaha Grand
+            L_LowKey=0
+            L_HighKey=127
+            L_LowVelocity=97
+            L_HighVelocity=104
+            L_releaseVolEnv=65354
+
+        Instrument=Bright Yamaha Grand
+            L_LowKey=0
+            L_HighKey=127
+            L_LowVelocity=89
+            L_HighVelocity=96
+            L_releaseVolEnv=65150
+
+        Instrument=Bright Yamaha Grand
+            L_LowKey=0
+            L_HighKey=127
+            L_LowVelocity=81
+            L_HighVelocity=88
+            L_releaseVolEnv=64919
+
+        Instrument=Bright Yamaha Grand
+            L_LowKey=0
+            L_HighKey=127
+            L_LowVelocity=73
+            L_HighVelocity=80
+            L_releaseVolEnv=64652
+
+        Instrument=Bright Yamaha Grand
+            L_LowKey=0
+            L_HighKey=127
+            L_LowVelocity=65
+            L_HighVelocity=72
+            L_releaseVolEnv=64336
+
+        Instrument=Bright Yamaha Grand
+            L_LowKey=0
+            L_HighKey=127
+            L_LowVelocity=0
+            L_HighVelocity=64
+            L_releaseVolEnv=63950
+
+        GlobalLayer
+            GL_reverbEffectsSend=100
+            GL_initialAttenuation=240
+
+
+[Info]
+Version=2.1
+Engine=E-mu 10K1 
+Name=000 Florestan Piano 
+ROMName=
+ROMVersion=0.0
+Date=Nov 22, 2000  
+Designer=  
+Product=SBAWE32 
+Copyright=Public Domain 
+Editor=SFEDT v1.28:  
+Comments=This high quality soundfont was downloaded from:
+http://go.to/florestan
+OR
+http://nandoflorestan.cjb.net
+For hints on using this soundfont, go to the website.  
