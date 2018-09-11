@@ -1,6 +1,8 @@
 v 0.6
+-Changement de nom dans le repo git : PdRacks
 -structuration des dossiers de la racine du projet : ressources, medias, recordings, tutorial, extensions
 -nouveaux outils : [pdr] outil d'autocomplétion et d'autodéclaration de l'environnement PdRacks
+-Création d'un tutoriel
 
 v 0.5.3
 - Réécriture des modules pour pouvoir les utiliser en autonome (statique) ou en mode rack.
