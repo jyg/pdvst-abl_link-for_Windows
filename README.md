@@ -6,7 +6,3 @@ externals and utilities to use within pure-data framework
 
 * pdvst : updated version of j. Sarlo's project for using Pd (and any externals) as vst plugin inside any windows host. (for multiplateform and pd vanilia, see also camomille project https://github.com/pierreguillot/Camomile ) 
 
-2) Abstractions
-* PdRacks : live music performance project with puredata (tags : dynamic patching, rjdj)
-
-
