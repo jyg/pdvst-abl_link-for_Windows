@@ -1,0 +1,62 @@
+#N canvas 86 4 757 668 12;
+#X obj 188 462 cnv 15 500 200 empty empty empty 20 12 0 14 -232576
+-66577 0;
+#X obj 118 274 cnv 15 500 180 empty empty empty 20 12 0 14 -232576
+-66577 0;
+#X obj 21 102 TuioClient;
+#X floatatom 278 404 5 0 0 0 class1_fid - -;
+#X floatatom 365 425 5 0 0 0 class2_fid - -;
+#X obj 169 341 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144
+-1 -1;
+#X obj 376 338 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144
+-1 -1;
+#X obj 277 78 fid_table;
+#X text 220 492 fid_distance <class1> <class2>;
+#X text 250 519 1er inlet : événement de la classe 1;
+#X text 251 542 2eme inlet : événement de la classe 2;
+#X text 253 591 1er outlet : valeur de la distance;
+#X text 252 616 2ème outlet : sid de l'objet de <class1>;
+#X text 250 638 3ème outlet : sid de l'objet de <class2>;
+#X obj 193 363 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144
+-1 -1;
+#X obj 279 363 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144
+-1 -1;
+#X obj 364 364 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144
+-1 -1;
+#X text 55 230 On souhaite connaitre la distance entre des objets de
+classes différentes;
+#X text 130 281 On lance le calcul de distance à chaque événement update
+;
+#X text 196 468 fid_distance necessite de spécifier 2 classes;
+#X obj 7 175 fid_class green 1 1;
+#X text 448 167 classe "green" : objet 1 (vert);
+#X obj 169 314 r green.update;
+#X obj 208 348 fid_distance green yellow;
+#X obj 372 314 r yellow.update;
+#X obj 618 10 about_fid_abs;
+#X floatatom 193 380 5 0 0 0 distance - -;
+#X obj 278 381 fid;
+#X obj 365 382 fid;
+#X text 449 193 classe "yellow" : objets 2 à 8 (jaune);
+#X obj 21 134 fid_preprocess;
+#X text 224 562 LES DEUX ENTREES SONT DES ENTREES CHAUDES (ACTIVES)
+;
+#X obj 8 203 fid_class yellow 2 8;
+#X obj 22 20 cnv 15 200 30 empty empty fid_distance 5 12 0 20 -211601
+-66577 0;
+#X connect 2 0 30 0;
+#X connect 7 0 30 0;
+#X connect 20 0 32 0;
+#X connect 22 0 5 0;
+#X connect 22 0 23 0;
+#X connect 23 0 14 0;
+#X connect 23 0 26 0;
+#X connect 23 1 15 0;
+#X connect 23 1 27 0;
+#X connect 23 2 16 0;
+#X connect 23 2 28 0;
+#X connect 24 0 6 0;
+#X connect 24 0 23 1;
+#X connect 27 0 3 0;
+#X connect 28 0 4 0;
+#X connect 30 0 20 0;

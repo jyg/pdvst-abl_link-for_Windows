@@ -1,0 +1,37 @@
+#N canvas 273 0 750 558 12;
+#X declare -lib iemmatrix;
+#X obj 433 -1 about_fid_abs;
+#X obj -6 415 fid_count_instances;
+#X text -13 389 05_extraction_parametre.pd;
+#X obj 19 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 218 257 bng 15 250 50 0 empty empty done 17 7 0 10 -262144 -1
+-1;
+#X obj -7 443 fid_get;
+#X obj 17 3 cnv 15 300 30 empty empty fid_get_instances 5 12 0 20 -211601
+-66577 0;
+#X obj 418 164 fid_table;
+#X obj 420 329 fid_preprocess;
+#X obj -7 470 fid_set;
+#X msg 45 197 set <class2>;
+#X obj 419 357 fid_class <class> 2 8;
+#X obj 418 384 fid_class <class2> 1 1;
+#X text 42 170 <- get instances;
+#X text 152 195 <- change class_name;
+#X text -14 96 * ARGUMENTS : fid_get_instances <class_name>;
+#X text -14 43 * DESCRIPTION : fid_get_instances permet d'obtenir en
+sortie tous les sid des instances actives d'une classe donnée.;
+#X text -15 143 * USAGE;
+#X text -12 336 * VOIR AUSSI;
+#X obj 15 229 fid_get_instances <class>;
+#X msg 54 260 --------------;
+#X obj 0 295 print fid_get_instances[class];
+#X connect 3 0 19 0;
+#X connect 7 0 8 0;
+#X connect 8 0 11 0;
+#X connect 10 0 19 0;
+#X connect 11 0 12 0;
+#X connect 19 0 21 0;
+#X connect 19 1 4 0;
+#X connect 19 1 20 0;
+#X connect 20 0 21 0;

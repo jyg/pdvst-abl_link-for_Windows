@@ -1,0 +1,39 @@
+#N canvas 0 0 754 659 12;
+#X obj 433 -1 about_fid_abs;
+#X text 169 531 05_extraction_parametre.pd;
+#X text 65 529 voir aussi :;
+#X text 38 126 inlet 1 : valeur;
+#X text 15 107 * Syntaxe : fid_set <param_name>;
+#X obj 441 497 fid_get;
+#X obj 132 411 fid_set;
+#X msg 104 373 set coords;
+#X msg 196 373 set angle;
+#X text 12 57 * fid_set permet de modifier les valeurs des paramètres
+stockés en interne pour chaque blob/fiducial \, à partir de son sid.
+;
+#X obj 15 6 cnv 15 200 30 empty empty fid_set 5 12 0 20 -211601 -66577
+0;
+#X text 39 144 inlet 2 : sid;
+#X text 238 163 <sid>;
+#X text 87 166 <value>;
+#X text 13 328 * Comme pour tabwrite \, on peut changer de paramètre
+au moyen d'un message 'set';
+#X obj 112 192 fid_set <param_name>;
+#X text 20 453 * on peut agir sur des paramètres prédéfinis ou créer
+ses propres noms de paramètres.;
+#X text 20 495 * pour la liste des paramètres prédéfinis \, voir l'aide
+sur;
+#X text 14 219 * fid_set fonctionne d'une manière analogue à tabwrite
+: on définit d'abord l'index (sid) \, puis on envoie la valeur à enregistrer.
+;
+#X text 15 277 * Il est possible de stocker des floats \, des symbols
+\, et des listes de longueur variable;
+#X text 438 173 DOCUMENTER METHODE "REMOVE";
+#X text 16 552 * on peut éliminer un champ pour un sid donné \, avec
+la commande delete;
+#X obj 209 615 fid_set field;
+#X msg 203 586 delete;
+#X text 297 582 <sid>;
+#X connect 7 0 6 0;
+#X connect 8 0 6 0;
+#X connect 23 0 22 0;

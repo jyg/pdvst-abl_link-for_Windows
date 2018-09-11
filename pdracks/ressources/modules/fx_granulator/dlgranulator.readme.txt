@@ -1,0 +1,45 @@
+dlgranulator~ patch for puredata
+v 0.62
+by david golightly
+2/2005
+
+contains:
+the patch:
+dlgranulator~.pd
+
+abstractions used by the patch:
+bounded_rand.pd
+grainpiston~.pd
+
+a demo:
+granulator.pd
+
+enjoy!
+
+davigoli@hotmail.com
+
+how to use:
+dlgranulator~ is a delay-line granulator which enables granulation of incoming sounds in realtime by altering the following parameters:
+
+amp
+pan
+trn - transposition of grain in cents
+dur - duration of grain in ms
+iot - interonset time (time between successive grains) in ms
+
+The envelope is a 3-stage line segment (ASR) using cosine smoothing and controlled by the following parameters:
+shp - % of the envelope used by the S portion
+skw - % of time (A+R) used by A.  Higher values of skw will have an upwards ramp /| shape,
+and lower values will have a sharper attack |\
+An envelope with shp=1 and skw=50 is a quasi-gaussian shape.
+
+dlt - Point in the delay line from which grains are read, up to 8000 ms.
+fb  - feedback level (amount of dlgranulator's output which is fed back into the delay line).
+
+voices - highest number of possible simultaneous grains (currently max. 16).  The actual number of grains is determined by dur & iot as well.
+
+each parameter (except fb & voices) is controlled by 2 faders: the left fader controls the center value, and the right fader controls the range of possible values. Each parameter is chosen at random from within those boundaries.
+
+You can send messages to change parameters by wiring a message box to the left outlet of the patch.  See the demo (granulator.pd) for example parameter change messages.
+
+PLEASE feel free to e-mail me with questions or problems!

@@ -1,0 +1,80 @@
+#N canvas 0 59 1010 708 12;
+#X obj 34 132 *~ 1;
+#X obj 103 17 vsl 15 128 0.01 1 1 0 empty empty rec_level 0 -8 0 8
+-262144 -1 -1 0 1;
+#X obj 36 90 +~;
+#X obj 19 46 adc~ 1 2;
+#X obj 480 259 bng 15 50 30 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X text 278 -1 (mode play seulement);
+#X text 489 158 (cas d'urgence seulement);
+#X text 14 303 A) enregistrement de la boucle de base (toutes LED eteintes)
+;
+#X text 29 391 remarques :;
+#X text 144 392 -des actions successives sur PLAY permettent d'arreter
+puis de redemarrer la lecture;
+#X text 10 487 B) mode overdub;
+#X text 147 424 -les actions A1 A2 provoquent l'effacement de toute
+boucle precedemment enregistree;
+#X text 47 325 1) appuyer sur REC en debut de boucle (la LED rouge
+s'allume);
+#X text 44 359 2) appuyer sur PLAY en fin de boucle pour relire celle-ci
+en boucle (la LED verte s"allume);
+#X text 149 456 -le player est alors synchronisable en entree (en mode
+lecture seulement);
+#X text 66 607 3) revenir en mode play en rappuyant sur le bouton PLAY
+;
+#X text 66 503 1) le headrush etant en mode lecture (LED verte allumee)
+\, appuyer sur le bouton rec/dub pour superposer une autre couche a
+l'enregistrement (les deux LED verte et rouge s'allument);
+#X text 66 572 2) il est possible d'effacer toutes les sur-couches
+(overdub) en appuyant sur le bouton REC une deuxieme fois;
+#X text 631 74 DUREE ACTUELLE DE BOUCLE MAX : 100 sec;
+#X text 632 15 EMULATEUR AKAI HEADRUSH E1;
+#X msg 469 91 play;
+#X msg 470 116 rec;
+#X msg 401 158 flushdub;
+#X obj 404 277 s synchro;
+#X text 296 254 envoi synchro externe;
+#X obj 147 268 dac~ 1 2;
+#X obj 24 190 r~ \$0-out-L;
+#X obj 131 193 r~ \$0-out-R;
+#X obj 598 195 route synchro table_id1 table_id2;
+#X obj 663 222 unpack s f;
+#X symbolatom 581 252 20 0 0 0 - - -;
+#X floatatom 756 254 5 0 0 0 - - -;
+#X obj 768 223 unpack s f;
+#X symbolatom 585 313 20 0 0 0 - - -;
+#X floatatom 765 313 5 0 0 0 - - -;
+#X text 568 271 nom de la table de loop \, et sa duree (msec);
+#X text 560 331 nom de la table de overdub \, et duree de la loop(msec)
+;
+#X floatatom 478 277 5 0 0 0 - - -;
+#X msg 297 39 synchro 23;
+#X msg 415 42 synchro 1520;
+#X msg 423 215 set synchro \$1;
+#X obj 217 105 headrush \$0-out;
+#X connect 0 0 41 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 3 1 2 1;
+#X connect 20 0 41 1;
+#X connect 21 0 41 1;
+#X connect 22 0 41 1;
+#X connect 26 0 25 0;
+#X connect 27 0 25 1;
+#X connect 28 0 4 0;
+#X connect 28 0 23 0;
+#X connect 28 0 37 0;
+#X connect 28 0 40 0;
+#X connect 28 1 29 0;
+#X connect 28 2 32 0;
+#X connect 29 0 30 0;
+#X connect 29 1 31 0;
+#X connect 32 0 33 0;
+#X connect 32 1 34 0;
+#X connect 38 0 41 1;
+#X connect 39 0 41 1;
+#X connect 40 0 39 0;
+#X connect 41 0 28 0;

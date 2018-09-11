@@ -1,0 +1,27 @@
+#N canvas 421 33 717 586 12;
+#X declare -lib iemmatrix;
+#X obj 433 -1 about_fid_abs;
+#X obj 76 410 fid_set;
+#X text 73 328 05_extraction_parametre.pd;
+#X text 33 308 voir aussi :;
+#X obj 58 157 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 76 383 fid_get;
+#X text 52 131 inlet : bang;
+#X text 12 40 fid_count_instances permet d'obtenir le nombre d'instances
+actives d'une classe donnée.;
+#X text 42 96 Syntaxe : fid_count_instances <class_name>;
+#X floatatom 58 220 5 0 0 0 - - -;
+#X obj 74 356 fid_get_instances;
+#X obj 18 5 cnv 15 300 30 empty empty fid_count_instances 5 12 0 20
+-211601 -66577 0;
+#X obj 428 174 fid_table;
+#X obj 430 339 fid_preprocess;
+#X obj 429 367 fid_class <class> 2 8;
+#X obj 428 394 fid_class <class2> 1 1;
+#X obj 58 194 fid_count_instances <class>;
+#X connect 4 0 16 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 16 0 9 0;
