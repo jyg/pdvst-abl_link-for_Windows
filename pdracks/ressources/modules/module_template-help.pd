@@ -1,6 +1,0 @@
-#N canvas 713 56 613 297 10;
-#X obj 57 84 cnv 15 260 140 empty empty empty 20 12 0 14 -261234 -66577
-0;
-#X text 33 29 This a minimal module template you can copy to create
-your own modules.;
-#X obj 86 112 module_template;

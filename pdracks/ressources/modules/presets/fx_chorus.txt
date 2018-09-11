@@ -1,5 +1,0 @@
-Test;
-Tezst;
-Preset3;
-Preset4;
-Preset5;

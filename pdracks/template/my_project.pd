@@ -1,4 +1,0 @@
-#N canvas 1064 271 633 429 12;
-#X text 58 20 You can start using PdRacks modules here;
-#X text 63 46 To start \, all you need is to create one instance of
-[pdr] object;
