@@ -1,0 +1,29 @@
+#N canvas 571 369 841 439 12;
+#X text 50 351 You can use autocompletion tool in a subpatch. Simply
+add a [pdr] object in this subpatch.;
+#X obj 96 211 pdr;
+#N canvas 1 56 450 300 stuff 0;
+#X obj 85 48 r ping-r;
+#X obj 85 71 s ping-s;
+#X text 143 26 disable this instance of [pdr];
+#X connect 0 0 1 0;
+#X restore 521 357 pd stuff;
+#X text 159 179 V V;
+#X text 159 173 | |;
+#X text 159 160 |;
+#X text 183 159 ___;
+#X text 162 146 ______;
+#X text 212 167 menu-mode (vanilla);
+#X obj 512 332 cnv 15 100 60 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 32 133 Insertion mode;
+#X text 28 21 [pdr] is an autocompletion tool that helps you to choose
+PdRacks modules quickly from a menu list \, sorted by categories. When
+active \, press <Insert> key.;
+#X text 148 193 0;
+#X text 163 193 1;
+#X text 178 193 2;
+#X text 53 299 2) menu-mode (vanilla) let you choose objects from a
+window with list of all objects \, (as in Automatonism);
+#X text 53 273 1) autoconmpletion-mode uses a popup menu.;
+#X text 211 149 autoconmpletion-mode (needs iemguts + iemlib);

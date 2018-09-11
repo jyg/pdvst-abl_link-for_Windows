@@ -1,0 +1,45 @@
+#N canvas 871 347 763 594 10;
+#X obj 311 359 list trim;
+#X obj 301 322 list prepend set;
+#N canvas 1 56 450 300 speed_lim 0;
+#X obj 87 20 inlet;
+#X obj 87 105 t b b a;
+#X obj 83 278 list append;
+#X obj 83 307 list trim;
+#X msg 129 200 1;
+#X msg 57 177 0;
+#X obj 83 332 outlet;
+#X obj 55 145 delay 100;
+#X obj 83 249 metro 100;
+#X obj 33 226 change;
+#X connect 0 0 1 0;
+#X connect 1 0 7 0;
+#X connect 1 1 4 0;
+#X connect 1 2 2 1;
+#X connect 2 0 3 0;
+#X connect 3 0 6 0;
+#X connect 4 0 9 0;
+#X connect 5 0 9 0;
+#X connect 7 0 5 0;
+#X connect 8 0 2 0;
+#X connect 9 0 8 0;
+#X restore 304 385 pd speed_lim;
+#X obj 268 289 r \$1-\$2-\$3;
+#X obj 280 434 s \$1-\$2-\$4;
+#X floatatom 418 180 5 0 0 0 - - -, f 5;
+#X obj 167 214 midi-colors \$1 \$2-\$3 \$1-\$2-\$4 \$5 \$6 \$7 \$8
+;
+#X text 45 68 arguments : \$0 ctl-name <send-suffix> <receive-suffix>
+<min_value> <max_value> <lin/log> <default_color>, f 109;
+#X text 295 24 u_r : wrapper for automatonism modules inside pdracks
+;
+#X obj 445 306 inlet;
+#X obj 432 390 outlet;
+#X obj 432 367 u_dispatch \$1 \$2-\$3;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 0;
+#X connect 5 0 6 1;
+#X connect 9 0 11 0;
+#X connect 11 0 10 0;

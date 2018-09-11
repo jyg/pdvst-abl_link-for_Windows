@@ -1,0 +1,39 @@
+#N struct mappings float y symbol module_name symbol param_name float
+ccnum float min float max symbol mapping;
+#N canvas 535 276 821 474 16;
+#X declare -path ../ressources/modules;
+#X declare -path ../extensions/automatonism;
+#X declare -path ../extensions/automatonism/modular/patch_editor_abs
+;
+#X obj 509 44 pdr;
+#N canvas 0 50 450 300 PdRacks.declare 0;
+#X obj 10 10 declare -path ../ressources/modules;
+#X obj 10 35 pdr-categories;
+#X obj 10 60 text define -k scene_preset;
+#A set audio_out-0 pan 0 \; audio_out-0 vol 83.9898 \; audio_out-0
+out OUT(1/2) \; bwl-osc-0 bwl-osc-wform-s 0 \; bwl-osc-0 bwl-osc-fm-att-s
+0 \; bwl-osc-0 bwl-osc-cv-att-s 0 \; bwl-osc-0 bwl-osc-pwidth-s 63
+\; bwl-osc-0 bwl-osc-pitch-s 29 \;;
+#X obj 10 85 text define -k pdr-extensions;
+#A set automatonism \;;
+#X obj 10 110 text define -k categories;
+#A set effects \; instruments \; midi \; utils \; automatonism \;;
+#X obj 10 100 text define -k automatonism;
+#A set inst_modular for use with dynamic PdRacks \; inst_modular_standalone
+for use with static PdRacks \; ahr wtf?? \; bwl-osc band limited oscillator
+\; lp-filter low-pass filter \; overdrive distorsion effect \;;
+#X obj 100 130 declare -path ../extensions/automatonism;
+#X obj 100 130 declare -path ../extensions/automatonism/modular/patch_editor_abs
+;
+#X restore 509 89 pd PdRacks.declare;
+#X obj 509 119 PdRacks.settings;
+#X obj 75 126 bwl-osc;
+#X obj 87 282 audio_out;
+#X obj 508 214 PdRacks.midilearn;
+#X text 35 14 With this patched version of Automatonism \, it's possible
+to assign midi controls to automatonism parameters., f 42;
+#X text 386 349 https://www.automatonism.com/;
+#X text 53 393 Until now \, only few automatonism object are wrapped
+inside Pdracks;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;

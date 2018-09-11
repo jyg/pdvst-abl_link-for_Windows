@@ -1,10 +1,4 @@
-#N canvas 610 50 653 438 10;
-#X declare -path ../core;
-#X declare -path ../rj;
-#X declare -path C:/Users/jyg/Desktop/pd/Patches/2010/fid_abs_0.3.6
-;
-#X obj 436 59 declare -path ../core;
-#X obj 436 89 declare -path ../rj;
+#N canvas 610 56 653 438 10;
 #X text 45 292 EXPERIMENTAL ALPHA;
 #X obj 26 292 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
 #X obj 25 355 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
@@ -29,7 +23,6 @@ FID_CLASSES), f 38;
 #X text 242 324 Monotouch;
 #X obj 26 322 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
 #X text 232 400 VOIR AUSSI : [data_fidtouch];
-#X obj 138 149 data_fidcontrol;
 #X text 41 148 nb de touch events simultanés ->, f 16;
 #X text 241 113 1;
 #X text 280 115 2;
@@ -42,4 +35,4 @@ FID_CLASSES), f 38;
 #X text 282 140 |;
 #X text 282 130 |;
 #X text 329 168 <- 3;
-#X coords 0 438 1 437 190 70 0;
+#X obj 138 149 data_fidcontrol;

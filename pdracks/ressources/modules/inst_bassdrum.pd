@@ -1,4 +1,6 @@
-#N canvas 462 50 981 595 10;
+#N canvas 462 56 981 595 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #X obj 152 240 route note;
 #X obj 32 163 notein 1;
 #X obj 63 213 pack f f;
@@ -211,22 +213,20 @@
 #X coords 0 -1 1 1 180 30 1 100 100;
 #X restore 252 22 pd etude_morphing;
 #X obj 101 101 cnv 15 188 68 empty \$0-background inst_bassdrum 0 7
-0 14 -260818 -1 0;
-#X obj 256 101 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+0 14 -262144 -1 0;
 #X obj 236 100 tgl 15 0 \$0-midiNoteIn \$0-midiNoteIn-rcv midiNoteIn
 -50 7 0 10 -262144 -1 -1 0 1;
 #X obj 100 114 ui_vsl \$0 freq2 1 1000;
 #X obj 138 114 ui_vsl \$0 decay 10 2000;
 #X obj 252 114 ui_vsl \$0 gain 0.1 10;
 #X obj 233 118 vsl 19 48 100 10000 1 0 \$0-lowpass \$0-lowpass-rcv
-lp 0 10 0 10 -262144 -1 -1 3000 1;
+lp 0 10 0 10 -262144 -1 -1 0 1;
 #X obj 214 118 vsl 19 48 0 1 0 0 \$0-noize \$0-noize-rcv nz 0 10 0
-10 -262144 -1 -1 3600 1;
+10 -262144 -1 -1 0 1;
 #X obj 195 118 vsl 19 48 1 100 1 0 \$0-curve \$0-curve-rcv cu 0 10
-0 10 -262144 -1 -1 2100 1;
+0 10 -262144 -1 -1 0 1;
 #X obj 176 118 vsl 19 48 0.01 1000 1 0 \$0-square \$0-square-rcv sq
-0 10 0 10 -262144 -1 -1 4100 1;
+0 10 0 10 -262144 -1 -1 0 1;
 #X obj 622 241 module_loader inst_bassdrum \$0 \$1;
 #X obj 167 321 inlet~;
 #X obj 166 405 outlet~;
@@ -234,6 +234,8 @@ lp 0 10 0 10 -262144 -1 -1 3000 1;
 #X obj 267 407 outlet~;
 #X obj 377 203 inlet data;
 #X obj 379 229 outlet data;
+#X obj 534 4 declare -path ../../ressources/core;
+#X obj 534 34 declare -path ../../ressources/rj;
 #X connect 0 0 17 0;
 #X connect 1 0 3 0;
 #X connect 1 1 2 1;
@@ -242,8 +244,8 @@ lp 0 10 0 10 -262144 -1 -1 3000 1;
 #X connect 4 0 3 1;
 #X connect 8 0 9 0;
 #X connect 9 0 14 0;
-#X connect 12 0 56 0;
-#X connect 12 0 58 0;
+#X connect 12 0 55 0;
+#X connect 12 0 57 0;
 #X connect 14 0 16 0;
 #X connect 15 0 30 0;
 #X connect 16 0 15 0;
@@ -257,7 +259,6 @@ lp 0 10 0 10 -262144 -1 -1 3000 1;
 #X connect 20 1 23 0;
 #X connect 20 1 33 0;
 #X connect 21 0 26 0;
-#X connect 21 0 45 0;
 #X connect 22 0 25 1;
 #X connect 23 0 34 0;
 #X connect 24 0 22 0;
@@ -273,10 +274,10 @@ lp 0 10 0 10 -262144 -1 -1 3000 1;
 #X connect 38 0 37 0;
 #X connect 39 0 40 0;
 #X connect 41 0 42 0;
-#X connect 54 0 8 0;
-#X connect 55 0 56 0;
-#X connect 57 0 58 0;
-#X connect 59 0 0 0;
-#X connect 59 0 60 0;
-#X connect 59 0 54 0;
+#X connect 53 0 8 0;
+#X connect 54 0 55 0;
+#X connect 56 0 57 0;
+#X connect 58 0 0 0;
+#X connect 58 0 59 0;
+#X connect 58 0 53 0;
 #X coords 0 -1 1 1 190 70 1 100 100;

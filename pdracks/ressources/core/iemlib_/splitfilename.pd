@@ -1,0 +1,8 @@
+#N canvas 0 23 450 300 10;
+#X obj 187 88 splitfilename \$1;
+#X obj 184 65 inlet;
+#X obj 190 118 outlet;
+#X obj 286 120 outlet;
+#X connect 0 0 2 0;
+#X connect 0 1 3 0;
+#X connect 1 0 0 0;

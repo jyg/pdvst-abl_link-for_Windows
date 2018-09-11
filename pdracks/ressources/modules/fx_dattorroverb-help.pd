@@ -1,0 +1,13 @@
+#N canvas 713 50 613 297 10;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X obj 416 38 declare -path ../core;
+#X obj 416 68 declare -path ../rj;
+#X obj 340 163 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X text 360 159 Instances multiples;
+#X obj 46 150 fx_dattorroverb;
+#X text 7 73 dattorro algorithm : http://tre.ucsd.edu/wordpress/?p=625
+;
+#X obj 340 193 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X text 368 190 vanilia;
+#X text 8 50 high quality vanilla reverb using;

@@ -1,4 +1,6 @@
-#N canvas 0 104 978 542 10;
+#N canvas 1 104 978 542 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #N canvas 172 83 586 377 LICENSE-GPL 0;
 #X text 57 88 This program is free software: you can redistribute it
 and/or modify it under the terms of the GNU General Public License
@@ -16,7 +18,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 ;
 #X restore 347 11 pd LICENSE-GPL;
 #X text 35 69 ui_hsl \$0 name min max;
-#N canvas 383 50 989 622 filter 1;
+#N canvas 383 50 989 622 filter 0;
 #X obj 27 25 inlet~;
 #X obj 278 25 inlet~;
 #X obj 70 445 outlet~;
@@ -24,8 +26,8 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 46 343 e_beequad;
 #X msg 178 309 interp \$1;
 #X obj 263 350 e_beequad;
-#X obj 290 281 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 21 256;
+#X obj 290 281 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 21 256;
 #X obj 679 55 r \$0-freq;
 #X obj 781 56 r \$0-Q;
 #X obj 175 199 u_lowpassq;
@@ -142,7 +144,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X restore 30 292 pd filter;
 #X obj 552 170 u_dispatch \$0 Q;
 #X text 51 17 embedded rjdj e_lowpass abstraction;
-#X obj 101 101 cnv 15 188 68 empty \$0-background fx_lop 0 7 0 14 -260818
+#X obj 101 101 cnv 15 188 68 empty \$0-background fx_lop 0 7 0 14 -262144
 -1 0;
 #X obj 100 115 ui_vsl \$0 freq 20 20000;
 #X obj 142 115 ui_vs \$0 Q 0 10;
@@ -167,6 +169,10 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 -1 -1;
 #X obj 549 192 u_dispatch \$0 freq;
 #X obj 555 245 u_parameter \$0 speed;
+#X msg 692 74 speed 1 \, delta 0 \, freq 20000 \, Q 0.5;
+#X obj 795 31 loadbang;
+#X obj 534 4 declare -path ../../ressources/core;
+#X obj 534 34 declare -path ../../ressources/rj;
 #X connect 2 0 15 0;
 #X connect 2 1 16 0;
 #X connect 3 0 25 0;
@@ -178,4 +184,6 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X connect 19 0 12 0;
 #X connect 25 0 26 0;
 #X connect 26 0 20 0;
+#X connect 27 0 12 0;
+#X connect 28 0 27 0;
 #X coords 0 -1 1 1 190 70 1 100 100;

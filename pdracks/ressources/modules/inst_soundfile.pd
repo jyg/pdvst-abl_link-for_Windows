@@ -1,4 +1,6 @@
-#N canvas 93 50 918 599 10;
+#N canvas 93 56 918 599 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #N canvas 172 83 586 377 LICENSE-GPL 0;
 #X text 57 88 This program is free software: you can redistribute it
 and/or modify it under the terms of the GNU General Public License
@@ -81,7 +83,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 477 268 s \$0-file;
 #X obj 100 114 ui_vs \$0 vol 0 127;
 #X obj 138 139 tgl 30 0 \$0-play \$0-play-rcv PLAY 2 13 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #N canvas 0 50 602 499 audio_stuff 0;
 #X obj 133 22 r \$0-file;
 #X msg 135 185 open \$1;
@@ -207,6 +209,8 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 114 261 inlet~;
 #X obj 229 256 inlet data;
 #X obj 229 278 outlet data;
+#X obj 644 4 declare -path ../../ressources/core;
+#X obj 644 34 declare -path ../../ressources/rj;
 #X connect 3 0 16 0;
 #X connect 4 0 6 0;
 #X connect 6 0 9 0;

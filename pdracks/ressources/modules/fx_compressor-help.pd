@@ -1,6 +1,4 @@
 #N canvas 312 199 931 469 10;
-#X declare -path ../core;
-#X declare -path ../rj;
 #N canvas 0 50 545 320 noiseBurst 0;
 #X obj 250 106 noise~;
 #X obj 354 116 *~ 100;
@@ -44,13 +42,11 @@ rmspeak 0 \, lookahead 0;
 #X text 104 38 STEP 1: turn on DSP;
 #X text 149 51 (and make sure your speakers/headphones arent too loud)
 ;
-#X obj 346 38 declare -path ../core;
-#X obj 346 68 declare -path ../rj;
 #X obj 17 246 fx_compressor;
 #X text 542 31 stereo lookahead compressor;
 #X text 608 8 fx_compressor;
-#X connect 0 0 19 0;
-#X connect 0 0 19 1;
+#X connect 0 0 17 0;
+#X connect 0 0 17 1;
 #X connect 1 0 0 0;
-#X connect 19 0 2 0;
-#X connect 19 1 2 1;
+#X connect 17 0 2 0;
+#X connect 17 1 2 1;

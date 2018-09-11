@@ -1,5 +1,5 @@
-#N struct 7110-symarray float x array symbols 7110-sym;
-#N struct 7110-sym symbol name float on;
+#N struct 1316-symarray float x array symbols 1316-sym;
+#N struct 1316-sym symbol name float on;
 #N canvas 560 50 766 552 10;
 #X declare -path ../core;
 #X declare -path ../rj;
@@ -85,4 +85,7 @@ que l'on peut éditer.;
 #X text 15 514 utilisable avec data_wintablet (à tester);
 #X text 130 462 TO DO;
 #X text 18 533 utilisable avec data_fidtouch (à tester);
+#X obj 38 212 dac~;
+#X connect 46 0 53 0;
+#X connect 46 1 53 1;
 #X coords 0 552 1 551 190 70 0;

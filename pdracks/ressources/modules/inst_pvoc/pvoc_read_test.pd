@@ -1,0 +1,6 @@
+#N canvas 224 52 901 613 12;
+#X obj 41 1 inlet;
+#X obj 42 566 outlet~;
+#X obj 171 568 outlet~;
+#X obj 31 416 bsaylor/pvoc~ \$1-nop 2048 4;
+#X obj 312 419 bsaylor/pvoc~ \$1-nop 2048 4;

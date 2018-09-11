@@ -1,4 +1,6 @@
-#N canvas 646 50 707 623 10;
+#N canvas 646 56 707 623 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #X obj 101 101 cnv 15 188 68 empty \$0-background fx_parameq2 0 7 0
 14 -262144 -1 0;
 #X obj 101 101 cnv 15 188 68 empty \$0-background fx_parameq2 0 7 0
@@ -11,7 +13,7 @@
 #X obj 257 346 outlet data;
 #X obj 100 115 ui_vsl \$0 freq 20 9999;
 #X obj 138 115 ui_vsl \$0 Q 0.1 10;
-#N canvas 403 -2 1054 610 audio_stuf~ 1;
+#N canvas 403 1048 1054 610 audio_stuf~ 1;
 #X obj 37 37 inlet~;
 #X obj 32 262 outlet~;
 #X text 222 97 440;
@@ -28,7 +30,7 @@
 #X obj 427 37 inlet~;
 #X obj 422 262 outlet~;
 #X obj 426 217 e_beequad;
-#N canvas 0 50 1002 622 lfo 1;
+#N canvas 1 56 1002 622 lfo 0;
 #X obj 87 500 line;
 #X obj 87 522 mtof;
 #X obj 364 291 +;
@@ -154,6 +156,8 @@
 #X text 243 115 LFO;
 #X obj 274 102 bng 15 250 50 0 \$0-no_lfo empty empty 17 7 0 10 -262144
 -1 -1;
+#X obj 534 4 declare -path ../../ressources/core;
+#X obj 534 34 declare -path ../../ressources/rj;
 #X connect 2 0 10 0;
 #X connect 2 0 18 0;
 #X connect 3 0 19 0;

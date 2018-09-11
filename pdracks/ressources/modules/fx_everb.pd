@@ -1,4 +1,6 @@
-#N canvas 0 50 1362 685 10;
+#N canvas 1 56 1362 685 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #N canvas 172 83 586 377 LICENSE-GPL 0;
 #X text 57 88 This program is free software: you can redistribute it
 and/or modify it under the terms of the GNU General Public License
@@ -326,6 +328,8 @@ in individual files.;
 #X obj 112 539 * -1;
 #X obj 112 561 s \$0-dry;
 #X obj 261 396 module_loader fx_everb \$0 \$1;
+#X obj 534 4 declare -path ../../ressources/core;
+#X obj 534 34 declare -path ../../ressources/rj;
 #X connect 3 0 4 0;
 #X connect 4 0 10 0;
 #X connect 5 0 9 0;

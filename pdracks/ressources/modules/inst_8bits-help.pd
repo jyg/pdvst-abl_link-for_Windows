@@ -1,8 +1,4 @@
 #N canvas 448 85 894 552 10;
-#X declare -path ../core;
-#X declare -path ../rj;
-#X obj 346 63 declare -path ../core;
-#X obj 346 93 declare -path ../rj;
 #X text 478 460 EXPERIMENTAL ALPHA;
 #X obj 458 462 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
 #X obj 460 515 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
@@ -23,4 +19,3 @@ ou en omni \, ctlin;
 par une équation;
 #X obj 456 384 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
 #X text 476 382 monodique;
-#X coords 0 552 1 551 190 70 0;

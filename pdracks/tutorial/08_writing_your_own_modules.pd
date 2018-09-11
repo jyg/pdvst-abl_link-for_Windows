@@ -1,0 +1,21 @@
+#N canvas 545 542 908 393 16;
+#X declare -path ../ressources/modules;
+#X obj 600 29 pdr;
+#N canvas 0 50 450 300 PdRacks.declare 0;
+#X obj 10 10 declare -path ../ressources/modules;
+#X obj 10 35 pdr-categories;
+#X obj 10 60 text define -k scene_preset;
+#A set inst_rhodey-0 vol 77.2703 \; inst_rhodey-0 tone 0.724074 \;
+inst_rhodey-0 decay 2132.89 \;;
+#X obj 10 85 text define -k pdr-extensions;
+#A set;
+#X obj 10 110 text define -k categories;
+#A set effects \; instruments \; midi \; utils \;;
+#X restore 600 74 pd PdRacks.declare;
+#X obj 600 104 PdRacks.settings;
+#X obj 34 157 module_template;
+#X text 39 32 PdRacks lets your write your own modules \, enabling
+midi mapping \, preset saving \, morphing capabilities and other features.
+, f 46;
+#X text 34 121 Start by editing this object : [module_template];
+#X text 200 178 <- right-click here and choose "open";

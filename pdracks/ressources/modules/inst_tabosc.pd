@@ -1,11 +1,14 @@
 #N canvas 248 65 981 595 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
+#X declare -path ../../ressources/core/fid_abs_vanilia-0.4;
 #X obj 45 216 pack f f;
 #X obj 52 187 spigot;
 #X obj 192 194 r \$0-midiNoteIn;
 #X obj 596 325 u_parameter \$0 midiNoteIn;
 #X obj 596 347 u_parameter \$0 mode;
 #X obj 596 391 u_dispatch \$0 vol;
-#N canvas 0 50 494 446 volpan 0;
+#N canvas 1 56 494 446 volpan 0;
 #X obj -3 -16 inlet~;
 #X obj 79 335 outlet~;
 #X obj 155 332 outlet~;
@@ -148,7 +151,7 @@
 #X obj 221 523 route note stop;
 #X msg 274 555 stop;
 #X obj 101 101 cnv 15 188 68 empty \$0-background inst_tabosc 0 7 0
-12 -260818 -1 0;
+12 -262144 -1 0;
 #X obj 32 163 notein 1;
 #X obj 252 100 tgl 15 0 \$0-midiNoteIn \$0-midiNoteIn-rcv Midi 16 7
 0 8 -262144 -1 -1 0 1;
@@ -156,7 +159,7 @@
 -8 0 10 -262144 -1 -1 4;
 #X obj 252 115 ui_vs \$0 vol 0 127;
 #X obj 103 114 hsl 50 15 8 500 1 0 \$0-sustain \$0-sustain-rcv sustain
--2 8 0 10 -262144 -1 -1 4500 1;
+-2 8 0 10 -262144 -1 -1 1800 1;
 #X obj 205 110 vsl 15 30 95 70 0 0 \$0-sens \$0-sens-rcv sens -7 -7
 0 10 -261234 -1 -1 0 1;
 #X obj 182 144 bng 25 250 50 0 \$0-recButton \$0-recButton-rcv REC
@@ -171,13 +174,13 @@
 #X obj 189 123 bng 15 250 50 0 \$0-open empty O 5 7 0 10 -203904 -1
 -1;
 #X obj 100 140 vsl 20 27 1 0 0 0 \$0-mode \$0-mode-rcv mode 0 -7 0
-10 -262144 -1 -1 900 1;
-#N canvas 0 50 517 502 \$0-sinesum 0;
+10 -262144 -1 -1 2600 1;
+#N canvas 1 56 517 502 \$0-sinesum 0;
 #N canvas 572 63 1103 563 reglages 0;
 #X obj 400 169 vsl 50 128 0 0.3 0 0 \$0-harmo7 \$0-harmo7-rcv empty
-0 -9 0 10 -262144 -1 -1 4400 1;
+0 -9 0 10 -262144 -1 -1 0 1;
 #X obj 450 169 vsl 50 128 0 0.3 0 0 \$0-harmo8 \$0-harmo8-rcv empty
-0 -9 0 10 -262144 -1 -1 6900 1;
+0 -9 0 10 -262144 -1 -1 0 1;
 #X obj 328 21 unpack f f f f f f f f;
 #X msg 313 -136 1 0 0 0 0 0 0 0;
 #X msg 336 -106 0 1 0 0 0 0 0 0;
@@ -192,17 +195,17 @@
 #X obj 450 117 bng 50 250 50 0 empty empty 8' 17 20 0 30 -262144 -1
 -1;
 #X obj 300 169 vsl 50 128 0 0.3 0 0 \$0-harmo5 \$0-harmo5-rcv empty
-0 -9 0 10 -262144 -1 -1 7800 1;
+0 -9 0 10 -262144 -1 -1 300 1;
 #X obj 350 169 vsl 50 128 0 0.3 0 0 \$0-harmo6 \$0-harmo6-rcv empty
-0 -9 0 10 -262144 -1 -1 8700 1;
+0 -9 0 10 -262144 -1 -1 9100 1;
 #X obj 300 117 bng 50 250 50 0 empty empty 5' 17 20 0 30 -262144 -1
 -1;
 #X obj 350 117 bng 50 250 50 0 empty empty 6' 17 20 0 30 -262144 -1
 -1;
 #X obj 200 169 vsl 50 128 0 0.3 0 0 \$0-harmo3 \$0-harmo3-rcv empty
-0 -9 0 10 -262144 -1 -1 7700 1;
+0 -9 0 10 -262144 -1 -1 6600 1;
 #X obj 250 169 vsl 50 128 0 0.3 0 0 \$0-harmo4 \$0-harmo4-rcv empty
-0 -9 0 10 -262144 -1 -1 12700 1;
+0 -9 0 10 -262144 -1 -1 11300 1;
 #X obj 200 117 bng 50 250 50 0 empty empty 3' 17 20 0 30 -262144 -1
 -1;
 #X obj 250 117 bng 50 250 50 0 empty empty 4' 17 20 0 30 -262144 -1
@@ -210,7 +213,7 @@
 #X obj 100 169 vsl 50 128 0 0.3 0 0 \$0-harmo1 \$0-harmo1-rcv empty
 0 -9 0 10 -262144 -1 -1 12700 1;
 #X obj 150 169 vsl 50 128 0 0.3 0 0 \$0-harmo2 \$0-harmo2-rcv empty
-0 -9 0 10 -262144 -1 -1 5700 1;
+0 -9 0 10 -262144 -1 -1 11900 1;
 #X obj 100 117 bng 50 250 50 0 empty empty 1' 17 20 0 30 -262144 -1
 -1;
 #X obj 150 117 bng 50 250 50 0 empty empty 2' 17 20 0 30 -262144 -1
@@ -244,7 +247,7 @@
 #X coords 0 -1 1 1 400 200 1 100 100;
 #X restore 64 26 pd reglages;
 #X obj 370 270 vsl 20 120 1 0 0 0 \$0-mode \$0-mode-rcv mode 0 -7 0
-10 -262144 -1 -1 4119 1;
+10 -262144 -1 -1 11900 1;
 #X obj 188 288 s pd-\$0-sinesum;
 #X msg 182 250 vis 0;
 #X msg 256 247 vis 1;
@@ -263,7 +266,7 @@
 0;
 #X obj 167 139 bng 15 250 50 0 empty empty edit -15 -6 0 10 -262130
 -1 -1;
-#N canvas 0 50 696 300 sinesum 0;
+#N canvas 1 56 696 300 sinesum 0;
 #X obj 67 17 inlet;
 #X obj 69 41 u_parameter \$0 harmo1;
 #X obj 67 67 u_parameter \$0 harmo2;
@@ -539,7 +542,7 @@
 #X obj 228 367 *~ 0;
 #X obj 596 368 u_dispatch \$0 monit;
 #X text 794 255 <- GUI pour sinesum;
-#N canvas 0 50 450 300 sinesum_stuff 0;
+#N canvas 1 56 450 300 sinesum_stuff 0;
 #X obj 127 105 t b f;
 #X obj 162 93 t b f;
 #X obj 219 97 t b f;
@@ -561,25 +564,25 @@
 #X obj 316 45 r \$0-harmo6;
 #X obj 376 65 r \$0-harmo7;
 #X obj 426 45 r \$0-harmo8;
-#X obj 104 234 ../pending/sinesum \$0-sinesum 256;
 #X obj 32 161 delay 0;
-#X connect 0 0 22 0;
+#X obj 104 234 sinesum \$0-sinesum 256;
+#X connect 0 0 21 0;
 #X connect 0 1 7 1;
-#X connect 1 0 22 0;
+#X connect 1 0 21 0;
 #X connect 1 1 7 2;
-#X connect 2 0 22 0;
+#X connect 2 0 21 0;
 #X connect 2 1 7 3;
-#X connect 3 0 22 0;
+#X connect 3 0 21 0;
 #X connect 3 1 7 4;
-#X connect 4 0 22 0;
+#X connect 4 0 21 0;
 #X connect 4 1 7 5;
-#X connect 5 0 22 0;
+#X connect 5 0 21 0;
 #X connect 5 1 7 6;
-#X connect 6 0 22 0;
+#X connect 6 0 21 0;
 #X connect 6 1 7 7;
 #X connect 7 0 11 1;
-#X connect 9 0 21 0;
-#X connect 10 0 22 0;
+#X connect 9 0 22 0;
+#X connect 10 0 21 0;
 #X connect 10 1 7 0;
 #X connect 11 0 9 0;
 #X connect 12 0 11 0;
@@ -592,7 +595,7 @@
 #X connect 18 0 4 0;
 #X connect 19 0 5 0;
 #X connect 20 0 6 0;
-#X connect 22 0 12 0;
+#X connect 21 0 12 0;
 #X restore 700 217 pd sinesum_stuff;
 #X obj 159 317 inlet~;
 #X obj 261 309 inlet~;
@@ -602,6 +605,10 @@
 #X obj 358 529 outlet data;
 #X obj 596 303 module_loader inst_tabosc \$0 \$1;
 #X obj 43 274 u_makepoly2 16 1 inst_tabosc/module_tabosc \$0 \$0-tabosc
+;
+#X obj 954 4 declare -path ../../ressources/core;
+#X obj 954 34 declare -path ../../ressources/rj;
+#X obj 870 87 declare -path ../../ressources/core/fid_abs_vanilia-0.4
 ;
 #X connect 0 0 72 0;
 #X connect 1 0 0 0;

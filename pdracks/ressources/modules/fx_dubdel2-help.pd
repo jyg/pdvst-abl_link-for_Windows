@@ -1,8 +1,4 @@
-#N canvas 713 50 613 604 10;
-#X declare -path ../core;
-#X declare -path ../rj;
-#X obj 446 45 declare -path ../core;
-#X obj 446 75 declare -path ../rj;
+#N canvas 713 56 613 604 10;
 #X obj 360 140 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
 #X text 380 136 Instances multiples;
 #X text 11 37 effet de tape delay avec filtre;
@@ -89,5 +85,4 @@ les 200ms \, sans clic;
 #X text 95 498 mode noclic;
 #X text 10 57 inspiré des abstractions rjdj e_dubdel et e_noclickdelsig
 ;
-#X connect 69 0 67 0;
-#X coords 0 604 1 603 190 70 0;
+#X connect 67 0 65 0;

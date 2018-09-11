@@ -98,7 +98,7 @@
 #X connect 5 1 1 0;
 #X connect 6 0 1 1;
 #X restore 398 384 pd append_class_name_to_sid_instance;
-#N canvas 367 166 1063 553 remove_sid_and_class_name 1;
+#N canvas -47 144 1063 553 remove_sid_and_class_name 1;
 #X obj 316 43 inlet;
 #X obj 361 296 text search;
 #X obj 360 318 select -1;
@@ -121,7 +121,7 @@
 #X obj 359 395 list split 1;
 #X obj 453 465 select;
 #X msg 461 498 add2 \$1;
-#X msg 462 521 class-rec 5;
+#X msg 462 521 0;
 #X obj 442 574 text set;
 #X msg 447 215 symbol class-\$1;
 #X obj 446 238 t s b f b s;
@@ -150,7 +150,7 @@
 #X connect 4 0 5 0;
 #X connect 4 1 2 0;
 #X restore 798 195 pd list-drip;
-#X msg 860 321 touch touch touch touch touch touch touch;
+#X msg 860 321;
 #X msg 857 282 add2 \$1;
 #X obj 824 224 select \$1;
 #X obj 822 114 t f b f;

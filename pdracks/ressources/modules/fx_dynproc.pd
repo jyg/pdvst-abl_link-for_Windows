@@ -1,4 +1,6 @@
 #N canvas 91 146 944 533 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #N canvas 0 50 868 621 audio_stuff 0;
 #X obj 60 10 inlet~;
 #X obj 149 462 outlet~;
@@ -529,6 +531,8 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 175 115 ui_vs \$0 thresh 0 120;
 #X obj 213 115 ui_vs \$0 makeup 0 100;
 #X obj 251 115 ui_vs \$0 wet 0 1;
+#X obj 534 4 declare -path ../../ressources/core;
+#X obj 534 34 declare -path ../../ressources/rj;
 #X connect 0 0 41 0;
 #X connect 0 1 42 0;
 #X connect 3 0 4 0;

@@ -1,4 +1,6 @@
 #N canvas 156 61 1046 595 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #X text 90 415 TODO;
 #X text 25 450 sauvegarde;
 #X text 27 473 multiple patterns;
@@ -166,18 +168,18 @@ modules presets;
 #X obj 451 182 symbol \$0-preset_manager;
 #X obj 416 297 r \$0-preset_manager;
 #X obj 101 101 cnv 15 188 68 empty \$0-background PdRacks.presets 0
-7 0 14 -260818 -1 0;
+7 0 14 -262144 -1 0;
 #X obj 331 108 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 249 103 bng 30 250 50 0 MORPH.STOP empty STOP 5 13 0 10 -262144
+#X obj 246 115 bng 30 250 50 0 MORPH.STOP empty STOP 5 13 0 10 -262144
 -1 -1;
 #X obj 109 155 hradio 15 1 0 8 empty empty 1_2_3_4_5_6_7_8 0 8 0 13
--204786 -1 -260097 1;
+-204786 -1 -260097 0;
 #X obj 109 140 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -261234
 -1 -1 1;
-#X text 250 118 MORPH;
-#X text 235 151 <- load;
-#X text 235 138 <- save;
+#X text 249 129 MORPH;
+#X text 235 154 <- load;
+#X text 235 142 <- save;
 #X obj 785 176 module_loader PdRacks.presets \$0 \$1;
 #X obj 11 350 inlet~;
 #X obj 71 350 inlet~;
@@ -185,7 +187,7 @@ modules presets;
 #X obj 11 372 outlet~;
 #X obj 147 361 inlet data;
 #X obj 147 383 outlet data;
-#X obj 225 101 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 238 100 bng 15 250 50 0 empty empty clear 17 7 0 10 -262144
 -1 -1;
 #X msg 309 67 dump.preset\$1 bang;
 #X msg 309 45 0 \, 1 \, 2 \, 3 \, 4 \, 5 \, 6 \, 7;
@@ -276,7 +278,7 @@ modules presets;
 #X obj 915 664 int;
 #X obj 1034 722 s MORPH.TIME;
 #X msg 1044 657 label MORPH.TIME=\$1ms;
-#X obj 111 120 hsl 128 15 1 5001 1 0 \$0-morph.time \$0-morph.time-rcv
+#X obj 111 125 hsl 128 15 1 5001 1 0 \$0-morph.time \$0-morph.time-rcv
 MORPH.TIME=0ms 2 8 0 10 -225271 -1 -1 0 1;
 #X obj 783 399 u_parameter \$0 morph.time;
 #X obj 581 709 midi-colors \$0 morph.time \$0-morph.time-rcv 0 0 no_morphing
@@ -303,6 +305,8 @@ wet 0.399579 @ fx_dubdel2-2 fb 0.648925 @ fx_dubdel2-2 bq 2 @ fx_dubdel2-2
 bpitch 113.971 @ fx_lop-1 speed 59.3009 @ fx_lop-1 freq 2307.12 @ fx_lop-1
 delta 0 @ fx_lop-1 Q 7.88775 @ audio_out-3 pan 0 @ audio_out-3 mute
 0 @ audio_out-3 vol 111.345 @ audio_out-3 out OUT(1/2);
+#X obj 901 48 declare -path ../../ressources/core;
+#X obj 901 78 declare -path ../../ressources/rj;
 #X connect 3 0 4 0;
 #X connect 9 0 10 0;
 #X connect 10 0 11 0;

@@ -1,0 +1,5 @@
+TestDj ltranspose <subset> <undefined> @ pos 0.58651 @ lpos <subset>
+0 @ sr 44100 @ lsr <subset> 44100 @ vol 112.878 @ path others @ high_key
+72 @ lhigh_key <subset> 72 @ low_key 57 @ llow_key <subset> 48 @ root_key
+57 @ lroot_key <subset> 60 @ filename Dj.wav @ lfilename <subset> Dj.wav
+@;

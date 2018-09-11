@@ -1,0 +1,55 @@
+#N struct 18074-symarray float x array symbols 18074-sym;
+#N struct 18074-sym symbol name float on;
+#N struct 18087-symarray float x array symbols 18087-sym;
+#N struct 18087-sym symbol name float on;
+#N struct 18088-symarray float x array symbols 18088-sym;
+#N struct 18088-sym symbol name float on;
+#N struct 18089-symarray float x array symbols 18089-sym;
+#N struct 18089-sym symbol name float on;
+#N canvas 323 161 873 552 12;
+#X declare -path ../core;
+#X declare -path ../rj;
+#X declare -path ../modules;
+#X obj 346 63 declare -path ../core;
+#X obj 346 93 declare -path ../rj;
+#X obj 356 123 declare -path ../modules;
+#X obj 82 391 dac~;
+#X obj 256 69 notein;
+#X obj 257 116 pack f f;
+#X msg 257 138 note \$1 \$2;
+#X obj 44 86 data_azerty2midi;
+#X text 174 225 0 1 2 3 4;
+#X text 399 326 SampleRate = 44100 par défaut;
+#X text 340 283 1) Choix du sample;
+#X text 398 309 Ajout / modification d'un sample;
+#X text 340 422 2) mapping;
+#X text 340 497 4) gestion des différents samples en mémoire;
+#X text 315 225 Paramètres avancés : ils sont divisés en 4 sections
+;
+#X text 323 247 (pour faire apparaitre le sélecteur d'onglet \, appuyer
+sur EDIT);
+#X text 339 355 ATTENTION : les fichiers doivent être obligatoirement
+tous stockés dans un même sous-dossier du dossier modules/pcm_synth/soundfonts/
+;
+#X text 27 20 inst_oneshot : lecteur oneshot multisample stereo \,
+pour lire une collection de samples directement depuis le disque \,
+sans les charger en mémoire;
+#X text 570 21 64 samples différents;
+#X text 577 47 16 voix de polyhonie;
+#X obj 58 247 inst_oneshot;
+#X text 311 156 Mode toogle : le sample est joué jusqu'à réception
+de l'événement note off;
+#X text 321 186 Mode trigger : le sample est joué en entier \, sans
+tenir compte de l'événement note off;
+#X text 389 439 choix des notes de début (low) \, de fin (high) et
+de référence (root);
+#X text 340 477 3) points de bouclage (non pris en compte);
+#X text 345 470 ______________________;
+#X text 58 422 spread : pan aleatoire;
+#X connect 4 0 5 0;
+#X connect 4 1 5 1;
+#X connect 5 0 6 0;
+#X connect 6 0 20 2;
+#X connect 7 2 20 2;
+#X connect 20 0 3 0;
+#X connect 20 1 3 1;

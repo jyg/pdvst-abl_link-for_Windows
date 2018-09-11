@@ -113,7 +113,7 @@
 #X restore 509 55 pd delete;
 #X obj 279 72 s \$1-index;
 #X obj 285 171 r \$1-index;
-#N canvas 587 107 704 476 update 1;
+#N canvas 587 107 704 476 update 0;
 #X obj 250 62 inlet;
 #X obj 352 63 r \$1-l\$2;
 #X obj 277 168 list append;
@@ -156,6 +156,7 @@
 #X obj 381 23 route get append reset delete next prev update set;
 #X obj 768 81 list trim;
 #X obj 768 103 route <subset>;
+#X obj 770 188 r \$1-index;
 #X connect 0 0 3 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 0;
@@ -185,3 +186,4 @@
 #X connect 23 0 24 0;
 #X connect 24 0 5 0;
 #X connect 24 1 5 0;
+#X connect 25 0 20 1;

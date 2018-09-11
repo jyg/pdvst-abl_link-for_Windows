@@ -1,0 +1,49 @@
+Prenoms mode 1 @ vol 111.449 @ lend <subset> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> @ lstart <subset> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> @ path
+aime @ high_key 108 @ lhigh_key <subset> 48 50 52 53 55 57 59 60 62
+64 65 67 69 71 72 74 76 77 79 81 83 84 86 88 89 91 93 95 96 98 100
+101 103 105 107 108 @ low_key 108 @ llow_key <subset> 48 50 52 53 55
+57 59 60 62 64 65 67 69 71 72 74 76 77 79 81 83 84 86 88 89 91 93 95
+96 98 100 101 103 105 107 108 @ root_key 108 @ lroot_key <subset> 48
+50 52 53 55 57 59 60 62 64 65 67 69 71 72 74 76 77 79 81 83 84 86 88
+89 91 93 95 96 98 100 101 103 105 107 108 @ filename 36.wav @ lfilename
+<subset> 01.wav 02.wav 03.wav 04.wav 05.wav 06.wav 07.wav 08.wav 09.wav
+10.wav 11.wav 12.wav 13.wav 14.wav 15.wav 16.wav 17.wav 18.wav 19.wav
+20.wav 21.wav 22.wav 23.wav 24.wav 25.wav 26.wav 27.wav 28.wav 29.wav
+30.wav 31.wav 32.wav 33.wav 34.wav 35.wav 36.wav @;
+Verbes mode 1 @ vol 100.563 @ lend <subset> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> @ lstart <subset> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> @ path aime @ high_key 81 @ lhigh_key <subset> 48 49 50
+51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73
+74 75 76 77 78 79 80 81 @ low_key 81 @ llow_key <subset> 48 49 50 51
+52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74
+75 76 77 78 79 80 81 @ root_key 81 @ lroot_key <subset> 48 49 50 51
+52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74
+75 76 77 78 79 80 81 @ filename verbe34.wav @ lfilename <subset> verbe01.wav
+verbe02.wav verbe03.wav verbe04.wav verbe05.wav verbe06.wav verbe07.wav
+verbe08.wav verbe09.wav verbe10.wav verbe11.wav verbe12.wav verbe13.wav
+verbe14.wav verbe15.wav verbe16.wav verbe17.wav verbe18.wav verbe19.wav
+verbe20.wav verbe21.wav verbe22.wav verbe23.wav verbe24.wav verbe25.wav
+verbe26.wav verbe27.wav verbe28.wav verbe29.wav verbe30.wav verbe31.wav
+verbe32.wav verbe33.wav verbe34.wav @;

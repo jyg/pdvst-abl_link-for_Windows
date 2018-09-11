@@ -11,4 +11,3 @@
 #X obj 34 97 fx_lowhip;
 #X text 12 14 effet de filtre (passe bas / passe haut avec passage
 continu de l'un à l'autre);
-#X coords 0 297 1 296 190 70 0;

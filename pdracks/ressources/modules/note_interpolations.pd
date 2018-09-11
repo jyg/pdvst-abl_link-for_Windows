@@ -1,4 +1,6 @@
 #N canvas 417 96 926 486 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #N canvas 172 83 586 377 LICENSE-GPL 0;
 #X text 57 88 This program is free software: you can redistribute it
 and/or modify it under the terms of the GNU General Public License
@@ -53,13 +55,15 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 303 216 r \$0-mode;
 #X obj 347 345 u_parameter \$0 mode;
 #X obj 219 150 tgl 15 0 \$0-direct \$0-direct-rcv direct 17 7 0 10
--262144 -1 -1 1 1;
+-262144 -1 -1 0 1;
 #X obj 347 365 u_parameter \$0 direct;
 #X obj 267 287 spigot;
 #X obj 303 256 r \$0-direct;
 #X msg 195 363 note \$1 \$2;
 #X text 458 61 todo : écrire un registre \, dans lequel sont mémorisées
 les notes entrantes;
+#X obj 484 4 declare -path ../../ressources/core;
+#X obj 484 34 declare -path ../../ressources/rj;
 #X connect 2 0 4 0;
 #X connect 3 0 5 0;
 #X connect 6 0 10 0;

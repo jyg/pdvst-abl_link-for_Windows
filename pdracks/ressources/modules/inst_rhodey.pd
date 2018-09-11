@@ -1,4 +1,6 @@
-#N canvas 203 50 981 595 10;
+#N canvas 203 56 981 595 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #X obj 191 51 makenote 100 100;
 #N canvas 145 50 577 652 random 0;
 #X obj 100 99 select 1;
@@ -98,15 +100,18 @@
 #X obj 45 216 pack f f;
 #X obj 52 187 spigot;
 #X obj 192 194 r \$0-midiNoteIn;
-#X obj 227 153 tgl 15 0 \$0-midiNoteIn \$0-midiNoteIn-rcv midiNoteIn
+#X obj 227 153 tgl 15 0 \$0-midiNoteIn \$0-midiNoteIn-rcv omni_notein
 -50 7 0 10 -262144 -1 -1 0 1;
 #X obj 252 115 ui_vs \$0 vol 0 127;
+#X obj 534 4 declare -path ../../ressources/core;
+#X obj 534 34 declare -path ../../ressources/rj;
 #X connect 1 0 0 0;
 #X connect 1 1 0 1;
 #X connect 1 2 0 2;
 #X connect 3 0 22 0;
 #X connect 4 0 5 0;
 #X connect 4 0 29 0;
+#X connect 4 1 26 0;
 #X connect 5 0 18 0;
 #X connect 5 1 18 1;
 #X connect 6 0 16 0;

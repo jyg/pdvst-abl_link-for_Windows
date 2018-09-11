@@ -1,0 +1,156 @@
+#N struct 2936-symarray float x array symbols 2936-sym;
+#N struct 2936-sym symbol name float on;
+#N struct mappings float y symbol module_name symbol param_name float
+ccnum float min float max symbol mapping;
+#N canvas 1 56 1046 598 10;
+#X declare -path ../ressources/modules;
+#X obj 90 110 note_16steps 1;
+#X obj 90 270 fx_sub 1;
+#X obj 91 346 note_randomize 1;
+#X obj 88 509 audio_out 3;
+#X obj 290 110 note_16steps 2;
+#X obj 290 190 note_randomize 2;
+#X obj 290 270 inst_bassdrum 2;
+#X obj 290 350 fx_dubdel2 3;
+#X obj 290 430 audio_out 5;
+#X obj 520 110 audio_in 5;
+#X obj 520 190 fx_dattorroverb 1;
+#X obj 520 270 audio_out 4;
+#X obj 836 67 pdr;
+#N canvas 1 56 450 300 PdRacks.declare 0;
+#X obj 10 10 declare -path ../ressources/modules;
+#X obj 10 35 pdr-categories;
+#X obj 10 85 text define -k pdr-extensions;
+#A set;
+#X obj 10 60 text define -k scene_preset;
+#A set fx_reverse-0 speed 2 \; fx_reverse-0 reverse 1 \; fx_reverse-0
+loop 1 \; fx_reverse-0 time 9.99947 \; fx_reverse-0 rev-att 0.101737
+\; inst_tabosc-1 slot 4 \; inst_tabosc-1 harmo8 0 \; inst_tabosc-1
+harmo7 0 \; inst_tabosc-1 harmo6 0.214961 \; inst_tabosc-1 harmo5 0.00708661
+\; inst_tabosc-1 harmo4 0.266929 \; inst_tabosc-1 harmo3 0.155906 \;
+inst_tabosc-1 harmo2 0.281102 \; inst_tabosc-1 harmo1 1 \; inst_tabosc-1
+sustain 23.9634 \; inst_tabosc-1 vol 98.2867 \; inst_tabosc-1 mode
+0 \; audio_out-3 slot 36 \; audio_out-3 pan 0 \; audio_out-3 vol 95.6184
+\; audio_out-3 out OUT(1/2) \; fx_dattorroverb-0 slot 35 \; fx_dattorroverb-0
+fbgain 0.8 \; fx_dattorroverb-0 damping 0.25 \; fx_dattorroverb-0 bandwidth
+0.6 \; fx_dattorroverb-0 predel 30 \; fx_dattorroverb-0 wet 0.252805
+\; audio_in-4 slot 34 \; audio_in-4 module-slot 0 \; audio_in-4 gain
+-0.127586 \; audio_in-4 in MASTER \; audio_out-4 slot 17 \; audio_out-4
+pan 0.255102 \; audio_out-4 mute 0 \; audio_out-4 vol 95.8798 \; audio_out-4
+out MASTER \; fx_dubdel2-2 noclick_mode 0 \; fx_dubdel2-2 slot 16 \;
+fx_dubdel2-2 dell 4 \; fx_dubdel2-2 delr 3 \; fx_dubdel2-2 sync 1 \;
+fx_dubdel2-2 del 619.309 \; fx_dubdel2-2 wet 0.274425 \; fx_dubdel2-2
+fb 0.241608 \; fx_dubdel2-2 bq 2 \; fx_dubdel2-2 bpitch 95.9466 \;
+inst_bassdrum-1 slot 15 \; inst_bassdrum-1 gain 0.841059 \; inst_bassdrum-1
+decay 49.2443 \; inst_bassdrum-1 freq2 73.3351 \; inst_bassdrum-1 square
+5.83388 \; inst_bassdrum-1 curve 12.7756 \; inst_bassdrum-1 noize 0.829787
+\; inst_bassdrum-1 lowpass 3085.76 \; note_randomize-1 euclid 48 \;
+note_randomize-1 slot 14 \; note_randomize-1 accent 13.628 \; note_randomize-1
+prob 68.6451 \; note_16steps-1 ticks 0 \; note_16steps-1 vol 100 \;
+note_16steps-1 sustain 0.8 \; note_16steps-1 randoms 0 1 0 0 1 0 0
+1 0 0 1 0 1 0 0 0 \; note_16steps-1 lrandoms <sublist> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> \; note_16steps-1 div 0 \; note_16steps-1
+slot 13 \; note_16steps-1 cycle 12 \; note_16steps-1 lcycle <subset>
+16 16 16 16 \; note_16steps-1 steps 15.4666 10 9.66662 -1 7 3.86662
+-1 0 20.3001 7.73329 6 11.6 20.4 18.3667 19.3334 27.0667 \; note_16steps-1
+lsteps <sublist> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> \; note_16steps-1
+xpose 4.19048 \; note_16steps-1 lxpose <subset> 0 0 0 0 \; note_16steps-1
+offset 44.898 \; note_16steps-1 loffset <subset> 50 50 50 50 \; note_16steps-1
+scale 3.44898 \; note_16steps-1 lscale <subset> 0 0 0 0 \; audio_out-2
+slot 7 \; audio_out-2 pan 0.0510204 \; audio_out-2 vol 98.8276 \; audio_out-2
+out MASTER \; note_randomize-0 euclid 36 \; note_randomize-0 wet 0.713421
+\; note_randomize-0 decay 498.049 \; note_randomize-0 slot 6 \; note_randomize-0
+accent 14.2092 \; note_randomize-0 prob 19.5704 \; fx_sub-0 slot 5
+\; fx_sub-0 wet 0.981951 \; fx_sub-0 bypass 0 \; fx_sub-0 direct 99.9564
+\; fx_sub-0 oct2 60.3414 \; fx_sub-0 oct1 47.3876 \; note_16steps-0
+ticks 0 \; note_16steps-0 vol 100 \; note_16steps-0 sustain 0.8 \;
+note_16steps-0 randoms 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 \; note_16steps-0
+lrandoms <sublist> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+\; note_16steps-0 div 1 \; note_16steps-0 slot 3 \; note_16steps-0
+cycle 12 \; note_16steps-0 lcycle <subset> 16 16 16 16 \; note_16steps-0
+steps 6.76667 0 6.76667 6.76667 4.83332 4.83332 6.76667 23 7.73334
+7.73334 8.70002 8.70002 13.5333 12.5667 16.4334 13.5334 \; note_16steps-0
+lsteps <sublist> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> \; note_16steps-0
+xpose 4.71429 \; note_16steps-0 lxpose <subset> 0 0 0 0 \; note_16steps-0
+offset 14.2857 \; note_16steps-0 loffset <subset> 50 50 50 50 \; note_16steps-0
+scale 3.71429 \; note_16steps-0 lscale <subset> 0 0 0 0 \;;
+#X restore 836 112 pd PdRacks.declare;
+#X obj 836 142 PdRacks.settings;
+#X obj 836 225 PdRacks.transport;
+#X obj 90 190 inst_tabosc 2;
+#X text 170 51 Press Spacebar to start...;
+#X obj 90 425 fx_reverse;
+#X obj 838 310 PdRacks.midilearn;
+#X connect 0 0 16 0;
+#X connect 0 1 16 1;
+#X connect 0 2 16 2;
+#X connect 1 0 2 0;
+#X connect 1 1 2 1;
+#X connect 1 2 2 2;
+#X connect 2 0 18 0;
+#X connect 2 1 18 1;
+#X connect 2 2 18 2;
+#X connect 4 0 5 0;
+#X connect 4 1 5 1;
+#X connect 4 2 5 2;
+#X connect 5 0 6 0;
+#X connect 5 1 6 1;
+#X connect 5 2 6 2;
+#X connect 6 0 7 0;
+#X connect 6 1 7 1;
+#X connect 6 2 7 2;
+#X connect 7 0 8 0;
+#X connect 7 1 8 1;
+#X connect 7 2 8 2;
+#X connect 9 0 10 0;
+#X connect 9 1 10 1;
+#X connect 9 2 10 2;
+#X connect 10 0 11 0;
+#X connect 10 1 11 1;
+#X connect 10 2 11 2;
+#X connect 16 0 1 0;
+#X connect 16 1 1 1;
+#X connect 16 2 1 2;
+#X connect 18 0 3 0;
+#X connect 18 1 3 1;
+#X connect 18 2 3 2;

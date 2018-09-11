@@ -1,4 +1,4 @@
-#N canvas 713 50 613 297 10;
+#N canvas 713 56 622 370 10;
 #X declare -path ../core;
 #X declare -path ../rj;
 #X obj 346 38 declare -path ../core;
@@ -10,4 +10,7 @@
 #X text 10 50 mise en oeuvre de l'abstraction rjdj e_beequad;
 #X text 11 30 effet de filtre passe bas;
 #X obj 65 129 fx_lop;
-#X coords 0 297 1 296 190 70 0;
+#X text 145 261 la section expérimentale LFO permet de faire varier
+la fréquence en fonction de l'attaque du son entrant :;
+#X text 243 299 delta = amplitude de la variation de fréquence;
+#X text 244 321 speed = rapidité de variation;

@@ -1,0 +1,71 @@
+#N canvas 437 94 551 508 10;
+#X obj 139 396 *~;
+#X obj 287 399 *~;
+#X obj 102 397 *~;
+#X obj 253 399 *~;
+#X floatatom 208 326 5 0 1 0 drywet - -, f 5;
+#X obj 271 423 +~;
+#X obj 116 425 +~;
+#X obj 209 349 - 1;
+#X obj 208 370 * -1;
+#X obj 180 296 dattorroplate;
+#X text 265 4 tested in pdextended;
+#X text 346 160 predelay - 0 to 200;
+#X text 347 179 bandwidth 0 to 1;
+#X text 346 197 damping 0 to 1;
+#X obj 371 33 loadbang;
+#X text 346 233 gain above 1 oscillates;
+#X text 344 215 gain 0 to 1;
+#X obj 130 248 inlet~;
+#X obj 272 451 outlet~;
+#X obj 115 457 outlet~;
+#X obj 0 0 cnv 15 200 200 empty empty dattorro_plate 20 12 0 14 -233017
+-66577 0;
+#X obj 9 40 hsl 128 15 0 200 0 0 empty predelayms predelayms -2 -8
+0 10 -262144 -1 -1 1905 1;
+#X floatatom 151 39 5 0 0 0 - - -, f 5;
+#X obj 9 72 hsl 128 15 0 1 0 0 empty bandwidth bandwidth -2 -8 0 10
+-262144 -1 -1 7620 1;
+#X floatatom 152 71 5 0 0 0 - - -, f 5;
+#X obj 9 106 hsl 128 15 0 1 0 0 empty damping damping -2 -8 0 10 -262144
+-1 -1 3175 1;
+#X floatatom 152 105 5 0 0 0 - - -, f 5;
+#X obj 10 137 hsl 128 15 0 1 0 0 empty gain fbgain -2 -8 0 10 -262144
+-1 -1 6350 1;
+#X floatatom 153 136 5 0 0 0 - - -, f 5;
+#X obj 11 169 hsl 128 15 0 100 0 0 empty drywet mix -2 -8 0 10 -262144
+-1 -1 6350 1;
+#X floatatom 154 168 5 0 0 0 - - -, f 5;
+#X obj 209 170 * 0.01;
+#X msg 372 62 \; predelayms 30 \; bandwidth 0.6 \; damping 0.25 \;
+gain 0.8 \; drywet 50;
+#X connect 0 0 6 1;
+#X connect 1 0 5 1;
+#X connect 2 0 6 0;
+#X connect 3 0 5 0;
+#X connect 4 0 1 0;
+#X connect 4 0 0 0;
+#X connect 4 0 7 0;
+#X connect 5 0 18 0;
+#X connect 6 0 19 0;
+#X connect 7 0 8 0;
+#X connect 8 0 2 1;
+#X connect 8 0 3 1;
+#X connect 9 0 0 1;
+#X connect 9 1 1 1;
+#X connect 14 0 32 0;
+#X connect 17 0 2 0;
+#X connect 17 0 9 0;
+#X connect 17 0 3 0;
+#X connect 21 0 22 0;
+#X connect 22 0 9 1;
+#X connect 23 0 24 0;
+#X connect 24 0 9 2;
+#X connect 25 0 26 0;
+#X connect 26 0 9 3;
+#X connect 27 0 28 0;
+#X connect 28 0 9 4;
+#X connect 29 0 30 0;
+#X connect 30 0 31 0;
+#X connect 31 0 4 0;
+#X coords 0 -1 1 1 200 200 2 0 0;

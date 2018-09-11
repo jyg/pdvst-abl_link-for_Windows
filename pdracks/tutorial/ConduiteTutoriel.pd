@@ -1,0 +1,521 @@
+#N struct text-help-struct float x float y text z;
+#N canvas 732 339 936 609 16;
+#X scalar text-help-struct 522 106.6 \; audio_out-3 slot 14 \\\; audio_out-3
+pan 0 \\\; audio_out-3 vol 110.931 \\\; audio_out-3 out OUT(1/2) \\\;
+data_azerty2midi-0 enable 1 \\\; data_azerty2midi-0 slot 12 \\\; data_azerty2midi-0
+oct 3 \\\; data_azerty2midi-0 velo 100 \\\; inst_rhodey-0 vol 95.3796
+\\\; inst_rhodey-0 slot 13 \\\; inst_rhodey-0 tone 0.432653 \\\; inst_rhodey-0
+decay 2449.16 \\\; \;;
+#X scalar text-help-struct 525 149 \; inst_euclidrums-0 set 1 \\\;
+inst_euclidrums-0 bd 11.1804 \\\; inst_euclidrums-0 sn 17.182 \\\;
+inst_euclidrums-0 hh 25.169 \\\; inst_euclidrums-0 slot 14 \\\; audio_out-4
+slot 16 \\\; audio_out-4 pan 0 \\\; audio_out-4 vol 100.563 \\\; audio_out-4
+out OUT(1/2) \\\; data_wintablet-1 slot 13 \\\; fx_dubdel2-2 noclick_mode
+0 \\\; fx_dubdel2-2 slot 15 \\\; fx_dubdel2-2 dell 3 \\\; fx_dubdel2-2
+delr 3 \\\; fx_dubdel2-2 sync 1 \\\; fx_dubdel2-2 del 459.508 \\\;
+fx_dubdel2-2 wet 0.42449 \\\; fx_dubdel2-2 fb 0.138776 \\\; fx_dubdel2-2
+bq 2 \\\; fx_dubdel2-2 bpitch 60 \\\; \;;
+#X text 117 563 Session EucliDrums;
+#X scalar text-help-struct 303 557 \; inst_euclidrums-0 set 0 \\\;
+inst_euclidrums-0 bd 11.1804 \\\; inst_euclidrums-0 sn 17.182 \\\;
+inst_euclidrums-0 hh 25.169 \\\; inst_euclidrums-0 slot 14 \\\; fx_compressor-1
+lookahead 0 \\\; fx_compressor-1 response 40 \\\; fx_compressor-1 gain
+7.10204 \\\; fx_compressor-1 ratio 5.21857 \\\; fx_compressor-1 thresh
+-10.9796 \\\; fx_compressor-1 rmspeak 0 \\\; fx_compressor-1 slot 15
+\\\; audio_out-4 slot 17 \\\; audio_out-4 pan 0 \\\; audio_out-4 vol
+100.563 \\\; audio_out-4 out OUT(1/2) \\\; data_wintablet-1 slot 13
+\\\; fx_dubdel2-2 noclick_mode 0 \\\; fx_dubdel2-2 slot 16 \\\; fx_dubdel2-2
+dell 3 \\\; fx_dubdel2-2 delr 3 \\\; fx_dubdel2-2 sync 1 \\\; fx_dubdel2-2
+del 459.508 \\\; fx_dubdel2-2 wet 0.42449 \\\; fx_dubdel2-2 fb 0.138776
+\\\; fx_dubdel2-2 bq 2 \\\; fx_dubdel2-2 bpitch 60 \\\; \;;
+#X text 333 152 Une autre scène :;
+#X text 53 208 En cliquant sur une scène \, la configuration de rack
+et les réglages associés à cette scène sont chargés.;
+#X text 54 255 Il est possible de placer un carré de scène n'importe
+où dans un patch;
+#N canvas 706 325 450 300 conduite 1;
+#X scalar text-help-struct 40 0 \; \;;
+#X scalar text-help-struct 40 40 \; audio_out-3 slot 13 \\\; audio_out-3
+pan 0 \\\; audio_out-3 mute 0 \\\; audio_out-3 vol 110.931 \\\; audio_out-3
+out OUT(1/2) \\\; data_azerty2midi-0 az-qw 1 \\\; data_azerty2midi-0
+slot 12 \\\; data_azerty2midi-0 enable 1 \\\; data_azerty2midi-0 oct
+4 \\\; data_azerty2midi-0 velo 100 \\\; \;;
+#X scalar text-help-struct 40 80 \; audio_out-3 slot 14 \\\; audio_out-3
+pan 0 \\\; audio_out-3 mute 0 \\\; audio_out-3 vol 110.931 \\\; audio_out-3
+out OUT(1/2) \\\; inst_rhodey-0 slot 13 \\\; inst_rhodey-0 vol 95.3796
+\\\; inst_rhodey-0 tone 0.432653 \\\; inst_rhodey-0 decay 2449.16 \\\;
+data_azerty2midi-0 az-qw 1 \\\; data_azerty2midi-0 slot 12 \\\; data_azerty2midi-0
+enable 1 \\\; data_azerty2midi-0 oct 4 \\\; data_azerty2midi-0 velo
+100 \\\; \;;
+#X scalar text-help-struct 40 160 \; ctl-assign note_randomize-1 prob
+4 0 100 lin 0 \\\; ctl-assign inst_bassdrum-1 decay 0 10 2000 log \\\;
+ctl-assign note_16steps-1 cycle 6 1 16 lin \\\; ctl-assign inst_bassdrum-1
+freq2 2 1 1000 log \\\; fx_bitcrush-0 wet 0 \\\; fx_bitcrush-0 depth
+34.7063 \\\; fx_bitcrush-0 slot 34 \\\; audio_in-4 slot 5 \\\; audio_in-4
+module-slot 0 \\\; audio_in-4 mute 0 \\\; audio_in-4 gain 2.63673 \\\;
+audio_in-4 in MASTER \\\; audio_out-4 slot 17 \\\; audio_out-4 pan
+0 \\\; audio_out-4 mute 0 \\\; audio_out-4 vol 102.637 \\\; audio_out-4
+out MASTER \\\; inst_euclidrums-0 set 0 \\\; inst_euclidrums-0 bd 11.1804
+\\\; inst_euclidrums-0 sn 12.3494 \\\; inst_euclidrums-0 hh 25.169
+\\\; inst_euclidrums-0 slot 14 \\\; note_16steps-1 ticks 0 \\\; note_16steps-1
+vol 100 \\\; note_16steps-1 sustain 0.8 \\\; note_16steps-1 randoms
+0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 \\\; note_16steps-1 lrandoms <sublist>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> \\\; note_16steps-1
+div 1 \\\; note_16steps-1 slot 23 \\\; note_16steps-1 cycle 7.79134
+\\\; note_16steps-1 lcycle <subset> 16 16 16 16 \\\; note_16steps-1
+steps -1 29 17.4 11.6 20.3 27 18.3666 16.4333 11.5999 13 8.6999 25.1334
+11.6 27.0668 1.93322 11.6 \\\; note_16steps-1 lsteps <sublist> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> \\\; note_16steps-1 xpose 6.69565
+\\\; note_16steps-1 lxpose <subset> 0 0 0 0 \\\; note_16steps-1 offset
+38.8889 \\\; note_16steps-1 loffset <subset> 50 50 50 50 \\\; note_16steps-1
+scale 5.77778 \\\; note_16steps-1 lscale <subset> 0 0 0 0 \\\; note_16steps-1
+DeviceFeedback 1 \\\; fx_compressor-1 lookahead 0 \\\; fx_compressor-1
+response 40 \\\; fx_compressor-1 gain 7.10204 \\\; fx_compressor-1
+ratio 5.21857 \\\; fx_compressor-1 thresh -10.9796 \\\; fx_compressor-1
+rmspeak 0 \\\; fx_compressor-1 slot 15 \\\; fx_parameq2-0 speed 63.0957
+\\\; fx_parameq2-0 delta -7.71428 \\\; fx_parameq2-0 slot 35 \\\; fx_parameq2-0
+bypass 0 \\\; fx_parameq2-0 gain 19.8699 \\\; fx_parameq2-0 freq 872.501
+\\\; fx_parameq2-0 Q 4.02623 \\\; audio_out-3 slot 27 \\\; audio_out-3
+pan 0 \\\; audio_out-3 mute 0 \\\; audio_out-3 vol 104.71 \\\; audio_out-3
+out MASTER \\\; fx_freeverb-2 slot 6 \\\; fx_freeverb-2 freeze 0 \\\;
+fx_freeverb-2 wet 0.118367 \\\; fx_freeverb-2 damp 88.9796 \\\; fx_freeverb-2
+hall 62.449 \\\; fx_freeverb-2 amp 80 \\\; note_randomize-1 euclid
+24 \\\; note_randomize-1 wet 0.999894 \\\; note_randomize-1 decay 88.8358
+\\\; note_randomize-1 slot 25 \\\; note_randomize-1 accent 8.16327
+\\\; note_randomize-1 prob 28.6417 \\\; inst_bassdrum-1 slot 24 \\\;
+inst_bassdrum-1 gain 0.852339 \\\; inst_bassdrum-1 decay 440.142 \\\;
+inst_bassdrum-1 freq2 2.48696 \\\; inst_bassdrum-1 square 1.71413 \\\;
+inst_bassdrum-1 curve 34.0341 \\\; inst_bassdrum-1 noize 0.765957 \\\;
+inst_bassdrum-1 lowpass 10000 \\\; data_wintablet-1 ccz_enable 1 \\\;
+data_wintablet-1 ccy_enable 1 \\\; data_wintablet-1 ccx_enable 1 \\\;
+data_wintablet-1 ccz 6 \\\; data_wintablet-1 ccy 4 \\\; data_wintablet-1
+ccx 2 \\\; data_wintablet-1 slot 13 \\\; fx_dubdel2-2 noclick_mode
+0 \\\; fx_dubdel2-2 slot 16 \\\; fx_dubdel2-2 dell 3 \\\; fx_dubdel2-2
+delr 3 \\\; fx_dubdel2-2 sync 1 \\\; fx_dubdel2-2 del 459.508 \\\;
+fx_dubdel2-2 wet 0.42449 \\\; fx_dubdel2-2 fb 0.138776 \\\; fx_dubdel2-2
+bq 2 \\\; fx_dubdel2-2 bpitch 60 \\\; fx_dubdel2-1 noclick_mode 0 \\\;
+fx_dubdel2-1 slot 26 \\\; fx_dubdel2-1 dell 3 \\\; fx_dubdel2-1 delr
+3 \\\; fx_dubdel2-1 sync 1 \\\; fx_dubdel2-1 del 462.387 \\\; fx_dubdel2-1
+wet 0.510204 \\\; fx_dubdel2-1 fb 0.0857143 \\\; fx_dubdel2-1 bq 2
+\\\; fx_dubdel2-1 bpitch 88.3143 \\\; fx_dubdel-1 slot 36 \\\; fx_dubdel-1
+sync 1 \\\; fx_dubdel-1 dell 0 \\\; fx_dubdel-1 delr 0 \\\; fx_dubdel-1
+del 360.225 \\\; fx_dubdel-1 wet 0.534694 \\\; fx_dubdel-1 fb 0.302041
+\\\; fx_dubdel-1 bq 2 \\\; fx_dubdel-1 bpitch 86.2857 \\\; audio_out-2
+slot 37 \\\; audio_out-2 pan 0 \\\; audio_out-2 mute 0 \\\; audio_out-2
+vol 98.4898 \\\; audio_out-2 out OUT(1/2) \\\; audio_out-1 slot 7 \\\;
+audio_out-1 pan 0 \\\; audio_out-1 vol 101.082 \\\; audio_out-1 out
+OUT(1/2) \\\; \;;
+#X scalar text-help-struct 40 600 \; fx_formant-0 vowels 94.3429 \\\;
+fx_formant-0 Q 84.4939 \\\; fx_formant-0 slot 13 \\\; inst_pcm-1 sr
+44100 \\\; inst_pcm-1 lsr <subset> 32000 32000 32000 32000 32000 32000
+32000 32000 32000 32000 32000 32000 32000 32000 32000 32000 32000 32000
+32000 32000 \\\; inst_pcm-1 vol 99.5265 \\\; inst_pcm-1 lend <subset>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> \\\; inst_pcm-1 lstart <subset> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> \\\; inst_pcm-1 path P200_Piano \\\; inst_pcm-1 high_key
+108 \\\; inst_pcm-1 lhigh_key <subset> 34 30 26 38 42 46 50 54 58 62
+66 70 74 78 84 90 94 99 104 108 \\\; inst_pcm-1 low_key 105 \\\; inst_pcm-1
+llow_key <subset> 31 27 0 35 39 43 47 51 55 59 63 67 71 75 79 85 91
+95 100 105 \\\; inst_pcm-1 root_key 108 \\\; inst_pcm-1 lroot_key <subset>
+34 30 26 38 42 46 50 54 58 62 66 70 74 78 84 90 94 99 104 108 \\\;
+inst_pcm-1 slot 12 \\\; inst_pcm-1 filename P200_Piano_C10(L).wav \\\;
+inst_pcm-1 lfilename <subset> P200_Piano_A#2(L).wav P200_Piano_F#2(L).wav
+P200_Piano_D2(L).wav P200_Piano_D3(L).wav P200_Piano_F#3(L).wav P200_Piano_A#3(L).wav
+P200_Piano_D4(L).wav P200_Piano_F#4(L).wav P200_Piano_A#4(L).wav P200_Piano_D5(L).wav
+P200_Piano_F#5(L).wav P200_Piano_A#5(L).wav P200_Piano_D6(L).wav P200_Piano_F#6(L).wav
+P200_Piano_C7(L).wav P200_Piano_F#7(L).wav P200_Piano_A#7(L).wav P200_Piano_D#8(L).wav
+P200_Piano_G#9(L).wav P200_Piano_C10(L).wav \\\; midi_notein-1 factor
+127 \\\; midi_notein-1 power 0.19307 \\\; midi_notein-1 slot 11 \\\;
+audio_out-4 slot 14 \\\; audio_out-4 pan 0 \\\; audio_out-4 mute 0
+\\\; audio_out-4 vol 82.4204 \\\; audio_out-4 out OUT(1/2) \\\; fx_lowhip-3
+slot 23 \\\; \;;
+#X scalar text-help-struct 40 520 \; audio_in-4 slot 1 \\\; audio_in-4
+module-slot 0 \\\; audio_in-4 mute 0 \\\; audio_in-4 gain 8 \\\; audio_in-4
+in IN(1/2) \\\; fx_sub-0 slot 14 \\\; fx_sub-0 wet 9.71157e-05 \\\;
+fx_sub-0 bypass 0 \\\; fx_sub-0 direct 100 \\\; fx_sub-0 oct2 78.7402
+\\\; fx_sub-0 oct1 0 \\\; fx_parameq-4 bypass 0 \\\; fx_parameq-4 gain
+-5.39592 \\\; fx_parameq-4 freq 1915.41 \\\; fx_parameq-4 Q 6.67559
+\\\; fx_parameq-4 slot 4 \\\; fx_compressor-1 lookahead 0 \\\; fx_compressor-1
+response 39 \\\; fx_compressor-1 gain 8.60204 \\\; fx_compressor-1
+ratio 11.1309 \\\; fx_compressor-1 thresh -11.0204 \\\; fx_compressor-1
+rmspeak 0 \\\; fx_compressor-1 slot 2 \\\; fx_parameq2-0 speed 147.01
+\\\; fx_parameq2-0 delta 0 \\\; fx_parameq2-0 slot 3 \\\; fx_parameq2-0
+bypass 0 \\\; fx_parameq2-0 gain 0 \\\; fx_parameq2-0 freq 100.537
+\\\; fx_parameq2-0 Q 1.29305 \\\; audio_out-3 slot 18 \\\; audio_out-3
+pan 0.0510204 \\\; audio_out-3 mute 0 \\\; audio_out-3 vol 95.3796
+\\\; audio_out-3 out OUT(1/2) \\\; fx_freeverb-2 slot 33 \\\; fx_freeverb-2
+freeze 0 \\\; fx_freeverb-2 wet 0.996684 \\\; fx_freeverb-2 damp 56.6929
+\\\; fx_freeverb-2 hall 90.9191 \\\; fx_freeverb-2 amp 88.0315 \\\;
+inst_headrush-1 slot 23 \\\; inst_headrush-1 vol 82.2646 \\\; inst_headrush-1
+wet 0.999304 \\\; fx_dubdel2-2 noclick_mode 0 \\\; fx_dubdel2-2 slot
+24 \\\; fx_dubdel2-2 dell 4 \\\; fx_dubdel2-2 delr 4 \\\; fx_dubdel2-2
+sync 1 \\\; fx_dubdel2-2 del 540.437 \\\; fx_dubdel2-2 wet 0 \\\; fx_dubdel2-2
+fb 0.669291 \\\; fx_dubdel2-2 bq 2 \\\; fx_dubdel2-2 bpitch 99.0551
+\\\; fx_dubdel2-1 noclick_mode 0 \\\; fx_dubdel2-1 slot 16 \\\; fx_dubdel2-1
+dell 4 \\\; fx_dubdel2-1 delr 4 \\\; fx_dubdel2-1 sync 0 \\\; fx_dubdel2-1
+del 540.437 \\\; fx_dubdel2-1 wet 0 \\\; fx_dubdel2-1 fb 0.857957 \\\;
+fx_dubdel2-1 bq 2 \\\; fx_dubdel2-1 bpitch 99.0551 \\\; fx_chorus-2
+slot 17 \\\; fx_chorus-2 bypass 0 \\\; fx_chorus-2 mod 2 \\\; fx_chorus-2
+freq 1.2948 \\\; fx_pitchshift-2 slot 13 \\\; fx_pitchshift-2 semitones
+0 \\\; fx_pitchshift-2 del 3.21578 \\\; fx_pitchshift-2 fback 47.2441
+\\\; fx_pitchshift-2 wet 0 \\\; fx_pitchshift-2 size 100 \\\; fx_pitchshift-2
+pitch -12 \\\; fx_ring-1 slot 15 \\\; fx_ring-1 freq 0.1 \\\; fx_ring-1
+wet 0.677165 \\\; fx_lowhip-1 slot 25 \\\; fx_lowhip-1 f.Q 0.551181
+\\\; fx_lowhip-1 f.freq 0.141732 \\\; fx_reverse-1 rev-att 0 \\\; fx_reverse-1
+slot 12 \\\; audio_record-1 slot 34 \\\; audio_out-2 slot 35 \\\; audio_out-2
+pan 0 \\\; audio_out-2 mute 0 \\\; audio_out-2 vol 0 \\\; audio_out-2
+out OUT(1/2) \\\; audio_out-0 slot 26 \\\; audio_out-0 pan 0 \\\; audio_out-0
+mute 0 \\\; audio_out-0 vol 0 \\\; audio_out-0 out OUT(1/2) \\\; audio_in-3
+slot 11 \\\; audio_in-3 module-slot 4 \\\; audio_in-3 mute 0 \\\; audio_in-3
+gain -0.34388 \\\; audio_in-3 in MODULE \\\; audio_in-2 slot 32 \\\;
+audio_in-2 module-slot 17 \\\; audio_in-2 mute 0 \\\; audio_in-2 gain
+-0.0328598 \\\; audio_in-2 in MODULE \\\; audio_in-1 slot 22 \\\; audio_in-1
+module-slot 16 \\\; audio_in-1 gain -8.24898 \\\; audio_in-1 in MODULE
+\\\; PdRacks.midi-0 note2cc_chan_out 2 \\\; PdRacks.midi-0 note2cc_chan_in
+1 \\\; PdRacks.midi-0 note2cc_enable 1 \\\; ctl-assign fx_dubdel2-1
+fb 29 0 1 lin \\\; ctl-assign fx_pitchshift-2 fback 55 0 100 lin \\\;
+ctl-assign fx_parameq2-0 gain 17 0 10 lin 0 \\\; ctl-assign fx_freeverb-2
+damp 60 0 100 lin \\\; ctl-assign fx_parameq2-0 delta 17 0 30 lin 0
+\\\; ctl-assign fx_chorus-2 mod 4 0 2 lin \\\; ctl-assign audio_out-3
+vol 62 0 127 lin \\\; ctl-assign fx_sub-0 oct2 21 0 100 lin \\\; ctl-assign
+fx_pitchshift-2 del 56 1.5 4800 log \\\; ctl-assign fx_lop-1 freq 18
+20000 139.566 log 0 \\\; ctl-assign audio_out-2 vol 8 0 127 lin \\\;
+ctl-assign fx_lowhip-0 f.Q 29 0 1 lin \\\; ctl-assign fx_sub-0 direct
+22 0 100 lin \\\; ctl-assign fx_dubdel2-2 wet 5 0 1 lin \\\; ctl-assign
+fx_dubdel2-1 bpitch 30 50 120 lin \\\; ctl-assign fx_lop-1 delta 17
+0 30 lin 0 \\\; ctl-assign audio_out-0 vol 7 0 127 lin \\\; ctl-assign
+fx_sub-0 oct1 20 0 100 lin \\\; ctl-assign fx_lowhip-1 f.freq 3 0 1
+lin \\\; ctl-assign fx_lowhip-1 f.Q 51 0 1 lin \\\; ctl-assign fx_ring-1
+freq 6 0.1 3000 log \\\; ctl-assign fx_chorus-2 freq 46 0.05 10 log
+\\\; ctl-assign fx_dubdel2-2 bpitch 30 50 120 lin \\\; ctl-assign fx_reverse-1
+rev-att 19 0 1 lin \\\; ctl-assign inst_headrush-1 led-play 179 0 0
+lin 17 \\\; ctl-assign fx_ring-1 wet 2 0 1 lin \\\; ctl-assign audio_in-3
+mute 129 0 1 lin 2 \\\; ctl-assign fx_parameq2-0 Q 17 1.29305 3.65174
+log 0 \\\; ctl-assign fx_lowhip-0 f.freq 28 0 1 lin \\\; ctl-assign
+fx_freeverb-2 hall 58 0 100 lin \\\; ctl-assign fx_parameq2-0 freq
+18 20 9999 log \\\; ctl-assign fx_dubdel2-1 wet 5 0 1 lin \\\; ctl-assign
+inst_headrush-1 led-rec 175 0 0 lin 13 \\\; ctl-assign audio_in-4 gain
+16 -100 27 lin \\\; ctl-assign fx_reverse-1 reverse 176 \\\; ctl-assign
+fx_chorus-2 bypass 4 \\\; ctl-assign fx_lop-1 Q 18 0.1 8 lin 0 \\\;
+ctl-assign fx_freeverb-2 freeze 174 \\\; ctl-assign fx_dubdel2-2 del
+1 100 3000 log \\\; ctl-assign fx_dubdel2-2 fb 29 0 1 lin \\\; ctl-assign
+fx_pitchshift-2 pitch 54 -12 12 lin \\\; ctl-assign fx_dubdel2-1 del
+1 100 3000 log \\\; ctl-assign fx_sub-0 bypass 132 \\\; \;;
+#X scalar text-help-struct 40 440 \; midi_notein-0 device 0 \\\; midi_notein-0
+slot 22 \\\; note_16steps-1 DeviceFeedback 1 \\\; note_16steps-1 randoms
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \\\; note_16steps-1 lrandoms <sublist>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> \\\; note_16steps-1
+div 0 \\\; note_16steps-1 slot 24 \\\; note_16steps-1 cycle 14.4646
+\\\; note_16steps-1 lcycle <subset> 16 16 16 16 \\\; note_16steps-1
+steps -1 -1 -1 -1 4 -1 -1 -1 11 16 -1 7 1 7 16 13 \\\; note_16steps-1
+lsteps <sublist> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> \\\; note_16steps-1
+xpose 6.40945 \\\; note_16steps-1 lxpose <subset> 0 0 0 0 \\\; note_16steps-1
+offset 50.3937 \\\; note_16steps-1 loffset <subset> 50 50 50 50 \\\;
+note_16steps-1 scale 0 \\\; note_16steps-1 lscale <subset> 0 0 0 0
+\\\; audio_out-3 slot 27 \\\; audio_out-3 pan 0.0102041 \\\; audio_out-3
+mute 0 \\\; audio_out-3 vol 81.1024 \\\; audio_out-3 out OUT(1/2) \\\;
+midi_arpeggiator-0 slot 23 \\\; midi_arpeggiator-0 bypass 1 \\\; midi_arpeggiator-0
+prob 0.999902 \\\; midi_arpeggiator-0 duration 250.367 \\\; midi_arpeggiator-0
+beat 3 \\\; inst_bassdrum-1 slot 25 \\\; inst_bassdrum-1 gain 0.542868
+\\\; inst_bassdrum-1 decay 193.376 \\\; inst_bassdrum-1 freq2 1000
+\\\; inst_bassdrum-1 square 101.83 \\\; inst_bassdrum-1 curve 100 \\\;
+inst_bassdrum-1 noize 0.692913 \\\; inst_bassdrum-1 lowpass 4930.75
+\\\; fx_dubdel2-1 noclick_mode 0 \\\; fx_dubdel2-1 slot 26 \\\; fx_dubdel2-1
+dell 3 \\\; fx_dubdel2-1 delr 3 \\\; fx_dubdel2-1 sync 1 \\\; fx_dubdel2-1
+del 462.387 \\\; fx_dubdel2-1 wet 0.17551 \\\; fx_dubdel2-1 fb 0.183673
+\\\; fx_dubdel2-1 bq 2 \\\; fx_dubdel2-1 bpitch 88.3143 \\\; PdRacks.midi-0
+note2cc_chan_out 2 \\\; PdRacks.midi-0 note2cc_chan_in 1 \\\; PdRacks.midi-0
+note2cc_enable 1 \\\; ctl-assign inst_bassdrum-0 lowpass 2071 1000
+10000 log 0 \\\; ctl-assign inst_bassdrum-0 noize 2071 0 1 lin \\\;
+ctl-assign inst_bassdrum-0 curve 2070 1 100 log \\\; ctl-assign inst_bassdrum-1
+lowpass 23 1000 10000 log 0 \\\; ctl-assign inst_bassdrum-1 noize 23
+0 1 lin \\\; ctl-assign inst_bassdrum-0 freq2 2070 1 1000 log \\\;
+ctl-assign inst_bassdrum-0 decay 2069 10 2000 log \\\; ctl-assign note_16steps-0
+offset 2049 0 100 lin \\\; ctl-assign note_16steps-1 xpose 25 0 11
+lin \\\; ctl-assign inst_bassdrum-1 curve 22 1 100 log \\\; ctl-assign
+inst_bassdrum-1 freq2 22 1 1000 log \\\; ctl-assign note_16steps-1
+cycle 20 1 16 lin \\\; ctl-assign audio_out-2 vol 2055 0 100 lin 0
+\\\; ctl-assign note_16steps-0 cycle 2076 1 16 lin \\\; ctl-assign
+note_randomize-1 prob 4 0 100 lin 0 \\\; ctl-assign inst_bassdrum-1
+square 24 0.001 1000 log \\\; ctl-assign inst_bassdrum-0 square 2072
+0.001 1000 log \\\; ctl-assign inst_bassdrum-1 decay 21 10 2000 log
+\\\; ctl-assign note_16steps-0 div 2075 0 2 lin \\\; ctl-assign note_16steps-0
+scale 2074 0 13 lin \\\; ctl-assign note_16steps-0 xpose 2073 0 11
+lin \\\; ctl-assign audio_out-3 vol 7 0 100 lin 0 \\\; ctl-assign note_16steps-1
+scale 26 0 13 lin \\\; ctl-assign note_16steps-1 div 27 0 2 lin \\\;
+ctl-assign note_16steps-1 offset 1 0 100 lin 0 \\\; \;;
+#X scalar text-help-struct 40 240 \; midi_notein-1 device 1 \\\; midi_notein-1
+slot 32 \\\; midi_arpeggiator-1 slot 33 \\\; midi_arpeggiator-1 prob
+0.990687 \\\; midi_arpeggiator-1 duration 347.469 \\\; midi_arpeggiator-1
+beat 3 \\\; midi_notein-0 device 0 \\\; midi_notein-0 slot 22 \\\;
+audio_out-4 slot 17 \\\; audio_out-4 pan 0 \\\; audio_out-4 vol 96.4163
+\\\; audio_out-4 out OUT(1/2) \\\; inst_euclidrums-0 set 0 \\\; inst_euclidrums-0
+bd 11.1804 \\\; inst_euclidrums-0 sn 17.182 \\\; inst_euclidrums-0
+hh 25.169 \\\; inst_euclidrums-0 slot 14 \\\; note_16steps-1 DeviceFeedback
+1 \\\; note_16steps-1 randoms 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \\\;
+note_16steps-1 lrandoms <sublist> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> \\\; note_16steps-1 div 0 \\\; note_16steps-1 slot 24 \\\;
+note_16steps-1 cycle 16 \\\; note_16steps-1 lcycle <subset> 16 16 16
+16 \\\; note_16steps-1 steps -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 \\\; note_16steps-1 lsteps <sublist> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> \\\; note_16steps-1 xpose 5.28346 \\\; note_16steps-1
+lxpose <subset> 0 0 0 0 \\\; note_16steps-1 offset 62.9921 \\\; note_16steps-1
+loffset <subset> 50 50 50 50 \\\; note_16steps-1 scale 0 \\\; note_16steps-1
+lscale <subset> 0 0 0 0 \\\; fx_compressor-1 lookahead 0 \\\; fx_compressor-1
+response 40 \\\; fx_compressor-1 gain 7.10204 \\\; fx_compressor-1
+ratio 5.21857 \\\; fx_compressor-1 thresh -10.9796 \\\; fx_compressor-1
+rmspeak 0 \\\; fx_compressor-1 slot 15 \\\; audio_out-3 slot 27 \\\;
+audio_out-3 pan -0.357143 \\\; audio_out-3 vol 75.5906 \\\; audio_out-3
+out OUT(1/2) \\\; note_16steps-0 MidiOutPort 1 \\\; note_16steps-0
+DeviceFeedback 1 \\\; note_16steps-0 randoms 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 \\\; note_16steps-0 lrandoms <sublist> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> \\\; note_16steps-0 div 0 \\\; note_16steps-0
+slot 34 \\\; note_16steps-0 cycle 16 \\\; note_16steps-0 lcycle <subset>
+16 16 16 16 \\\; note_16steps-0 steps -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 \\\; note_16steps-0 lsteps <sublist> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> \\\; note_16steps-0 xpose 0 \\\;
+note_16steps-0 lxpose <subset> 0 0 0 0 \\\; note_16steps-0 offset 44.0945
+\\\; note_16steps-0 loffset <subset> 50 50 50 50 \\\; note_16steps-0
+scale 0 \\\; note_16steps-0 lscale <subset> 0 0 0 0 \\\; midi_arpeggiator-0
+slot 23 \\\; midi_arpeggiator-0 prob 0.999902 \\\; midi_arpeggiator-0
+duration 250.367 \\\; midi_arpeggiator-0 beat 3 \\\; inst_bassdrum-1
+slot 25 \\\; inst_bassdrum-1 gain 0.542868 \\\; inst_bassdrum-1 decay
+210.203 \\\; inst_bassdrum-1 freq2 23.4465 \\\; inst_bassdrum-1 square
+0.947061 \\\; inst_bassdrum-1 curve 8.19192 \\\; inst_bassdrum-1 noize
+0.535433 \\\; inst_bassdrum-1 lowpass 3431.1 \\\; inst_bassdrum-0 slot
+35 \\\; inst_bassdrum-0 gain 0.918894 \\\; inst_bassdrum-0 decay 112.425
+\\\; inst_bassdrum-0 freq2 23.4465 \\\; inst_bassdrum-0 square 1.31253
+\\\; inst_bassdrum-0 curve 8.19192 \\\; inst_bassdrum-0 noize 0.503937
+\\\; inst_bassdrum-0 lowpass 3191.08 \\\; data_wintablet-1 slot 13
+\\\; data_wintablet-1 ccz_enable 0 \\\; data_wintablet-1 ccy_enable
+0 \\\; data_wintablet-1 ccx_enable 0 \\\; data_wintablet-1 ccz 6 \\\;
+data_wintablet-1 ccy 4 \\\; data_wintablet-1 ccx 2 \\\; fx_dubdel2-2
+noclick_mode 0 \\\; fx_dubdel2-2 slot 16 \\\; fx_dubdel2-2 dell 3 \\\;
+fx_dubdel2-2 delr 3 \\\; fx_dubdel2-2 sync 1 \\\; fx_dubdel2-2 del
+459.508 \\\; fx_dubdel2-2 wet 0.106122 \\\; fx_dubdel2-2 fb 0.138776
+\\\; fx_dubdel2-2 bq 2 \\\; fx_dubdel2-2 bpitch 60 \\\; fx_dubdel2-1
+noclick_mode 0 \\\; fx_dubdel2-1 slot 26 \\\; fx_dubdel2-1 dell 3 \\\;
+fx_dubdel2-1 delr 3 \\\; fx_dubdel2-1 sync 1 \\\; fx_dubdel2-1 del
+462.387 \\\; fx_dubdel2-1 wet 0.17551 \\\; fx_dubdel2-1 fb 0.183673
+\\\; fx_dubdel2-1 bq 2 \\\; fx_dubdel2-1 bpitch 88.3143 \\\; fx_dubdel2-0
+noclick_mode 0 \\\; fx_dubdel2-0 slot 36 \\\; fx_dubdel2-0 dell 3 \\\;
+fx_dubdel2-0 delr 3 \\\; fx_dubdel2-0 sync 1 \\\; fx_dubdel2-0 del
+653.779 \\\; fx_dubdel2-0 wet 0.195918 \\\; fx_dubdel2-0 fb 0.285714
+\\\; fx_dubdel2-0 bq 2 \\\; fx_dubdel2-0 bpitch 96.5714 \\\; audio_out-2
+slot 37 \\\; audio_out-2 pan 0.357143 \\\; audio_out-2 vol 75.5906
+\\\; audio_out-2 out OUT(1/2) \\\; ctl-assign inst_bassdrum-1 noize
+23 0 1 lin \\\; ctl-assign inst_bassdrum-0 lowpass 2071 1000 10000
+log 0 \\\; ctl-assign inst_bassdrum-0 freq2 2070 1 1000 log \\\; ctl-assign
+inst_bassdrum-0 square 2072 0.001 1000 log \\\; ctl-assign inst_bassdrum-0
+noize 2071 0 1 lin \\\; ctl-assign inst_bassdrum-1 lowpass 23 1000
+10000 log 0 \\\; ctl-assign inst_bassdrum-0 curve 2070 1 100 log \\\;
+ctl-assign note_16steps-1 xpose 25 0 11 lin \\\; ctl-assign inst_bassdrum-1
+curve 22 1 100 log \\\; ctl-assign inst_bassdrum-0 decay 2069 10 2000
+log \\\; ctl-assign inst_bassdrum-1 freq2 22 1 1000 log \\\; ctl-assign
+note_16steps-1 cycle 28 1 16 lin \\\; ctl-assign audio_out-2 vol 2055
+0 100 lin 0 \\\; ctl-assign note_16steps-0 cycle 2076 1 16 lin \\\;
+ctl-assign inst_bassdrum-1 decay 21 10 2000 log \\\; ctl-assign note_randomize-1
+prob 4 0 100 lin 0 \\\; ctl-assign inst_bassdrum-1 square 24 0.001
+1000 log \\\; ctl-assign audio_out-3 vol 7 0 100 lin 0 \\\; ctl-assign
+note_16steps-0 xpose 2073 0 11 lin \\\; ctl-assign note_16steps-1 scale
+26 0 13 lin \\\; ctl-assign note_16steps-1 div 27 0 2 lin \\\; ctl-assign
+note_16steps-0 div 2075 0 2 lin \\\; ctl-assign note_16steps-1 offset
+1 0 100 lin \\\; ctl-assign note_16steps-0 offset 2049 0 100 lin \\\;
+ctl-assign note_16steps-0 scale 2074 0 13 lin \\\; \;;
+#X scalar text-help-struct 39 199 \; inst_euclidrums-0 set 0 \\\; inst_euclidrums-0
+bd 11.1804 \\\; inst_euclidrums-0 sn 17.182 \\\; inst_euclidrums-0
+hh 25.169 \\\; inst_euclidrums-0 slot 14 \\\; note_16steps-1 randoms
+0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 \\\; note_16steps-1 lrandoms <sublist>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> \\\; note_16steps-1
+div 0 \\\; note_16steps-1 slot 23 \\\; note_16steps-1 cycle 16 \\\;
+note_16steps-1 lcycle <subset> 16 16 16 16 \\\; note_16steps-1 steps
+11.6 12 14.5 14.5 -1 0 14.5 -1 5.8 29 17.4 17.4 10.6333 8.69995 21.2667
+20.3 \\\; note_16steps-1 lsteps <sublist> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> \\\; note_16steps-1 xpose 0 \\\; note_16steps-1 lxpose
+<subset> 0 0 0 0 \\\; note_16steps-1 offset 50 \\\; note_16steps-1
+loffset <subset> 50 50 50 50 \\\; note_16steps-1 scale 0 \\\; note_16steps-1
+lscale <subset> 0 0 0 0 \\\; fx_compressor-1 lookahead 0 \\\; fx_compressor-1
+response 40 \\\; fx_compressor-1 gain 7.10204 \\\; fx_compressor-1
+ratio 5.21857 \\\; fx_compressor-1 thresh -10.9796 \\\; fx_compressor-1
+rmspeak 0 \\\; fx_compressor-1 slot 15 \\\; audio_out-4 slot 17 \\\;
+audio_out-4 pan 0 \\\; audio_out-4 vol 100.563 \\\; audio_out-4 out
+OUT(1/2) \\\; note_randomize-1 euclid 24 \\\; note_randomize-1 wet
+0.999894 \\\; note_randomize-1 decay 88.8358 \\\; note_randomize-1
+slot 25 \\\; note_randomize-1 accent 8.16327 \\\; note_randomize-1
+prob 77.6531 \\\; inst_bassdrum-1 slot 24 \\\; inst_bassdrum-1 gain
+0.542868 \\\; inst_bassdrum-1 decay 61.507 \\\; inst_bassdrum-1 freq2
+112.763 \\\; inst_bassdrum-1 square 1000 \\\; inst_bassdrum-1 curve
+34.0341 \\\; inst_bassdrum-1 noize 0.659574 \\\; inst_bassdrum-1 lowpass
+3085.76 \\\; data_wintablet-1 slot 13 \\\; data_wintablet-1 ccz_enable
+1 \\\; data_wintablet-1 ccy_enable 1 \\\; data_wintablet-1 ccx_enable
+1 \\\; data_wintablet-1 ccz 6 \\\; data_wintablet-1 ccy 4 \\\; data_wintablet-1
+ccx 2 \\\; fx_dubdel2-2 noclick_mode 0 \\\; fx_dubdel2-2 slot 16 \\\;
+fx_dubdel2-2 dell 3 \\\; fx_dubdel2-2 delr 3 \\\; fx_dubdel2-2 sync
+1 \\\; fx_dubdel2-2 del 459.508 \\\; fx_dubdel2-2 wet 0.42449 \\\;
+fx_dubdel2-2 fb 0.138776 \\\; fx_dubdel2-2 bq 2 \\\; fx_dubdel2-2 bpitch
+60 \\\; fx_dubdel2-1 noclick_mode 0 \\\; fx_dubdel2-1 slot 26 \\\;
+fx_dubdel2-1 dell 3 \\\; fx_dubdel2-1 delr 3 \\\; fx_dubdel2-1 sync
+1 \\\; fx_dubdel2-1 del 462.387 \\\; fx_dubdel2-1 wet 0.17551 \\\;
+fx_dubdel2-1 fb 0.0857143 \\\; fx_dubdel2-1 bq 2 \\\; fx_dubdel2-1
+bpitch 88.3143 \\\; audio_out-3 slot 27 \\\; audio_out-3 pan 0 \\\;
+audio_out-3 vol 104.71 \\\; audio_out-3 out OUT(1/2) \\\; ctl-assign
+note_16steps-1 cycle 6 1 16 lin \\\; ctl-assign note_randomize-1 prob
+4 0 100 lin 0 \\\; ctl-assign inst_bassdrum-1 freq2 2 1 1000 log \\\;
+ctl-assign inst_bassdrum-1 decay 0 10 2000 log \\\; \;;
+#X obj 0 15 cnv 2 10000 2 empty ducon empty 20 12 0 14 -86853 -66577
+0;
+#X obj 0 0 vsl 30 4000 4000 0 0 0 SCENE-pos SCENE-pos-rcv empty 0 -9
+0 10 -260097 -1 -1 398400 0;
+#X text 181 230 SESSION 13/06;
+#X text 97 509 séance avec anabelle 29/09/17;
+#X text 126 443 note16steps + mpkmini progr3;
+#N canvas 1 56 450 300 keys 0;
+#X obj 248 8 receivecanvas 1;
+#N canvas 506 128 520 425 arrow_keys 0;
+#X obj 186 55 inlet;
+#X obj 275 65 select 63232 63235 63233 63234;
+#X text 358 44 mac;
+#X text 187 98 windows;
+#X obj 154 116 select Up Down;
+#X obj 229 232 s pre_prev;
+#X obj 354 239 s pre_next;
+#X obj 345 141 select 10;
+#X obj 345 166 s pre_go;
+#X connect 0 0 1 0;
+#X connect 0 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 1 6 0;
+#X connect 4 2 7 0;
+#X connect 7 0 8 0;
+#X restore 211 329 pd arrow_keys;
+#X obj 246 29 route mouse key;
+#X obj 243 87 route 1;
+#X obj 241 129 list split 1;
+#X connect 0 0 2 0;
+#X connect 2 1 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
+#X restore 225 23 pd keys;
+#X restore 216 392 pd conduite;
+#X obj 613 399 bng 60 250 50 0 \$0-save empty SAVE 5 30 0 20 -258113
+-1 -1;
+#X text 33 173 RAPPEL D'UNE SCENE;
+#X text 30 311 MEMORISATION D'UNE SCENE;
+#X text 50 421 Pour enregistrer une scène \, cliquer sur le bouton
+rouge;
+#X text 23 9 DEFINITION D'UNE SCENE;
+#X text 46 109 Une scène est matérialisée par un carré noir :;
+#X text 48 35 Dans PdRacks \, une scène définit l'agencement des
+différents modules (instruments \, effets) d'un rack \, ainsi que
+les réglages des différents paramètres associés à ces modules.
+;
+#X text 51 343 Les scènes sont sauvegardées uniquement à l'intérieur
+du sous-patch pd-conduite \, à l'emplacement indiqué par le curseur
+orange.;
+#X text 48 460 Remarque : il est possible de copier le carré noir
+créé et de le placer à n'importe quel autre endroit d'un patch;

@@ -1,4 +1,6 @@
 #N canvas 159 67 678 486 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #X obj 387 302 u_dispatch \$0 freq;
 #N canvas 172 83 586 377 LICENSE-GPL 0;
 #X text 57 88 This program is free software: you can redistribute it
@@ -55,8 +57,8 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 46 343 e_beequad;
 #X msg 178 309 interp \$1;
 #X obj 263 350 e_beequad;
-#X obj 290 281 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 2 256;
+#X obj 290 281 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 2 256;
 #X obj 337 135 u_lowpassq;
 #X obj 533 134 u_highpassq;
 #X obj 863 108 r \$0-type;
@@ -150,6 +152,8 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 118 311 outlet~;
 #X obj 218 271 inlet data;
 #X obj 218 293 outlet data;
+#X obj 534 4 declare -path ../../ressources/core;
+#X obj 534 34 declare -path ../../ressources/rj;
 #X connect 0 0 3 0;
 #X connect 3 0 4 0;
 #X connect 4 0 17 0;

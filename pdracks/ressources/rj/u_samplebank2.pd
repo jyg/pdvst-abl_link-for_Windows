@@ -1,4 +1,4 @@
-#N canvas 346 149 858 647 10;
+#N canvas 346 127 858 647 10;
 #X obj 405 304 openpanel;
 #X obj 405 452 soundfiler;
 #X obj 314 208 bng 20 250 50 0 empty empty open-sample 0 -6 1 10 -262144
@@ -30,7 +30,6 @@
 #X obj 217 411 r \$0-sr;
 #X obj 514 93 table \$1-1;
 #X obj 514 115 table \$1-2;
-#X msg 405 426 read -resize \$1 \$2-1 \$2-2;
 #N canvas 172 83 586 377 LICENSE-GPL 0;
 #X text 57 88 This program is free software: you can redistribute it
 and/or modify it under the terms of the GNU General Public License
@@ -52,8 +51,13 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 515 202 s \$0-sr;
 #X text 511 138 Allow global setting of soundfile samplerate;
 #X obj 197 361 / 44.1;
+#X obj 614 488 s \$0-sr;
+#X msg 614 468 \$1;
+#X text 634 441 à partir de pd 0.48;
+#X msg 405 426 read -resize -maxsize 4e+07 \$1 \$2-1 \$2-2;
 #X connect 0 0 5 0;
 #X connect 1 0 18 0;
+#X connect 1 1 37 0;
 #X connect 2 0 0 0;
 #X connect 3 0 4 0;
 #X connect 4 0 21 0;
@@ -61,14 +65,14 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X connect 6 0 7 0;
 #X connect 7 1 5 0;
 #X connect 8 0 6 0;
-#X connect 9 0 36 1;
+#X connect 9 0 35 1;
 #X connect 10 0 9 0;
-#X connect 12 0 36 0;
+#X connect 12 0 35 0;
 #X connect 12 1 26 2;
 #X connect 14 0 5 0;
 #X connect 15 0 0 0;
 #X connect 16 0 5 0;
-#X connect 17 0 30 0;
+#X connect 17 0 39 0;
 #X connect 19 0 25 0;
 #X connect 20 0 12 0;
 #X connect 21 0 11 0;
@@ -82,7 +86,8 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X connect 25 1 20 0;
 #X connect 26 0 24 0;
 #X connect 27 0 26 3;
-#X connect 30 0 1 0;
+#X connect 31 0 32 0;
 #X connect 32 0 33 0;
-#X connect 33 0 34 0;
-#X connect 36 0 26 1;
+#X connect 35 0 26 1;
+#X connect 37 0 36 0;
+#X connect 39 0 1 0;

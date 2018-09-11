@@ -1,0 +1,14 @@
+#N canvas 367 80 450 300 10;
+#X obj 127 42 inlet~;
+#X obj 147 139 outlet~;
+#X obj 200 40 inlet;
+#X obj 250 39 inlet;
+#X obj 296 38 inlet;
+#X obj 346 37 inlet;
+#X obj 187 88 para_bp2~ \$1 \$2 \$3 \$4;
+#X connect 0 0 6 0;
+#X connect 2 0 6 1;
+#X connect 3 0 6 2;
+#X connect 4 0 6 3;
+#X connect 5 0 6 4;
+#X connect 6 0 1 0;

@@ -1,6 +1,6 @@
-#N struct 7108-symarray float x array symbols 7108-sym;
-#N struct 7108-sym symbol name float on;
 #N canvas 393 82 1074 641 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #N canvas 172 83 586 377 LICENSE-GPL 0;
 #X text 57 88 This program is free software: you can redistribute it
 and/or modify it under the terms of the GNU General Public License
@@ -18,7 +18,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 ;
 #X restore 298 15 pd LICENSE-GPL;
 #X obj 101 101 cnv 15 188 68 empty \$0-background note_interpol 0 7
-0 13 -260818 -1 0;
+0 13 -262144 -1 0;
 #X obj 325 214 inlet~;
 #X obj 407 213 inlet~;
 #X obj 324 233 outlet~;
@@ -66,12 +66,12 @@ heught xmargin ymargin;
 #X restore 253 65 pd multitab;
 #X obj 176 39 namecanvas \$0-multitab;
 #X obj 211 100 hradio 15 1 0 2 \$0-guitab \$0-guitab-rcv empty 0 -8
-0 10 -191407 -1 -1 1;
+0 10 -191407 -1 -1 0;
 #X obj 643 277 module_loader note_interpol \$0 \$1;
 #X obj 101 201 cnv 15 188 68 empty \$0-background note_interpol 0 7
-0 13 -260818 -1 0;
+0 13 -262144 -1 0;
 #X obj 211 200 hradio 15 1 0 2 \$0-guitab \$0-guitab-rcv empty 0 -8
-0 10 -191407 -1 -1 1;
+0 10 -191407 -1 -1 0;
 #X floatatom 143 128 10 0 127 0 pivot #0-pivot-rcv #0-pivot, f 10
 ;
 #X symbolatom 171 128 6 0 0 0 - #0-pivot_display-rcv -, f 6;
@@ -191,7 +191,7 @@ a# \, b;
 #X connect 10 0 9 1;
 #X restore 679 239 pd pivot;
 #X obj 138 220 tgl 15 0 \$0-fifo_enable \$0-fifo_enable-rcv Enable
-17 7 0 10 -262144 -1 -1 1 1;
+17 7 0 10 -262144 -1 -1 0 1;
 #X obj 763 89 r \$0-fifo_enable;
 #X obj 799 133 *;
 #X obj 919 50 r \$0-fifo_depth;
@@ -202,7 +202,7 @@ a# \, b;
 #N canvas 0 50 450 300 sequencer 0;
 #X obj 188 59 inlet;
 #N canvas 375 58 988 579 sequencer 0;
-#X msg 269 312 1e+006;
+#X msg 269 312 1e+06;
 #X obj 39 501 text get \$0-fifo;
 #X obj 253 288 loadbang;
 #X obj 56 4 inlet;
@@ -279,7 +279,7 @@ a# \, b;
 #X restore 151 209 pd sequencer;
 #X connect 0 0 1 0;
 #X restore 357 436 pd sequencer;
-#N canvas 475 50 1124 617 fifo_delaying 1;
+#N canvas 475 50 1124 617 fifo_delaying 0;
 #X obj 610 47 inlet;
 #X obj 164 385 outlet;
 #X obj 122 249 makenote;
@@ -317,7 +317,7 @@ a# \, b;
 #X floatatom 419 545 5 0 0 0 - - -, f 5;
 #X obj 584 308 t b f b;
 #N canvas 363 50 786 579 fifo 0;
-#X msg 402 439 1e+006;
+#X msg 402 439 1e+06;
 #X msg 190 106 \$2 \$1;
 #X obj 386 415 loadbang;
 #X obj 200 10 inlet;
@@ -521,6 +521,8 @@ a# \, b;
 #X connect 54 1 28 0;
 #X connect 55 0 6 1;
 #X restore 721 200 pd fifo_delaying;
+#X obj 1044 4 declare -path ../../ressources/core;
+#X obj 1044 34 declare -path ../../ressources/rj;
 #X connect 2 0 4 0;
 #X connect 3 0 5 0;
 #X connect 6 0 8 0;
@@ -546,4 +548,4 @@ a# \, b;
 #X connect 41 1 39 1;
 #X connect 42 0 43 0;
 #X connect 46 0 36 0;
-#X coords 0 0 1 1 190 70 1 100 200;
+#X coords 0 0 1 1 190 70 1 100 100;

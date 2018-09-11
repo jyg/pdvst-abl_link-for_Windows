@@ -1,4 +1,5 @@
 #N canvas 94 177 997 392 10;
+#X declare -path ../rj;
 #X text 303 65 s'utilise comme u_dispatch mais permet de gérer des
 collections multiples au sein d'un même préset;
 #X msg 590 123 get \$1;
@@ -7,17 +8,16 @@ collections multiples au sein d'un même préset;
 #X text 668 126 pour rappeler le nième élément de la collection
 ;
 #X text 718 205 pour effacer la collection;
-#X obj 750 67 cyclone/coll;
-#C restore;
 #X msg 648 203 reset;
 #X msg 648 263 delete \$1;
 #X text 735 264 pour supprimer le nièeme élément d'une collection
 ;
-#X obj 252 157 u_subset \$0 <param>;
 #X floatatom 389 190 5 0 0 0 index - -, f 5;
 #X obj 503 251 s \$0-subset;
-#X connect 1 0 12 0;
-#X connect 2 0 12 0;
-#X connect 7 0 12 0;
-#X connect 8 0 12 0;
-#X connect 10 1 11 0;
+#X obj 798 28 declare -path ../rj;
+#X obj 252 157 u_subset \$0 <param>;
+#X connect 1 0 10 0;
+#X connect 2 0 10 0;
+#X connect 6 0 10 0;
+#X connect 7 0 10 0;
+#X connect 12 1 9 0;

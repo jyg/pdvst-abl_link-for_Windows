@@ -3,45 +3,29 @@
 #X declare -path ../rj;
 #X obj 346 63 declare -path ../core;
 #X obj 346 93 declare -path ../rj;
-#X text 478 460 EXPERIMENTAL ALPHA;
-#X obj 458 462 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
-#X obj 460 515 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
-1;
-#X text 480 484 Instances multiples;
-#X obj 458 485 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
 #X text 24 63 déclenchée par noteEvent;
-#X text 68 441 TO DO;
+#X text 86 437 TO DO;
 #X text 22 37 lecteur de sample oneshot;
 #X obj 24 169 inst_sampler;
 #X text 15 105 avec filtre passe-bas/passe-haut intégré;
-#X obj 289 267 ctlin 25 1;
-#X obj 410 258 ctlin 21 1;
-#X obj 524 258 ctlin 20 1;
-#X obj 649 255 ctlin 24 1;
-#X text 397 238 sustain coarse;
-#X text 289 243 sustain fine;
-#X text 535 235 offset coarse;
-#X text 656 234 offset fine;
-#X text 281 205 Pour le moment \, les points de départ de lecture
-(offset) et de durée (sustain) de lecture sont définis par des ctlin
-;
-#X text 283 293 la vitesse est définie par le numéro de note joué
+#X text 277 209 la vitesse est définie par le numéro de note joué
 au clavier;
-#X text 483 410 utilisable avec contrôleur midi (notein en data_inlet
-ou en omni \, ctlin;
-#X text 28 492 faire en sorte qu'il soit utilisable avec data_fidtouch
+#X text 46 488 faire en sorte qu'il soit utilisable avec data_fidtouch
 (à terminer);
-#X obj 365 362 ctlin 113 1;
-#X text 351 345 reverse mode;
-#X text 279 332 le mode ecture à l'envers également défini par ctlin
-;
-#X text 35 458 cf inst_turntable pour les fonctions d'édition et de
+#X text 53 454 cf inst_turntable pour les fonctions d'édition et de
 modification du subset;
-#X obj 458 412 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
 #X text 278 175 possibilité d'enregistrer à la volée (bouton REC)
 ;
-#X text 280 152 mode omni pour midi note (cocher case midiNoteIn);
-#X text 282 312 La note 60 correspond à la lecture du sample à vitesse
+#X text 276 228 La note 60 correspond à la lecture du sample à vitesse
 normale, f 63;
-#X text 281 393 polyphonie de 16;
+#X text 270 253 polyphonie de 16;
+#X text 29 10 ATTENTION - NOUVELLE INTERFACE - FICHIER D'AIDE OBSOLETE
+;
+#X text 405 308 et 'aftertouch <noteid> sustain <value>';
+#X text 276 286 accepte les messages 'aftertouch <noteid> pos/offset
+<value>', f 64;
+#X text 405 328 et 'aftertouch <noteid> pitchbend <value>';
+#X text 277 364 les valeurs pour offset (/pos) et sustain devant etre
+comprise entre 0 et 1 \, pour pitchbend \, entre -24 et 24 (exprimées
+en demi-tons);
 #X coords 0 552 1 551 190 70 0;

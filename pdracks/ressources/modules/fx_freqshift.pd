@@ -1,4 +1,6 @@
-#N canvas 93 50 678 486 10;
+#N canvas 93 56 678 486 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #N canvas 172 83 586 377 LICENSE-GPL 0;
 #X text 57 88 This program is free software: you can redistribute it
 and/or modify it under the terms of the GNU General Public License
@@ -176,6 +178,8 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 130 310 outlet~;
 #X obj 408 222 inlet data;
 #X obj 408 244 outlet data;
+#X obj 534 4 declare -path ../../ressources/core;
+#X obj 534 34 declare -path ../../ressources/rj;
 #X connect 2 0 5 0;
 #X connect 3 0 2 0;
 #X connect 4 0 16 0;

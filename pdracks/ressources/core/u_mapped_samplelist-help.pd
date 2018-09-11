@@ -1,0 +1,15 @@
+#N canvas 202 50 1108 685 10;
+#X text 375 58 low_key high_key EOM filename root_key sr;
+#X text 166 202 etc....;
+#X text 498 322 64 118.772 1.25992 24342-sample 44100 260230;
+#X text 252 413 nom_midi_note velocity(0-127) pitch(normal=1) wavtable_name
+sample_rate samplelength(samples);
+#X obj 148 316 r \$0-u_mapped_samplelist_output;
+#X obj 135 233 u_mapped_samplelist \$0;
+#X text 252 463 nom_midi_note velocity(0-127) pitch(normal=1) filename
+;
+#X obj 135 143 u_mapped_samplelist \$0;
+#X obj 135 163 u_mapped_samplelist \$0;
+#X connect 7 0 8 0;
+#X connect 8 0 5 0;
+#X coords 0 685 1 684 287 18 0;

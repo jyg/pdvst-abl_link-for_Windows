@@ -1,4 +1,6 @@
-#N canvas 644 50 632 300 10;
+#N canvas 644 56 632 300 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #N canvas 0 50 1038 620 stuff 0;
 #X obj 37 37 inlet;
 #X obj 121 169 mediasettings/audiosettings;
@@ -149,16 +151,13 @@
 ;
 #X text 283 204 <driver> <delay> <block> <device_out> <device_in> <nchan_out>
 <nchan_in>;
-#X msg 330 81 4 12 64 ASIO:ASIO4ALL_v2 ASIO:ASIO4ALL_v2 2 2;
 #X msg 330 35 3 80 64 Speakers_(Realtek_High_Definiti Microphone_(Realtek_High_Defini
 2 2;
 #X msg 358 104 4 6 64 ASIO:ASIO4ALL_v2 ASIO:ASIO4ALL_v2 2 2;
-#X obj 112 121 vradio 15 1 0 3 empty empty empty 0 -8 0 10 -262144
--1 -1 2;
-#X obj 206 173 select 0 1 2;
-#X text 132 120 mmio_interne;
-#X text 130 136 asio4all 12ms;
-#X text 130 152 asio4all 6ms;
+#X obj 112 109 vradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
+-1 -1 3;
+#X text 132 108 mmio_interne;
+#X text 130 140 asio4all 6ms;
 #X obj 263 120 ui_tgl \$0 DSP -1 16 13;
 #X obj 64 14 r \$0-DSP;
 #X obj 33 83 s pd;
@@ -170,16 +169,25 @@
 #X obj 247 138 bng 30 250 50 0 empty empty PANIC 2 15 0 10 -258113
 -1 -1;
 #X msg 234 225 \; pd dsp 0;
+#X obj 206 173 select 0 1 2 3;
+#X text 130 155 asio4all 4s 30ms;
+#X msg 358 134 4 30 64 ASIO:ASIO4ALL_v2 ASIO:ASIO4ALL_v2 4 4;
+#X text 130 124 asio4all 4s 12ms;
+#X msg 275 76 4 12 64 ASIO:ASIO4ALL_v2 ASIO:ASIO4ALL_v2 4 4;
+#X obj 484 4 declare -path ../../ressources/core;
+#X obj 484 34 declare -path ../../ressources/rj;
 #X connect 3 0 0 0;
 #X connect 4 0 0 0;
-#X connect 5 0 0 0;
-#X connect 6 0 7 0;
-#X connect 7 0 4 0;
-#X connect 7 1 3 0;
-#X connect 7 2 5 0;
-#X connect 12 0 14 0;
-#X connect 14 0 13 0;
-#X connect 15 0 16 0;
+#X connect 5 0 18 0;
+#X connect 9 0 11 0;
+#X connect 11 0 10 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
 #X connect 16 0 17 0;
-#X connect 19 0 20 0;
+#X connect 18 0 3 0;
+#X connect 18 1 22 0;
+#X connect 18 2 4 0;
+#X connect 18 3 20 0;
+#X connect 20 0 0 0;
+#X connect 22 0 0 0;
 #X coords 0 -1 1 1 190 70 1 100 100;

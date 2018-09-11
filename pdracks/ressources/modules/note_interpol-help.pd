@@ -1,10 +1,6 @@
-#N struct 1047-symarray float x array symbols 1047-sym;
-#N struct 1047-sym symbol name float on;
+#N struct 2779-symarray float x array symbols 2779-sym;
+#N struct 2779-sym symbol name float on;
 #N canvas 448 85 894 552 10;
-#X declare -path ../core;
-#X declare -path ../rj;
-#X obj 466 63 declare -path ../core;
-#X obj 466 93 declare -path ../rj;
 #X text 45 56 interpolations http://poset.labri.fr/interpolations/
 écriture de contraintes réactives pour improvisations pianistiques
 (from JIM2016);

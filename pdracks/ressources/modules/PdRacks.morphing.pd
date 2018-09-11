@@ -1,4 +1,6 @@
-#N canvas 301 50 991 595 10;
+#N canvas 301 56 991 595 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #X obj 135 140 hsl 128 30 0 1 0 0 \$0-morph \$0-morph-rcv A<--------->B
 10 15 0 14 -225271 -1 -1 0 1;
 #X obj 111 149 bng 20 250 50 0 \$0-morph.setA \$0-morph.setA-rcv A
@@ -39,6 +41,8 @@
 #X msg 698 290 label MORP.TIME=\$1ms;
 #X obj 687 252 int;
 #X obj 687 274 - 1;
+#X obj 741 48 declare -path ../../ressources/core;
+#X obj 741 78 declare -path ../../ressources/rj;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
 #X connect 6 0 9 0;

@@ -1,0 +1,21 @@
+#N canvas 0 50 782 487 10;
+#X obj 101 101 cnv 15 188 68 empty \$0-background data_cyclogroove
+0 7 0 12 -260818 -1 0;
+#X obj 521 29 namecanvas \$0-multitab;
+#X obj 101 301 cnv 15 188 68 empty \$0-background data_cyclogroove
+0 7 0 12 -260818 -1 0;
+#X obj 101 201 cnv 15 188 68 empty \$0-background data_cyclogroove
+0 7 0 12 -260818 -1 0;
+#X obj 230 200 hradio 15 1 0 4 \$0-guitab \$0-guitab-rcv empty 0 -8
+0 10 -191407 -1 -1 0;
+#X obj 230 300 hradio 15 1 0 4 \$0-guitab \$0-guitab-rcv empty 0 -8
+0 10 -191407 -1 -1 0;
+#X obj 230 100 hradio 15 1 0 4 \$0-guitab \$0-guitab-rcv empty 0 -8
+0 10 -191407 -1 -1 0;
+#X obj 101 401 cnv 15 188 68 empty \$0-background data_cyclogroove
+0 7 0 12 -260818 -1 0;
+#X obj 230 400 hradio 15 1 0 4 \$0-guitab \$0-guitab-rcv empty 0 -8
+0 10 -191407 -1 -1 0;
+#X obj 524 5 ui_multitab \$0;
+#X text 126 44 gestion d'onglet multipes dans un GOP;
+#X coords 0 0 1 1 190 70 1 100 100;

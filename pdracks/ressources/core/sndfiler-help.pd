@@ -1,0 +1,46 @@
+#N canvas 0 50 1140 414 10;
+#X obj 170 188 sndfiler;
+#X obj 336 259 table left 1e+007;
+#X obj 147 117 openpanel;
+#X obj 124 98 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 150 152 read \$1 left right;
+#X floatatom 102 214 10 0 0 0 - - -, f 10;
+#X obj 315 287 table right 1e+007;
+#X obj 317 117 openpanel;
+#X obj 294 98 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 320 152 read \$1 left right;
+#X floatatom 310 215 10 0 0 0 - - -, f 10;
+#X obj 340 188 soundfiler;
+#X obj 204 84 openpanel;
+#X obj 181 65 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 32 346 LIMITATIONS : -resize -skip -raw -maxsize flags currently
+not supported, f 76;
+#X text 37 -1 sndfiler is an attempt to make a glitch-free soundfiler
+;
+#X text 123 360 no dynamic resizing of tables;
+#X msg 494 85 \; pd dsp 1;
+#X obj 485 38 loadbang;
+#X text 572 216 Right outlet outputs info as a list: samplerate \,
+headersize \, num channels \, bytespersample \, & endianness ("b" or
+"l").;
+#X obj 197 219 print sndfiler;
+#X obj 406 221 print soundfiler;
+#X text 33 374 DEPENDENCIES : needs iemlib/soundfile_info for exact
+tablelength;
+#X connect 0 0 5 0;
+#X connect 0 1 20 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 9 0 11 0;
+#X connect 11 0 10 0;
+#X connect 11 1 21 0;
+#X connect 12 0 4 0;
+#X connect 12 0 9 0;
+#X connect 13 0 12 0;
+#X connect 18 0 17 0;

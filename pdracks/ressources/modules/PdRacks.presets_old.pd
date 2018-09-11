@@ -1,10 +1,12 @@
-#N canvas 305 50 1046 595 10;
+#N canvas 305 56 1046 595 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #X text 90 415 TODO;
 #X text 25 450 sauvegarde;
 #X text 27 473 multiple patterns;
 #X msg 451 201 saveTo \$1;
 #X obj 451 220 s RJ_SCENE_SAVE;
-#X msg 609 340 1e+006;
+#X msg 609 340 1e+06;
 #X obj 593 310 loadbang;
 #X text 548 6 au niveau d'une scène \, sauvegarde des mappings midi
 \, des paramètres globaux (main) \, des parametres de slot \, des
@@ -321,6 +323,8 @@ MORPH.TIME=0ms 2 8 0 10 -262144 -1 -1 0 1;
 #X obj 437 532 list trim;
 #X msg 532 561 add2 @;
 #X msg 439 577 @ @;
+#X obj 911 48 declare -path ../../ressources/core;
+#X obj 911 78 declare -path ../../ressources/rj;
 #X connect 3 0 4 0;
 #X connect 5 0 23 1;
 #X connect 6 0 5 0;

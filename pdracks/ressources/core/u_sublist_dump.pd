@@ -1,0 +1,11 @@
+#N canvas 0 50 450 300 10;
+#X obj 103 68 list trim;
+#X obj 105 91 route <subset>;
+#X obj 105 134 outlet;
+#X obj 105 113 list prepend \$2;
+#X obj 101 47 r \$1-l\$2;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 1 3 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;

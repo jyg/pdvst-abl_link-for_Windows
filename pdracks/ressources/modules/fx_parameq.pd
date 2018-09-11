@@ -1,4 +1,6 @@
-#N canvas 646 50 678 486 10;
+#N canvas 646 56 678 486 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #X obj 101 101 cnv 15 188 68 empty \$0-background fx_parameq 0 7 0
 14 -262144 -1 0;
 #X obj 101 101 cnv 15 188 68 empty \$0-background fx_parameq 0 7 0
@@ -65,6 +67,8 @@
 #X connect 10 0 11 0;
 #X restore 139 282 pd audio_stuf~;
 #X obj 252 115 ui_vs \$0 gain -100 20;
+#X obj 534 4 declare -path ../../ressources/core;
+#X obj 534 34 declare -path ../../ressources/rj;
 #X connect 2 0 11 0;
 #X connect 2 0 19 0;
 #X connect 3 0 20 0;

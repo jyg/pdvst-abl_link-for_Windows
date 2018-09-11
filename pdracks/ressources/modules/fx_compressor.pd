@@ -1,4 +1,6 @@
 #N canvas 758 58 944 533 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #N canvas 0 50 1050 444 stuff 0;
 #X obj 252 640 outlet~;
 #X obj 252 506 *~;
@@ -204,7 +206,7 @@
 #X connect 71 0 52 0;
 #X restore 132 265 pd stuff;
 #X obj 101 101 cnv 15 188 68 empty \$0-background fx_compressor 0 7
-0 14 -260818 -1 0;
+0 14 -262144 -1 0;
 #X obj 366 242 module_loader fx_compressor \$0 \$1;
 #X obj 267 544 r \$0-gain;
 #X obj 441 124 r \$0-rmspeak;
@@ -227,9 +229,9 @@
 #X obj 215 101 cnv 15 74 29 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #X obj 214 113 nbx 3 14 0 500 0 0 \$0-response \$0-response-rcv time
-0 -6 0 10 -262144 -1 -1 39 256;
+0 -6 0 10 -262144 -1 -1 40 256;
 #X obj 254 113 nbx 3 14 0 500 0 0 \$0-lookahead \$0-lookahead-rcv lkahd
-0 -6 0 10 -262144 -1 -1 9 256;
+0 -6 0 10 -262144 -1 -1 0 256;
 #X obj 275 140 vradio 15 1 0 2 \$0-rmspeak \$0-rmspeak-rcv RMS -10
 -7 0 10 -262144 -1 -1 0;
 #X text 387 67 60 40;
@@ -305,7 +307,7 @@
 #X connect 30 0 22 0;
 #X connect 31 0 19 0;
 #X restore 65 446 pd calculateGraph;
-#N canvas 0 50 578 428 animation_point_transfert 1;
+#N canvas 0 50 578 428 animation_point_transfert 0;
 #X obj 144 49 env~;
 #X obj 144 121 dbtorms;
 #X obj 148 340 s \$0-curseur;
@@ -346,7 +348,7 @@
 #X connect 18 0 8 0;
 #X connect 19 0 1 0;
 #X restore 25 398 pd animation_point_transfert;
-#X obj 215 164 cnv 2 4 4 empty \$0-curseur empty 20 12 0 14 -258113
+#X obj 213 166 cnv 2 4 4 empty \$0-curseur empty 20 12 0 14 -258113
 -66577 0;
 #X obj 77 197 inlet~;
 #X obj 81 314 outlet~;
@@ -358,6 +360,8 @@
 #X msg 301 41 thresh -2 \, ratio 2 \, response 40 \, gain 0 \, rmspeak
 0 \, lookahead 0;
 #X obj 286 17 loadbang;
+#X obj 534 4 declare -path ../../ressources/core;
+#X obj 534 34 declare -path ../../ressources/rj;
 #X connect 0 0 27 0;
 #X connect 0 0 24 1;
 #X connect 0 1 30 0;

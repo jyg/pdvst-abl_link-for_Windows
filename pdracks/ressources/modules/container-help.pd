@@ -1,0 +1,19 @@
+#N canvas 262 195 1042 611 10;
+#X text 325 44 peut accueillir une abstraction créée dynamiquement
+et pouvant être changée dynamiquement;
+#X msg 503 81 clear, f 8;
+#X msg 553 116 midi_notein 1;
+#X text 562 82 efface le contenu du container;
+#X msg 602 149 audio_out 1;
+#X obj 39 109 container 10;
+#X text 36 81 [container 10];
+#X obj 349 222 list prepend remote embedded;
+#X obj 349 245 list trim;
+#X obj 406 273 s container-9;
+#X msg 715 238 PdRacks.transport;
+#X connect 1 0 7 0;
+#X connect 2 0 7 0;
+#X connect 4 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 10 0 7 0;

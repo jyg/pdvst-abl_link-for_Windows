@@ -1,0 +1,28 @@
+#N canvas 545 542 908 393 16;
+#X declare -path ../ressources/modules;
+#X obj 77 185 inst_rhodey;
+#X obj 77 288 dac~;
+#X msg 262 156 note 64 100;
+#X obj 600 29 pdr;
+#N canvas 0 50 450 300 PdRacks.declare 0;
+#X obj 10 10 declare -path ../ressources/modules;
+#X obj 10 35 pdr-categories;
+#X obj 10 60 text define -k scene_preset;
+#A set inst_rhodey-0 vol 77.2703 \; inst_rhodey-0 tone 0.724074 \;
+inst_rhodey-0 decay 2132.89 \;;
+#X obj 10 85 text define -k pdr-extensions;
+#A set;
+#X obj 10 110 text define -k categories;
+#A set effects \; instruments \; midi \; utils \;;
+#X restore 600 74 pd PdRacks.declare;
+#X obj 600 104 PdRacks.settings;
+#X text 58 77 You can save your settings by clicking on SAVE red button
+and recall them by clicking on RECALL green one., f 46;
+#X text 58 31 When using PdRacks.settings \, the dsp is automatically
+enabled on patch load.;
+#X text 278 305 Note : [text define -k scene_preset] is the object
+that stores your preset. You can find it inside of [pd PdRacks.declare]
+subpatch.;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 2 0 0 2;

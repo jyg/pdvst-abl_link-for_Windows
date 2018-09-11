@@ -15,4 +15,5 @@
 #X text 182 278 pour sélectioner le port midi d'entrée;
 #X text 178 328 pour ajuster la courbe de vélocité;
 #X text 188 373 <- linéaire;
+#X text 256 406 voir aussi data_azerty2midi;
 #X coords 0 438 1 437 190 70 0;

@@ -1,9 +1,11 @@
-#N canvas 302 50 767 480 10;
-#N canvas 289 76 585 411 audio_stuff 1;
+#N canvas 302 56 767 480 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
+#N canvas 289 76 585 411 audio_stuff 0;
 #X obj 136 89 inlet~;
 #X obj 242 239 outlet~;
 #X obj 136 237 outlet~;
-#N canvas 16 50 826 586 engine 1;
+#N canvas 16 50 826 586 engine 0;
 #X obj 55 187 s~ \$0-in;
 #X obj 55 243 catch~ \$0-out;
 #X obj 50 446 outlet~;
@@ -20,20 +22,12 @@
 #X obj 52 268 expr~ $v1%256;
 #X obj 47 316 hip~ 5;
 #N canvas 0 50 450 300 \$0-core 0;
-#X obj 0 0 r~ 1340-in;
-#X obj 100 0 r 1340-p1;
-#X obj 200 0 r 1340-p2;
-#X obj 0 20 expr~ ($v1%55)|($v1%55+$f2);
-#X obj 0 40 throw~ 1340-out;
-#X connect 0 0 3 0;
-#X connect 1 0 3 1;
-#X connect 3 0 4 0;
 #X restore 52 214 pd \$0-core;
 #X obj 53 166 *~ 524288;
 #X obj 50 115 / 2048;
 #X text 131 70 reset phase;
 #X text 121 168 (=65536*16);
-#N canvas 0 60 1005 566 dynamic_patching 1;
+#N canvas 0 60 1005 566 dynamic_patching 0;
 #X obj 371 322 s pd-\$0-core;
 #X obj 487 177 t b b l;
 #X obj 511 243 delay 100;
@@ -166,11 +160,13 @@ append" above.;
 2 \, connect 3 0 4 0;
 #X obj 220 383 print \$0-chain;
 #X obj 376 29 symbol;
-#X msg 140 403 ($v1%55)|($v1%55+$f2);
+#X msg 140 403 ($v1%6536)|($v1%(555+$f2));
 #X obj 206 46 r \$1-busy;
 #X obj 523 105 select symbol;
 #X obj 698 136 t s s;
 #X obj 523 69 list append;
+#X obj 779 43 loadbang;
+#X msg 779 65 clear;
 #X connect 1 0 3 0;
 #X connect 1 1 2 0;
 #X connect 1 2 11 0;
@@ -212,6 +208,8 @@ append" above.;
 #X connect 41 0 36 0;
 #X connect 41 1 40 1;
 #X connect 42 0 40 0;
+#X connect 43 0 44 0;
+#X connect 44 0 0 0;
 #X restore 288 267 pd dynamic_patching;
 #X connect 1 0 13 0;
 #X connect 3 0 16 0;
@@ -239,8 +237,8 @@ append" above.;
 #X msg 379 147 \$1 20;
 #X obj 290 202 *~;
 #X obj -30 -7 text define -k 8bit;
-#A set (t%55)|(t%55+a) \; ($v1>>(11*$f2))|($v1%(11.2*$f2)) \; Autres
-possibilités (seule la première ligne est active) \; (t%656)|(t%(555+b))
+#A set ($v1%6536)|($v1%(555+$f2)) \; ($v1>>(11*$f2))|($v1%(11.2*$f2))
+\; Autres possibilités (seule la première ligne est active) \; (t%656)|(t%(555+b))
 \; (t%(11*a))|(t%(11.2*a)) \; t \; A faire : utiliser la nouvelle fonction
 [list tosymbol] pour symplifier la syntaxe (remplacer $v1 par v \,
 etc...) et faire un parser qui en même temps vérifie la syntaxe \,
@@ -321,7 +319,6 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 279 327 outlet;
 #X obj 97 25 inlet;
 #X obj 267 25 inlet;
-#X obj 230 247 notein;
 #X obj 230 286 poly 1 1;
 #X msg 334 251 69 70;
 #X msg 341 219 69 0;
@@ -372,25 +369,23 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X restore 127 56 pd random notes;
 #X obj 303 180 select 0 1;
 #X obj 12 71 inlet midi;
-#X connect 2 0 12 0;
-#X connect 3 0 13 0;
-#X connect 4 0 5 0;
-#X connect 4 1 5 1;
-#X connect 5 1 0 0;
-#X connect 5 2 1 0;
-#X connect 6 0 5 0;
-#X connect 7 0 5 0;
-#X connect 8 0 9 0;
-#X connect 9 0 5 0;
-#X connect 10 0 11 0;
-#X connect 10 1 11 1;
-#X connect 11 0 5 0;
-#X connect 12 0 10 0;
-#X connect 12 1 10 1;
-#X connect 12 2 10 2;
-#X connect 13 0 7 0;
-#X connect 13 1 6 0;
-#X connect 14 0 5 0;
+#X connect 2 0 11 0;
+#X connect 3 0 12 0;
+#X connect 4 1 0 0;
+#X connect 4 2 1 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 7 0 8 0;
+#X connect 8 0 4 0;
+#X connect 9 0 10 0;
+#X connect 9 1 10 1;
+#X connect 10 0 4 0;
+#X connect 11 0 9 0;
+#X connect 11 1 9 1;
+#X connect 11 2 9 2;
+#X connect 12 0 6 0;
+#X connect 12 1 5 0;
+#X connect 13 0 4 0;
 #X restore 216 263 pd midi_gen;
 #X obj 467 352 u_dispatch \$0 A;
 #X obj 468 373 u_dispatch \$0 B;
@@ -403,19 +398,21 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 323 209 inlet data;
 #X obj 322 265 outlet data;
 #X obj 101 101 cnv 15 188 68 empty \$0-background inst_8bits 0 7 0
-14 -262144 -1 0;
+14 -260818 -1 0;
 #X obj 467 239 module_loader inst_8bits \$0 \$1;
 #X obj 101 121 bng 30 250 50 0 \$0-edit empty EDIT 0 20 0 10 -262144
 -1 -1;
 #X obj 35 137 r \$0-oct;
 #X obj 131 115 ui_vs \$0 oct -10.2 10.2;
-#X obj 170 115 ui_vs \$0 A 1 256;
-#X obj 220 102 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv Preset4
-2 7 0 10 -232576 -232576 -1 800 1;
+#X obj 170 114 ui_vs \$0 A 1 256;
+#X obj 220 102 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv Preset1
+2 7 0 10 -232576 -232576 -1 0 1;
 #X obj 209 115 ui_vs \$0 B 1 256;
 #X obj 252 115 ui_vs \$0 vol 0 127;
-#X symbolatom 100 156 26 0 0 0 - #0-chain-rcv #0-chain, f 26;
+#X symbolatom 100 155 26 0 0 0 - #0-chain-rcv #0-chain, f 26;
 #X obj 258 365 tabwrite~ \$0-scope;
+#X obj 534 4 declare -path ../../ressources/core;
+#X obj 534 34 declare -path ../../ressources/rj;
 #X connect 0 0 24 0;
 #X connect 0 0 38 0;
 #X connect 0 1 25 0;

@@ -1,0 +1,39 @@
+#N canvas 455 293 815 534 16;
+#X declare -path ../ressources/modules;
+#X obj 303 379 inst_rhodey;
+#X obj 302 464 dac~;
+#X msg 488 350 note 64 100;
+#X text 33 16 You can store several presets for the scene that is in
+your patch by using one (or more) [PdRacks.presets] module(s), f 45
+;
+#X obj 533 11 pdr;
+#N canvas 0 50 450 300 PdRacks.declare 0;
+#X obj 10 10 declare -path ../ressources/modules;
+#X obj 10 35 pdr-categories;
+#X obj 10 60 text define -k scene_preset;
+#A set PdRacks.presets-0 dump.preset2 @ inst_rhodey-0 vol 98.1626 @
+inst_rhodey-0 tone 0.8915 @ inst_rhodey-0 decay 2746.34 \; PdRacks.presets-0
+dump.preset1 @ inst_rhodey-0 vol 93.5181 @ inst_rhodey-0 tone 0.287126
+@ inst_rhodey-0 decay 1341.89 \; PdRacks.presets-0 dump.preset0 @ inst_rhodey-0
+vol 93.5181 @ inst_rhodey-0 tone 0.635612 @ inst_rhodey-0 decay 1787.18
+\; inst_rhodey-0 vol 93.5181 \; inst_rhodey-0 tone 0.635612 \; inst_rhodey-0
+decay 1787.18 \;;
+#X obj 10 85 text define -k pdr-extensions;
+#A set;
+#X obj 10 110 text define -k categories;
+#A set effects \; instruments \; midi \; utils \;;
+#X restore 533 56 pd PdRacks.declare;
+#X obj 533 86 PdRacks.settings;
+#X text 51 204 * To save a preset \, click one of the pink h-radios
+buttons. IMPORTANT : Don't forget to global-save in the patch by pressing
+red Save button in PdRacks.settings;
+#X text 52 277 * To recall a preset \, click one of the green h-radios
+buttons.;
+#X text 54 333 * MORPH.TIME lets you switch progressively between 2
+presets values, f 45;
+#X obj 89 87 cnv 15 240 100 empty empty empty 20 12 0 14 -261682 -66577
+0;
+#X obj 112 99 PdRacks.presets;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 2 0 0 2;

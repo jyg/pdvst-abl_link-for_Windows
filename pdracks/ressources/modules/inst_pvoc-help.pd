@@ -1,0 +1,45 @@
+#N struct 1547-symarray float x array symbols 1547-sym;
+#N struct 1547-sym symbol name float on;
+#N struct 1548-symarray float x array symbols 1548-sym;
+#N struct 1548-sym symbol name float on;
+#N struct 1549-symarray float x array symbols 1549-sym;
+#N struct 1549-sym symbol name float on;
+#N struct 1702-symarray float x array symbols 1702-sym;
+#N struct 1702-sym symbol name float on;
+#N canvas 590 251 894 671 10;
+#X text 364 293 quand on joue une note midi \, le sample mappé est
+joué;
+#X text 449 445 SampleRate = 44100 par défaut;
+#X text 390 402 1) Choix du sample;
+#X text 448 428 Ajout / modification d'un sample;
+#X text 385 505 3) réglage des points de bouclage;
+#X text 437 478 choix des notes de début \, de fin et de référence
+;
+#X text 388 461 2) mapping;
+#X text 385 538 4) gestion des différents samples en mémoire;
+#X text 364 318 Paramètres avancés : ils sont divisés en 4 sections
+;
+#X text 380 336 (pour faire apparaitre le sélecteur d'onglet \, appuyer
+sur EDIT);
+#X text 382 499 __________________________________;
+#X obj 140 179 midi_notein;
+#X text 16 453 messages gérés sur data_inlet;
+#X text 45 481 note <noteID> <vel>;
+#X text 176 577 ces modifications par note se cumulent avec les régleges
+globaux de pos et de pitch;
+#X text 15 513 messages aftertouch gérés sur data_inlet;
+#X text 41 539 aftertouch <noteID> pos < -1..1 >;
+#X text 41 559 aftertouch <noteID> pitchbend < -12..12 >;
+#X text 37 607 (les messages 'aftertouch' sont des messages type polyaftertouch
+\, permettant de contrôler des paramètres individuellement pour chaque
+note jouée);
+#X obj 137 359 dac~ 1 2;
+#X obj 137 284 inst_pvoc;
+#X obj 132 33 data_azerty2midi;
+#X obj 566 57 loadbang;
+#X msg 566 80 \; pd dsp 1;
+#X connect 11 2 20 2;
+#X connect 20 0 19 0;
+#X connect 20 1 19 1;
+#X connect 21 2 11 2;
+#X connect 22 0 23 0;

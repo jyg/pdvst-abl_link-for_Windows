@@ -1,0 +1,32 @@
+#N canvas 0 50 1184 487 10;
+#X msg 38 100 set \$1;
+#X text 232 279 Xunits/pixel Yunits/px gop xfrom yfrom xto yto width
+heught xmargin ymargin;
+#X obj 199 90 t f b;
+#X obj 160 199 * 100;
+#X obj 162 220 + 100;
+#X msg 152 400 donecanvasdialog 1 -1 1 0 0 1 1 190 70 100 \$1 \, dirty
+0;
+#X obj 110 298 t b f;
+#X msg 278 208 donecanvasdialog 1 -1 0 0 0 1 1 190 70 100 \$1;
+#X obj 283 141 f 100;
+#X obj 168 40 r \$1-guitab;
+#X obj 37 138 s \$1-guitab-rcv;
+#X obj 274 230 s \$1-multitab;
+#X text 612 205 momentary disable Graph on Parent to force redrawing
+in parent canvas;
+#X text 567 404 re-enable graph on parent with new values;
+#X obj 162 242 pipe 10;
+#X connect 0 0 10 0;
+#X connect 2 0 3 0;
+#X connect 2 1 8 0;
+#X connect 3 0 4 0;
+#X connect 4 0 8 1;
+#X connect 4 0 14 0;
+#X connect 5 0 11 0;
+#X connect 6 1 5 0;
+#X connect 7 0 11 0;
+#X connect 8 0 7 0;
+#X connect 9 0 0 0;
+#X connect 9 0 2 0;
+#X connect 14 0 6 0;

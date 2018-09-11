@@ -1,0 +1,25 @@
+#N canvas 0 50 693 443 10;
+#X floatatom 272 235 5 0 0 0 - - -, f 5;
+#X obj 233 292 print;
+#X text 97 374 u_rollmenu wav 1;
+#X obj 340 384 text define -k wav;
+#A set 1 bla bla.wav \; 2 gha gha.wav \; 3 bip bip.wav \;;
+#X obj 239 404 print;
+#X obj 246 341 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text 32 11 menu glissant;
+#X text 92 66 <row> (optionnel) : numéro de la colonne (partant de
+0) à afficher dans le menu, f 81;
+#X text 50 218 Exemples :;
+#X text 45 197 Les données à afficher sont stockées dans un objet
+[text define], f 66;
+#X text 100 238 u_rollmenu \$0 menu 0;
+#X obj 336 267 text define -k \$0-menu;
+#A set Choix_1 \; Choix_2 \;;
+#X text 64 41 syntaxe : u_rollmenu15 <sid> <text_name> [<row>] | [<row>
+<sendname>], f 75;
+#X text 91 88 <sendname> : nom du canal send (pour le canal receive
+\, l'extension -rcv et ajoutée automatiquement);
+#X text 102 146 méthodes : float : accéder à la ligne de rang indiqué
+(à partir de 0);
+#X obj 173 11 u_rollmenu15 \$0 menu;

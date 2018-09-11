@@ -1,4 +1,6 @@
-#N canvas 0 50 1042 595 10;
+#N canvas 1 56 1042 595 10;
+#X declare -path ../../ressources/core;
+#X declare -path ../../ressources/rj;
 #X text 90 415 TODO;
 #X text 25 450 sauvegarde;
 #X text 27 473 multiple patterns;
@@ -540,43 +542,43 @@
 #X msg 457 423 bright \$1;
 #X obj 730 323 u_parameter \$0 seuil;
 #X obj 545 108 r \$0-busy;
-#X obj 101 101 cnv 15 188 68 empty \$0-background audio_features 0
-7 0 14 -262144 -1 0;
-#X obj 218 104 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv PRESETS
+#X obj 101 101 cnv 15 188 68 empty \$0-background audio_features-2
+0 7 0 14 -262144 -1 0;
+#X obj 220 102 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv PRESETS
 2 5 0 10 -232576 -232576 -1 0 1;
-#X obj 224 128 bng 14 250 50 0 \$0-testx empty empty 17 7 0 10 -262144
+#X obj 225 123 bng 14 250 50 0 \$0-testx empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 224 142 bng 14 250 50 0 \$0-testy empty empty 17 7 0 10 -262144
+#X obj 225 139 bng 14 250 50 0 \$0-testy empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 224 156 bng 14 250 50 0 \$0-testz empty empty 17 7 0 10 -262144
+#X obj 225 155 bng 14 250 50 0 \$0-testz empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 127 139 tgl 15 0 empty \$0-detect-rcv detect 2 7 0 10 -262144
--262144 -1 0 1;
-#X text 192 130 env.;
-#X text 171 142 harmon.;
-#X text 178 155 brill.;
+#X obj 127 139 tgl 15 0 empty \$0-detect-rcv detect 2 7 0 10 -250685
+-250685 -1 1 1;
+#X text 194 130 env.;
+#X text 173 142 harmon.;
+#X text 180 154 brill.;
 #X obj 128 124 tgl 15 0 \$0-send_data \$0-send_data-rcv send_data 17
 7 0 10 -262144 -1 -1 0 1;
 #X obj 100 122 vsl 25 45 0 100 0 0 \$0-seuil \$0-seuil-rcv seuil 0
 14 0 10 -232576 -1 -1 0 1;
-#X obj 238 128 cnv 2 3 14 empty \$0-cca_cnv-rcv empty 20 12 0 14 -260097
+#X obj 240 122 cnv 2 1 14 empty \$0-cca_cnv-rcv empty 20 12 0 14 -260097
 -66577 0;
-#X obj 238 142 cnv 2 1 14 empty \$0-ccb_cnv-rcv empty 20 12 0 14 -260097
+#X obj 240 138 cnv 2 1 14 empty \$0-ccb_cnv-rcv empty 20 12 0 14 -260097
 -66577 0;
-#X obj 238 156 cnv 2 1 14 empty \$0-ccc_cnv-rcv empty 20 12 0 14 -260097
+#X obj 240 154 cnv 2 1 14 empty \$0-ccc_cnv-rcv empty 20 12 0 14 -260097
 -66577 0;
-#X floatatom 239 128 5 0 127 1 - #0-ccx-rcv #0-ccx, f 5;
-#X floatatom 239 142 5 0 127 1 - #0-ccy-rcv #0-ccy, f 5;
-#X floatatom 239 156 5 0 127 1 - #0-ccz-rcv #0-ccz, f 5;
+#X floatatom 239 121 5 0 127 1 - #0-ccx-rcv #0-ccx, f 5;
+#X floatatom 239 137 5 0 127 1 - #0-ccy-rcv #0-ccy, f 5;
+#X floatatom 239 153 5 0 127 1 - #0-ccz-rcv #0-ccz, f 5;
 #N canvas 500 223 468 97 \$0-autoscale_gui 0;
 #X obj 22 12 hsl 128 15 0 127 0 0 \$0-env-min \$0-env-min-rcv env-min
-5 7 0 10 -262144 -1 -1 0 1;
+5 7 0 10 -260818 -1 -1 0 1;
 #X obj 22 32 hsl 128 15 0 127 0 0 \$0-env-max \$0-env-max-rcv env-max
 5 7 0 10 -262144 -1 -1 0 1;
 #X obj 162 12 hsl 128 15 0 127 0 0 \$0-harmo-min \$0-harmo-min-rcv
 harmo-min 5 7 0 10 -260818 -1 -1 0 1;
 #X obj 302 12 hsl 128 15 0 127 0 0 \$0-bright-min \$0-bright-min-rcv
-bright-min 5 7 0 10 -262144 -1 -1 0 1;
+bright-min 5 7 0 10 -260818 -1 -1 0 1;
 #X obj 162 32 hsl 128 15 0 127 0 0 \$0-harmo-max \$0-harmo-max-rcv
 harmo-max 5 7 0 10 -262144 -1 -1 0 1;
 #X obj 302 32 hsl 128 15 0 127 0 0 \$0-bright-max \$0-bright-max-rcv
@@ -598,11 +600,11 @@ bright-filtering 5 7 0 10 -262144 -1 -1 0 1;
 #X obj 351 133 r \$0-learn;
 #X obj 351 160 select 1 0;
 #X msg 418 215 vis 0;
-#X obj 276 128 tgl 14 0 \$0-ccx_enable \$0-ccx_enable-rcv A 4 7 0 10
+#X obj 274 121 tgl 16 0 \$0-ccx_enable \$0-ccx_enable-rcv A 4 7 0 12
 -203904 -1 -1 0 1;
-#X obj 276 142 tgl 14 0 \$0-ccy_enable \$0-ccy_enable-rcv B 4 7 0 10
+#X obj 274 137 tgl 16 0 \$0-ccy_enable \$0-ccy_enable-rcv B 4 7 0 12
 -203904 -1 -1 0 1;
-#X obj 276 156 tgl 14 0 \$0-ccz_enable \$0-ccz_enable-rcv C 4 7 0 10
+#X obj 274 153 tgl 16 0 \$0-ccz_enable \$0-ccz_enable-rcv C 4 7 0 12
 -203904 -1 -1 0 1;
 #X obj 449 312 route showLastUsed;
 #X obj 451 287 r RACK_ADMIN;
@@ -626,6 +628,8 @@ bright-filtering 5 7 0 10 -262144 -1 -1 0 1;
 #X obj 484 557 makenote 500 100;
 #X obj 484 579 pack f f;
 #X msg 676 553 note \$1 \$2;
+#X obj 804 34 declare -path ../../ressources/core;
+#X obj 804 64 declare -path ../../ressources/rj;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
 #X connect 5 0 6 0;
