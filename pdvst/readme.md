@@ -4,7 +4,7 @@ This is the updated version of pdvst (vst 2.4, pd 0.47-1) based on initial work 
 Binaries are here : 
 http://puredata.info/Members/jyg/software/pdvst
 
-Source code available here : https://github.com/jyg/pure-data/tree/master/pdvst
+Source code available here : https://github.com/jyg/pdvst-abl_link-for_Windows/tree/master/pdvst
 
 # How does it work ?
 
