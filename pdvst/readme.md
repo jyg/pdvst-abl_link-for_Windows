@@ -1,10 +1,16 @@
-# PDVST 0.4
-This is the updated version of pdvst (vst 2.4, pd 0.47-1) based on initial work by Joseph Sarlo. PdVst is an extension that allows Pd patches (and pd.exe programm) to run as VST plugins (Windows 32/64 only).
+# PDVST 0.41  - 30/01/2018  -  
+## by Jean-Yves Gratius  jyg@gumo.fr 
 
-Binaries are here : 
+This is a version of pdvst (vst 2.4, pd 0.47-1) based on initial work by Joseph Sarlo. PdVst is an extension that allows Pd patches (and pd.exe programm) to run as VST plugins (Windows 32/64 only).
+
+Binaries are here (deprecated) : 
 http://puredata.info/Members/jyg/software/pdvst
 
-Source code available here : https://github.com/jyg/pdvst-abl_link-for_Windows/tree/master/pdvst
+Source code available here (deprecated) : https://github.com/jyg/PdVst
+
+## ! Project is now maintained here ! ##
+
+https://git.nubegris.com.ar/lucarda/pdvst-0.52
 
 # How does it work ?
 
